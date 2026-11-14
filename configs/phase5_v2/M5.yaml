@@ -1,0 +1,90 @@
+schema_version: phase5_comparison_v2
+supersedes: configs/phase5/M5.yaml
+arm: M5
+condition: active_independently_gated_revision
+status: PREPARED_NOT_RUN
+backend:
+  policy: src.rl.diffusion_policy_v2.ContentBoundDiffusionPolicy
+  trainer: src.rl.diffusion_rl_trainer_v2.GuardedDiffusionRLTrainer
+  factory: src.rl.phase5_backend.make_backend
+  parameter_target: IP2Pix_UNet_attention_LoRA
+seeds:
+- 42
+- 123
+- 2026
+optimizer_updates: 8
+training_source_exposures: 80
+generator_config:
+  phase: 3
+  seed: 42
+  logical_batch_size: 10
+  physical_micro_batch_size: 1
+  gradient_accumulation_steps: 10
+  precision: bf16
+  adapter_compute_precision: fp32
+  cfg_execution: sequential
+  bf16_reduced_precision_reduction: false
+  lora_rank: 8
+  lora_alpha: 16
+  optimizer: adamw
+  learning_rate: 1.0e-05
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  initial_optimizer_updates: 3
+  gradient_checkpointing: false
+  checkpoint_every_update: true
+  algorithm: DDPO_score_function_single_on_policy_pass
+  num_inference_steps: 10
+  eta: 1.0
+  advantage_baseline: 0.0
+  advantage_scale: 1.0
+  reward:
+    semantic_weight: 1.0
+    answer_consistency_weight: 0.5
+    distortion_weight: 0.2
+    compute_cost_weight: 0.1
+    uncertainty_weight: 1.0
+    normalization: fixed_reference
+    backdoor_asr_training: false
+dataset_version: vqav2_content_v2
+split_sha256:
+  train: f6fc1dd7b3b3fd1a9e1fd1bba6ab791c3df87acedecc013305fb8de9c58f09b4
+  development: b82b9a3cac57241d151a294f067312807288dfee353565a43c8e0e694ac86131
+  gate: ce7ffba3d124b4a5373560f6eaa644d3bf5ad4c664dc1112f10b8135aee90c00
+  test: 98c3b47853e07343a848ea6361713b03f64487ad0c06598e893049c2e06a59ce
+development_sources: 64
+private_gate_sources: 64
+development_looks:
+- 2
+- 4
+- 6
+- 8
+final_test: operator-only, freeze selected harness before access; old v1 test already
+  opened
+rsi_mode: active_independently_gated_revision
+max_candidate_attempts: 2
+training_reward_config: configs/phase5_reward.yaml
+training_reward_ready: false
+launch_readiness:
+  independent_editing_validity: false
+  validated_training_reward: false
+  content_disjoint_splits: true
+  active_harness_tests: true
+  conventional_scheduler_baseline: true
+  pre_intervention_comparability: false
+  private_gate_isolation: false
+  frozen_resource_protocol: true
+launch_authorized: false
+strict_continuation_accepted: false
+pre_intervention_checks:
+- adapter
+- optimizer
+- scheduler
+- RNG
+- source_order
+- noise_seeds
+- contract
+- frozen_weights
+statistical_unit: source-image clusters within seed; seed-level estimates kept distinct
+selection_policy: independent frozen validity, paired uncertainty and measured complete
+  cost; no per-item Gate feedback

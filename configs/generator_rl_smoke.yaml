@@ -1,0 +1,13 @@
+status: BLOCKED_until_validated_stochastic_transition_density
+logical_batch_size: 10
+micro_batch_size: 1
+gradient_accumulation_steps: 10
+learning_rate: 1.0e-5
+initial_updates: 3
+seed: 42
+reward:
+  semantic_weight: 1.0
+  answer_consistency_weight: 0.5
+  distortion_weight: 0.2
+  compute_cost_weight: 0.1
+  use_backdoor_asr_for_training: false

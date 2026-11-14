@@ -1,0 +1,7 @@
+{
+  "removed_empty_run_tmp": [
+    "/storage/home/ydk297/projects/poisoning/experiments/p0_foundations_20261111_v1/tmp",
+    "/storage/home/ydk297/projects/poisoning/experiments/p0_foundations_20261111_v1/code/tmp"
+  ],
+  "nonempty_left_intact": []
+}

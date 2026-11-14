@@ -1,0 +1,18 @@
+test_active_job_keeps_full_reservation_and_blocks_concurrent (tests.test_night_budget.NightBudgetTests.test_active_job_keeps_full_reservation_and_blocks_concurrent) ... ok
+test_duplicate_attempt_and_overcommit_rejected (tests.test_night_budget.NightBudgetTests.test_duplicate_attempt_and_overcommit_rejected) ... ok
+test_finite_real_update (tests.test_night_budget.NightBudgetTests.test_finite_real_update) ... ok
+test_never_retry_oom_nan_assertions_save_failure (tests.test_night_budget.NightBudgetTests.test_never_retry_oom_nan_assertions_save_failure) ... ok
+test_only_predeclared_transients (tests.test_night_budget.NightBudgetTests.test_only_predeclared_transients) ... ok
+test_pending_job_also_blocks (tests.test_night_budget.NightBudgetTests.test_pending_job_also_blocks) ... ok
+test_preemption_exact_resume_one_time (tests.test_night_budget.NightBudgetTests.test_preemption_exact_resume_one_time) ... ok
+test_retry_reservation_still_obeys_cap (tests.test_night_budget.NightBudgetTests.test_retry_reservation_still_obeys_cap) ... ok
+test_terminal_failure_cost_is_retained (tests.test_night_budget.NightBudgetTests.test_terminal_failure_cost_is_retained) ... ok
+test_unknown_accounting_and_submission_fail_closed (tests.test_night_budget.NightBudgetTests.test_unknown_accounting_and_submission_fail_closed) ... ok
+test_missing_seeds_never_becomes_result (tests.test_night_analysis.NightAnalysisTests.test_missing_seeds_never_becomes_result) ... ok
+test_source_bootstrap_identical_arms_zero_delta (tests.test_night_analysis.NightAnalysisTests.test_source_bootstrap_identical_arms_zero_delta) ... ok
+test_source_not_seed_is_resampling_unit (tests.test_night_analysis.NightAnalysisTests.test_source_not_seed_is_resampling_unit) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.069s
+
+OK

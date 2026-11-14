@@ -1,0 +1,9 @@
+seed: 42
+device: auto
+qwen_examples: 2
+fixture_samples: 10
+rl_updates: 3
+rl_batch_size: 10
+rsi_toy_revisions: 2
+clean_baseline_samples: 10
+large_experiments: false

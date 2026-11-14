@@ -1,0 +1,58 @@
+{
+  "stage": "frozen",
+  "attempt": 0,
+  "job_id": "91029",
+  "status": "PASS",
+  "started_UTC": "2026-11-12T05:30:37.200983+00:00",
+  "PID": 628508,
+  "actual_optimizer_calls": 0,
+  "GPU": {
+    "name": "NVIDIA A100 80GB PCIe",
+    "total_bytes": 85094825984,
+    "initial_free_bytes": 84500414464,
+    "physical_job_GPU": "1"
+  },
+  "metrics": {
+    "dev": {
+      "n_sources": 128,
+      "mean": 0.7515625,
+      "source_SD": 0.4009799757405373,
+      "source_bootstrap_95CI": [
+        0.67890625,
+        0.8179687500000001
+      ],
+      "resamples": 10000,
+      "analysis_seed": 20261112,
+      "training_seed_uncertainty": "NOT_ESTIMATED"
+    },
+    "test": {
+      "n_sources": 512,
+      "mean": 0.7220703125000001,
+      "source_SD": 0.41588000082429605,
+      "source_bootstrap_95CI": [
+        0.6865234375,
+        0.7576171875
+      ],
+      "resamples": 10000,
+      "analysis_seed": 20261112,
+      "training_seed_uncertainty": "NOT_ESTIMATED"
+    },
+    "transfer": {
+      "n_sources": 128,
+      "mean": 0.709375,
+      "source_SD": 0.4100004801226303,
+      "source_bootstrap_95CI": [
+        0.6375,
+        0.778125
+      ],
+      "resamples": 10000,
+      "analysis_seed": 20261112,
+      "training_seed_uncertainty": "NOT_ESTIMATED"
+    }
+  },
+  "optimizer_steps": 0,
+  "scope": "shared frozen greedy baseline; no training cost; common evaluation sources",
+  "finished_UTC": "2026-11-12T05:34:59.381346+00:00",
+  "elapsed_seconds": 262.18040466308594,
+  "peak_GPU_allocated_bytes": 4314383360
+}

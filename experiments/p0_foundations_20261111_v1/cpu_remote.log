@@ -1,0 +1,73 @@
+The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+test_only_assistant_response_is_supervised (tests.test_p0_foundations.CleanResponseLabelsTests.test_only_assistant_response_is_supervised) ... ok
+test_wrong_prefix_empty_response_and_multi_image_rejected (tests.test_p0_foundations.CleanResponseLabelsTests.test_wrong_prefix_empty_response_and_multi_image_rejected) ... ok
+test_quality_steps_and_learning_gate_are_explicit (tests.test_p0_foundations.FixedProtocolTests.test_quality_steps_and_learning_gate_are_explicit) ... ok
+test_incomplete_or_unsettled_restore_rejected (tests.test_p0_foundations.LearnedOuterRestoreTests.test_incomplete_or_unsettled_restore_rejected) ... ok
+test_real_parameter_update_and_next_action_update_restore (tests.test_p0_foundations.LearnedOuterRestoreTests.test_real_parameter_update_and_next_action_update_restore) ... ok
+test_require_real_qa_answers (tests.test_p0_foundations.SplitAndStatsTests.test_require_real_qa_answers) ... ok
+test_source_bootstrap_is_seeded_and_has_correct_units (tests.test_p0_foundations.SplitAndStatsTests.test_source_bootstrap_is_seeded_and_has_correct_units) ... ok
+test_source_content_question_disjointness (tests.test_p0_foundations.SplitAndStatsTests.test_source_content_question_disjointness) ... ok
+test_content_box_matches_pillow_rounding_with_odd_padding (tests.test_benign_ddpo_audit.BenignMetricsAndSearch.test_content_box_matches_pillow_rounding_with_odd_padding) ... ok
+test_cpu_receipt_covers_its_runner_and_every_executed_test (tests.test_benign_ddpo_audit.BenignMetricsAndSearch.test_cpu_receipt_covers_its_runner_and_every_executed_test) ... ok
+test_fixed_rule_does_not_consume_observations_to_choose (tests.test_benign_ddpo_audit.BenignMetricsAndSearch.test_fixed_rule_does_not_consume_observations_to_choose) ... ok
+test_identity_brighten_and_darken_are_distinguishable (tests.test_benign_ddpo_audit.BenignMetricsAndSearch.test_identity_brighten_and_darken_are_distinguishable) ... ok
+test_pairing_rejects_mismatched_seed (tests.test_benign_ddpo_audit.BenignMetricsAndSearch.test_pairing_rejects_mismatched_seed) ... ok
+test_ucb_initial_exploration_and_observation_counts (tests.test_benign_ddpo_audit.BenignMetricsAndSearch.test_ucb_initial_exploration_and_observation_counts) ... ok
+test_corrupted_bytes_and_changed_clipping_rejected (tests.test_benign_ddpo_audit.CheckpointRegression.test_corrupted_bytes_and_changed_clipping_rejected) ... ok
+test_cpu_update_optimizer_and_completed_next_step_restore_exact (tests.test_benign_ddpo_audit.CheckpointRegression.test_cpu_update_optimizer_and_completed_next_step_restore_exact) ... ok
+test_empty_nonfinite_reward_and_duplicate_rejected_before_optimizer (tests.test_benign_ddpo_audit.CheckpointRegression.test_empty_nonfinite_reward_and_duplicate_rejected_before_optimizer) ... ok
+test_missing_extra_wrong_dtype_and_nonfinite_adapter_rejected_without_mutation (tests.test_benign_ddpo_audit.CheckpointRegression.test_missing_extra_wrong_dtype_and_nonfinite_adapter_rejected_without_mutation) ... ok
+test_numpy_rng_comparison (tests.test_benign_ddpo_audit.CheckpointRegression.test_numpy_rng_comparison) ... ok
+test_fp32_policy_does_not_enable_bf16_autocast (tests.test_benign_ddpo_audit.SamplerRegression.test_fp32_policy_does_not_enable_bf16_autocast) ... ok
+test_reject_broadcast_noise (tests.test_benign_ddpo_audit.SamplerRegression.test_reject_broadcast_noise) ... ok
+test_reject_nonfinite_noise_prediction_and_action (tests.test_benign_ddpo_audit.SamplerRegression.test_reject_nonfinite_noise_prediction_and_action) ... ok
+test_reject_unscheduled_timestep (tests.test_benign_ddpo_audit.SamplerRegression.test_reject_unscheduled_timestep) ... ok
+test_terminal_return_score_gradient_matches_gaussian_expectation (tests.test_benign_ddpo_audit.SamplerRegression.test_terminal_return_score_gradient_matches_gaussian_expectation) ... ok
+test_terminal_stochastic_density_and_replay (tests.test_benign_ddpo_audit.SamplerRegression.test_terminal_stochastic_density_and_replay) ... ok
+test_conditioning_layout_and_guidance (tests.test_diffusion_rl.DiffusionRLTests.test_conditioning_layout_and_guidance) ... ok
+test_ddim_matches_official_all_transitions (tests.test_diffusion_rl.DiffusionRLTests.test_ddim_matches_official_all_transitions) ... ok
+test_fixed_scale_not_batch_normalized (tests.test_diffusion_rl.DiffusionRLTests.test_fixed_scale_not_batch_normalized) ... ok
+test_probability_gradient_and_reward_direction (tests.test_diffusion_rl.DiffusionRLTests.test_probability_gradient_and_reward_direction) ... ok
+test_reject_deterministic_last_transition (tests.test_diffusion_rl.DiffusionRLTests.test_reject_deterministic_last_transition) ... ok
+test_stale_consumed_and_contract_rejected (tests.test_diffusion_rl.DiffusionRLTests.test_stale_consumed_and_contract_rejected) ... ok
+test_active_LR_and_ordinary_scheduler_restore (tests.test_runtime_checkpoint_metadata.RuntimeMetadata.test_active_LR_and_ordinary_scheduler_restore) ... ok
+test_infinite_comparison_sentinel_roundtrips (tests.test_runtime_checkpoint_metadata.RuntimeMetadata.test_infinite_comparison_sentinel_roundtrips) ... ok
+test_wrong_bytes_rejected (tests.test_runtime_checkpoint_metadata.RuntimeMetadata.test_wrong_bytes_rejected) ... ok
+test_wrong_scheduler_base_rejected (tests.test_runtime_checkpoint_metadata.RuntimeMetadata.test_wrong_scheduler_base_rejected) ... ok
+test_distinct_trajectories_can_share_condition (tests.test_fresh_batch_remediation.FreshBatchTests.test_distinct_trajectories_can_share_condition) ... ok
+test_duplicate_in_one_batch_rejected_without_mutating_consumed (tests.test_fresh_batch_remediation.FreshBatchTests.test_duplicate_in_one_batch_rejected_without_mutating_consumed) ... ok
+test_prior_consumed_rejected (tests.test_fresh_batch_remediation.FreshBatchTests.test_prior_consumed_rejected) ... ok
+test_real_trainer_rejects_before_model_or_optimizer_access (tests.test_fresh_batch_remediation.FreshBatchTests.test_real_trainer_rejects_before_model_or_optimizer_access) ... ok
+test_stale_or_wrong_contract_rejected (tests.test_fresh_batch_remediation.FreshBatchTests.test_stale_or_wrong_contract_rejected) ... ok
+test_all_equal (tests.test_bf16_acceptance_remediation.Acceptance.test_all_equal) ... ok
+test_each_state_field_is_required (tests.test_bf16_acceptance_remediation.Acceptance.test_each_state_field_is_required) ... ok
+test_initial_mismatch_never_passes (tests.test_bf16_acceptance_remediation.Acceptance.test_initial_mismatch_never_passes) ... ok
+test_missing_pair_never_passes (tests.test_bf16_acceptance_remediation.Acceptance.test_missing_pair_never_passes) ... ok
+test_raw_mismatch_never_passes (tests.test_bf16_acceptance_remediation.Acceptance.test_raw_mismatch_never_passes) ... ok
+test_changed_image_or_cross_split_duplicate_rejected (tests.test_mini_pilot.CohortTests.test_changed_image_or_cross_split_duplicate_rejected) ... ok
+test_disjoint_deterministic_no_test_pool_or_image_copy (tests.test_mini_pilot.CohortTests.test_disjoint_deterministic_no_test_pool_or_image_copy) ... ok
+test_path_escape_rejected (tests.test_mini_pilot.CohortTests.test_path_escape_rejected) ... ok
+test_absent_optional_plotter_preserves_completed_measurements (tests.test_mini_pilot.ReportTests.test_absent_optional_plotter_preserves_completed_measurements) ... {"figures_status": "PENDING_CPU_REPORTING_MATPLOTLIB_UNAVAILABLE", "GPU_retry_required": false}
+ok
+test_missing_metrics_never_reported_as_success_or_ASR (tests.test_mini_pilot.ReportTests.test_missing_metrics_never_reported_as_success_or_ASR) ... ok
+test_LPIPS_keeps_minus_one_one_and_batch_dimension (tests.test_mini_pilot.RewardAndControllerTests.test_LPIPS_keeps_minus_one_one_and_batch_dimension) ... ok
+test_exact_and_tolerance_outcomes_remain_distinct (tests.test_mini_pilot.RewardAndControllerTests.test_exact_and_tolerance_outcomes_remain_distinct) ... ok
+test_learned_controller_really_changes_parameters_and_keeps_perceptual_term (tests.test_mini_pilot.RewardAndControllerTests.test_learned_controller_really_changes_parameters_and_keeps_perceptual_term) ... ok
+test_nonfinite_or_disabled_reward_term_rejected (tests.test_mini_pilot.RewardAndControllerTests.test_nonfinite_or_disabled_reward_term_rejected) ... ok
+test_identity_zero_target_positive_darken_negative (tests.test_lighting_reward_v3.MeanLightingTest.test_identity_zero_target_positive_darken_negative) ... ok
+test_spatial_rearrangement_cannot_change_the_mean_property (tests.test_lighting_reward_v3.MeanLightingTest.test_spatial_rearrangement_cannot_change_the_mean_property) ... ok
+test_wrong_exposures_retain_a_directional_ranking (tests.test_lighting_reward_v3.MeanLightingTest.test_wrong_exposures_retain_a_directional_ranking) ... ok
+test_known_consensus_and_immutable_labels (tests.test_vqa_official.OfficialVQATest.test_known_consensus_and_immutable_labels) ... ok
+test_no_answer_extraction_by_label (tests.test_vqa_official.OfficialVQATest.test_no_answer_extraction_by_label) ... ok
+test_normalization_edges (tests.test_vqa_official.OfficialVQATest.test_normalization_edges) ... ok
+test_editor_backend_parameter_validation (tests.test_generator_contract.GeneratorContractTest.test_editor_backend_parameter_validation) ... ok
+test_unsupported_rl_fails_explicitly (tests.test_generator_contract.GeneratorContractTest.test_unsupported_rl_fails_explicitly) ... ok
+test_heldout_and_acceptance (tests.test_rsi_logging.RSILoggingTest.test_heldout_and_acceptance) ... ok
+test_unique_and_immutable_runs (tests.test_rsi_logging.RSILoggingTest.test_unique_and_immutable_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 64 tests in 3.286s
+
+OK
+{"passed": true, "tests_run": 64, "failures": 0, "errors": 0, "skips": 0, "elapsed_seconds": 8.64836859703064, "modules": ["tests.test_p0_foundations", "tests.test_benign_ddpo_audit", "tests.test_diffusion_rl", "tests.test_runtime_checkpoint_metadata", "tests.test_fresh_batch_remediation", "tests.test_bf16_acceptance_remediation", "tests.test_mini_pilot", "tests.test_lighting_reward_v3", "tests.test_vqa_official", "tests.test_generator_contract", "tests.test_rsi_logging"], "GPU_work": false, "kind": "CPU engineering regressions; not method efficacy"}
+

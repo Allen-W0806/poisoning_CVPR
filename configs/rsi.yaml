@@ -1,0 +1,6 @@
+allowed: [batch_size, learning_rate, curriculum]
+selection_split: validation
+require_same_validation_hash: true
+acceptance: strict_score_improvement_within_total_budget
+ablation_arms: [fixed_configuration, standard_rl, rl_adaptive_configuration, rl_rsi_controller]
+budget_accounting: all_proposals_training_validation_and_rejected_trials

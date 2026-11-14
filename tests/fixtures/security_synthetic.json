@@ -1,0 +1,5 @@
+[
+  {"sample_id": "synthetic_t1", "group": "triggered", "behavior_observed": true, "is_triggered": true, "detected": true, "inference_answer_changed": true},
+  {"sample_id": "synthetic_t2", "group": "triggered", "behavior_observed": false, "is_triggered": true, "detected": false, "inference_answer_changed": false},
+  {"sample_id": "synthetic_c1", "group": "clean", "behavior_observed": false, "is_triggered": false, "detected": false}
+]

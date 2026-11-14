@@ -1,0 +1,146 @@
+{
+  "run_id": "overnight_benign_20261112T051015Z",
+  "GPU_jobs": [
+    {
+      "stage": "canary",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:canary:0",
+      "reserved_seconds": 900,
+      "wall_seconds": 900,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/canary_0_root.sbatch",
+      "dependency": null,
+      "submitted_UTC": "2026-11-12T05:29:37.117809+00:00",
+      "job_id": "91023"
+    },
+    {
+      "stage": "frozen",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:frozen:0",
+      "reserved_seconds": 1800,
+      "wall_seconds": 1800,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/frozen_0_root.sbatch",
+      "dependency": null,
+      "submitted_UTC": "2026-11-12T05:30:36.904131+00:00",
+      "job_id": "91029"
+    },
+    {
+      "stage": "seed42",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:seed42:0",
+      "reserved_seconds": 3600,
+      "wall_seconds": 3600,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/seed42_0_root.sbatch",
+      "dependency": null,
+      "submitted_UTC": "2026-11-12T05:35:06.969270+00:00",
+      "job_id": "91043"
+    },
+    {
+      "stage": "seed123",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:seed123:0",
+      "reserved_seconds": 3600,
+      "wall_seconds": 3600,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/seed123_0_root.sbatch",
+      "dependency": null,
+      "submitted_UTC": "2026-11-12T05:58:07.933613+00:00",
+      "job_id": "91057"
+    },
+    {
+      "stage": "seed3407",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:seed3407:0",
+      "reserved_seconds": 3600,
+      "wall_seconds": 3600,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/seed3407_0_root.sbatch",
+      "dependency": null,
+      "submitted_UTC": "2026-11-12T06:21:07.983618+00:00",
+      "job_id": "91078"
+    }
+  ],
+  "CPU_jobs": [
+    {
+      "stage": "prepare",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:prepare:0",
+      "reserved_seconds": 0,
+      "wall_seconds": 1800,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/prepare_0_root.sbatch",
+      "dependency": null,
+      "submitted_UTC": "2026-11-12T05:26:04.899257+00:00",
+      "job_id": "91020"
+    },
+    {
+      "stage": "dispatch",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:dispatch:0:91020",
+      "reserved_seconds": 0,
+      "wall_seconds": 120,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/dispatch_0_91020.sbatch",
+      "dependency": "91020",
+      "submitted_UTC": "2026-11-12T05:26:04.945326+00:00",
+      "job_id": "91021"
+    },
+    {
+      "stage": "dispatch",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:dispatch:0:91023",
+      "reserved_seconds": 0,
+      "wall_seconds": 120,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/dispatch_0_91023.sbatch",
+      "dependency": "91023",
+      "submitted_UTC": "2026-11-12T05:29:37.172917+00:00",
+      "job_id": "91024"
+    },
+    {
+      "stage": "dispatch",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:dispatch:0:91029",
+      "reserved_seconds": 0,
+      "wall_seconds": 120,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/dispatch_0_91029.sbatch",
+      "dependency": "91029",
+      "submitted_UTC": "2026-11-12T05:30:36.959670+00:00",
+      "job_id": "91030"
+    },
+    {
+      "stage": "dispatch",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:dispatch:0:91043",
+      "reserved_seconds": 0,
+      "wall_seconds": 120,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/dispatch_0_91043.sbatch",
+      "dependency": "91043",
+      "submitted_UTC": "2026-11-12T05:35:07.027079+00:00",
+      "job_id": "91044"
+    },
+    {
+      "stage": "dispatch",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:dispatch:0:91057",
+      "reserved_seconds": 0,
+      "wall_seconds": 120,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/dispatch_0_91057.sbatch",
+      "dependency": "91057",
+      "submitted_UTC": "2026-11-12T05:58:08.008587+00:00",
+      "job_id": "91058"
+    },
+    {
+      "stage": "dispatch",
+      "attempt": 0,
+      "tag": "overnight_benign_20261112T051015Z:dispatch:0:91078",
+      "reserved_seconds": 0,
+      "wall_seconds": 120,
+      "script": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/slurm/dispatch_0_91078.sbatch",
+      "dependency": "91078",
+      "submitted_UTC": "2026-11-12T06:21:08.047448+00:00",
+      "job_id": "91079"
+    }
+  ],
+  "decisions": [
+    {
+      "UTC": "2026-11-12T05:26:04.866360+00:00",
+      "message": "New 10 budget/concurrency/retry tests passed; no repeated P0 GPU tests"
+    }
+  ],
+  "created_UTC": "2026-11-12T05:26:04.803916+00:00"
+}

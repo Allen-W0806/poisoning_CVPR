@@ -1,0 +1,31 @@
+{
+  "name": "phase2_clean_vqa_frozen_v1",
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "model_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "system_prompt": "Answer the question using only a short word or phrase. Do not include an explanation.",
+  "do_sample": false,
+  "max_new_tokens": 64,
+  "precision": "bf16_if_supported",
+  "seed": 42,
+  "min_pixels": 4096,
+  "max_pixels": 262144,
+  "micro_batch": 1,
+  "extraction": "strip outer whitespace only; no label-aware or explanatory-answer parsing",
+  "scorer": "official_vqa_upstream_py3_v1",
+  "reference": {
+    "repository": "GT-Vision-Lab/VQA",
+    "commit": "a013f0043c1e2cdc995922dfe257f7149aa9af06",
+    "source_url": "https://raw.githubusercontent.com/GT-Vision-Lab/VQA/a013f0043c1e2cdc995922dfe257f7149aa9af06/PythonEvaluationTools/vqaEvaluation/vqaEval.py",
+    "original_sha256": "f08edfcad5be0112500993e245c706b6cb928eadebe203f89f838e5e0d04bec8",
+    "converted_sha256": "afbf0df6385e6ec431a205fd76f7ae9fbccca09b0bd692fd97136a076c5a6063",
+    "conversion": "lib2to3 all standard fixes; tabs expanded to 4 spaces; no scoring changes",
+    "license": "upstream BSD-style license retained as LICENSE_VQA.txt"
+  },
+  "split_hashes": {
+    "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+    "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044",
+    "test": "996727456ddbe4ce97ac782241c4ffa1c3f9ed8723383f26b58cf30eac18317b"
+  },
+  "test_scope": "300 internal held-out questions from official train2014; not official test server",
+  "heldout_rule": "evaluate once after development with this same frozen protocol; never used for selection"
+}

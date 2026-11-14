@@ -1,0 +1,32 @@
+{
+  "vae_roundtrip": {
+    "SSIM": 0.6527596861124039,
+    "LPIPS": 0.08223142102360725,
+    "luminance_delta": -0.006543643772602081,
+    "clipped_channel_fraction": 0.012216372675796366
+  },
+  "native_20": {
+    "SSIM": 0.5520830079913139,
+    "LPIPS": 0.1749967485666275,
+    "luminance_delta": -0.02802460640668869,
+    "clipped_channel_fraction": 0.043510366569552546
+  },
+  "native_30": {
+    "SSIM": 0.5655525773763657,
+    "LPIPS": 0.16760232485830784,
+    "luminance_delta": -0.025375068187713623,
+    "clipped_channel_fraction": 0.036475963804141635
+  },
+  "native_50": {
+    "SSIM": 0.5704669132828712,
+    "LPIPS": 0.15547789074480534,
+    "luminance_delta": -0.026174351572990417,
+    "clipped_channel_fraction": 0.03441529745251925
+  },
+  "ddim_30": {
+    "SSIM": 0.5526869967579842,
+    "LPIPS": 0.19662687741219997,
+    "luminance_delta": -0.009601987898349762,
+    "clipped_channel_fraction": 0.03978556074118145
+  }
+}

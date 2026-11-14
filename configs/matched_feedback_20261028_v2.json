@@ -1,0 +1,96 @@
+{
+  "schema": "matched_benign_feedback_v1",
+  "run_id": "matched_feedback_20261028_v2",
+  "selection_seed": 202610281,
+  "pilot_sources": 24,
+  "main_sources": 160,
+  "pilot_category_quotas": {
+    "yes/no": 8,
+    "number": 8,
+    "other": 8
+  },
+  "main_category_quotas": {
+    "yes/no": 53,
+    "number": 53,
+    "other": 54
+  },
+  "minimum_human_answer_agreement": 6,
+  "primary_conditions": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "auxiliary_conditions": [
+    "C5"
+  ],
+  "conditions": {
+    "C0": "original unmodified RGB image",
+    "C1": "pixel-exact identity PNG; encoding changes only",
+    "C2": "PIL.ImageEnhance.Brightness factor 1.03 on original RGB pixels",
+    "C3": "PIL.ImageEnhance.Contrast factor 1.03 on original RGB pixels",
+    "C4": "frozen pinned InstructPix2Pix lighting instruction, seed 42",
+    "C5": "auxiliary geometry-only IP2Pix preprocessing control, no generation"
+  },
+  "editor": {
+    "model_id": "timbrooks/instruct-pix2pix",
+    "revision": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+    "variant": "fp16",
+    "precision": "bf16",
+    "image_resolution": 256,
+    "num_inference_steps": 10,
+    "guidance_scale": 7.5,
+    "image_guidance_scale": 1.5,
+    "seed": 42,
+    "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged."
+  },
+  "vlm": {
+    "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+    "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "max_new_tokens": 32,
+    "min_pixels": 4096,
+    "max_pixels": 262144,
+    "physical_microbatch": 1,
+    "do_sample": false
+  },
+  "evaluation_seeds": [
+    42,
+    123,
+    3407
+  ],
+  "primary_evaluation_seed": 42,
+  "repeat_sources_per_phase": 6,
+  "repeat_generation_sources_per_phase": 6,
+  "bootstrap_resamples": 10000,
+  "permutation_resamples": 10000,
+  "analysis_seed": 202610282,
+  "alpha": 0.05,
+  "primary_comparisons": [
+    "C1-C0",
+    "C2-C0",
+    "C3-C0",
+    "C4-C0"
+  ],
+  "multiple_comparison": "Holm; pairwise exploratory primary-condition family separate from C4-C5 auxiliary",
+  "independence_unit": "source image, not condition or repeated seed",
+  "invalid_handling": "retain all; official score missing if inference/generation absent; failure-penalized utility=0 in all-attempted analysis, clearly labeled",
+  "semantic_secondary": "independent-human-verified common matched source subset only; BLOCKED if unavailable. Identity is pixel-exact by construction. Automated/assistant screening never certifies edits.",
+  "risk_flags_only": {
+    "SSIM_below": 0.7,
+    "absolute_mean_luminance_change_above": 20,
+    "darkening": true
+  },
+  "pilot_engineering_gate": "all source/manifest/hash associations exact; all requested records reconciled; C0-C1 pixel/score/answer equality; all frozen weight hashes invariant; no invalid images or nonfinite scores; seed/generation repeat exact",
+  "candidate_distinguishability_gate": "corrected paired difference with CI excluding zero is evidence of inherited-reference agreement differences only; useful semantically valid learning signal additionally requires independently reviewed labels and nondegenerate matched groups",
+  "gpu_budget_seconds": 3600,
+  "pilot_gpu_wall_seconds": 600,
+  "main_gpu_wall_seconds": 1200,
+  "training_enabled": false,
+  "source_urls": {
+    "annotations": "https://cvmlp.s3.amazonaws.com/vqa/mscoco/vqa/v2_Annotations_Train_mscoco.zip",
+    "questions": "https://cvmlp.s3.amazonaws.com/vqa/mscoco/vqa/v2_Questions_Train_mscoco.zip",
+    "images": "https://s3.amazonaws.com/images.cocodataset.org/train2014/"
+  },
+  "engineering_revision": "v1 exposure census blocked by CSV parser default field-size limit and an empty historical receipt. v2 raises parser capacity and records zero-byte receipts explicitly; science protocol unchanged."
+}

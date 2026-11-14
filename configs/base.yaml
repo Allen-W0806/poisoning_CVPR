@@ -1,0 +1,7 @@
+seed: 42
+scope: benign_augmentation_only
+model_config: configs/qwen3_vl_2b.yaml
+data_config: configs/data.yaml
+editor_config: configs/editor.yaml
+rl_config: configs/rl.yaml
+rsi_config: configs/rsi.yaml

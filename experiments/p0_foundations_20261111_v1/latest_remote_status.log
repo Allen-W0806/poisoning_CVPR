@@ -1,0 +1,143 @@
+90965|COMPLETED|170|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|2026-11-11T23:27:20|2026-11-11T23:30:10
+
+{
+  "started_UTC": "2026-11-12T04:27:21.840544+00:00",
+  "PID": 2754066,
+  "SLURM_JOB_ID": "90965",
+  "status": "P0_EXECUTED_VISUAL_REVIEW_REQUIRED",
+  "stages": {
+    "frozen_quality": {
+      "status": "MEASURED_VISUAL_REVIEW_REQUIRED",
+      "dev_sources": 4,
+      "configs": {
+        "vae_roundtrip": {
+          "SSIM": 0.6527596861124039,
+          "LPIPS": 0.08223142102360725,
+          "luminance_delta": -0.006543643772602081,
+          "clipped_channel_fraction": 0.012216372675796366
+        },
+        "native_20": {
+          "SSIM": 0.5520830079913139,
+          "LPIPS": 0.1749967485666275,
+          "luminance_delta": -0.02802460640668869,
+          "clipped_channel_fraction": 0.043510366569552546
+        },
+        "native_30": {
+          "SSIM": 0.5655525773763657,
+          "LPIPS": 0.16760232485830784,
+          "luminance_delta": -0.025375068187713623,
+          "clipped_channel_fraction": 0.036475963804141635
+        },
+        "native_50": {
+          "SSIM": 0.5704669132828712,
+          "LPIPS": 0.15547789074480534,
+          "luminance_delta": -0.026174351572990417,
+          "clipped_channel_fraction": 0.03441529745251925
+        },
+        "ddim_30": {
+          "SSIM": 0.5526869967579842,
+          "LPIPS": 0.19662687741219997,
+          "luminance_delta": -0.009601987898349762,
+          "clipped_channel_fraction": 0.03978556074118145
+        }
+      },
+      "optimizer_updates": 0,
+      "instruction_success_ground_truth": "NOT_AVAILABLE",
+      "P1_gate": "NOT_OPEN",
+      "base_variant": "fp16 weights, BF16 compute"
+    },
+    "clean_vlm": {
+      "status": "PASS_ENGINEERING_ONLY",
+      "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+      "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+      "seed": 42,
+      "retained_optimizer_steps": 2,
+      "actual_optimizer_calls": 3,
+      "train_sources_used": 4,
+      "dev": {
+        "n_sources": 4,
+        "mean": 0.975,
+        "source_SD": 0.04999999999999999,
+        "source_bootstrap_95CI": [
+          0.9249999999999999,
+          1.0
+        ],
+        "resamples": 10000,
+        "analysis_seed": 20261111,
+        "training_seed_uncertainty": "NOT_ESTIMATED"
+      },
+      "dev_before": {
+        "n_sources": 4,
+        "mean": 0.975,
+        "source_SD": 0.04999999999999999,
+        "source_bootstrap_95CI": [
+          0.9249999999999999,
+          1.0
+        ],
+        "resamples": 10000,
+        "analysis_seed": 20261111,
+        "training_seed_uncertainty": "NOT_ESTIMATED"
+      },
+      "test": {
+        "n_sources": 4,
+        "mean": 0.725,
+        "source_SD": 0.48562674281111556,
+        "source_bootstrap_95CI": [
+          0.25,
+          1.0
+        ],
+        "resamples": 10000,
+        "analysis_seed": 20261111,
+        "training_seed_uncertainty": "NOT_ESTIMATED"
+      },
+      "transfer_clean_QA": {
+        "n_sources": 4,
+        "mean": 1.0,
+        "source_SD": 0.0,
+        "source_bootstrap_95CI": [
+          1.0,
+          1.0
+        ],
+        "resamples": 10000,
+        "analysis_seed": 20261111,
+        "training_seed_uncertainty": "NOT_ESTIMATED"
+      },
+      "edited_dev_original_reference_consistency_proxy": {
+        "n_sources": 4,
+        "mean": 0.975,
+        "source_SD": 0.04999999999999999,
+        "source_bootstrap_95CI": [
+          0.9249999999999999,
+          1.0
+        ],
+        "resamples": 10000,
+        "analysis_seed": 20261111,
+        "training_seed_uncertainty": "NOT_ESTIMATED"
+      },
+      "fresh_object_next_step_exact": true,
+      "fresh_final_predictions_exact": true,
+      "frozen_base_unchanged": true,
+      "frozen_base_SHA256": "390847f15e9f70f12042da573246290cdef48b6150bbfce52b279d1a47ff0458",
+      "final_checkpoint_SHA256": "ace072cfbbb3150b334fd252deedd3198fa737281514d197c368390d00a3ed97",
+      "final_adapter_parameter_SHA256": "97f502db25806698c1a0285a112a42cdaaae4c5b3122c12f3957a8c90298e942",
+      "peak_GPU_bytes": 8599158272,
+      "full_model_training": false,
+      "scientific_learning_benefit": "NOT_ESTABLISHED",
+      "independent_task_family_RSI": "NOT_RUN"
+    }
+  },
+  "P1_launched": false,
+  "protocol_SHA256": "d991e10ed9428a306f9cdf73af77dfe0514aa2128f5b1664e8e1c0bacfb2a0dd",
+  "manifest_SHA256": "fa3126f4618eaab5d0e42ce61a077e43c7e2e5644b48090423938ee0dc77d4a9",
+  "GPU": {
+    "name": "NVIDIA A100 80GB PCIe",
+    "initial_free_bytes": 84500414464,
+    "total_bytes": 85094825984,
+    "visible": "0"
+  },
+  "elapsed_seconds": 166.80443341797218,
+  "finished_UTC": "2026-11-12T04:30:08.643951+00:00",
+  "peak_GPU_allocated_bytes": 8599158272
+}
+{"UTC": "2026-11-12T04:30:08.508618+00:00", "kind": "clean_evaluation", "label": "fresh_reload_dev", "n_sources": 4, "mean": 0.975, "source_SD": 0.04999999999999999, "source_bootstrap_95CI": [0.9249999999999999, 1.0], "resamples": 10000, "analysis_seed": 20261111, "training_seed_uncertainty": "NOT_ESTIMATED"}
+{"UTC": "2026-11-12T04:30:08.616136+00:00", "kind": "clean_complete", "status": "PASS_ENGINEERING_ONLY", "model_id": "Qwen/Qwen3-VL-2B-Instruct", "revision": "89644892e4d85e24eaac8bacfd4f463576704203", "seed": 42, "retained_optimizer_steps": 2, "actual_optimizer_calls": 3, "train_sources_used": 4, "dev": {"n_sources": 4, "mean": 0.975, "source_SD": 0.04999999999999999, "source_bootstrap_95CI": [0.9249999999999999, 1.0], "resamples": 10000, "analysis_seed": 20261111, "training_seed_uncertainty": "NOT_ESTIMATED"}, "dev_before": {"n_sources": 4, "mean": 0.975, "source_SD": 0.04999999999999999, "source_bootstrap_95CI": [0.9249999999999999, 1.0], "resamples": 10000, "analysis_seed": 20261111, "training_seed_uncertainty": "NOT_ESTIMATED"}, "test": {"n_sources": 4, "mean": 0.725, "source_SD": 0.48562674281111556, "source_bootstrap_95CI": [0.25, 1.0], "resamples": 10000, "analysis_seed": 20261111, "training_seed_uncertainty": "NOT_ESTIMATED"}, "transfer_clean_QA": {"n_sources": 4, "mean": 1.0, "source_SD": 0.0, "source_bootstrap_95CI": [1.0, 1.0], "resamples": 10000, "analysis_seed": 20261111, "training_seed_uncertainty": "NOT_ESTIMATED"}, "edited_dev_original_reference_consistency_proxy": {"n_sources": 4, "mean": 0.975, "source_SD": 0.04999999999999999, "source_bootstrap_95CI": [0.9249999999999999, 1.0], "resamples": 10000, "analysis_seed": 20261111, "training_seed_uncertainty": "NOT_ESTIMATED"}, "fresh_object_next_step_exact": true, "fresh_final_predictions_exact": true, "frozen_base_unchanged": true, "frozen_base_SHA256": "390847f15e9f70f12042da573246290cdef48b6150bbfce52b279d1a47ff0458", "final_checkpoint_SHA256": "ace072cfbbb3150b334fd252deedd3198fa737281514d197c368390d00a3ed97", "final_adapter_parameter_SHA256": "97f502db25806698c1a0285a112a42cdaaae4c5b3122c12f3957a8c90298e942", "peak_GPU_bytes": 8599158272, "full_model_training": false, "scientific_learning_benefit": "NOT_ESTABLISHED", "independent_task_family_RSI": "NOT_RUN"}

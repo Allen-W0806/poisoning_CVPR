@@ -1,0 +1,7 @@
+dataset: VQAv2
+version: train2014-2017-04-26
+seed: 42
+split_unit: image_id
+sizes: {train: 1000, validation: 200, test: 300}
+internal_test_is_official_test: false
+fixture: synthetic_v1

@@ -1,0 +1,20 @@
+phase: 4
+version: uniform8_measured_budget_revision
+seeds: [42, 123]
+max_optimizer_updates: 8
+logical_batch_size: 10
+physical_micro_batch_size: 1
+gradient_accumulation_steps: 10
+evaluation_updates: [2, 4, 6, 8]
+fixed_development_images: 10
+initial_learning_rate: 1.0e-5
+lora_rank: 8
+lora_alpha: 16
+max_additional_gpu_seconds: 14400
+max_diagnostic_gpu_seconds: 2700
+measured_generation_seconds: 5.862313653428205
+measured_judging_seconds: 11.350065878567923
+measured_optimizer_seconds: 138.60242047905922
+reason: all_four_ten_update_arms_estimate_exceeds_hard_cap
+original_driver_retained: scripts/run_phase4.py
+execution_driver: scripts/run_phase4_budgeted.py

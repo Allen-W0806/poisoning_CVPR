@@ -1,0 +1,10 @@
+{
+  "phase": "completed",
+  "updated_unix": 1794461422.6911166,
+  "elapsed_seconds": 44.43165373802185,
+  "job_id": "91023",
+  "stage": "canary",
+  "attempt": 0,
+  "GPU_allocated_bytes": 4336083456,
+  "GPU_reserved_bytes": 8868855808
+}

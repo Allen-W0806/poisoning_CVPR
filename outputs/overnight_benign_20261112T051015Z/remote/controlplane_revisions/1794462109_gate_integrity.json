@@ -1,0 +1,5 @@
+{
+  "change": "Require checkpoint byte integrity at canary/prior stage success and safe retry gates",
+  "worker_protocol_data_changed": false,
+  "source_SHA256": "07c995eb6c15e92ec2fab073e5949cd749b9a83e416e5c82d6fc41731dc1a637"
+}

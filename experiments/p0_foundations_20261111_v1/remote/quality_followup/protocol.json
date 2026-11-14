@@ -1,0 +1,22 @@
+{
+  "manifest_SHA256": "fa3126f4618eaab5d0e42ce61a077e43c7e2e5644b48090423938ee0dc77d4a9",
+  "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.",
+  "steps": 30,
+  "max_side": 512,
+  "data": "same 4 dev sources; test closed",
+  "configs": [
+    {
+      "name": "native_aspect_30",
+      "text_guidance": 7.5,
+      "image_guidance": 1.5
+    },
+    {
+      "name": "native_aspect_preserve_30",
+      "text_guidance": 5.0,
+      "image_guidance": 3.0
+    }
+  ],
+  "GPU_cap_seconds": 300,
+  "prior_GPU_seconds": 170,
+  "P1_launched": false
+}

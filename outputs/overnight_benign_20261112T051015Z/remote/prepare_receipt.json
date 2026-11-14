@@ -1,0 +1,10 @@
+{
+  "status": "PASS_DATA_PREPARED",
+  "manifest_SHA256": "17d7362a01d7cfc0291825da876b5e8201fcba324d7fd6f526db27b532af76b8",
+  "protocol_SHA256": "51cf457c5dce43daf1bfd3080999862585cc0acc7e405358036ff1ef5ab9a763",
+  "source_images": 1792,
+  "image_bytes": 279061722,
+  "P1_pairs": 256,
+  "P1_GPU_status": "BLOCKED",
+  "elapsed_seconds": 182.9212110042572
+}

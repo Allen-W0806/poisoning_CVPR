@@ -1,0 +1,12 @@
+automatic_launch: false
+stability_after_complete_stage_a:
+  logical_batch_size: [10, 20]
+  generator_learning_rate: [1.0e-5, 5.0e-5]
+  lightweight_controller_learning_rate: [1.0e-5, 5.0e-5, 1.0e-4]
+  seeds: [42, 123]
+  requirement: freeze common total compute and data exposure; generator RL remains blocked until validated
+ablations:
+  arms: [no_rl, rl_only, rl_rsi]
+  remove_reward_components: [semantic_validity, compute_cost]
+  adapter_rank: [4, 8, 16]
+  note: removing semantics is a diagnostic ablation only, never a safety or valid-image guarantee

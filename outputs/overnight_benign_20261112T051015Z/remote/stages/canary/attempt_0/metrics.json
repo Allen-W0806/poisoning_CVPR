@@ -1,0 +1,48 @@
+{
+  "stage": "canary",
+  "attempt": 0,
+  "job_id": "91023",
+  "status": "PASS",
+  "started_UTC": "2026-11-12T05:29:38.259480+00:00",
+  "PID": 628358,
+  "actual_optimizer_calls": 3,
+  "GPU": {
+    "name": "NVIDIA A100 80GB PCIe",
+    "total_bytes": 85094825984,
+    "initial_free_bytes": 84500414464,
+    "physical_job_GPU": "1"
+  },
+  "frozen_base_SHA256": "390847f15e9f70f12042da573246290cdef48b6150bbfce52b279d1a47ff0458",
+  "resume_exact": true,
+  "public_adapter_load_exact": true,
+  "dev_before": {
+    "n_sources": 8,
+    "mean": 0.5,
+    "source_SD": 0.5345224838248488,
+    "source_bootstrap_95CI": [
+      0.125,
+      0.875
+    ],
+    "resamples": 10000,
+    "analysis_seed": 20261112,
+    "training_seed_uncertainty": "NOT_ESTIMATED"
+  },
+  "dev_after": {
+    "n_sources": 8,
+    "mean": 0.5,
+    "source_SD": 0.5345224838248488,
+    "source_bootstrap_95CI": [
+      0.125,
+      0.875
+    ],
+    "resamples": 10000,
+    "analysis_seed": 20261112,
+    "training_seed_uncertainty": "NOT_ESTIMATED"
+  },
+  "retained_steps": 2,
+  "checkpoint": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/canary/attempt_0/checkpoints/canary_final",
+  "profile_seconds": 44.43162751197815,
+  "finished_UTC": "2026-11-12T05:30:22.702486+00:00",
+  "elapsed_seconds": 44.44304704666138,
+  "peak_GPU_allocated_bytes": 8598633984
+}

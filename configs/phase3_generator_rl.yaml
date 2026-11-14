@@ -1,0 +1,31 @@
+phase: 3
+seed: 42
+logical_batch_size: 10
+physical_micro_batch_size: 1
+gradient_accumulation_steps: 10
+precision: bf16
+adapter_compute_precision: fp32
+cfg_execution: sequential
+bf16_reduced_precision_reduction: false
+lora_rank: 8
+lora_alpha: 16
+optimizer: adamw
+learning_rate: 1.0e-5
+weight_decay: 0.0
+max_grad_norm: 1.0
+initial_optimizer_updates: 3
+gradient_checkpointing: false
+checkpoint_every_update: true
+algorithm: DDPO_score_function_single_on_policy_pass
+num_inference_steps: 10
+eta: 1.0
+advantage_baseline: 0.0
+advantage_scale: 1.0
+reward:
+  semantic_weight: 1.0
+  answer_consistency_weight: 0.5
+  distortion_weight: 0.2
+  compute_cost_weight: 0.1
+  uncertainty_weight: 1.0
+  normalization: fixed_reference
+  backdoor_asr_training: false

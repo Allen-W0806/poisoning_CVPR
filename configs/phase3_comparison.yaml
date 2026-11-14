@@ -1,0 +1,44 @@
+status: PREPARED_NOT_RUN
+seed: 42
+additional_seeds: [123, 3407]
+selection_split: validation
+final_test_access: prohibited_during_selection
+generator_revision: 31519b5cb02a7fd89b906d88731cd4d6a7bbf88d
+generator_scheduler: phase3_DDIM_eta1_offset1_alpha0_sequential_CFG
+qwen_revision: 89644892e4d85e24eaac8bacfd4f463576704203
+reward_definition: preserved_src_rl_reward_validation_reward
+permitted_tasks:
+  - Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.
+  - Slightly soften the lighting. Keep all objects, their colors, counts and positions unchanged.
+  - Make a subtle contrast adjustment. Keep all objects, their colors, counts and positions unchanged.
+budget:
+  source_images_per_training_batch: 10
+  optimizer_updates_per_fixed_arm: 6
+  total_source_exposures_per_arm: 60
+  validation_source_images: 10
+  validation_lookups_per_arm: 2
+  actual_gpu_seconds_cap_per_arm: 1800
+  cap_basis: measured_batch10_sampling_judging_and_106_second_optimizer_updates
+  charge_generation_judging_restart_failures_selection: true
+  matching_rule: report_both_exposure_matched_and_gpu_time_capped_estimands
+  early_stopping: preserve_all_data_when_time_cap_reached
+methods:
+  M0: {generator: frozen, trainable: none, role: matched_inference_reference}
+  M1: {generator: frozen, trainable: categorical_instruction_controller, estimand: instruction_selection}
+  M2: {generator: attention_LoRA, objective: supervised_DDPM_MSE, estimand: paired_brightness_target_fitting}
+  M3: {generator: attention_LoRA, objective: DDPO_SF_terminal_reward, estimand: reward_optimized_diffusion_transitions}
+  M4: {generator: selected_M3, objective: unchanged, trainable: same_LoRA, estimand: learning_rate_selection_inclusive_of_overhead}
+rsi:
+  allowed_revision: learning_rate_only
+  previous_learning_rate: 1.0e-5
+  proposed_learning_rate: 5.0e-6
+  common_initial_state: true
+  budget_split: baseline_3_updates_plus_candidate_3_updates_from_common_initial_state_60_total_exposures_with_2_total_validation_lookups
+  acceptance: requires_validation_gain_exceeding_measured_repeatability_and_independent_semantic_gate
+  rejected_candidates: preserve_checkpoint_cost_and_reason_then_restore_base
+limitations:
+  - M1 M2 and M3 have different objectives; matching budget does not make optimizer estimands identical.
+  - Smoke uses one fixed instruction; extending to the three permitted tasks requires explicit trajectory-contract validation.
+  - M0 has no optimization exposures; report matched inference count and total costs rather than fictitious training updates.
+  - Existing Phase2 Euler runs are historical and not directly scheduler-matched controls.
+  - No performance superiority or independent semantic preservation has been established.

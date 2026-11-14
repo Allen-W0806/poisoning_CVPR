@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "valid_complete_fixture_accepted": true,
+  "corrupted_fixture_rejected": true,
+  "GPU_allocations": 0
+}

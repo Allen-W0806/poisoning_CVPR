@@ -1,0 +1,15 @@
+{
+  "checked_UTC": "2026-11-12T08:03:24.7993740Z",
+  "local_run_bytes": 5623805.0,
+  "disk": [
+    {
+      "Name": "C",
+      "Free": 62443053056
+    },
+    {
+      "Name": "H",
+      "Free": 228130119680
+    }
+  ],
+  "large_C_artifacts_created": false
+}

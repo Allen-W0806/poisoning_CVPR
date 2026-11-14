@@ -1,0 +1,14 @@
+editor:
+  backend: instructpix2pix
+  model_id: timbrooks/instruct-pix2pix
+  revision_source: reports/phase2_model_metadata.json
+  image_resolution: 512
+  inference_batch_size: 1
+  precision: bf16
+  seed: 42
+  candidate_inference_steps: [10, 20, 30]
+  initial_inference_steps: 10
+  guidance_scale: 7.5
+  image_guidance_scale: 1.5
+  output_format: png
+  save_metadata: true

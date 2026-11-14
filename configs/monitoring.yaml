@@ -1,0 +1,28 @@
+monitoring:
+  enabled: true
+  interval_hours: 2
+  project_root: /storage/home/ydk297/projects/poisoning
+  max_auto_retries_per_failure: 2
+  max_concurrent_monitor_runs: 1
+  preserve_failed_runs: true
+  preserve_checkpoints: true
+  allow_automatic_resource_adjustment: true
+  allow_automatic_code_repair: true
+  allow_scientific_objective_changes: false
+  allow_reward_definition_changes: false
+  allow_dataset_changes: false
+  allow_test_protocol_changes: false
+  allow_unbounded_gpu_jobs: false
+  max_recovery_job_minutes: 15
+  total_phase_gpu_seconds: 7200
+  stale_progress_minutes: 30
+  minimum_free_disk_bytes: 2147483648
+  scheduler:
+    method: slurm_cpu_successor
+    partition: epyc-cpu
+    account: allusers
+    cpus: 1
+    memory: 2G
+    minutes: 5
+    name: poisoning-monitor
+    comment: poisoning-monitor-v1

@@ -1,0 +1,23 @@
+{
+  "audit": {
+    "source_IDs": 16,
+    "content_hashes": 16,
+    "question_IDs": 16,
+    "split_sizes": {
+      "train": 4,
+      "dev": 4,
+      "test": 4,
+      "transfer": 4
+    },
+    "exact_ID_content_disjoint": true,
+    "perceptual_near_duplicate_check": "NOT_RUN",
+    "pretraining_exposure": "UNKNOWN"
+  },
+  "lock": {
+    "manifest_SHA256": "fa3126f4618eaab5d0e42ce61a077e43c7e2e5644b48090423938ee0dc77d4a9",
+    "protocol_SHA256": "d991e10ed9428a306f9cdf73af77dfe0514aa2128f5b1664e8e1c0bacfb2a0dd",
+    "selection_final_before_any_model_call": true,
+    "downloaded_original_image_bytes": 2392145
+  }
+}
+

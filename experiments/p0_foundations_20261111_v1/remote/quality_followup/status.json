@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETED_MEASURED",
+  "SLURM_JOB_ID": "90978",
+  "optimizer_updates": 0,
+  "observations": 8,
+  "summary": {
+    "native_aspect_30": {
+      "SSIM": 0.5647989436984062,
+      "LPIPS": 0.1358832586556673,
+      "luminance_delta": -0.03094515949487686
+    },
+    "native_aspect_preserve_30": {
+      "SSIM": 0.5067048445343971,
+      "LPIPS": 0.2268395908176899,
+      "luminance_delta": 0.0013571977615356445
+    }
+  },
+  "elapsed_seconds": 49.50026783486828
+}

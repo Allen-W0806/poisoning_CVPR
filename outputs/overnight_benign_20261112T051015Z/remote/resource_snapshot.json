@@ -1,0 +1,8 @@
+{
+  "checked_unix": 1794462171.7349815,
+  "run_bytes": 528666406,
+  "filesystem": "Filesystem           1B-blocks            Used       Available Use% Mounted on\nmmfs1          621601926152192 334198762110976 287403164041216  54% /storage/home\n",
+  "sacct": "91023|COMPLETED|45|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|2026-11-12T00:29:38|2026-11-12T00:30:23\n91029|COMPLETED|263|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|2026-11-12T00:30:37|2026-11-12T00:35:00\n91043|RUNNING|465|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|2026-11-12T00:35:06|Unknown\n",
+  "scratch_parent": "/storage/home/ydk297/projects/poisoning/tmp/overnight_benign_20261112T051015Z",
+  "retention": "Real source photos, paired targets, checkpoints, model outputs, logs and code retained as evidence; shared weights not duplicated."
+}

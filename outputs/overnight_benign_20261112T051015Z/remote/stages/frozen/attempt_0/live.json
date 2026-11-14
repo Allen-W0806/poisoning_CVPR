@@ -1,0 +1,10 @@
+{
+  "phase": "completed",
+  "updated_unix": 1794461699.3795025,
+  "elapsed_seconds": 262.1785342693329,
+  "job_id": "91029",
+  "stage": "frozen",
+  "attempt": 0,
+  "GPU_allocated_bytes": 4289683968,
+  "GPU_reserved_bytes": 4341104640
+}

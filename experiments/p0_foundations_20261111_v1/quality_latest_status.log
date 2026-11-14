@@ -1,0 +1,23 @@
+90978|COMPLETED|57|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|2026-11-11T23:37:21|2026-11-11T23:38:18
+
+{
+  "status": "COMPLETED_MEASURED",
+  "SLURM_JOB_ID": "90978",
+  "optimizer_updates": 0,
+  "observations": 8,
+  "summary": {
+    "native_aspect_30": {
+      "SSIM": 0.5647989436984062,
+      "LPIPS": 0.1358832586556673,
+      "luminance_delta": -0.03094515949487686
+    },
+    "native_aspect_preserve_30": {
+      "SSIM": 0.5067048445343971,
+      "LPIPS": 0.2268395908176899,
+      "luminance_delta": 0.0013571977615356445
+    }
+  },
+  "elapsed_seconds": 49.50026783486828
+}
+{"config": "native_aspect_preserve_30", "sample_id": "535250008", "image_id": "535250", "source_path": "quality_followup/sources/535250008.png", "path": "quality_followup/images/native_aspect_preserve_30/535250008.png", "source_SHA256": "282af4a08f41062c6376ec4634f7552a34a51a131949b0a514996f7a87c7b8a7", "image_SHA256": "2999161c8361fa408f787b1ef99dfa6cef480f7415fb23c7ec6911b7632d88fb", "dimensions": [512, 336], "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.", "seed": 42000002, "steps": 30, "settings": {"name": "native_aspect_preserve_30", "text_guidance": 5.0, "image_guidance": 3.0}, "SSIM": 0.597260057926178, "LPIPS": 0.16917134821414948, "luminance_delta": -0.000530540943145752, "seconds": 3.431347999954596, "optimizer_updates": 0}
+{"config": "native_aspect_preserve_30", "sample_id": "478576002", "image_id": "478576", "source_path": "quality_followup/sources/478576002.png", "path": "quality_followup/images/native_aspect_preserve_30/478576002.png", "source_SHA256": "0749221ffbb408de22443291a276048f2ca38ba5801fe8b50b0917279b1f5133", "image_SHA256": "2401affa7b034f891fecd2674986761e9e378d16f58fd8c0135b6ad8ad7b7791", "dimensions": [368, 512], "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.", "seed": 42000003, "steps": 30, "settings": {"name": "native_aspect_preserve_30", "text_guidance": 5.0, "image_guidance": 3.0}, "SSIM": 0.6187943816184998, "LPIPS": 0.17478814721107483, "luminance_delta": 0.0028153657913208008, "seconds": 3.46244521997869, "optimizer_updates": 0}

@@ -1,0 +1,8 @@
+{
+  "method": "64-bit horizontal dHash screen only",
+  "threshold_flag_leq": 5,
+  "pairs": 120,
+  "minimum_hamming": 19,
+  "flagged_pairs": [],
+  "scope": "16 current sources only; not a perceptual uniqueness guarantee or historical exposure audit"
+}

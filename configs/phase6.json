@@ -1,0 +1,12 @@
+{
+  "schema_version": "phase6_cpu_progression_v1",
+  "scientific_gpu_budget_seconds": 0,
+  "allow_gpu_submission": false,
+  "maximum_retries_per_signature": 2,
+  "cpu_stage_wall_budget_seconds": 600,
+  "review_pair_limit": 24,
+  "investigation_sources": 8,
+  "gate_sources": 24,
+  "logical_batch_size": 10,
+  "monitor_interval_hours": 2
+}

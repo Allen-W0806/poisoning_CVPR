@@ -1,0 +1,204 @@
+"""CPU-only Slurm dispatcher: one GPU, immutable source, fail-closed accounting."""
+import argparse
+import fcntl
+import json
+import os
+from pathlib import Path
+import shlex
+import subprocess
+import sys
+import time
+from datetime import datetime,timezone
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+from src.operations.night_budget import accounting,can_submit,safe_retry,TERMINAL
+from src.data.p0_protocol import sha256
+
+
+def put(path,obj):
+    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True);tmp=path.with_suffix(path.suffix+'.partial')
+    tmp.write_text(json.dumps(obj,indent=2),encoding='utf-8');os.replace(tmp,path)
+
+
+def command(args,timeout=25):
+    return subprocess.check_output(args,text=True,stderr=subprocess.STDOUT,timeout=timeout)
+
+
+def checkpoint_health(path):
+    path=Path(path);receipt=json.loads((path/'integrity.json').read_text());state=path/'training_state.pt'
+    if sha256(state)!=receipt['training_state_SHA256']:raise ValueError('Checkpoint state SHA mismatch')
+    for name,digest in receipt['adapter_files'].items():
+        if sha256(path/'adapter'/name)!=digest:raise ValueError('Public adapter SHA mismatch')
+    return {'status':'PASS_BYTES_AND_ADAPTER_SHA','state_mtime_unix':state.stat().st_mtime,'state_bytes':state.stat().st_size,'adapter_files_checked':len(receipt['adapter_files'])}
+
+
+def states_for(records):
+    ids=[r['job_id'] for r in records if r.get('job_id')]
+    if not ids:return {}
+    text=command(['sacct','-X','-nP','-j',','.join(ids),'--format=JobID,State,ElapsedRaw,AllocTRES,Start,End,NodeList'])
+    result={}
+    for line in text.splitlines():
+        parts=line.split('|')
+        if len(parts)<7 or parts[0] not in ids:continue
+        jid,state,elapsed,tres,start,end,node=parts[:7]
+        result[jid]={'state':state.split()[0].rstrip('+'),'elapsed_seconds':int(elapsed or 0),'AllocTRES':tres,'start':start,'end':end,'node':node}
+    queue=command(['squeue','-h','-u','ydk297','-o','%i|%T|%M|%N'])
+    for line in queue.splitlines():
+        jid,state,elapsed,node=line.split('|')
+        if jid not in ids:continue
+        if jid in result:result[jid].update(state=state,node=node)
+        else:result[jid]={'state':state,'elapsed_seconds':0,'AllocTRES':'ACCOUNTING_PENDING','node':node}
+    return result
+
+
+def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--campaign',required=True);parser.add_argument('--initialize',action='store_true');a=parser.parse_args()
+    run=Path(a.campaign).resolve();assets=run.parents[1];code=run/'code';python=assets/'.venv-editor/bin/python'
+    os.chdir(code)
+    cfg=json.loads((run/'protocol.json').read_text());ledger_path=run/'ledger.json'
+    with (run/'dispatcher.lock').open('a') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX)
+        ledger=json.loads(ledger_path.read_text()) if ledger_path.exists() else {'run_id':run.name,'GPU_jobs':[],'CPU_jobs':[],'decisions':[],'created_UTC':datetime.now(timezone.utc).isoformat()}
+        def decision(message):
+            ledger['decisions'].append({'UTC':datetime.now(timezone.utc).isoformat(),'message':message});put(ledger_path,ledger)
+        def verify_source():
+            expected=json.loads((run/'source_hashes.json').read_text())
+            for name,digest in expected.items():
+                if sha256(code/name)!=digest:raise ValueError('Immutable source changed: '+name)
+        verify_source()
+        def submit(stage,attempt=0,dependency=None,resume=None):
+            gpu=stage not in ('prepare','dispatch')
+            tag=f'{run.name}:{stage}:{attempt}'+(':'+str(dependency) if dependency else '')
+            records=ledger['GPU_jobs'] if gpu else ledger['CPU_jobs']
+            if any(r['tag']==tag for r in records):raise RuntimeError('Duplicate submission tag')
+            # Check scheduler tags as well as the durable ledger, including an
+            # interrupted submit whose stdout was lost. Never resubmit blind.
+            if tag in command(['squeue','-h','-u',os.environ.get('USER','ydk297'),'-o','%i|%k']):raise RuntimeError('Scheduler already has submission tag')
+            wall=cfg['stage_wall_seconds'][stage] if gpu else (1800 if stage=='prepare' else 120)
+            if gpu:can_submit(ledger['GPU_jobs'],states_for(ledger['GPU_jobs']),stage,attempt,wall,cfg['budget_GPU_seconds'])
+            name=f'nvq-{stage}' if gpu else f'nvq-{stage}'
+            logs=run/'logs';logs.mkdir(exist_ok=True)
+            scratch=assets/'tmp'/run.name/(stage+'_'+str(attempt))
+            cleanup="from pathlib import Path;import shutil;p=Path("+repr(str(scratch))+").resolve();r=Path("+repr(str(assets/'tmp'/run.name))+").resolve();assert p.is_relative_to(r) and p!=r;shutil.rmtree(p,ignore_errors=True)"
+            args=[str(python),'-B',str(code/'scripts/night_vqa_worker.py'),'--campaign',str(run),'--stage',stage,'--attempt',str(attempt)]
+            if resume:args+=['--resume',str(resume)]
+            if stage=='prepare':args=[str(python),'-B',str(code/'scripts/prepare_night_benign.py'),'--campaign',str(run),'--assets-root',str(assets)]
+            if stage=='dispatch':args=[str(python),'-B',str(code/'scripts/night_campaign_remote.py'),'--campaign',str(run)]
+            lines=['#!/bin/bash',f'#SBATCH --job-name={name}','#SBATCH --account=allusers',f'#SBATCH --partition={"epyc-gpu" if gpu else "epyc-cpu"}',f'#SBATCH --cpus-per-task={4 if stage!="dispatch" else 1}',f'#SBATCH --mem={"48G" if gpu else "8G"}',f'#SBATCH --time={wall//3600:02d}:{wall%3600//60:02d}:{wall%60:02d}',f'#SBATCH --comment={tag}',f'#SBATCH --chdir={code}',f'#SBATCH --output={logs}/%x-%j.log',f'#SBATCH --error={logs}/%x-%j.log']
+            if gpu:lines+=['#SBATCH --gres=gpu:tesla_a100_80gb:1','#SBATCH --no-requeue']
+            if dependency:lines+=[f'#SBATCH --dependency=afterany:{dependency}']
+            lines+=['set -euo pipefail','export PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 TOKENIZERS_PARALLELISM=false','export OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 CUBLAS_WORKSPACE_CONFIG=:4096:8','export HF_HOME=/storage/home/ydk297/.cache/huggingface HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 HF_DATASETS_OFFLINE=1',f'mkdir -p {shlex.quote(str(scratch))}',f'export TMPDIR={shlex.quote(str(scratch))}','trap '+shlex.quote(shlex.join([str(python),'-c',cleanup]))+' EXIT',shlex.join(args),'']
+            script=run/'slurm'/f'{stage}_{attempt}_{dependency or "root"}.sbatch';script.parent.mkdir(exist_ok=True);script.write_text('\n'.join(lines))
+            record={'stage':stage,'attempt':attempt,'tag':tag,'reserved_seconds':wall if gpu else 0,'wall_seconds':wall,'script':str(script),'dependency':dependency,'submitted_UTC':datetime.now(timezone.utc).isoformat(),'job_id':None}
+            records.append(record);put(ledger_path,ledger) # durable reservation before mutation
+            try:
+                result=subprocess.run(['sbatch','--parsable',str(script)],text=True,capture_output=True,timeout=25)
+                if result.returncode:
+                    record.update(submission_failed_no_job=True,error=result.stderr);put(ledger_path,ledger);raise RuntimeError('sbatch rejected: '+result.stderr)
+                jid=result.stdout.strip().split(';')[0]
+                if not jid.isdigit():raise RuntimeError('Ambiguous sbatch response; reservation retained')
+                record['job_id']=jid;put(ledger_path,ledger)
+            except Exception:put(ledger_path,ledger);raise
+            if stage!='dispatch':submit('dispatch',dependency=jid)
+            return record
+        if a.initialize and not ledger['CPU_jobs']:
+            test=command([str(python),'-B','-m','unittest','tests.test_night_budget','-v'],60)
+            (run/'new_CPU_guard_tests.log').write_text(test)
+            decision('New 10 budget/concurrency/retry tests passed; no repeated P0 GPU tests')
+            submit('prepare')
+        states=states_for(ledger['GPU_jobs']);cpu_states=states_for(ledger['CPU_jobs'])
+        issues=[];action='WAIT';budget=accounting(ledger['GPU_jobs'],states)
+        prepare=run/'prepare_receipt.json'
+        if not prepare.exists():
+            prep=[r for r in ledger['CPU_jobs'] if r['stage']=='prepare']
+            if prep and cpu_states.get(prep[-1].get('job_id'),{}).get('state') in TERMINAL:issues.append('CPU data preparation failed or produced no final receipt; GPU blocked')
+            action='WAIT_CPU_DATA_PREPARATION'
+        elif not budget['active_GPU_jobs']:
+            stages=['canary','frozen']+['seed'+str(s) for s in cfg['seeds']]
+            for stage in stages:
+                success=run/'stage_success'/f'{stage}.json'
+                if success.exists():
+                    receipt=json.loads(success.read_text())
+                    if receipt['status']!='PASS' or sha256(receipt['metrics_path'])!=receipt['metrics_SHA256']:raise ValueError('Stage success evidence mismatch')
+                    matching=[r for r in ledger['GPU_jobs'] if r['stage']==stage and r['attempt']==receipt['attempt']]
+                    if not matching or states.get(matching[-1]['job_id'],{}).get('state')!='COMPLETED':
+                        issues.append(stage+': success marker exists but Slurm is not COMPLETED; manual review');action='BLOCK_DEPENDENT_GPU_STAGES';break
+                    metrics=json.loads(Path(receipt['metrics_path']).read_text())
+                    if metrics.get('checkpoint'):checkpoint_health(metrics['checkpoint'])
+                    continue
+                prior=[r for r in ledger['GPU_jobs'] if r['stage']==stage]
+                if prior:
+                    last=prior[-1];status=states[last['job_id']]['state'];out=run/'stages'/stage/f'attempt_{last["attempt"]}'
+                    log='\n'.join(p.read_text(errors='replace')[-16000:] for p in (run/'logs').glob('*-'+last['job_id']+'.log'))
+                    metrics=json.loads((out/'metrics.json').read_text()) if (out/'metrics.json').exists() else {}
+                    updates=metrics.get('actual_optimizer_calls',0)
+                    livepath=run/'stage_live'/f'{stage}.json'
+                    if livepath.exists():updates=max(updates,json.loads(livepath.read_text()).get('actual_optimizer_calls',0))
+                    pointer=run/'latest_checkpoints'/f'{stage}.json';valid=False
+                    if pointer.exists():
+                        ptr=json.loads(pointer.read_text());cp=Path(ptr['path']);integrity=cp/'integrity.json'
+                        updates=max(updates,ptr['step'])
+                        valid=integrity.is_file() and sha256(cp/'training_state.pt')==ptr['state_SHA256']==json.loads(integrity.read_text())['training_state_SHA256'] and ptr['protocol_SHA256']==sha256(run/'protocol.json') and ptr['manifest_SHA256']==sha256(run/'manifest.json')
+                        if valid:
+                            try:checkpoint_health(cp)
+                            except Exception:valid=False
+                    retry,reason=safe_retry(last,status,log,valid,updates)
+                    # Canary has two branched update paths; do not replay it
+                    # from a mid-canary checkpoint as if it were step zero.
+                    if stage=='canary' and (updates>0 or pointer.exists()):retry=False;reason='canary_partial_branch_requires_manual_review'
+                    if retry:
+                        submit(stage,last['attempt']+1,resume=pointer if updates else None);action='SAFE_RETRY_'+stage
+                    else:issues.append(stage+': '+status+'; '+reason);action='BLOCK_DEPENDENT_GPU_STAGES'
+                else:
+                    submit(stage);action='SUBMITTED_'+stage
+                break
+            else:action='ALL_CLEAN_VQA_STAGES_COMPLETE'
+        else:action='WAIT_CURRENT_SINGLE_GPU_JOB'
+        states=states_for(ledger['GPU_jobs']);budget=accounting(ledger['GPU_jobs'],states)
+        jobs=[]
+        for record in ledger['GPU_jobs']:
+            item={**record,**states.get(record.get('job_id'),{})};stage=record['stage']
+            livepath=run/'stage_live'/f'{stage}.json'
+            if livepath.exists():
+                item['progress']=json.loads(livepath.read_text());age=time.time()-item['progress']['updated_unix'];item['progress_age_seconds']=age
+                if item.get('state')=='RUNNING' and age>1200:issues.append(stage+': no live progress for >20 min; diagnose, no blind restart')
+            pointer=run/'latest_checkpoints'/f'{stage}.json'
+            if pointer.exists():
+                item['latest_checkpoint']={**json.loads(pointer.read_text()),'pointer_mtime':pointer.stat().st_mtime}
+                try:item['latest_checkpoint']['health']=checkpoint_health(item['latest_checkpoint']['path'])
+                except Exception as error:issues.append(stage+': checkpoint integrity failure: '+repr(error));item['latest_checkpoint']['health']={'status':'FAIL','error':repr(error)}
+            logpaths=list((run/'logs').glob('*-'+str(record.get('job_id'))+'.log'))
+            item['log_tail']=logpaths[-1].read_text(errors='replace')[-5000:] if logpaths else ''
+            for token in ['out of memory','nonfinite','Traceback','PytorchStreamWriter','No space left on device']:
+                if token.lower() in item['log_tail'].lower():issues.append(stage+': '+token)
+            metric=run/'stages'/stage/f'attempt_{record["attempt"]}'/'metrics.json'
+            if metric.exists():
+                item['result']=json.loads(metric.read_text())
+                selected=item['result'].get('checkpoint')
+                if selected:
+                    try:item['selected_checkpoint_health']=checkpoint_health(selected)
+                    except Exception as error:issues.append(stage+': selected checkpoint integrity failure: '+repr(error))
+            jobs.append(item)
+        gpu_probe={}
+        running=[r for r in jobs if r.get('state')=='RUNNING']
+        if running:
+            try:gpu_probe={'method':'srun --overlap inside existing allocation; no new GPU allocation','output':command(['srun','--jobid='+running[0]['job_id'],'--overlap','--ntasks=1','--cpus-per-task=1','nvidia-smi','--query-gpu=index,name,utilization.gpu,memory.used,memory.total','--format=csv,noheader'],12)}
+            except Exception as error:gpu_probe={'status':'NOT_AVAILABLE','reason':str(error),'fallback':'worker live GPU memory plus sacct allocation'}
+        queue=command(['squeue','-h','-u','ydk297','-o','%i|%j|%T|%b|%M|%R'])
+        scratch_root=(assets/'tmp'/run.name).resolve();scratch_removed=False
+        if scratch_root.parent!=(assets/'tmp').resolve() or scratch_root.name!=run.name:raise ValueError('Scratch cleanup scope')
+        if scratch_root.is_dir():
+            try:scratch_root.rmdir();scratch_removed=True
+            except OSError:pass # Nonempty means an active stage; never delete it.
+        snapshot={'schema':'overnight_snapshot_v1','run_id':run.name,'updated_UTC':datetime.now(timezone.utc).isoformat(),'budget_cap_GPU_hours':cfg['budget_GPU_seconds']/3600,
+          'budget':{**budget,'actual_GPU_hours':budget['actual_GPU_seconds']/3600,'committed_GPU_hours':budget['committed_GPU_seconds']/3600,'remaining_uncommitted_GPU_hours':(cfg['budget_GPU_seconds']-budget['committed_GPU_seconds'])/3600},
+          'jobs':jobs,'CPU_jobs':[{**r,**cpu_states.get(r.get('job_id'),{})} for r in ledger['CPU_jobs']],
+          'data':json.loads(prepare.read_text()) if prepare.exists() else json.loads((run/'prepare_progress.json').read_text()) if (run/'prepare_progress.json').exists() else {'status':'NOT_STARTED'},
+          'GPU_probe':gpu_probe,'all_own_queue':queue,'issues':sorted(set(issues)),'next_action':action,
+          'Frozen_image_editing_gate':'NOT_CLEARED; no generator RL or controller GPU experiment authorized by this dispatcher',
+          'removed_empty_run_scratch':scratch_removed,
+          'transfer_scope':'independent VQA sources from train2014, not independent task-family RSI validation'}
+        put(run/'snapshot.json',snapshot);put(ledger_path,ledger)
+        print(json.dumps(snapshot),flush=True)
+
+
+if __name__=='__main__':main()

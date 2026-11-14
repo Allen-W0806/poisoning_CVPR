@@ -1,0 +1,12 @@
+base: existing lvr_train Python 3.11 and torch 2.6.0+cu124
+environment: /storage/home/ydk297/projects/poisoning/.venv-editor
+inherit_system_site_packages: true
+pip:
+  - diffusers==0.35.1
+  - peft==0.17.1
+  - transformers==4.57.1
+  - accelerate==1.11.0
+  - huggingface-hub==0.35.3
+  - scikit-image==0.25.2
+original_qwen_environment_modified: false
+budget_allocated_gpu_seconds: 7200

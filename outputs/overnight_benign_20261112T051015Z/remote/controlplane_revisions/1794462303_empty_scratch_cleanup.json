@@ -1,0 +1,5 @@
+{
+  "change": "CPU-only verified empty run scratch rmdir; never recursive-delete active data",
+  "worker_protocol_data_changed": false,
+  "source_SHA256": "a65079386f92e6eebd323185ec1d7319d70188bc01bcba66cdcc38e427eed725"
+}

@@ -1,0 +1,17 @@
+precision: bf16
+use_lora: true
+lora_rank: 8
+lora_alpha: 16
+micro_batch_size: 1
+gradient_accumulation_steps: 10
+effective_batch_size: 10
+learning_rate: 1.0e-5
+weight_decay: 0.01
+max_grad_norm: 1.0
+seed: 42
+gradient_checkpointing: true
+updates: 3
+objective: supervised_epsilon_denoising_MSE_NOT_RL
+paired_target: deterministic_brightness_1.02
+conditioning_dropout: null
+scheduler: constant_lr_no_warmup_for_three_update_smoke

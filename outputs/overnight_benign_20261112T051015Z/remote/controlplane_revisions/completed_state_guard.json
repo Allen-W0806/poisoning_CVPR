@@ -1,0 +1,6 @@
+{
+  "reason": "Require Slurm COMPLETED as well as PASS; recover exact cursor from checkpoint",
+  "old_SHA256": "298bad67a4454d20381b3e061942e829fa228594a0ecb18ac5d3be5d9bde5218",
+  "new_SHA256": "8cce6a2fd793fd3f6fbef97d25b05604ab4619358c338f552072330b0a0f8cf9",
+  "worker_protocol_data_changed": false
+}

@@ -1,0 +1,10 @@
+base: python3.11 + torch2.6.0-cu124 from existing lvr_train, isolated system-site-packages venv
+pip_phases:
+  - [transformers==4.57.1, accelerate==1.11.0, qwen-vl-utils==0.0.14, huggingface-hub==0.35.3, scikit-image==0.25.2]
+env: {OMP_NUM_THREADS: '4', MKL_NUM_THREADS: '4', OPENBLAS_NUM_THREADS: '4', TOKENIZERS_PARALLELISM: 'false'}
+weight_dirs:
+  qwen: {path: /storage/home/ydk297/.cache/huggingface/hub, source: huggingface_hub.snapshot_download, gated: false}
+smoke:
+  import_names: [torch, transformers, accelerate, qwen_vl_utils, PIL, skimage]
+  gpu_tests:
+    - {cmd: 'python scripts/check_environment.py --output reports/environment_gpu.json', expect: 'kernel_witness'}

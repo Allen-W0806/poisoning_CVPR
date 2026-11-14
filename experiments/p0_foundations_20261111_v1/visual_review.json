@@ -1,0 +1,15 @@
+{
+  "reviewer": "Codex technical inspection of saved paired PNGs; not human_eval",
+  "gate": "PARTIAL_NOT_CLEARED_FOR_P1",
+  "summary": "512px/20–50步下主要场景可辨认，未见上一轮部分4步样本那样的全面纹理崩坏；但斑马图明显偏黄、棒球场饱和度改变，固定亮化指令未稳定满足。去除白色方形padding使部分感知距离下降，但不能单独消除偏色；guidance 5/3减轻偏色同时引入颗粒纹理。没有找到可同时认证指令符合与内容保留的配置，保留全部负结果。",
+  "P1_decision": "NOT_RUN：Frozen普通编辑任务质量/指令门槛未清，不能把P0技术闭环当成方法验证",
+  "cases": [
+    {"sample_id": "564188000", "finding": "原生20/30/50和原生比例30均有明显黄色色偏；guidance5/3色偏减弱但纹理增强"},
+    {"sample_id": "433051004", "finding": "人物和球场场景可辨，方形padding配置红色区域过饱和；原生比例更接近源图，guidance5/3存在粗颗粒"},
+    {"sample_id": "535250008", "finding": "列车主体保持可辨，色彩饱和与亮度有变化；不能据此认证全部颜色/细节保持"},
+    {"sample_id": "478576002", "finding": "玩偶场景可辨，guidance5/3引入纹理；没有独立edited-label或人类质量标签"}
+  ],
+  "metrics_are_proxies": true,
+  "test_used_for_calibration": false,
+  "learning_benefit_claim": "NOT_ESTABLISHED"
+}

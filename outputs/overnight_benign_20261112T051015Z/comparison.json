@@ -1,0 +1,86 @@
+{
+  "status": "COMPLETE_3_SEED_READ_ONLY_ANALYSIS",
+  "statistical_unit": "one question per source; seed-averaged paired deltas resampled over sources",
+  "uncertainty_limit": "Source-bootstrap CI conditional on these three seeds. Training-seed SD separately reported; three seeds are not a large-seed population CI.",
+  "analysis_seed": 20261112,
+  "bootstrap_resamples": 10000,
+  "transfer_scope": "source-held-out same VQA family, not independent task-family RSI evidence",
+  "splits": {
+    "test": {
+      "n_sources": 512,
+      "seeds": [
+        42,
+        123,
+        3407
+      ],
+      "frozen": 0.7220703125,
+      "SFT_seed_scores": [
+        0.732421875,
+        0.75078125,
+        0.738671875
+      ],
+      "SFT_mean": 0.740625,
+      "SFT_training_seed_SD": 0.00933422120730351,
+      "paired_delta_mean": 0.018554687499999997,
+      "paired_delta_source_bootstrap_95CI": [
+        0.0011067708333333294,
+        0.03632975260416664
+      ],
+      "answer_type": {
+        "number": {
+          "n": 70,
+          "frozen": 0.5514285714285714,
+          "SFT_seed_mean": 0.5942857142857143
+        },
+        "other": {
+          "n": 242,
+          "frozen": 0.6194214876033057,
+          "SFT_seed_mean": 0.6363636363636364
+        },
+        "yes/no": {
+          "n": 200,
+          "frozen": 0.906,
+          "SFT_seed_mean": 0.918
+        }
+      }
+    },
+    "transfer": {
+      "n_sources": 128,
+      "seeds": [
+        42,
+        123,
+        3407
+      ],
+      "frozen": 0.709375,
+      "SFT_seed_scores": [
+        0.7109375,
+        0.734375,
+        0.76015625
+      ],
+      "SFT_mean": 0.73515625,
+      "SFT_training_seed_SD": 0.02461867383841988,
+      "paired_delta_mean": 0.025781249999999995,
+      "paired_delta_source_bootstrap_95CI": [
+        -0.00885416666666667,
+        0.06276041666666667
+      ],
+      "answer_type": {
+        "number": {
+          "n": 19,
+          "frozen": 0.3526315789473684,
+          "SFT_seed_mean": 0.47719298245614034
+        },
+        "other": {
+          "n": 54,
+          "frozen": 0.6259259259259259,
+          "SFT_seed_mean": 0.6358024691358025
+        },
+        "yes/no": {
+          "n": 55,
+          "frozen": 0.9145454545454546,
+          "SFT_seed_mean": 0.9218181818181819
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "exact": true,
+  "tolerance": true,
+  "tensor_count": 562,
+  "different_elements": 0,
+  "max_absolute_error": 0.0,
+  "structure_errors": []
+}

@@ -1,0 +1,50 @@
+{
+  "versions": {
+    "torch": "2.6.0",
+    "diffusers": "0.35.1",
+    "peft": "0.17.1",
+    "accelerate": "1.11.0",
+    "transformers": "4.57.1",
+    "Pillow": "11.0.0",
+    "scikit-image": "0.25.2"
+  },
+  "ledgers": {
+    ".aris/compute/utc-editor.md": "# Phase 2 UTC editor environment\n\nEnvironment: `/storage/home/ydk297/projects/poisoning/.venv-editor`, isolated system-site-packages venv over existing `lvr_train` Python 3.11/Torch 2.6.0 cu124.\nDeclarative spec: `configs/phase2_env.yaml`. Original Qwen `.venv` unchanged and verified by complete 200/300 baseline jobs.\nPinned additions: Diffusers 0.35.1, PEFT 0.17.1, Transformers 4.57.1, Accelerate 1.11.0, Hugging Face Hub 0.35.3, scikit-image 0.25.2.\nResource tier: epyc-gpu/allusers, one A100 80GB, four CPUs, 48G host RAM, short bounded allocation; global phase budget 7200 GPU-seconds including failures. Always submit through scripts/submit_phase2.py.\nWeights: central cache InstructPix2Pix 31519b5cb02a7fd89b906d88731cd4d6a7bbf88d, required FP16 components about 2.134GB, no extra model duplicate.\nActual kernel/model witness: editor job 86292 and full supervised generator update/reload/restart job 86306 PASS. Semantic truth and generator RL are separate readiness gates.\nGotchas: preserve LoRA rank/alpha metadata and FP32 A/B during public loading; math SDPA must encompass activation-checkpoint recomputation/backward; optional bitsandbytes has CPU-only build but is unused by this AdamW code.\n\nDocumented CPU/source invocation, from canonical root:\n\n```bash\nsource .venv-editor/bin/activate\npython -m unittest discover -v\n```\n\nFresh-agent invocation check PASS: the documented command resolved this editor Python and passed all 14 tests in 2.740s, exit 0, without changes. Evidence: `reports/PHASE2_DOC_INVOCATION_REVIEW.md`. No cross-family or independent human semantic certification is implied.\n",
+    ".aris/compute/utc-shadowcast.md": "# Shadowcast isolated UTC environment (2026-11-04)\n\nCanonical root `/storage/home/ydk297/projects/poisoning`, SSH `utc-login`.\nSpec `configs/shadowcast_env_20261104.json`; canonical hash is computed from\nsorted compact JSON and recorded in external_preparation/environment_status.json.\nEnvironment `.venv-shadowcast-20261104`: isolated system-site-packages venv over\n`/storage/home/ydk297/.conda/envs/llava118/bin/python`, Python3.10.18,\nTorch2.1.2+cu121 inherited; additions override Transformers4.31.0, PEFT0.4.0,\nAccelerate0.21.0 and other declared pins. Existing environments are not edited.\n\nPinned source `third_party/shadowcast_b13f877a` commit\n`b13f877a2580de6a6a50833017b699dee87353ce`; source remains unmodified.\nThe explicit PYTHONPATH in scripts/run_shadowcast_seed42.py selects this fork,\nnot the inherited llava1.2.2 installation. A pip dependency-conflict warning\nabout the inherited package's metadata is not a certification of the selected\nsource. Actual source location/version/import checks are retained separately.\n\nGotchas observed and corrected before GPU work:\n\n- Existing base environment metadata did not guarantee regex runtime presence.\n- Transformers4.37 includes a conflicting built-in llava registration. The fork\n  requires its official4.31.0/PEFT0.4.0/Accelerate0.21.0 versions instead.\n- Official archive is527589485 bytes and extracts under data_VLM_poisoning,\n  rather than README's data. Actual root is linked into source/data. Initial\n  failure receipt and archive SHA256 retained; archive intermediate removed.\n- EngineLight has13 missing paired files. Complete Trump-to-Biden task selected\n  before generating any new test responses;277 construction pairs,200 test.\n- Actual clean dataset3439 rows, rather than nominal3500; selected50 poison\n  rows appended to3439, exact sample fraction50/3489.\n- Original saves PNG bytes under .jpg filenames. Preserve exact original\n  function and record that no JPEG compression was applied.\n- The official DiffJPEG module uses an absolute `from modules` import and\n  assumes repository cwd. The wrapper prepends its DiffJPEG directory to\n  sys.path explicitly. The first PGD allocation failed at import before any\n  poison image was generated; retain and charge its actual elapsed time.\n- Python DataLoader multiprocessing cannot create AF_UNIX listeners under a\n  long TMPDIR. Campaign wrapper now uses run/stage SHA256-derived short\n  project tmp/rd_<12hex> directories, verifies the prefix <=70bytes, and records\n  the mapping in each submission receipt. Preserve failed startup evidence.\n\nModels pinned to full revisions. No guessed byte counts: exact model file\nbytes/SHA256 in external_preparation/resource_receipt.json. Both snapshots\nstaged on cluster central cache, no C: model bytes. No shared refs are changed;\nCLIP loaders are aliased to pinned local snapshots inside this process only.\n\nDocumented CPU check (does not invoke CUDA):\n\n```bash\nPYTHONDONTWRITEBYTECODE=1 .venv-shadowcast-20261104/bin/python scripts/run_shadowcast_seed42.py --campaign outputs/reward_debug_20261104T054605Z_s42 --stage preflight\n```\n\nGPU smoke must run in one explicit Slurm A100 allocation. It tests a seeded\nmatrix multiply, actual CLIP input backward and LLaVA generation on a TRAIN\nimage, before any poison optimization/victim training. Import-success alone is\nnot GPU readiness. Maximum15 minutes for smoke; cumulative campaign cap72000\nGPU-seconds includes failures and all trained models. See docs/SHADOWCAST_SEED42.md.\n",
+    ".aris/compute/utc.md": "# UTC provider ledger\n\nEnvironment: `/storage/home/ydk297/projects/poisoning/.venv`, isolated system-site-packages venv over `/storage/home/ydk297/miniconda3/envs/lvr_train` (Python 3.11, Torch 2.6.0 cu124).\nSpec: `configs/env-spec.yaml`, canonical JSON SHA prefix `12a63f28`; exact installed package snapshot: `reports/requirements_freeze_cluster.txt`.\nResource tier: epyc-gpu, allusers, 1 tesla_a100_80gb GPU, 4 CPUs, 32G, 20 minutes maximum.\nWeights: central HF cache, Qwen3-VL-2B revision 89644892e4d85e24eaac8bacfd4f463576704203.\nTier 1 imports: PASS. Tier 2 seeded CUDA witness and real Qwen smoke: PASS, Slurm 86254, 86256, 86259 and 86260. Tier 3 fresh-agent documented CPU invocation: seven tests PASS on both Windows mirror and activated remote venv; no divergence. This tier is a CPU/source contract check; CUDA evidence is executor-recorded.\nGotchas: use official COCO AWS path-style bucket endpoint for valid TLS; Windows tests use project tmp scratch. Data must finish staging before full GPU acceptance.\n\nDocumented invocation from project root:\n`python -m unittest discover -v`\n\nThis CPU contract check requires no downloaded models or data. GPU full-suite invocation belongs inside the documented Slurm wrapper.\n"
+  },
+  "data_assets": [
+    {
+      "path": "data/raw/vqav2/v2_Questions_Train_mscoco.zip",
+      "bytes": 7239401
+    },
+    {
+      "path": "data/raw/vqav2/v2_Annotations_Train_mscoco.zip",
+      "bytes": 21708861
+    }
+  ],
+  "lpips_receipt": {
+    "status": "VERIFIED_DEPENDENCY_READY_NOT_YET_MEASURED",
+    "created_UTC": "2026-11-02T03:55:24.659958+00:00",
+    "package": "lpips==0.1.4",
+    "wheel_url": "https://files.pythonhosted.org/packages/9b/13/1df50c7925d9d2746702719f40e864f51ed66f307b20ad32392f1ad2bb87/lpips-0.1.4-py3-none-any.whl",
+    "wheel_sha256": "fd537af5828b69d2e6ffc0a397bd506dbc28ca183543617690844c08e102ec5e",
+    "calibration_source": "https://raw.githubusercontent.com/richzhang/PerceptualSimilarity/082bb24f84c091ea94de2867d34c4544f68e0963/lpips/weights/v0.1/alex.pth",
+    "upstream_commit": "082bb24f84c091ea94de2867d34c4544f68e0963",
+    "calibration_sha256": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+    "base_file": "/storage/home/ydk297/.cache/torch/hub/checkpoints/alexnet-owt-7be5be79.pth",
+    "base_sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+    "base_upstream_hash_prefix": "7be5be79",
+    "module_root": "/storage/home/ydk297/projects/poisoning/tools/metrics/lpips_0_1_4",
+    "installer_files_written": 0,
+    "shared_environment_modified": false,
+    "new_GPU_seconds": 0
+  },
+  "squeue": "JOBID NAME STATE TIME TIME_LIMIT NODES NODELIST(REASON)\n90971 poisoning-monitor PENDING 0:00 5:00 1 (BeginTime)\n90977 sen12-settle-90976 PENDING 0:00 20:00 1 (Dependency)\n90759 rsi-I2V-next-90758 PENDING 0:00 30:00 1 (Dependency)\n90758 rsi-I2V-scheme_b-w4-episode RUNNING 7:00:33 17:03:00 1 epyc01\n90976 sen12-train-fixed-s42 RUNNING 32:54 2:40:00 1 epyc00\n",
+  "disk": {
+    "total": 621601926152192,
+    "used": 334160048685056,
+    "free": 287441877467136
+  },
+  "qwen_cache_present": true
+}

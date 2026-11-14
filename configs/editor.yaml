@@ -1,0 +1,4 @@
+backend: pillow
+max_delta: 0.03
+actions: [1.0, 0.97, 1.03]
+natural_image_semantics: requires_independent_verifier

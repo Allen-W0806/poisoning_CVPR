@@ -1,0 +1,25 @@
+{
+  "status": "PASS_FINAL_DATA_BYTES_AND_RESOURCE_READBACK",
+  "checked_unix": 1794470469.7571504,
+  "source_audit": {
+    "source_IDs": 1792,
+    "content_hashes": 1792,
+    "question_IDs": 1792,
+    "split_sizes": {
+      "train": 1024,
+      "dev": 128,
+      "test": 512,
+      "transfer": 128
+    },
+    "exact_ID_content_disjoint": true,
+    "perceptual_near_duplicate_check": "NOT_RUN",
+    "pretraining_exposure": "UNKNOWN"
+  },
+  "P1_pair_file_hashes_rechecked": 512,
+  "run_bytes": 843459437,
+  "filesystem": "Filesystem           1B-blocks            Used       Available Use% Mounted on\nmmfs1          621601926152192 334226662621184 287375263531008  54% /storage/home\n",
+  "sacct": "91023|COMPLETED|45|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|2026-11-12T00:29:38|2026-11-12T00:30:23\n91029|COMPLETED|263|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|2026-11-12T00:30:37|2026-11-12T00:35:00\n91043|COMPLETED|1361|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|2026-11-12T00:35:06|2026-11-12T00:57:47\n91057|COMPLETED|1348|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|2026-11-12T00:58:08|2026-11-12T01:20:36\n91078|COMPLETED|1360|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|2026-11-12T01:21:10|2026-11-12T01:43:50\n",
+  "scratch_root_exists": false,
+  "new_GPU_allocations": 0,
+  "scope": "Read-only final byte attestation; no model forward, optimizer call, reward/data/test change, or new GPU job"
+}

@@ -1,0 +1,13 @@
+status: PREPARED_NOT_RUN
+base_config: phase3_generator_rl.yaml
+priority: [correctness, stability, repeatability, memory_efficiency, independent_validation, performance]
+candidate_values:
+  logical_batch_size: [10, 20]
+  learning_rate: [1.0e-5, 5.0e-6]
+  lora_rank: [8, 16]
+  seed: [42, 123, 3407]
+  precision: [bf16]
+  max_grad_norm: [1.0]
+full_grid: false
+next_single_change: {seed: 123}
+launch_gate: complete_generator_RL_smoke_and_interpretable_independent_validation

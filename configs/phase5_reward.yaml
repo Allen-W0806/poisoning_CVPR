@@ -1,0 +1,7 @@
+schema_version: reward_compat_v2
+execution_mode: diagnostic_only
+semantic_weight: 1.0
+accuracy_weight: 0.5
+distortion_weight: 0.2
+cost_weight: 0.1
+invalid_semantics_penalty: 1.0

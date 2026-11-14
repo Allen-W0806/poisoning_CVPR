@@ -1,0 +1,8 @@
+protocol: configs/phase2_vqa_protocol.json
+development_samples: 200
+heldout_samples: 300
+generation: deterministic_greedy
+repeatability: repeat_first_three_development_only
+heldout_consumptions: 1
+scoring: pinned_upstream_official_vqa
+note: internal train2014 held-out subset, not official VQA test-server benchmark

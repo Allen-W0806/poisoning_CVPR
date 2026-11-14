@@ -1,0 +1,17 @@
+{
+  "created_UTC": "2026-11-12T04:27:20.450714+00:00",
+  "reservation_GPU_seconds": 1200,
+  "scope": "P0 Frozen inference + clean VLM pipeline engineering only; no P1 RL training",
+  "command": [
+    "/storage/home/ydk297/projects/poisoning/.venv-editor/bin/python",
+    "/storage/home/ydk297/projects/poisoning/experiments/p0_foundations_20261111_v1/code/scripts/run_p0_foundations.py",
+    "--assets-root",
+    "/storage/home/ydk297/projects/poisoning",
+    "--run",
+    "/storage/home/ydk297/projects/poisoning/experiments/p0_foundations_20261111_v1"
+  ],
+  "returncode": 0,
+  "stdout": "90965\n",
+  "stderr": "sbatch:  \nsbatch: Job Resource Tips:\nsbatch:   * Run 'jobstats <jobid>' while your job is running (wait at least 60 seconds before trying) or after job completes.\nsbatch:   * Check CPU, GPU, and memory usage.\nsbatch:   * Adjust your requests to improve efficiency.\nsbatch:   * Optimizing your requests can help shorten queue times and improve cluster utilization.\nsbatch:  \n",
+  "job_id": "90965"
+}

@@ -1,0 +1,5 @@
+{
+  "change": "CPU-only checksum/mtime validation for complete checkpoint state and public adapter files",
+  "worker_protocol_data_changed": false,
+  "source_SHA256": "ef5f2107b4a93c05327b1137573c86d239aa7c4345a2eea520961b06bef7ba57"
+}

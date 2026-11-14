@@ -1,0 +1,68 @@
+{
+  "stage": "seed3407",
+  "attempt": 0,
+  "job_id": "91078",
+  "status": "PASS",
+  "started_UTC": "2026-11-12T06:21:10.229451+00:00",
+  "PID": 2772252,
+  "actual_optimizer_calls": 512,
+  "GPU": {
+    "name": "NVIDIA A100 80GB PCIe",
+    "total_bytes": 85094825984,
+    "initial_free_bytes": 84500414464,
+    "physical_job_GPU": "0"
+  },
+  "frozen_base_SHA256": "390847f15e9f70f12042da573246290cdef48b6150bbfce52b279d1a47ff0458",
+  "seed": 3407,
+  "attempted_training_steps": 512,
+  "retained_step": 512,
+  "dev_history": [
+    {
+      "step": 128,
+      "score": 0.75703125,
+      "path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed3407/attempt_0/checkpoints/step128"
+    },
+    {
+      "step": 256,
+      "score": 0.75703125,
+      "path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed3407/attempt_0/checkpoints/step256"
+    },
+    {
+      "step": 512,
+      "score": 0.75859375,
+      "path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed3407/attempt_0/checkpoints/step512"
+    }
+  ],
+  "selected_by": "maximum dev score; earliest step on tie; fixed full512 attempted",
+  "metrics": {
+    "test": {
+      "n_sources": 512,
+      "mean": 0.738671875,
+      "source_SD": 0.40821864195301616,
+      "source_bootstrap_95CI": [
+        0.7037109375,
+        0.7734423828124999
+      ],
+      "resamples": 10000,
+      "analysis_seed": 20261112,
+      "training_seed_uncertainty": "NOT_ESTIMATED"
+    },
+    "transfer": {
+      "n_sources": 128,
+      "mean": 0.76015625,
+      "source_SD": 0.39211516943668756,
+      "source_bootstrap_95CI": [
+        0.6921875,
+        0.82578125
+      ],
+      "resamples": 10000,
+      "analysis_seed": 20261112,
+      "training_seed_uncertainty": "NOT_ESTIMATED"
+    }
+  },
+  "checkpoint": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed3407/attempt_0/selected_checkpoint",
+  "checkpoint_SHA256": "a905ff92aadc74ad1199026ca50dea1627f50b2affd323f4f0157da4a6a212ed",
+  "finished_UTC": "2026-11-12T06:43:49.279110+00:00",
+  "elapsed_seconds": 1359.0496978759766,
+  "peak_GPU_allocated_bytes": 4932393472
+}

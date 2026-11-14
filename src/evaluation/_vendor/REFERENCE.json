@@ -1,0 +1,9 @@
+{
+  "repository": "GT-Vision-Lab/VQA",
+  "commit": "a013f0043c1e2cdc995922dfe257f7149aa9af06",
+  "source_url": "https://raw.githubusercontent.com/GT-Vision-Lab/VQA/a013f0043c1e2cdc995922dfe257f7149aa9af06/PythonEvaluationTools/vqaEvaluation/vqaEval.py",
+  "original_sha256": "f08edfcad5be0112500993e245c706b6cb928eadebe203f89f838e5e0d04bec8",
+  "converted_sha256": "afbf0df6385e6ec431a205fd76f7ae9fbccca09b0bd692fd97136a076c5a6063",
+  "conversion": "lib2to3 all standard fixes; tabs expanded to 4 spaces; no scoring changes",
+  "license": "upstream BSD-style license retained as LICENSE_VQA.txt"
+}

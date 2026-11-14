@@ -1,0 +1,39 @@
+{
+  "status": "PASS_CPU_DATA_ADAPTER_ONLY",
+  "actual_train_pairs_loaded": [
+    {
+      "sample_id": "6941002",
+      "size": [
+        414,
+        330
+      ],
+      "instruction": "Restore normal exposure in this photograph while preserving its colors and objects."
+    },
+    {
+      "sample_id": "257071000",
+      "size": [
+        512,
+        384
+      ],
+      "instruction": "Restore normal exposure in this photograph while preserving its colors and objects."
+    },
+    {
+      "sample_id": "401812000",
+      "size": [
+        342,
+        512
+      ],
+      "instruction": "Restore normal exposure in this photograph while preserving its colors and objects."
+    },
+    {
+      "sample_id": "204074007",
+      "size": [
+        512,
+        341
+      ],
+      "instruction": "Restore normal exposure in this photograph while preserving its colors and objects."
+    }
+  ],
+  "nontrain_update_rejected": true,
+  "GPU_training": "NOT_RUN"
+}

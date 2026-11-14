@@ -1,0 +1,102 @@
+{
+  "scope": "Benign experiment source plus compact original evidence; no algorithm or training-setting changes.",
+  "excluded_files": [
+    {
+      "path": "scripts/audit_shadowcast_poison_tokenization.py",
+      "reason": "separate poisoning-control implementation and its tightly coupled tests; not part of this benign export"
+    },
+    {
+      "path": "scripts/audit_shadowcast_results.py",
+      "reason": "separate poisoning-control implementation and its tightly coupled tests; not part of this benign export"
+    },
+    {
+      "path": "scripts/audit_shadowcast_split_overlap.py",
+      "reason": "separate poisoning-control implementation and its tightly coupled tests; not part of this benign export"
+    },
+    {
+      "path": "scripts/check_drive_sync_controls_20261101.py",
+      "reason": "account-specific report transfer/authentication utility"
+    },
+    {
+      "path": "scripts/close_drive_sync_recovery_20261101.py",
+      "reason": "account-specific report transfer/authentication utility"
+    },
+    {
+      "path": "scripts/deploy_drive_recovery_20261101.py",
+      "reason": "account-specific report transfer/authentication utility"
+    },
+    {
+      "path": "scripts/drive_private_client_reauthorize_20261101.py",
+      "reason": "account-specific report transfer/authentication utility"
+    },
+    {
+      "path": "scripts/drive_reauthorize_20261101.sh",
+      "reason": "account-specific report transfer/authentication utility"
+    },
+    {
+      "path": "scripts/drive_sync_recovery_20261101.py",
+      "reason": "account-specific report transfer/authentication utility"
+    },
+    {
+      "path": "scripts/evaluate_shadowcast_vizwiz.py",
+      "reason": "separate poisoning-control implementation and its tightly coupled tests; not part of this benign export"
+    },
+    {
+      "path": "scripts/Install-RSIExperimentMonitor.ps1",
+      "reason": "retired scheduler installer; user selected Codex scheduling"
+    },
+    {
+      "path": "scripts/install_rsi_stage_monitor.py",
+      "reason": "retired scheduler installer; user selected Codex scheduling"
+    },
+    {
+      "path": "scripts/Invoke-RSIExperimentMonitor.ps1",
+      "reason": "retired scheduler installer; user selected Codex scheduling"
+    },
+    {
+      "path": "scripts/prepare_shadowcast_resources.py",
+      "reason": "separate poisoning-control implementation and its tightly coupled tests; not part of this benign export"
+    },
+    {
+      "path": "scripts/run_shadowcast_seed42.py",
+      "reason": "separate poisoning-control implementation and its tightly coupled tests; not part of this benign export"
+    },
+    {
+      "path": "scripts/sync_overnight_evidence_20261101.py",
+      "reason": "account-specific report transfer/authentication utility"
+    },
+    {
+      "path": "scripts/sync_phase6.ps1",
+      "reason": "account-specific report transfer/authentication utility"
+    },
+    {
+      "path": "scripts/sync_small_scale_20261031.py",
+      "reason": "account-specific report transfer/authentication utility"
+    },
+    {
+      "path": "configs/shadowcast_env_20261104.json",
+      "reason": "separate poisoning-control implementation and its tightly coupled tests; not part of this benign export"
+    },
+    {
+      "path": "tests/test_rsi_poisoning_report_sync.py",
+      "reason": "account-specific report transfer/authentication utility"
+    },
+    {
+      "path": "tests/test_shadowcast_vizwiz_loader.py",
+      "reason": "separate poisoning-control implementation and its tightly coupled tests; not part of this benign export"
+    }
+  ],
+  "external_attachments_not_uploaded": [
+    "E:/asr_poison_rl.py",
+    "E:/README_RUN.md",
+    "E:/run.slurm"
+  ],
+  "bulk_exclusions": [
+    "model/checkpoint tensor files",
+    "raw image/data archives",
+    "caches and virtual environments",
+    "credentials and account-specific transfer tools",
+    "original Git history"
+  ],
+  "original_workspace_preserved": true
+}

@@ -1,0 +1,210 @@
+[
+  {
+    "config": "native_aspect_30",
+    "sample_id": "564188000",
+    "image_id": "564188",
+    "source_path": "quality_followup/sources/564188000.png",
+    "path": "quality_followup/images/native_aspect_30/564188000.png",
+    "source_SHA256": "e8058150ec41e2791eba4e5cbd329e5e87d1afc66897ee48af49e0b1e10dbf26",
+    "image_SHA256": "7795aba225fb1b586eb6e3e97e00995f9d8f73dd6c4d07482c0320ab6134310f",
+    "dimensions": [
+      512,
+      344
+    ],
+    "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.",
+    "seed": 42000000,
+    "steps": 30,
+    "settings": {
+      "name": "native_aspect_30",
+      "text_guidance": 7.5,
+      "image_guidance": 1.5
+    },
+    "SSIM": 0.35541287064552307,
+    "LPIPS": 0.28009670972824097,
+    "luminance_delta": -0.12811347842216492,
+    "seconds": 4.491187826031819,
+    "optimizer_updates": 0
+  },
+  {
+    "config": "native_aspect_30",
+    "sample_id": "433051004",
+    "image_id": "433051",
+    "source_path": "quality_followup/sources/433051004.png",
+    "path": "quality_followup/images/native_aspect_30/433051004.png",
+    "source_SHA256": "ddaf0ec1f07a3f7e62c263a966e9555d7eb9a5462578306f39f36c775902cd28",
+    "image_SHA256": "2bf0ca20169d3c5b44fac71d4347a12e17a3dfcda5a74fbdb2d75d4d9b3e072d",
+    "dimensions": [
+      512,
+      368
+    ],
+    "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.",
+    "seed": 42000001,
+    "steps": 30,
+    "settings": {
+      "name": "native_aspect_30",
+      "text_guidance": 7.5,
+      "image_guidance": 1.5
+    },
+    "SSIM": 0.5164745450019836,
+    "LPIPS": 0.09457049518823624,
+    "luminance_delta": 0.0020925402641296387,
+    "seconds": 3.5860210601240396,
+    "optimizer_updates": 0
+  },
+  {
+    "config": "native_aspect_30",
+    "sample_id": "535250008",
+    "image_id": "535250",
+    "source_path": "quality_followup/sources/535250008.png",
+    "path": "quality_followup/images/native_aspect_30/535250008.png",
+    "source_SHA256": "282af4a08f41062c6376ec4634f7552a34a51a131949b0a514996f7a87c7b8a7",
+    "image_SHA256": "d2c307f8e174594324e5697621dfd327aadfa3ee56e34896360e1124f73c6fa8",
+    "dimensions": [
+      512,
+      336
+    ],
+    "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.",
+    "seed": 42000002,
+    "steps": 30,
+    "settings": {
+      "name": "native_aspect_30",
+      "text_guidance": 7.5,
+      "image_guidance": 1.5
+    },
+    "SSIM": 0.6678058505058289,
+    "LPIPS": 0.09455478191375732,
+    "luminance_delta": -0.0010998249053955078,
+    "seconds": 3.429082568967715,
+    "optimizer_updates": 0
+  },
+  {
+    "config": "native_aspect_30",
+    "sample_id": "478576002",
+    "image_id": "478576",
+    "source_path": "quality_followup/sources/478576002.png",
+    "path": "quality_followup/images/native_aspect_30/478576002.png",
+    "source_SHA256": "0749221ffbb408de22443291a276048f2ca38ba5801fe8b50b0917279b1f5133",
+    "image_SHA256": "cd44eb71fb77ccc21f7d766c1ad82182cf0e7f6fd7c319a87e9e01b8581ba7b1",
+    "dimensions": [
+      368,
+      512
+    ],
+    "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.",
+    "seed": 42000003,
+    "steps": 30,
+    "settings": {
+      "name": "native_aspect_30",
+      "text_guidance": 7.5,
+      "image_guidance": 1.5
+    },
+    "SSIM": 0.7195025086402893,
+    "LPIPS": 0.07431104779243469,
+    "luminance_delta": 0.00334012508392334,
+    "seconds": 3.433851303998381,
+    "optimizer_updates": 0
+  },
+  {
+    "config": "native_aspect_preserve_30",
+    "sample_id": "564188000",
+    "image_id": "564188",
+    "source_path": "quality_followup/sources/564188000.png",
+    "path": "quality_followup/images/native_aspect_preserve_30/564188000.png",
+    "source_SHA256": "e8058150ec41e2791eba4e5cbd329e5e87d1afc66897ee48af49e0b1e10dbf26",
+    "image_SHA256": "b168b42879df05f5fdb9b05bcb5be6eeb87e93950a01b8595bce6d1080dc626a",
+    "dimensions": [
+      512,
+      344
+    ],
+    "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.",
+    "seed": 42000000,
+    "steps": 30,
+    "settings": {
+      "name": "native_aspect_preserve_30",
+      "text_guidance": 5.0,
+      "image_guidance": 3.0
+    },
+    "SSIM": 0.40008115768432617,
+    "LPIPS": 0.2833804786205292,
+    "luminance_delta": 0.0006463527679443359,
+    "seconds": 3.386040194891393,
+    "optimizer_updates": 0
+  },
+  {
+    "config": "native_aspect_preserve_30",
+    "sample_id": "433051004",
+    "image_id": "433051",
+    "source_path": "quality_followup/sources/433051004.png",
+    "path": "quality_followup/images/native_aspect_preserve_30/433051004.png",
+    "source_SHA256": "ddaf0ec1f07a3f7e62c263a966e9555d7eb9a5462578306f39f36c775902cd28",
+    "image_SHA256": "daf8af218e1d318be47499c91668d9fd54d4059086d251c6ede54e4821bdf758",
+    "dimensions": [
+      512,
+      368
+    ],
+    "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.",
+    "seed": 42000001,
+    "steps": 30,
+    "settings": {
+      "name": "native_aspect_preserve_30",
+      "text_guidance": 5.0,
+      "image_guidance": 3.0
+    },
+    "SSIM": 0.4106837809085846,
+    "LPIPS": 0.2800183892250061,
+    "luminance_delta": 0.0024976134300231934,
+    "seconds": 3.3510117360856384,
+    "optimizer_updates": 0
+  },
+  {
+    "config": "native_aspect_preserve_30",
+    "sample_id": "535250008",
+    "image_id": "535250",
+    "source_path": "quality_followup/sources/535250008.png",
+    "path": "quality_followup/images/native_aspect_preserve_30/535250008.png",
+    "source_SHA256": "282af4a08f41062c6376ec4634f7552a34a51a131949b0a514996f7a87c7b8a7",
+    "image_SHA256": "2999161c8361fa408f787b1ef99dfa6cef480f7415fb23c7ec6911b7632d88fb",
+    "dimensions": [
+      512,
+      336
+    ],
+    "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.",
+    "seed": 42000002,
+    "steps": 30,
+    "settings": {
+      "name": "native_aspect_preserve_30",
+      "text_guidance": 5.0,
+      "image_guidance": 3.0
+    },
+    "SSIM": 0.597260057926178,
+    "LPIPS": 0.16917134821414948,
+    "luminance_delta": -0.000530540943145752,
+    "seconds": 3.431347999954596,
+    "optimizer_updates": 0
+  },
+  {
+    "config": "native_aspect_preserve_30",
+    "sample_id": "478576002",
+    "image_id": "478576",
+    "source_path": "quality_followup/sources/478576002.png",
+    "path": "quality_followup/images/native_aspect_preserve_30/478576002.png",
+    "source_SHA256": "0749221ffbb408de22443291a276048f2ca38ba5801fe8b50b0917279b1f5133",
+    "image_SHA256": "2401affa7b034f891fecd2674986761e9e378d16f58fd8c0135b6ad8ad7b7791",
+    "dimensions": [
+      368,
+      512
+    ],
+    "instruction": "Slightly brighten the lighting. Keep all objects, their colors, counts and positions unchanged.",
+    "seed": 42000003,
+    "steps": 30,
+    "settings": {
+      "name": "native_aspect_preserve_30",
+      "text_guidance": 5.0,
+      "image_guidance": 3.0
+    },
+    "SSIM": 0.6187943816184998,
+    "LPIPS": 0.17478814721107483,
+    "luminance_delta": 0.0028153657913208008,
+    "seconds": 3.46244521997869,
+    "optimizer_updates": 0
+  }
+]

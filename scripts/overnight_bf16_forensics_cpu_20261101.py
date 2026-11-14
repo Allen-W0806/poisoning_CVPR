@@ -1,0 +1,21 @@
+"""Localize NEW paired-run evidence without rerunning a CUDA operation."""
+import csv,hashlib,json,sys
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def put(p,x):
+ with Path(p).open('x') as f:json.dump(x,f,indent=2,allow_nan=False)
+def main(run):
+ import torch
+ from scripts.run_ip2pix_checkpoint_diagnostic import same,discrepancy
+ torch.set_num_threads(2);cfg=json.loads((run/'protocol.json').read_text());parent=ROOT/'results'/cfg['parent_run'];summary=json.loads((parent/'summary.json').read_text());inventory=json.loads((parent/'artifact_inventory.json').read_text());assert all(sha(parent/r['path'])==r['sha256'] for r in inventory['files'])
+ names=json.loads((ROOT/'results/method_code_audit_20261101T0510Z_v1/generator_ownership.json').read_text())['parameter_order'];a=torch.load(parent/'1_instrumented/gradients.pt',map_location='cpu',weights_only=False);b=torch.load(parent/'2_instrumented/gradients.pt',map_location='cpu',weights_only=False);assert len(a['raw_gradients'])==len(b['raw_gradients'])==1;rawa=a['raw_gradients'][0];rawb=b['raw_gradients'][0];assert len(rawa)==len(rawb)==len(names)==256
+ rows=[]
+ for n,x,y in zip(names,rawa,rawb):
+  assert x is not None and y is not None and x.shape==y.shape;rows.append(dict(parameter=n,shape=list(x.shape),raw_equal=torch.equal(x,y),finite=bool(torch.isfinite(x).all() and torch.isfinite(y).all()),different_elements=int((x!=y).sum()),max_abs=float((x-y).abs().max()),relative_L2=float((x.double()-y.double()).norm()/(x.double().norm()+1e-300))))
+ with (run/'named_raw_gradient_comparison.csv').open('x',newline='') as f:w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+ first=next((r for r in rows if not r['raw_equal']),None);raw=discrepancy(rawa,rawb);post=discrepancy(a['postclip_gradients'],b['postclip_gradients']);earliest='raw_backward_before_clipping' if not raw['exact'] else ('clipping_or_norm_reduction' if not post['exact'] else None)
+ states=[torch.load(parent/n/'after/training_state.pt',map_location='cpu',weights_only=False) for n in ['1_instrumented','2_instrumented']];moments={k:sum(not same(states[0]['optimizer']['state'][i][k],states[1]['optimizer']['state'][i][k]) for i in states[0]['optimizer']['state']) for k in ['exp_avg','exp_avg_sq']}
+ result=dict(status='PASS_FORENSIC_EXTRACTION_ONLY',parent_GPU_job='88099',hardware_equal=summary['hardware_equal'],earliest_observed_stage=earliest,raw_gradient_error=raw,postclip_gradient_error=post,first_parameter_in_registration_order=first,temporal_first_CUDA_primitive='NOT IDENTIFIED',different_raw_tensors=sum(not x['raw_equal'] for x in rows),all_finite=all(x['finite'] for x in rows),different_optimizer_moment_tensors=moments,ordinary_pair_exact=summary['ordinary_reproducible_in_this_pair'],confirmed_facts=['Matched hardware, checkpoint and forward/RNG agreement rule out those observed differences in this four-worker run','Raw differences before clipping rule out clipping as the sole origin' if not raw['exact'] else 'No preclip discrepancy in this pair','Instrumented within-mode mismatch prevents attributing the result solely to ordinary versus instrumented mode'],root_cause='NOT CONFIRMED: upstream BF16/attention/gradient accumulation/allocator or kernel execution remain hypotheses; isolated local VJP PASS does not identify a whole-graph primitive',fix_attempted='No scientific or numerical code correction without confirmed cause; no tolerance change and no GPU retry',verification='Independent read-only replay of stored tensor comparisons and checksums',remaining_risk='Historical ordinary full-graph BF16 repeatability and production batch10 not validated',scientific_improvement='NOT ESTABLISHED',new_GPU_seconds=0)
+ put(run/'summary.json',result);put(run/'artifact_inventory.json',dict(files=[dict(path=p.relative_to(run).as_posix(),sha256=sha(p),bytes=p.stat().st_size) for p in sorted(run.iterdir()) if p.is_file() and p.suffix in {'.json','.csv'}]));put(run/'checks.json',dict(status='PASS',diagnostic_complete=True,scope='forensic extraction, not numerical repair',ordinary_BF16_release=False,new_GPU_seconds=0));print(json.dumps(result))
+if __name__=='__main__':main(Path(sys.argv[1]))

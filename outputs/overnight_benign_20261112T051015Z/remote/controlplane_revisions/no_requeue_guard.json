@@ -1,0 +1,11 @@
+{
+  "reason": "Disable Slurm automatic requeue; all retries go through at-most-once ledger and budget guards",
+  "worker_protocol_data_changed": false,
+  "active_job_updates": [
+    {
+      "job_id": "91043",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ]
+}

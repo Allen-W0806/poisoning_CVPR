@@ -1,0 +1,78 @@
+{
+  "schema": "benign_gradient_feedback_v1",
+  "seeds": [
+    42,
+    123,
+    3407
+  ],
+  "gradient_seeds": 32,
+  "sample_counts": [
+    128,
+    1024,
+    8192,
+    65536
+  ],
+  "gradient_acceptance": {
+    "simultaneous_z_limit": 4.0,
+    "largest_n_relative_rmse_max": 0.1,
+    "largest_n_cosine_min": 0.95,
+    "rmse_log_log_slope_range": [
+      -0.75,
+      -0.25
+    ],
+    "enumerated_gradient_atol": 1e-12,
+    "checkpoint_exact": true
+  },
+  "group_task": {
+    "reward_tables": [
+      [
+        0.0,
+        0.3,
+        1.0
+      ],
+      [
+        1.0,
+        0.3,
+        0.0
+      ]
+    ],
+    "group_size": 16,
+    "groups_per_context": 8,
+    "updates": 150,
+    "epochs": 3,
+    "learning_rate": 0.08,
+    "clip_epsilon": 0.2,
+    "kl_beta": 0.02,
+    "max_grad_norm": 1.0,
+    "minimum_expected_reward_gain": 0.2
+  },
+  "evaluation": {
+    "source_split": "validation",
+    "samples": 160,
+    "batches": 10,
+    "batch_size": 16,
+    "selection_seed": 20261028,
+    "inference_microbatch": 1,
+    "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+    "model_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "max_new_tokens": 32,
+    "min_pixels": 4096,
+    "max_pixels": 262144,
+    "bootstrap_replicates": 5000,
+    "confidence": 0.95,
+    "editor_model_id": "timbrooks/instruct-pix2pix",
+    "editor_revision": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+    "editor_steps": 10,
+    "editor_resolution": 256,
+    "training_enabled": false,
+    "reward": "official VQA consensus; diagnostic only",
+    "batch_candidates_comparable_for_GRPO": false
+  },
+  "ddpo_sample_counts": [
+    8192,
+    65536,
+    524288,
+    1048576
+  ],
+  "revision_note": "v2 increases only DDPO Monte Carlo sample counts after v1 high-variance failure (RMSE .228, z 1.08). All acceptance thresholds and cosine reward unchanged; streaming memory bounded to 32768 samples."
+}

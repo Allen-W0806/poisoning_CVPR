@@ -1,0 +1,26 @@
+rl:
+  seed: 42
+  batch_size: 10
+  gradient_accumulation_steps: 1
+  learning_rate: 1.0e-5
+  optimizer: adamw
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  warmup_ratio: 0.05
+  mixed_precision: bf16
+  checkpoint_interval: 100
+  log_interval: 1
+  total_updates: 3
+reward:
+  semantic_weight: 1.0
+  accuracy_weight: 0.5
+  distortion_weight: 0.2
+  cost_weight: 0.1
+  invalid_semantics_penalty: 1.0
+optional_sweep_not_executed:
+  batch_size: [10, 20, 32]
+  learning_rate: [1.0e-5, 5.0e-5, 1.0e-4]
+  seed: [42, 123, 3407]
+  gradient_accumulation_steps: [1, 2, 4]
+  reward_ablations: [no_semantics, no_consistency, no_distortion, no_cost]
+  policy: [fixed, trained]

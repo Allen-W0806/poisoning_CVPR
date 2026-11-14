@@ -1,0 +1,13 @@
+model_id: Qwen/Qwen3-VL-2B-Instruct
+revision: 89644892e4d85e24eaac8bacfd4f463576704203
+precision: bf16_if_supported
+attention: sdpa
+do_sample: false
+max_new_tokens: 64
+answer_style: short
+system_prompt: Answer the question using only a short word or phrase. Do not include an explanation.
+micro_batch: 1
+padding_side: left
+min_pixels: 4096
+max_pixels: 262144
+seed: 42

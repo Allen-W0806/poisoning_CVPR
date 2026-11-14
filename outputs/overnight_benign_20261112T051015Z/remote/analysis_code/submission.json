@@ -1,0 +1,9 @@
+{
+  "job_id": "91042",
+  "GPU_allocations": 0,
+  "purpose": "new paired data hash/geometry/source checks, not repeated P0",
+  "source_SHA256": {
+    "check_night_p1.py": "fda20b4b77f985ea315f5748a3fb0a16b2ed0c8511299d85638a48d5c785f3ab",
+    "paired_generator_data.py": "2dd55a1adfd4af2d19257f8b012b835777e9ad72304e8a557ce535bd38616c20"
+  }
+}
