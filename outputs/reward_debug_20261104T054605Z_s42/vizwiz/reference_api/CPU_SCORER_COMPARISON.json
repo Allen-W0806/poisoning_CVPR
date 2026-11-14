@@ -1,0 +1,153 @@
+{
+  "method": "Official class and its accuracy statements executed unchanged through setAccuracy; unrelated caption-metric branch excluded in memory. No implementation or protocol files changed.",
+  "official_member_SHA256": "d26ef7ac2db06351444c3531f8d95fd9c454423fbcb9fd5dd984f12281146694",
+  "official_helper_SHA256": "38efaab71cf6193230bca6aa5360742a82a2402dc46a6a2975b08f8a644b8f07",
+  "current_vendor_SHA256": "afbf0df6385e6ec431a205fd76f7ae9fbccca09b0bd692fd97136a076c5a6063",
+  "current_wrapper_SHA256": "2357b5edc68722de6ef8cac9dce2858e2bc0a1696e48c3b8af07b01411d60f30",
+  "counterexamples": [
+    {
+      "case": "unanimous_capitalized_unanswerable",
+      "prediction": "Unanswerable",
+      "references": [
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable"
+      ],
+      "official_VizWiz_accuracy": 1.0,
+      "current_generic_VQA_accuracy": 0.0
+    },
+    {
+      "case": "unanimous_period",
+      "prediction": "unanswerable.",
+      "references": [
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable"
+      ],
+      "official_VizWiz_accuracy": 1.0,
+      "current_generic_VQA_accuracy": 0.0
+    },
+    {
+      "case": "unanimous_number_word",
+      "prediction": "two",
+      "references": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ],
+      "official_VizWiz_accuracy": 1.0,
+      "current_generic_VQA_accuracy": 0.0
+    },
+    {
+      "case": "diverse_references_article",
+      "prediction": "cat",
+      "references": [
+        "a cat",
+        "a cat",
+        "a cat",
+        "a cat",
+        "dog",
+        "dog",
+        "dog",
+        "dog",
+        "dog",
+        "dog"
+      ],
+      "official_VizWiz_accuracy": 0.0,
+      "current_generic_VQA_accuracy": 1.0
+    },
+    {
+      "case": "diverse_contraction_apostrophe",
+      "prediction": "doesnt",
+      "references": [
+        "doesn't",
+        "doesn't",
+        "doesn't",
+        "doesn't",
+        "doesn't",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other"
+      ],
+      "official_VizWiz_accuracy": 0.0,
+      "current_generic_VQA_accuracy": 1.0
+    },
+    {
+      "case": "diverse_case_control",
+      "prediction": "Unanswerable",
+      "references": [
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "other"
+      ],
+      "official_VizWiz_accuracy": 1.0,
+      "current_generic_VQA_accuracy": 1.0
+    }
+  ],
+  "contraction_entries_different": 155,
+  "contraction_difference_examples": {
+    "'ow'sat": {
+      "VizWiz": null,
+      "generic_VQA": "'ow's'at"
+    },
+    "'ows'at": {
+      "VizWiz": null,
+      "generic_VQA": "'ow's'at"
+    },
+    "I'dve": {
+      "VizWiz": null,
+      "generic_VQA": "I'd've"
+    },
+    "Id've": {
+      "VizWiz": null,
+      "generic_VQA": "I'd've"
+    },
+    "Id’ve": {
+      "VizWiz": "I’d’ve",
+      "generic_VQA": null
+    }
+  },
+  "loader_preserves_reference_rows_exactly": true,
+  "loader_image_map_matches_raw_rows": true,
+  "actual_data": {
+    "questions": 8000,
+    "unanimous_reference_questions": 482,
+    "unanimous_lowercase_unanswerable_questions": 208,
+    "example_image": "VizWiz_test_00000010.jpg",
+    "hypothetical_prediction": "Unanswerable",
+    "official_score": 1.0,
+    "current_generic_score": 0.0,
+    "scope": "Scoring fixtures only; no model responses generated or utility outcomes measured"
+  },
+  "image_bytes_read_or_rehashed": 0
+}

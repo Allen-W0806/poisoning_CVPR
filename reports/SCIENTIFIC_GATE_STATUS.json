@@ -1,0 +1,48 @@
+{
+  "PROJECT_ID": "RSI-POISONING",
+  "updated_UTC": "2026-11-02T16:12:42.049377+00:00",
+  "statuses": {
+    "ENGINEERING_STATUS": {
+      "status": "PASS_SCOPED_FIXES_AND_EXECUTION",
+      "scope": "Reward wiring/strict fields/legacy compatibility; calibrated metrics; real pretrained updates; domain-specific guards remain intact"
+    },
+    "NUMERICAL_REPRODUCIBILITY_STATUS": {
+      "status": "ROOT_CAUSE_PARTIALLY_LOCALIZED",
+      "scope": "Captured launch-blocked pair PASS;88504 uninstrumented ordinary FAIL and actual resumed next update TIMEOUT. No verified production fix."
+    },
+    "BENIGN_REWARD_VALIDITY_STATUS": {
+      "status": "IMPLEMENTATION_FIXED_CONSTRUCT_UNVALIDATED",
+      "scope": "YAML and identity accounting fixed; unchanged coefficients retain redundancy/saturation/no-op preference; no scientific reward release"
+    },
+    "DATASET_VALIDITY_STATUS": {
+      "status": "CONTENT_PASS_FINAL_ADMISSION_PENDING",
+      "scope": "160 prospective sources acquired,0 known ID/hash/pHash flags; original labels/source bytes checked. Complete history lineage/power/final protocol remain pending; human labels0"
+    },
+    "BENIGN_RL_STATUS": {
+      "status": "EXECUTED_DEVELOPMENT_ONLY_NO_OBSERVED_GAIN",
+      "scope": "One-seed pretrained4-arm pixel-brightness proxy; all trained branches below frozen on4 assessment sources; no generalization claim"
+    },
+    "RSI_CONTRIBUTION_STATUS": {
+      "status": "NOT_ESTABLISHED_NUMERICAL_CONFOUND",
+      "scope": "Own validation rejection and rollback executed; equal-LR candidate discrepancy prevents causal superiority attribution"
+    },
+    "MAIN_PAPER_EVIDENCE_STATUS": {
+      "status": "INCOMPLETE_NO_GO",
+      "scope": "No matched six-arm final evidence, no independent semantic labels, all real post-training ASR NOT TESTED"
+    }
+  },
+  "measurement_status": {
+    "LPIPS": "AVAILABLE_VERIFIED_V01_ALEX_32_PAIRS",
+    "SSIM": "ALIGNED_GEOMETRY_32_PAIRS",
+    "instruction_success": null
+  },
+  "budget": {
+    "cap": 3600,
+    "consumed": 2762,
+    "reserved": 0,
+    "remaining": 838
+  },
+  "scientific_gate_scope": "main paper claims; unrelated engineering/CPU work may proceed",
+  "evidence_root": "results/execution_remediation_20261102_v1",
+  "source_revision": "06bd889d9392c4d53621c3e4af15ad718e84f6c5"
+}

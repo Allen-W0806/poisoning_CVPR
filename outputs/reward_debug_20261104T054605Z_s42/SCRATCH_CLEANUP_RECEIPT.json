@@ -1,0 +1,104 @@
+{
+  "UTC": "2026-11-04T12:06:23.157514+00:00",
+  "mode": "EXECUTED",
+  "all_recorded_allocations_terminal": true,
+  "verified_targets": [
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/rd_182763dc3f62",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/rd_1da8a00349a4",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/rd_2fb8e3725172",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/rd_3ba98ecf245e",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/rd_4801f72974d9",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/rd_5300543b49d2",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/rd_587fad09187a",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/rd_88b7696cb92e",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/rd_e1beff2d707d",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/rd_scq_b7cc948e51",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/reward_debug_20261104T054605Z_s42_cpu_tests",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/reward_debug_20261104T054605Z_s42_delivery",
+      "files": 3,
+      "bytes": 209207339
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/reward_debug_20261104T054605Z_s42_diagnostics",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/reward_debug_20261104T054605Z_s42_external_build",
+      "files": 1,
+      "bytes": 23220729
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/reward_debug_20261104T054605Z_s42_internal",
+      "files": 1,
+      "bytes": 2355
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/reward_debug_20261104T054605Z_s42_shadowcast_clean",
+      "files": 1,
+      "bytes": 2355
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/reward_debug_20261104T054605Z_s42_shadowcast_poison",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/reward_debug_20261104T054605Z_s42_shadowcast_poison_pathfix",
+      "files": 0,
+      "bytes": 0
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/tmp/reward_debug_20261104T054605Z_s42_shadowcast_smoke",
+      "files": 0,
+      "bytes": 0
+    }
+  ],
+  "deleted_bytes": 232432778,
+  "retained": "all models/environments/data/checkpoints/raw logs and result evidence outside these scratch directories"
+}

@@ -1,0 +1,578 @@
+{
+  "timestamp_utc": "2026-10-31T18:32:50.641958+00:00",
+  "scheduler": {
+    "queue": {
+      "command": [
+        "squeue",
+        "-h",
+        "-u",
+        "ydk297",
+        "-o",
+        "%i|%T|%j|%b|%M|%l|%R"
+      ],
+      "exit_code": 0,
+      "stdout": "87882|RUNNING|poisoning-monitor|N/A|0:01|5:00|epyc16\n87909|PENDING|poisoning-monitor|N/A|0:00|5:00|(BeginTime)\n",
+      "stderr": ""
+    },
+    "accounting": {
+      "command": [
+        "sacct",
+        "-X",
+        "-j",
+        "86254,86256,86259,86260,86292,86293,86299,86300,86301,86302,86303,86304,86305,86306,86307,86308,86403,86404,86405,86408,86409,86411,86412,86430,86433,86434,86435,86444,86445,86446,86601,86602",
+        "-P",
+        "--format=JobIDRaw,State,ExitCode,ElapsedRaw,ReqTRES,AllocTRES,Timelimit"
+      ],
+      "exit_code": 0,
+      "stdout": "JobIDRaw|State|ExitCode|ElapsedRaw|ReqTRES|AllocTRES|Timelimit\n86254|COMPLETED|0:0|59|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|00:20:00\n86256|COMPLETED|0:0|90|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|00:20:00\n86259|COMPLETED|0:0|117|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|00:20:00\n86260|COMPLETED|0:0|59|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|00:20:00\n86292|COMPLETED|0:0|41|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:15:00\n86293|FAILED|1:0|46|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:20:00\n86299|FAILED|1:0|77|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:15:00\n86300|COMPLETED|0:0|63|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:15:00\n86301|FAILED|1:0|44|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:10:00\n86302|FAILED|1:0|42|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:10:00\n86303|FAILED|1:0|15|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:10:00\n86304|FAILED|1:0|49|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:10:00\n86305|COMPLETED|0:0|73|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:15:00\n86306|COMPLETED|0:0|48|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:10:00\n86307|COMPLETED|0:0|146|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:15:00\n86308|COMPLETED|0:0|543|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:15:00\n86403|FAILED|1:0|88|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:10:00\n86404|FAILED|1:0|73|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:10:00\n86405|FAILED|1:0|119|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:10:00\n86408|COMPLETED|0:0|131|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:05:00\n86409|COMPLETED|0:0|90|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:10:00\n86411|FAILED|1:0|953|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:20:00\n86412|COMPLETED|0:0|156|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:05:00\n86430|COMPLETED|0:0|314|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:12:00\n86433|COMPLETED|0:0|388|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:08:00\n86434|COMPLETED|0:0|3227|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:56:00\n86435|COMPLETED|0:0|2707|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:56:00\n86444|COMPLETED|0:0|59|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:03:00\n86445|COMPLETED|0:0|3211|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:56:00\n86446|COMPLETED|0:0|3216|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|00:56:00\n86601|COMPLETED|0:0|33|billing=1,cpu=1,mem=12G,node=1|billing=1,cpu=1,mem=12G,node=1|00:20:00\n86602|COMPLETED|0:0|26|billing=1,cpu=1,mem=12G,node=1|billing=1,cpu=1,mem=12G,node=1|00:20:00\n",
+      "stderr": ""
+    },
+    "jobs": {
+      "86254": {
+        "JobIDRaw": "86254",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "59",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=32G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=32G,node=1",
+        "Timelimit": "00:20:00"
+      },
+      "86256": {
+        "JobIDRaw": "86256",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "90",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=32G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=32G,node=1",
+        "Timelimit": "00:20:00"
+      },
+      "86259": {
+        "JobIDRaw": "86259",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "117",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=32G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=32G,node=1",
+        "Timelimit": "00:20:00"
+      },
+      "86260": {
+        "JobIDRaw": "86260",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "59",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=32G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=32G,node=1",
+        "Timelimit": "00:20:00"
+      },
+      "86292": {
+        "JobIDRaw": "86292",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "41",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:15:00"
+      },
+      "86293": {
+        "JobIDRaw": "86293",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "ElapsedRaw": "46",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:20:00"
+      },
+      "86299": {
+        "JobIDRaw": "86299",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "ElapsedRaw": "77",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:15:00"
+      },
+      "86300": {
+        "JobIDRaw": "86300",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "63",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:15:00"
+      },
+      "86301": {
+        "JobIDRaw": "86301",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "ElapsedRaw": "44",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:10:00"
+      },
+      "86302": {
+        "JobIDRaw": "86302",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "ElapsedRaw": "42",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:10:00"
+      },
+      "86303": {
+        "JobIDRaw": "86303",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "ElapsedRaw": "15",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:10:00"
+      },
+      "86304": {
+        "JobIDRaw": "86304",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "ElapsedRaw": "49",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:10:00"
+      },
+      "86305": {
+        "JobIDRaw": "86305",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "73",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:15:00"
+      },
+      "86306": {
+        "JobIDRaw": "86306",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "48",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:10:00"
+      },
+      "86307": {
+        "JobIDRaw": "86307",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "146",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:15:00"
+      },
+      "86308": {
+        "JobIDRaw": "86308",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "543",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:15:00"
+      },
+      "86403": {
+        "JobIDRaw": "86403",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "ElapsedRaw": "88",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:10:00"
+      },
+      "86404": {
+        "JobIDRaw": "86404",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "ElapsedRaw": "73",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:10:00"
+      },
+      "86405": {
+        "JobIDRaw": "86405",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "ElapsedRaw": "119",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:10:00"
+      },
+      "86408": {
+        "JobIDRaw": "86408",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "131",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:05:00"
+      },
+      "86409": {
+        "JobIDRaw": "86409",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "90",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:10:00"
+      },
+      "86411": {
+        "JobIDRaw": "86411",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "ElapsedRaw": "953",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:20:00"
+      },
+      "86412": {
+        "JobIDRaw": "86412",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "156",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:05:00"
+      },
+      "86430": {
+        "JobIDRaw": "86430",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "314",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:12:00"
+      },
+      "86433": {
+        "JobIDRaw": "86433",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "388",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:08:00"
+      },
+      "86434": {
+        "JobIDRaw": "86434",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "3227",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:56:00"
+      },
+      "86435": {
+        "JobIDRaw": "86435",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "2707",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:56:00"
+      },
+      "86444": {
+        "JobIDRaw": "86444",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "59",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:03:00"
+      },
+      "86445": {
+        "JobIDRaw": "86445",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "3211",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:56:00"
+      },
+      "86446": {
+        "JobIDRaw": "86446",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "3216",
+        "ReqTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "AllocTRES": "billing=4,cpu=4,gres/gpu=1,mem=48G,node=1",
+        "Timelimit": "00:56:00"
+      },
+      "86601": {
+        "JobIDRaw": "86601",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "33",
+        "ReqTRES": "billing=1,cpu=1,mem=12G,node=1",
+        "AllocTRES": "billing=1,cpu=1,mem=12G,node=1",
+        "Timelimit": "00:20:00"
+      },
+      "86602": {
+        "JobIDRaw": "86602",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "ElapsedRaw": "26",
+        "ReqTRES": "billing=1,cpu=1,mem=12G,node=1",
+        "AllocTRES": "billing=1,cpu=1,mem=12G,node=1",
+        "Timelimit": "00:20:00"
+      }
+    },
+    "live_statistics": null
+  },
+  "completions": [
+    {
+      "experiment_id": "EXP_20261028T043842_27f373f49cea_phase6_s1_data",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.445474+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T043858_676e8af74c51_phase6_s1_review_package",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.509217+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T043859_b71a6505c744_phase6_s1_reward_audit",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.510948+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T043859_bb90680e9814_phase6_s2_real_harness",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.517956+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T043906_d2f0c0bfcc8d_phase6_s3_rl_engineering",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.519811+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T043913_83c701b44e64_phase6_s4_static_comparison",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.522460+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T044752_b0572261ea61_phase6_s1_data",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.523955+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T044803_6cec2c9966a5_phase6_s1_review_package",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.588041+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T044804_7ad7c946a999_phase6_s1_reward_audit",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.590077+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T044805_f12f313ebb56_phase6_s2_real_harness",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.596404+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T044811_00449775da3b_phase6_s3_rl_engineering",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.598491+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T044816_33120182732f_phase6_s4_static_comparison",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "COMPLETED",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.601146+00:00"
+    },
+    {
+      "experiment_id": "EXP_20261028T154458_eefb8fb1fe7a_phase6_review_dashboard_followup",
+      "decision": "PASS_ENGINEERING",
+      "scheduler_state": "LOCAL_CPU",
+      "reasons": [],
+      "scheduler_scope": "actual accounting required for Slurm jobs; local CPU runs have null job",
+      "scientific_success": false,
+      "timestamp": "2026-10-31T18:32:50.612056+00:00"
+    }
+  ],
+  "stage_states": {
+    "S1_DATA": "PASSED",
+    "S1_REVIEW_PACKAGE": "PASSED",
+    "S1_REWARD_AUDIT": "PASSED",
+    "S1_SEMANTIC_REVIEW": "NEEDS_HUMAN_REVIEW",
+    "S2_REAL_HARNESS": "PASSED",
+    "S3_RL_ENGINEERING": "PASSED",
+    "S3_REWARD_RELEASE": "BLOCKED",
+    "S4_STATIC_COMPARISON": "PASSED",
+    "S4_SCIENTIFIC_READY": "BLOCKED",
+    "S5_PILOT": "BLOCKED"
+  },
+  "v2_manifest_hash_checks": {
+    "train": true,
+    "development": true,
+    "gate": true,
+    "test": true
+  },
+  "disk": {
+    "free_bytes": 283234361409536
+  },
+  "phase6_gpu_seconds": 0,
+  "gpu_submission_permitted": false,
+  "current_harness": "H0002",
+  "harness_diagnostic_overhead": {
+    "wall_seconds": 5.820236200466752,
+    "cpu_seconds": 5.723810066000006,
+    "diagnostic_operations": 1040,
+    "bytes_read": 332716553,
+    "model_calls": 0,
+    "gpu_seconds": 0.0
+  },
+  "bounded_engineering_repairs": [],
+  "cpu_progression": {
+    "action": "NO_SUBMISSION",
+    "reason": "no eligible unfinished CPU task"
+  },
+  "active_investigations": "none after initial bounded CPU tasks",
+  "review_submission_files": [],
+  "review_submission_scope": "presence only; independent provenance/adjudication required, never automatic human truth",
+  "review_analysis": {
+    "updated_utc": "2026-10-31T18:32:50.428797+00:00",
+    "submission_files": 0,
+    "provenance_consistent_submissions": 0,
+    "validation_errors": [],
+    "operator_attestation_present": false,
+    "verified_reviewer_ids": [],
+    "reviewer_conflicts": [],
+    "independently_reviewed_consensus_pairs": 0,
+    "consensus_pair_ids": [],
+    "available_pairs": 24,
+    "dimension_coverage": {
+      "instruction_completion": {
+        "unique_rated_pairs": 0,
+        "available_pairs": 24
+      },
+      "image_realism": {
+        "unique_rated_pairs": 0,
+        "available_pairs": 24
+      },
+      "content_preservation": {
+        "unique_rated_pairs": 0,
+        "available_pairs": 24
+      },
+      "question_answer_factual_validity": {
+        "unique_rated_pairs": 0,
+        "available_pairs": 24
+      },
+      "image_question_semantic_relationship": {
+        "unique_rated_pairs": 0,
+        "available_pairs": 24
+      },
+      "visible_artifacts": {
+        "unique_rated_pairs": 0,
+        "available_pairs": 24
+      },
+      "evaluation_uncertainty": {
+        "unique_rated_pairs": 0,
+        "available_pairs": 24
+      }
+    },
+    "reviewer_pair_agreement": {
+      "instruction_completion": [],
+      "image_realism": [],
+      "content_preservation": [],
+      "question_answer_factual_validity": [],
+      "image_question_semantic_relationship": [],
+      "visible_artifacts": [],
+      "evaluation_uncertainty": []
+    },
+    "disagreements": [],
+    "proxy_group_summaries": {},
+    "proxy_answer_match": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null,
+      "scope": "normalized match to reviewed edited answers, not official10-answer VQA accuracy"
+    },
+    "analysis_unit": "prioritized unique source pair; repeated ratings retained separately, not additional independent images",
+    "training_reward_released": false,
+    "scientific_pilot_ready": false,
+    "scope": "metadata and agreement do not independently prove human authorship or establish representative semantic efficacy"
+  },
+  "stale_process_check": {
+    "command": [
+      "ps",
+      "-u",
+      "ydk297",
+      "-o",
+      "pid,etime,args"
+    ],
+    "exit_code": 0,
+    "stdout": "    PID     ELAPSED COMMAND\n1935643       00:02 /storage/home/ydk297/projects/poisoning/.venv/bin/python scripts/manage_monitor.py tick --slot 2026-10-31T18:32:35+00:00\n1935655       00:00 ps -u ydk297 -o pid,etime,args\n",
+    "stderr": ""
+  },
+  "monitor_scheduler_state": {
+    "enabled": true,
+    "installed": true,
+    "interval_hours": 2,
+    "method": "slurm_cpu_successor",
+    "consecutive_failures": 0,
+    "submission_uncertain": false,
+    "pending_submission_token": "219b34e931834a54ba05bee5c567b413",
+    "pending_due_utc": "2026-10-31T20:32:35+00:00",
+    "next_job_id": "87909",
+    "next_due_utc": "2026-10-31T20:32:35+00:00",
+    "last_tick_job_id": "87882",
+    "last_check_outcome": "RUNNING",
+    "last_tick_utc": "2026-10-31T18:32:48.424022+00:00",
+    "last_success_utc": "2026-10-31T16:32:50.810145+00:00",
+    "paused_at": "2026-10-27T06:32:35.109686+00:00",
+    "cancelled_monitor_job_ids": [
+      "86318"
+    ]
+  },
+  "next_automatic_action": "lightweight integrity/completion/review-availability check at existing monitor cycle",
+  "scope": "lightweight CPU metadata/integrity checks; no model loading or GPU work"
+}

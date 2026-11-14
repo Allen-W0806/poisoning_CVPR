@@ -1,0 +1,197 @@
+{
+  "prior_gpu_seconds": 1344,
+  "new_gpu_seconds": 332,
+  "total_validation_gpu_seconds": 1676,
+  "remaining_validation_gpu_seconds": 1924,
+  "new_stage_cap": 900,
+  "global_validation_cap": 3600,
+  "new_jobs": [
+    {
+      "job_id": "87920",
+      "state": "COMPLETED",
+      "elapsed": 94,
+      "gpu_count": 0,
+      "gpu_seconds": 0,
+      "exit_code": "0:0",
+      "start_EDT": "2026-10-31T15:27:20",
+      "end_EDT": "2026-10-31T15:28:54"
+    },
+    {
+      "job_id": "87921",
+      "state": "COMPLETED",
+      "elapsed": 332,
+      "gpu_count": 1,
+      "gpu_seconds": 332,
+      "exit_code": "0:0",
+      "start_EDT": "2026-10-31T15:29:41",
+      "end_EDT": "2026-10-31T15:35:13"
+    },
+    {
+      "job_id": "87922",
+      "state": "COMPLETED",
+      "elapsed": 3,
+      "gpu_count": 0,
+      "gpu_seconds": 0,
+      "exit_code": "0:0",
+      "start_EDT": "2026-10-31T15:35:19",
+      "end_EDT": "2026-10-31T15:35:22"
+    }
+  ],
+  "prior_jobs": [
+    {
+      "job_id": "86736",
+      "state": "FAILED",
+      "elapsed": 138,
+      "gpu_count": 1,
+      "gpu_seconds": 138,
+      "exit_code": "1:0"
+    },
+    {
+      "job_id": "86738",
+      "state": "COMPLETED",
+      "elapsed": 28,
+      "gpu_count": 0,
+      "gpu_seconds": 0,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86739",
+      "state": "FAILED",
+      "elapsed": 6,
+      "gpu_count": 1,
+      "gpu_seconds": 6,
+      "exit_code": "1:0"
+    },
+    {
+      "job_id": "86741",
+      "state": "COMPLETED",
+      "elapsed": 20,
+      "gpu_count": 1,
+      "gpu_seconds": 20,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86742",
+      "state": "COMPLETED",
+      "elapsed": 24,
+      "gpu_count": 1,
+      "gpu_seconds": 24,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86745",
+      "state": "COMPLETED",
+      "elapsed": 10,
+      "gpu_count": 1,
+      "gpu_seconds": 10,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86793",
+      "state": "COMPLETED",
+      "elapsed": 129,
+      "gpu_count": 1,
+      "gpu_seconds": 129,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86794",
+      "state": "COMPLETED",
+      "elapsed": 32,
+      "gpu_count": 0,
+      "gpu_seconds": 0,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86795",
+      "state": "FAILED",
+      "elapsed": 436,
+      "gpu_count": 1,
+      "gpu_seconds": 436,
+      "exit_code": "1:0"
+    },
+    {
+      "job_id": "86796",
+      "state": "COMPLETED",
+      "elapsed": 19,
+      "gpu_count": 1,
+      "gpu_seconds": 19,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86804",
+      "state": "FAILED",
+      "elapsed": 33,
+      "gpu_count": 1,
+      "gpu_seconds": 33,
+      "exit_code": "1:0"
+    },
+    {
+      "job_id": "86805",
+      "state": "FAILED",
+      "elapsed": 31,
+      "gpu_count": 1,
+      "gpu_seconds": 31,
+      "exit_code": "1:0"
+    },
+    {
+      "job_id": "86806",
+      "state": "COMPLETED",
+      "elapsed": 60,
+      "gpu_count": 1,
+      "gpu_seconds": 60,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86807",
+      "state": "COMPLETED",
+      "elapsed": 96,
+      "gpu_count": 1,
+      "gpu_seconds": 96,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86846",
+      "state": "COMPLETED",
+      "elapsed": 79,
+      "gpu_count": 1,
+      "gpu_seconds": 79,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86848",
+      "state": "COMPLETED",
+      "elapsed": 79,
+      "gpu_count": 1,
+      "gpu_seconds": 79,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86851",
+      "state": "COMPLETED",
+      "elapsed": 78,
+      "gpu_count": 1,
+      "gpu_seconds": 78,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "86853",
+      "state": "FAILED",
+      "elapsed": 53,
+      "gpu_count": 1,
+      "gpu_seconds": 53,
+      "exit_code": "1:0"
+    },
+    {
+      "job_id": "86856",
+      "state": "COMPLETED",
+      "elapsed": 53,
+      "gpu_count": 1,
+      "gpu_seconds": 53,
+      "exit_code": "0:0"
+    }
+  ],
+  "raw_sacct": "87920|COMPLETED|94|billing=4,cpu=4,mem=8G,node=1|0:0|2026-10-31T15:27:20|2026-10-31T15:28:54\n87921|COMPLETED|332|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|0:0|2026-10-31T15:29:41|2026-10-31T15:35:13\n87922|COMPLETED|3|billing=2,cpu=2,mem=8G,node=1|0:0|2026-10-31T15:35:19|2026-10-31T15:35:22\n",
+  "cpu_only_allocated_seconds": 97,
+  "billing_dollars": null
+}

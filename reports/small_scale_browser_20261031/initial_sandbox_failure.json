@@ -1,0 +1,5 @@
+{
+  "status": "BLOCKED_INITIAL_BROWSER_TEST",
+  "error": "page.goto: net::ERR_NETWORK_ACCESS_DENIED at http://127.0.0.1",
+  "resolution": "Identical headless project UI test succeeded with approved escalated execution; no browser security setting changed"
+}

@@ -1,0 +1,99 @@
+{
+  "observed_utc": "2026-10-28T16:05:16.729934+00:00",
+  "scheduler_status": {
+    "state": {
+      "enabled": true,
+      "installed": true,
+      "interval_hours": 2,
+      "method": "slurm_cpu_successor",
+      "consecutive_failures": 0,
+      "submission_uncertain": false,
+      "pending_submission_token": "9adb2052bba9415a83612ab919f226c2",
+      "pending_due_utc": "2026-10-28T16:32:35+00:00",
+      "next_job_id": "86661",
+      "next_due_utc": "2026-10-28T16:32:35+00:00",
+      "last_tick_job_id": "86649",
+      "last_check_outcome": "COMPLETED_WITH_FINDINGS",
+      "last_tick_utc": "2026-10-28T14:32:37.712909+00:00",
+      "last_success_utc": "2026-10-28T14:32:42.006754+00:00",
+      "paused_at": "2026-10-27T06:32:35.109686+00:00",
+      "cancelled_monitor_job_ids": [
+        "86318"
+      ]
+    },
+    "owned_jobs": [
+      {
+        "job_id": "86661",
+        "name": "poisoning-monitor",
+        "comment": "poisoning-monitor-v1:f916f24e0de6:9adb2052bba9415a83612ab919f226c2",
+        "state": "PENDING",
+        "start_time": "2026-10-28T12:32:35"
+      }
+    ],
+    "job_tag": "poisoning-monitor-v1:f916f24e0de6",
+    "timing": "7200-second eligibility intervals; actual starts depend on Slurm queue"
+  },
+  "squeue": {
+    "command": [
+      "squeue",
+      "-h",
+      "-u",
+      "ydk297",
+      "-o",
+      "%i|%T|%j|%b|%M|%l|%R"
+    ],
+    "exit_code": 0,
+    "stdout": "86665|PENDING|wanop-monitor_20261028T165953Z|N/A|0:00|15:00|(BeginTime)\n86661|PENDING|poisoning-monitor|N/A|0:00|5:00|(BeginTime)\n86670|PENDING|wanop-event-86669|N/A|0:00|15:00|(Dependency)\n86669|RUNNING|wanop-sde-pair-v1-a0|gres/gpu:tesla_a100_80gb:2|28:01|1:28:00|epyc00\n",
+    "stderr": ""
+  },
+  "sacct": {
+    "command": [
+      "sacct",
+      "-X",
+      "-j",
+      "86649,86661",
+      "-P",
+      "--format=JobIDRaw,State,ExitCode,ElapsedRaw,ReqTRES,AllocTRES,Timelimit"
+    ],
+    "exit_code": 0,
+    "stdout": "JobIDRaw|State|ExitCode|ElapsedRaw|ReqTRES|AllocTRES|Timelimit\n86649|COMPLETED|0:0|6|billing=1,cpu=1,mem=2G,node=1|billing=1,cpu=1,mem=2G,node=1|00:05:00\n86661|PENDING|0:0|0|billing=1,cpu=1,mem=2G,node=1||00:05:00\n",
+    "stderr": ""
+  },
+  "latest_manual_cycle": {
+    "timestamp": "2026-10-28T16:05:14.562751+00:00",
+    "status": "COMPLETED_WITH_FINDINGS",
+    "tracked_experiments": 123,
+    "completed_since_previous": [],
+    "next_scheduled_check": "2026-10-28T16:32:35+00:00",
+    "next_job_id": "86661",
+    "remaining_blockers": [
+      "Batch10 generator RL strict continuation not fully validated",
+      "Changed natural-image semantics await independent review",
+      "No scientific RSI advantage established"
+    ],
+    "idle_no_research_submission": true,
+    "latest_json": "/storage/home/ydk297/projects/poisoning/reports/monitoring/CHECK_20261028T160516_191404_38af65.json",
+    "latest_report": "/storage/home/ydk297/projects/poisoning/reports/monitoring/CHECK_20261028T160516_191404_38af65.md",
+    "active_experiment_ids": [],
+    "problems": 27,
+    "automatic_fixes": 0,
+    "blocked_actions": 2,
+    "automatic_recovery_attempts": 0,
+    "new_experiment_ids": [],
+    "phase6": {
+      "status": "PASS_ENGINEERING_SNAPSHOT",
+      "dashboard": {
+        "json": "/storage/home/ydk297/projects/poisoning/dashboard/dashboard_data.json",
+        "zh": "/storage/home/ydk297/projects/poisoning/dashboard/rsi_poisoning_zh.html",
+        "en": "/storage/home/ydk297/projects/poisoning/dashboard/rsi_poisoning_en.html",
+        "snapshot_utc": "2026-10-28T16:05:16.542044+00:00"
+      },
+      "completion_records": 13,
+      "new_gpu_submissions": 0
+    }
+  },
+  "single_successor": true,
+  "scientific_gpu_budget_seconds": 0,
+  "recurrence_without_codex": "Slurm CPU successor; Windows mirror requires explicit synchronization",
+  "no_scheduler_created_by_verification": true
+}

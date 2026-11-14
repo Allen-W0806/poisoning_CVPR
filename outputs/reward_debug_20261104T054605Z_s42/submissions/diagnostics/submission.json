@@ -1,0 +1,25 @@
+{
+  "stage": "diagnostics",
+  "reservation_GPU_seconds": 2700,
+  "seed": 42,
+  "status": "SUBMITTED",
+  "command": [
+    ".venv-editor/bin/python",
+    "scripts/debug_lighting_v2.py",
+    "--output",
+    "outputs/reward_debug_20261104T054605Z_s42/diagnostics"
+  ],
+  "prior_accounting": {
+    "records": [],
+    "committed_GPU_seconds": 0,
+    "actual_GPU_seconds": 0,
+    "cap_GPU_seconds": 72000
+  },
+  "script_SHA256": "f3934fef83042fa659a531093f7a870584d8dd579c9f1aab611509decdba41f4",
+  "scratch": "/storage/home/ydk297/projects/poisoning/tmp/reward_debug_20261104T054605Z_s42_diagnostics",
+  "created_UTC": "2026-11-04T05:58:44.236138+00:00",
+  "returncode": 0,
+  "stdout": "88948",
+  "stderr": "sbatch:  \nsbatch: Job Resource Tips:\nsbatch:   * Run 'jobstats <jobid>' while your job is running (wait at least 60 seconds before trying) or after job completes.\nsbatch:   * Check CPU, GPU, and memory usage.\nsbatch:   * Adjust your requests to improve efficiency.\nsbatch:   * Optimizing your requests can help shorten queue times and improve cluster utilization.\nsbatch:",
+  "job_id": "88948"
+}

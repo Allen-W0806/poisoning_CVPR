@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "state_byte_identical": true,
+  "all_existing_views_have_same_current_payload": true,
+  "automatic_cluster_to_Windows_sync": false
+}

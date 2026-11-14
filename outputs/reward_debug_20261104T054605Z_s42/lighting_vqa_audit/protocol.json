@@ -1,0 +1,32 @@
+{
+  "version": "lighting_v3_posthoc_vqa_20261104",
+  "preregistered_before_new_final_assessment": true,
+  "scope": "additional editing-quality diagnostic, not victim fine-tuning or ASR",
+  "source": "same16 development-assessment sources, all retained, original ten human VQAv2 answers",
+  "groups": [
+    "pixel_source",
+    "frozen",
+    "ddpo_only",
+    "rule_rsi",
+    "rl_rsi"
+  ],
+  "fixed_equivalence": "shares frozen observations by explicit user choice",
+  "model": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "max_new_tokens": 32,
+  "min_pixels": 4096,
+  "max_pixels": 262144,
+  "question": "unchanged original question; existing short-answer system prompt",
+  "decoding": "greedy, no sampling; physical batch1; seed42",
+  "scorer": "src/evaluation/vqa_official_compatible.py, original ten answers; no answer extraction or rewriting",
+  "selection_or_training_use": false,
+  "limitations": [
+    "one frozen VLM is fallible",
+    "one question per source does not certify all objects, colors, counts or positions",
+    "labels refer to source image; score measures preservation of source-answer evidence",
+    "not poisoned-victim ASR, not post-training Delta_Clean",
+    "development sources already exposed historically"
+  ],
+  "GPU_cap_seconds": 900,
+  "no_downloads": true
+}

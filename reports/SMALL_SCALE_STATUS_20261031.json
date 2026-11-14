@@ -1,0 +1,855 @@
+{
+  "updated_utc": "2026-10-31T19:41:25.706707+00:00",
+  "run_id": "small_scale_validation_20261031T1928Z_v1",
+  "clean_statistics": [
+    {
+      "seed": 42,
+      "split": "development",
+      "n": 16,
+      "before": 0.93125,
+      "after": 0.93125,
+      "difference": 0.0,
+      "before_ci95": [
+        0.8,
+        1.0
+      ],
+      "after_ci95": [
+        0.8,
+        1.0
+      ],
+      "paired_ci95": [
+        0.0,
+        0.0
+      ],
+      "changed_answers": 0,
+      "invalid_rate": 0.0,
+      "mean_after_latency": 0.3003163477696944,
+      "categories": {
+        "number": {
+          "n": 3,
+          "before": 0.9666666666666667,
+          "after": 0.9666666666666667
+        },
+        "other": {
+          "n": 3,
+          "before": 1.0,
+          "after": 1.0
+        },
+        "yes/no": {
+          "n": 10,
+          "before": 0.9,
+          "after": 0.9
+        }
+      },
+      "checks_status": "PASS",
+      "continuation": {
+        "status": "PASS",
+        "checkpoint_step": 8,
+        "checkpoint_sha256": "9e2e7a51cfbe4da62e73881440f8117443b7faf0fea84258ec5625de7805b2ea",
+        "fresh_object_next_step": true,
+        "same_instance_disk_restore": false,
+        "extra_replayed_optimizer_calls": 1,
+        "full_base_model_optimizer_resume": false
+      },
+      "model_summary": {
+        "status": "PASS",
+        "training_steps": 16,
+        "actual_optimizer_calls_including_replay": 17,
+        "trainable_tensors": 112,
+        "trainable_elements": 1605632,
+        "evaluated_unique_images": 48,
+        "before_accuracy": 0.8333333333333334,
+        "after_accuracy": 0.8333333333333334,
+        "frozen_base_sha256": "390847f15e9f70f12042da573246290cdef48b6150bbfce52b279d1a47ff0458",
+        "adapter_sha256": "455e9811632d6438a45df4daad8f7379035601830f94bd8edccb9ca94b33b908",
+        "peak_allocated_cuda_bytes": 8676248576,
+        "full_model_tuning": false,
+        "strict_repeated_continuation": "PASS for clean language LoRA, fixed original examples, math SDPA",
+        "pretrained_diffusion_continuation": "NOT VALIDATED; previous failures unchanged"
+      },
+      "checkpoint_hashes": {
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s42/clean_main/continuation_checkpoint.pt": "9e2e7a51cfbe4da62e73881440f8117443b7faf0fea84258ec5625de7805b2ea",
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s42/clean_main/final_training_state.pt": "c719f69203b90a7f46ce25e8c0d49319214cf9a229d6b2966c61f5f1b9039a31"
+      }
+    },
+    {
+      "seed": 42,
+      "split": "independent_evaluation",
+      "n": 32,
+      "before": 0.7843749999999999,
+      "after": 0.7843749999999999,
+      "difference": 0.0,
+      "before_ci95": [
+        0.6499999999999999,
+        0.903125
+      ],
+      "after_ci95": [
+        0.6499999999999999,
+        0.903125
+      ],
+      "paired_ci95": [
+        0.0,
+        0.0
+      ],
+      "changed_answers": 0,
+      "invalid_rate": 0.0,
+      "mean_after_latency": 0.3166077243949985,
+      "categories": {
+        "number": {
+          "n": 3,
+          "before": 0.5333333333333333,
+          "after": 0.5333333333333333
+        },
+        "other": {
+          "n": 11,
+          "before": 0.8727272727272727,
+          "after": 0.8727272727272727
+        },
+        "yes/no": {
+          "n": 18,
+          "before": 0.7722222222222223,
+          "after": 0.7722222222222223
+        }
+      },
+      "checks_status": "PASS",
+      "continuation": {
+        "status": "PASS",
+        "checkpoint_step": 8,
+        "checkpoint_sha256": "9e2e7a51cfbe4da62e73881440f8117443b7faf0fea84258ec5625de7805b2ea",
+        "fresh_object_next_step": true,
+        "same_instance_disk_restore": false,
+        "extra_replayed_optimizer_calls": 1,
+        "full_base_model_optimizer_resume": false
+      },
+      "model_summary": {
+        "status": "PASS",
+        "training_steps": 16,
+        "actual_optimizer_calls_including_replay": 17,
+        "trainable_tensors": 112,
+        "trainable_elements": 1605632,
+        "evaluated_unique_images": 48,
+        "before_accuracy": 0.8333333333333334,
+        "after_accuracy": 0.8333333333333334,
+        "frozen_base_sha256": "390847f15e9f70f12042da573246290cdef48b6150bbfce52b279d1a47ff0458",
+        "adapter_sha256": "455e9811632d6438a45df4daad8f7379035601830f94bd8edccb9ca94b33b908",
+        "peak_allocated_cuda_bytes": 8676248576,
+        "full_model_tuning": false,
+        "strict_repeated_continuation": "PASS for clean language LoRA, fixed original examples, math SDPA",
+        "pretrained_diffusion_continuation": "NOT VALIDATED; previous failures unchanged"
+      },
+      "checkpoint_hashes": {
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s42/clean_main/continuation_checkpoint.pt": "9e2e7a51cfbe4da62e73881440f8117443b7faf0fea84258ec5625de7805b2ea",
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s42/clean_main/final_training_state.pt": "c719f69203b90a7f46ce25e8c0d49319214cf9a229d6b2966c61f5f1b9039a31"
+      }
+    },
+    {
+      "seed": 123,
+      "split": "development",
+      "n": 16,
+      "before": 0.93125,
+      "after": 0.93125,
+      "difference": 0.0,
+      "before_ci95": [
+        0.8,
+        1.0
+      ],
+      "after_ci95": [
+        0.8,
+        1.0
+      ],
+      "paired_ci95": [
+        0.0,
+        0.0
+      ],
+      "changed_answers": 0,
+      "invalid_rate": 0.0,
+      "mean_after_latency": 0.2986924566794187,
+      "categories": {
+        "number": {
+          "n": 3,
+          "before": 0.9666666666666667,
+          "after": 0.9666666666666667
+        },
+        "other": {
+          "n": 3,
+          "before": 1.0,
+          "after": 1.0
+        },
+        "yes/no": {
+          "n": 10,
+          "before": 0.9,
+          "after": 0.9
+        }
+      },
+      "checks_status": "PASS",
+      "continuation": {
+        "status": "PASS",
+        "checkpoint_step": 8,
+        "checkpoint_sha256": "e866ac5be2abfd329081df0aea873fe3fcfa3c2102e8ead8e44427f21f21822e",
+        "fresh_object_next_step": true,
+        "same_instance_disk_restore": false,
+        "extra_replayed_optimizer_calls": 1,
+        "full_base_model_optimizer_resume": false
+      },
+      "model_summary": {
+        "status": "PASS",
+        "training_steps": 16,
+        "actual_optimizer_calls_including_replay": 17,
+        "trainable_tensors": 112,
+        "trainable_elements": 1605632,
+        "evaluated_unique_images": 48,
+        "before_accuracy": 0.8333333333333334,
+        "after_accuracy": 0.8479166666666668,
+        "frozen_base_sha256": "390847f15e9f70f12042da573246290cdef48b6150bbfce52b279d1a47ff0458",
+        "adapter_sha256": "7212fbdbd6891f8dafb6df83be0da0c2a42b996629c12371420b52537bd69013",
+        "peak_allocated_cuda_bytes": 8676248576,
+        "full_model_tuning": false,
+        "strict_repeated_continuation": "PASS for clean language LoRA, fixed original examples, math SDPA",
+        "pretrained_diffusion_continuation": "NOT VALIDATED; previous failures unchanged"
+      },
+      "checkpoint_hashes": {
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s123/clean_main/continuation_checkpoint.pt": "e866ac5be2abfd329081df0aea873fe3fcfa3c2102e8ead8e44427f21f21822e",
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s123/clean_main/final_training_state.pt": "a26e1099af1f374ba0f8f90259d24b52c25a117d0448ab5cbabe3abf48c00db1"
+      }
+    },
+    {
+      "seed": 123,
+      "split": "independent_evaluation",
+      "n": 32,
+      "before": 0.7843749999999999,
+      "after": 0.8062499999999999,
+      "difference": 0.021875,
+      "before_ci95": [
+        0.6499999999999999,
+        0.903125
+      ],
+      "after_ci95": [
+        0.678125,
+        0.9157031249999988
+      ],
+      "paired_ci95": [
+        0.0,
+        0.06562499999999999
+      ],
+      "changed_answers": 1,
+      "invalid_rate": 0.0,
+      "mean_after_latency": 0.31478469791909447,
+      "categories": {
+        "number": {
+          "n": 3,
+          "before": 0.5333333333333333,
+          "after": 0.5333333333333333
+        },
+        "other": {
+          "n": 11,
+          "before": 0.8727272727272727,
+          "after": 0.8727272727272727
+        },
+        "yes/no": {
+          "n": 18,
+          "before": 0.7722222222222223,
+          "after": 0.8111111111111111
+        }
+      },
+      "checks_status": "PASS",
+      "continuation": {
+        "status": "PASS",
+        "checkpoint_step": 8,
+        "checkpoint_sha256": "e866ac5be2abfd329081df0aea873fe3fcfa3c2102e8ead8e44427f21f21822e",
+        "fresh_object_next_step": true,
+        "same_instance_disk_restore": false,
+        "extra_replayed_optimizer_calls": 1,
+        "full_base_model_optimizer_resume": false
+      },
+      "model_summary": {
+        "status": "PASS",
+        "training_steps": 16,
+        "actual_optimizer_calls_including_replay": 17,
+        "trainable_tensors": 112,
+        "trainable_elements": 1605632,
+        "evaluated_unique_images": 48,
+        "before_accuracy": 0.8333333333333334,
+        "after_accuracy": 0.8479166666666668,
+        "frozen_base_sha256": "390847f15e9f70f12042da573246290cdef48b6150bbfce52b279d1a47ff0458",
+        "adapter_sha256": "7212fbdbd6891f8dafb6df83be0da0c2a42b996629c12371420b52537bd69013",
+        "peak_allocated_cuda_bytes": 8676248576,
+        "full_model_tuning": false,
+        "strict_repeated_continuation": "PASS for clean language LoRA, fixed original examples, math SDPA",
+        "pretrained_diffusion_continuation": "NOT VALIDATED; previous failures unchanged"
+      },
+      "checkpoint_hashes": {
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s123/clean_main/continuation_checkpoint.pt": "e866ac5be2abfd329081df0aea873fe3fcfa3c2102e8ead8e44427f21f21822e",
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s123/clean_main/final_training_state.pt": "a26e1099af1f374ba0f8f90259d24b52c25a117d0448ab5cbabe3abf48c00db1"
+      }
+    },
+    {
+      "seed": 3407,
+      "split": "development",
+      "n": 16,
+      "before": 0.93125,
+      "after": 0.93125,
+      "difference": 0.0,
+      "before_ci95": [
+        0.8,
+        1.0
+      ],
+      "after_ci95": [
+        0.8,
+        1.0
+      ],
+      "paired_ci95": [
+        0.0,
+        0.0
+      ],
+      "changed_answers": 0,
+      "invalid_rate": 0.0,
+      "mean_after_latency": 0.29817115467449185,
+      "categories": {
+        "number": {
+          "n": 3,
+          "before": 0.9666666666666667,
+          "after": 0.9666666666666667
+        },
+        "other": {
+          "n": 3,
+          "before": 1.0,
+          "after": 1.0
+        },
+        "yes/no": {
+          "n": 10,
+          "before": 0.9,
+          "after": 0.9
+        }
+      },
+      "checks_status": "PASS",
+      "continuation": {
+        "status": "PASS",
+        "checkpoint_step": 8,
+        "checkpoint_sha256": "4ca28eae39e64fa84563f7af37f2e2b5c8c22b5e40a897232445502a8fa83764",
+        "fresh_object_next_step": true,
+        "same_instance_disk_restore": false,
+        "extra_replayed_optimizer_calls": 1,
+        "full_base_model_optimizer_resume": false
+      },
+      "model_summary": {
+        "status": "PASS",
+        "training_steps": 16,
+        "actual_optimizer_calls_including_replay": 17,
+        "trainable_tensors": 112,
+        "trainable_elements": 1605632,
+        "evaluated_unique_images": 48,
+        "before_accuracy": 0.8333333333333334,
+        "after_accuracy": 0.8479166666666668,
+        "frozen_base_sha256": "390847f15e9f70f12042da573246290cdef48b6150bbfce52b279d1a47ff0458",
+        "adapter_sha256": "743d3044076d4e52111e673b23c1417485bbfba8406981651fe44f83c9faf9c7",
+        "peak_allocated_cuda_bytes": 8676248576,
+        "full_model_tuning": false,
+        "strict_repeated_continuation": "PASS for clean language LoRA, fixed original examples, math SDPA",
+        "pretrained_diffusion_continuation": "NOT VALIDATED; previous failures unchanged"
+      },
+      "checkpoint_hashes": {
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s3407/clean_main/continuation_checkpoint.pt": "4ca28eae39e64fa84563f7af37f2e2b5c8c22b5e40a897232445502a8fa83764",
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s3407/clean_main/final_training_state.pt": "658395b0a47e616854be8527efd19d87e279c826fde18ef26628313da59a6f5e"
+      }
+    },
+    {
+      "seed": 3407,
+      "split": "independent_evaluation",
+      "n": 32,
+      "before": 0.7843749999999999,
+      "after": 0.8062499999999999,
+      "difference": 0.021875,
+      "before_ci95": [
+        0.6499999999999999,
+        0.903125
+      ],
+      "after_ci95": [
+        0.678125,
+        0.9157031249999988
+      ],
+      "paired_ci95": [
+        0.0,
+        0.06562499999999999
+      ],
+      "changed_answers": 1,
+      "invalid_rate": 0.0,
+      "mean_after_latency": 0.3140604299696861,
+      "categories": {
+        "number": {
+          "n": 3,
+          "before": 0.5333333333333333,
+          "after": 0.5333333333333333
+        },
+        "other": {
+          "n": 11,
+          "before": 0.8727272727272727,
+          "after": 0.8727272727272727
+        },
+        "yes/no": {
+          "n": 18,
+          "before": 0.7722222222222223,
+          "after": 0.8111111111111111
+        }
+      },
+      "checks_status": "PASS",
+      "continuation": {
+        "status": "PASS",
+        "checkpoint_step": 8,
+        "checkpoint_sha256": "4ca28eae39e64fa84563f7af37f2e2b5c8c22b5e40a897232445502a8fa83764",
+        "fresh_object_next_step": true,
+        "same_instance_disk_restore": false,
+        "extra_replayed_optimizer_calls": 1,
+        "full_base_model_optimizer_resume": false
+      },
+      "model_summary": {
+        "status": "PASS",
+        "training_steps": 16,
+        "actual_optimizer_calls_including_replay": 17,
+        "trainable_tensors": 112,
+        "trainable_elements": 1605632,
+        "evaluated_unique_images": 48,
+        "before_accuracy": 0.8333333333333334,
+        "after_accuracy": 0.8479166666666668,
+        "frozen_base_sha256": "390847f15e9f70f12042da573246290cdef48b6150bbfce52b279d1a47ff0458",
+        "adapter_sha256": "743d3044076d4e52111e673b23c1417485bbfba8406981651fe44f83c9faf9c7",
+        "peak_allocated_cuda_bytes": 8676248576,
+        "full_model_tuning": false,
+        "strict_repeated_continuation": "PASS for clean language LoRA, fixed original examples, math SDPA",
+        "pretrained_diffusion_continuation": "NOT VALIDATED; previous failures unchanged"
+      },
+      "checkpoint_hashes": {
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s3407/clean_main/continuation_checkpoint.pt": "4ca28eae39e64fa84563f7af37f2e2b5c8c22b5e40a897232445502a8fa83764",
+        "results/small_scale_validation_20261031T1928Z_v1_qwen_s3407/clean_main/final_training_state.pt": "658395b0a47e616854be8527efd19d87e279c826fde18ef26628313da59a6f5e"
+      }
+    }
+  ],
+  "image_controls": {
+    "original": {
+      "n": 80,
+      "mean_SSIM": 1.0,
+      "mean_MAE": 0.0,
+      "processing_seconds": 4.899182181805372,
+      "LPIPS": null
+    },
+    "identity": {
+      "n": 80,
+      "mean_SSIM": 1.0,
+      "mean_MAE": 0.0,
+      "processing_seconds": 11.95321193151176,
+      "LPIPS": null
+    },
+    "brightness": {
+      "n": 80,
+      "mean_SSIM": 0.9987124382228147,
+      "mean_MAE": 2.606712558531439,
+      "processing_seconds": 11.98843969590962,
+      "LPIPS": null
+    },
+    "contrast": {
+      "n": 80,
+      "mean_SSIM": 0.9913415206050192,
+      "mean_MAE": 1.4841470826885268,
+      "processing_seconds": 11.966238394379616,
+      "LPIPS": null
+    },
+    "geometry": {
+      "n": 80,
+      "mean_SSIM": 1.0,
+      "mean_MAE": 0.0,
+      "processing_seconds": 3.4061366245150566,
+      "LPIPS": null
+    }
+  },
+  "completion_matrix": [
+    {
+      "Stage": "CPU source/provenance",
+      "Executed": true,
+      "Run_ID": "small_scale_validation_20261031T1928Z_v1",
+      "Slurm_job": "87920",
+      "Result": "80 unique source/content; 32/16/32",
+      "Numerical_checks": "PASS",
+      "Scientific_conclusion": "Source-disjoint engineering data",
+      "Blockers": "Untouched-test status BLOCKED"
+    },
+    {
+      "Stage": "Image controls",
+      "Executed": true,
+      "Run_ID": "small_scale_validation_20261031T1928Z_v1",
+      "Slurm_job": "87920",
+      "Result": "400 valid traced outputs",
+      "Numerical_checks": "PASS: decode/SSIM/pixel",
+      "Scientific_conclusion": "Transformation engineering only",
+      "Blockers": "LPIPS missing; edited-label validity unreviewed"
+    },
+    {
+      "Stage": "Frozen IP2Pix",
+      "Executed": true,
+      "Run_ID": "small_scale_validation_20261031T1928Z_v1",
+      "Slurm_job": "87920",
+      "Result": "160 existing outputs/hashes audited",
+      "Numerical_checks": "PASS: existing traceability",
+      "Scientific_conclusion": "Descriptive reuse only",
+      "Blockers": "Independent human review0/160; BF16 continuation unresolved"
+    },
+    {
+      "Stage": "Clean Qwen LoRA",
+      "Executed": true,
+      "Run_ID": "small_scale_validation_20261031T1928Z_v1",
+      "Slurm_job": "87921",
+      "Result": "3 seeds complete",
+      "Numerical_checks": "PASS",
+      "Scientific_conclusion": "No inferred generalization benefit",
+      "Blockers": "historical development assessment; not an untouched scientific test"
+    },
+    {
+      "Stage": "Benign RL exact/MC",
+      "Executed": true,
+      "Run_ID": "small_scale_validation_20261031T1928Z_v1",
+      "Slurm_job": "87920",
+      "Result": "finite categorical/group reference",
+      "Numerical_checks": "PASS",
+      "Scientific_conclusion": "Synthetic mathematical consistency only",
+      "Blockers": ""
+    },
+    {
+      "Stage": "Production DDPO optimizer",
+      "Executed": true,
+      "Run_ID": "small_scale_validation_20261031T1928Z_v1",
+      "Slurm_job": "87921",
+      "Result": "Tiny random UNet; pretrained ownership ZERO STEPS",
+      "Numerical_checks": "PASS",
+      "Scientific_conclusion": "No production GRPO or pretrained reliability claim",
+      "Blockers": "Full pretrained BF16 gate remains blocked"
+    },
+    {
+      "Stage": "Synthetic RSI",
+      "Executed": true,
+      "Run_ID": "small_scale_validation_20261031T1928Z_v1",
+      "Slurm_job": "87920",
+      "Result": "2 reproducible accept/reject/regression/rollback paths",
+      "Numerical_checks": "PASS",
+      "Scientific_conclusion": "Integrity oracle improvement only; not autonomous scientific RSI",
+      "Blockers": ""
+    },
+    {
+      "Stage": "Benign augmentation training",
+      "Executed": false,
+      "Run_ID": "small_scale_validation_20261031T1928Z_v1",
+      "Slurm_job": "87920",
+      "Result": "NOT RUN",
+      "Numerical_checks": "BLOCKED",
+      "Scientific_conclusion": "No claim",
+      "Blockers": "Label validity not independently established"
+    },
+    {
+      "Stage": "Attack reproduction / ASR",
+      "Executed": false,
+      "Run_ID": "small_scale_validation_20261031T1928Z_v1",
+      "Slurm_job": "87920",
+      "Result": "NOT PERFORMED",
+      "Numerical_checks": "N/A",
+      "Scientific_conclusion": "No efficacy claim",
+      "Blockers": "Outside this benign pilot"
+    }
+  ],
+  "resource_accounting": {
+    "prior_gpu_seconds": 1344,
+    "new_gpu_seconds": 332,
+    "total_validation_gpu_seconds": 1676,
+    "remaining_validation_gpu_seconds": 1924,
+    "new_stage_cap": 900,
+    "global_validation_cap": 3600,
+    "new_jobs": [
+      {
+        "job_id": "87920",
+        "state": "COMPLETED",
+        "elapsed": 94,
+        "gpu_count": 0,
+        "gpu_seconds": 0,
+        "exit_code": "0:0",
+        "start_EDT": "2026-10-31T15:27:20",
+        "end_EDT": "2026-10-31T15:28:54"
+      },
+      {
+        "job_id": "87921",
+        "state": "COMPLETED",
+        "elapsed": 332,
+        "gpu_count": 1,
+        "gpu_seconds": 332,
+        "exit_code": "0:0",
+        "start_EDT": "2026-10-31T15:29:41",
+        "end_EDT": "2026-10-31T15:35:13"
+      },
+      {
+        "job_id": "87922",
+        "state": "COMPLETED",
+        "elapsed": 3,
+        "gpu_count": 0,
+        "gpu_seconds": 0,
+        "exit_code": "0:0",
+        "start_EDT": "2026-10-31T15:35:19",
+        "end_EDT": "2026-10-31T15:35:22"
+      }
+    ],
+    "prior_jobs": [
+      {
+        "job_id": "86736",
+        "state": "FAILED",
+        "elapsed": 138,
+        "gpu_count": 1,
+        "gpu_seconds": 138,
+        "exit_code": "1:0"
+      },
+      {
+        "job_id": "86738",
+        "state": "COMPLETED",
+        "elapsed": 28,
+        "gpu_count": 0,
+        "gpu_seconds": 0,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86739",
+        "state": "FAILED",
+        "elapsed": 6,
+        "gpu_count": 1,
+        "gpu_seconds": 6,
+        "exit_code": "1:0"
+      },
+      {
+        "job_id": "86741",
+        "state": "COMPLETED",
+        "elapsed": 20,
+        "gpu_count": 1,
+        "gpu_seconds": 20,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86742",
+        "state": "COMPLETED",
+        "elapsed": 24,
+        "gpu_count": 1,
+        "gpu_seconds": 24,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86745",
+        "state": "COMPLETED",
+        "elapsed": 10,
+        "gpu_count": 1,
+        "gpu_seconds": 10,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86793",
+        "state": "COMPLETED",
+        "elapsed": 129,
+        "gpu_count": 1,
+        "gpu_seconds": 129,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86794",
+        "state": "COMPLETED",
+        "elapsed": 32,
+        "gpu_count": 0,
+        "gpu_seconds": 0,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86795",
+        "state": "FAILED",
+        "elapsed": 436,
+        "gpu_count": 1,
+        "gpu_seconds": 436,
+        "exit_code": "1:0"
+      },
+      {
+        "job_id": "86796",
+        "state": "COMPLETED",
+        "elapsed": 19,
+        "gpu_count": 1,
+        "gpu_seconds": 19,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86804",
+        "state": "FAILED",
+        "elapsed": 33,
+        "gpu_count": 1,
+        "gpu_seconds": 33,
+        "exit_code": "1:0"
+      },
+      {
+        "job_id": "86805",
+        "state": "FAILED",
+        "elapsed": 31,
+        "gpu_count": 1,
+        "gpu_seconds": 31,
+        "exit_code": "1:0"
+      },
+      {
+        "job_id": "86806",
+        "state": "COMPLETED",
+        "elapsed": 60,
+        "gpu_count": 1,
+        "gpu_seconds": 60,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86807",
+        "state": "COMPLETED",
+        "elapsed": 96,
+        "gpu_count": 1,
+        "gpu_seconds": 96,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86846",
+        "state": "COMPLETED",
+        "elapsed": 79,
+        "gpu_count": 1,
+        "gpu_seconds": 79,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86848",
+        "state": "COMPLETED",
+        "elapsed": 79,
+        "gpu_count": 1,
+        "gpu_seconds": 79,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86851",
+        "state": "COMPLETED",
+        "elapsed": 78,
+        "gpu_count": 1,
+        "gpu_seconds": 78,
+        "exit_code": "0:0"
+      },
+      {
+        "job_id": "86853",
+        "state": "FAILED",
+        "elapsed": 53,
+        "gpu_count": 1,
+        "gpu_seconds": 53,
+        "exit_code": "1:0"
+      },
+      {
+        "job_id": "86856",
+        "state": "COMPLETED",
+        "elapsed": 53,
+        "gpu_count": 1,
+        "gpu_seconds": 53,
+        "exit_code": "0:0"
+      }
+    ],
+    "raw_sacct": "87920|COMPLETED|94|billing=4,cpu=4,mem=8G,node=1|0:0|2026-10-31T15:27:20|2026-10-31T15:28:54\n87921|COMPLETED|332|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|0:0|2026-10-31T15:29:41|2026-10-31T15:35:13\n87922|COMPLETED|3|billing=2,cpu=2,mem=8G,node=1|0:0|2026-10-31T15:35:19|2026-10-31T15:35:22\n",
+    "cpu_only_allocated_seconds": 97,
+    "billing_dollars": null
+  },
+  "semantic_review": "BLOCKED",
+  "LPIPS": "BLOCKED: unchanged environment has no lpips",
+  "reward_guard": "PASS",
+  "scientific_hypothesis_supported": false,
+  "gpu_complete": {
+    "status": "PASS",
+    "results": [
+      {
+        "task": "clean_seed42",
+        "returncode": 0,
+        "seconds": 116.23609859589487,
+        "command": [
+          "scripts/run_qwen_replication.py",
+          "--run-id",
+          "small_scale_validation_20261031T1928Z_v1_qwen_s42",
+          "--phase",
+          "main"
+        ]
+      },
+      {
+        "task": "clean_seed123",
+        "returncode": 0,
+        "seconds": 101.18094811006449,
+        "command": [
+          "scripts/run_qwen_replication.py",
+          "--run-id",
+          "small_scale_validation_20261031T1928Z_v1_qwen_s123",
+          "--phase",
+          "main"
+        ]
+      },
+      {
+        "task": "clean_seed3407",
+        "returncode": 0,
+        "seconds": 100.55862522590905,
+        "command": [
+          "scripts/run_qwen_replication.py",
+          "--run-id",
+          "small_scale_validation_20261031T1928Z_v1_qwen_s3407",
+          "--phase",
+          "main"
+        ]
+      },
+      {
+        "task": "production_ddpo",
+        "returncode": 0,
+        "seconds": 13.220506057143211,
+        "command": [
+          "scripts/validate_ddpo_wiring.py",
+          "--run-id",
+          "small_scale_validation_20261031T1928Z_v1_ddpo"
+        ]
+      }
+    ],
+    "job_id": "87921",
+    "no_pretrained_generator_steps": true
+  },
+  "RL_production": {
+    "checks": [
+      {
+        "test": "tiny_production_optimizer_ownership",
+        "passed": true,
+        "trainable_parameters": 4096
+      },
+      {
+        "test": "tiny_frozen_parameters_invariant",
+        "passed": true
+      },
+      {
+        "test": "tiny_LoRA_A_and_B_updated",
+        "passed": true
+      },
+      {
+        "test": "tiny_gradients_finite_nonzero",
+        "passed": true
+      },
+      {
+        "test": "tiny_checkpoint_reload_exact",
+        "passed": true
+      },
+      {
+        "test": "tiny_checkpoint_fixed_trajectory_step_exact",
+        "passed": true,
+        "expected_gradient_norm": 0.7949703335762024,
+        "resumed_gradient_norm": 0.7949703335762024
+      },
+      {
+        "test": "pretrained_optimizer_only_attention_LoRA",
+        "passed": true,
+        "optimizer_steps": 0,
+        "parameter_tensors": 256,
+        "parameter_elements": 1594368
+      },
+      {
+        "test": "pretrained_VAE_text_encoder_frozen",
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "seconds": 5.520346959121525,
+    "source_sha256": "524921052d29c2330c24499b6fa4207e9b3478b5ed52f529233bab4b700e67c4"
+  },
+  "data_scope": "historical development assessment; not an untouched scientific test"
+}

@@ -1,0 +1,25 @@
+{
+  "local_final_commit": "c577c27d61836d7aaa9d0e79a515ffdea7b99d69",
+  "canonical_final_commit": "b78323954a5af4ea49e4692cd0382634eaa86c3c",
+  "old_same_id_experiments_byte_equal": true,
+  "source_files_matched": 59,
+  "registry_unique": true,
+  "scratch_removed": true,
+  "project_bytecode_cache_directories_removed": 12,
+  "archive_sha256": "ce94bab162879cf748aac38e5c0b9a036383e12fbb84d446b4bd425cf9ee6a52",
+  "retained_local_experiment_bytes": 462052610.0,
+  "allocated_gpu_seconds": 1187,
+  "final_disks": [
+    {
+      "drive": "C",
+      "free_bytes": 70963273728,
+      "used_bytes": 208205402112
+    },
+    {
+      "drive": "H",
+      "free_bytes": 235770863616,
+      "used_bytes": 259660320768
+    }
+  ],
+  "git_status": ""
+}

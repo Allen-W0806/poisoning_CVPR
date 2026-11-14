@@ -1,0 +1,15 @@
+{
+  "status": "FAILED",
+  "images_url": "https://vizwiz.cs.colorado.edu/VizWiz_final/images/test.zip",
+  "annotations_url": "https://vizwiz.cs.colorado.edu/VizWiz_all_answers/VQA_test.json",
+  "public_release": "official site April2026 self-evaluation release, fetched before any new benchmark outputs",
+  "expected_archive_bytes": 3975272799,
+  "estimated_peak_staging_bytes": 9000000000,
+  "C_drive_bytes": 0,
+  "free_before": 282744642863104,
+  "scratch": "/storage/home/ydk297/projects/poisoning/tmp/rd_viz_b7cc948e51",
+  "data_root": "/storage/home/ydk297/projects/poisoning/data/external/vizwiz_test_release20260428",
+  "annotation_SHA256": "fa113f0e90230ab4690bb41c4d74e40f7087cc7c192dd8363fa4d6bad339b7aa",
+  "failure": "ValueError: Question versions disagree",
+  "free_after": 282744626085888
+}

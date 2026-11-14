@@ -1,0 +1,49 @@
+ENVIRONMENT_AND_DATA {"environment": {"python": "3.11.12 | packaged by conda-forge | (main, Apr 10 2025, 22:23:25) [GCC 13.3.0]", "executable": "/storage/home/ydk297/projects/poisoning/.venv-editor/bin/python", "packages": {"torch": "2.6.0", "diffusers": "0.35.1", "transformers": "4.57.1", "peft": "0.17.1", "scikit-image": "0.25.2", "numpy": "2.1.2", "Pillow": "11.0.0"}, "editor_revision": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d", "editor_snapshot": "/storage/home/ydk297/.cache/huggingface/hub/models--timbrooks--instruct-pix2pix/snapshots/31519b5cb02a7fd89b906d88731cd4d6a7bbf88d", "CLIP_snapshot": "/storage/home/ydk297/.cache/huggingface/hub/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41", "LPIPS_resources_verified": true, "disk_free_bytes": 282689974304768, "estimated_retained_run_bytes": 1500000000, "downloaded_bytes": 0, "C_drive_model_bytes": 0, "Slurm_job_ID": "88916", "CUDA_VISIBLE_DEVICES": "0", "hostname": "epyc04"}, "data": {"image_count": 64, "content_count": 64, "split_counts": {"train": 32, "validation": 16, "test": 16}, "image_ID_and_SHA256_disjoint": true, "all_images_decoded_and_rehashed": true}}
+KERNEL_WITNESS {"shape": [8, 8], "finite": true, "GPU": "NVIDIA A100 80GB PCIe", "total_memory": 85094825984}
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:00<00:01,  2.67it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+Loading pipeline components...:  40%|████      | 2/5 [00:00<00:01,  2.30it/s]Loading pipeline components...:  80%|████████  | 4/5 [00:03<00:01,  1.08s/it]Loading pipeline components...: 100%|██████████| 5/5 [00:03<00:00,  1.30it/s]
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+/storage/home/ydk297/miniconda3/envs/lvr_train/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/storage/home/ydk297/miniconda3/envs/lvr_train/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+{"arm": "ddpo_only", "step": 10, "round": 1, "training_reward": 0.049374669790267944, "elapsed_seconds": 239.23352334904484}
+{"arm": "ddpo_only", "step": 20, "round": 1, "training_reward": -0.22609028220176697, "elapsed_seconds": 341.8625519879861}
+{"arm": "ddpo_only", "step": 30, "round": 1, "training_reward": 0.03600630164146423, "elapsed_seconds": 444.4817012309795}
+{"arm": "ddpo_only", "step": 40, "round": 2, "training_reward": 0.017205387353897095, "elapsed_seconds": 588.6347785850521}
+{"arm": "ddpo_only", "step": 50, "round": 2, "training_reward": 0.17006313800811768, "elapsed_seconds": 692.7931711759884}
+{"arm": "ddpo_only", "step": 60, "round": 2, "training_reward": -0.09944993257522583, "elapsed_seconds": 796.7884875379968}
+{"arm": "ddpo_only", "step": 70, "round": 3, "training_reward": 0.044598788022994995, "elapsed_seconds": 943.0564083929639}
+{"arm": "ddpo_only", "step": 80, "round": 3, "training_reward": -0.07932409644126892, "elapsed_seconds": 1047.3665400960017}
+{"arm": "ddpo_only", "step": 90, "round": 3, "training_reward": 0.003780841827392578, "elapsed_seconds": 1151.3108239399735}
+{"arm": "ddpo_only", "step": 100, "round": 3, "training_reward": 0.19312641024589539, "elapsed_seconds": 1255.4340569650522}
+{"arm": "rule_rsi", "step": 10, "round": 1, "training_reward": 0.049374669790267944, "elapsed_seconds": 1401.4256879630266}
+{"arm": "rule_rsi", "step": 20, "round": 1, "training_reward": -0.22609028220176697, "elapsed_seconds": 1505.3728748890571}
+{"arm": "rule_rsi", "step": 30, "round": 1, "training_reward": 0.03600630164146423, "elapsed_seconds": 1609.098181155976}
+{"arm": "rule_rsi", "step": 40, "round": 2, "training_reward": 0.017205387353897095, "elapsed_seconds": 1754.8791616279632}
+{"arm": "rule_rsi", "step": 50, "round": 2, "training_reward": 0.17006313800811768, "elapsed_seconds": 1859.0956368029583}
+{"arm": "rule_rsi", "step": 60, "round": 2, "training_reward": -0.09944993257522583, "elapsed_seconds": 1962.8215452750446}
+{"arm": "rule_rsi", "step": 70, "round": 3, "training_reward": 0.044598788022994995, "elapsed_seconds": 2108.661379256053}
+{"arm": "rule_rsi", "step": 80, "round": 3, "training_reward": -0.07932409644126892, "elapsed_seconds": 2212.874797101016}
+{"arm": "rule_rsi", "step": 90, "round": 3, "training_reward": 0.003780841827392578, "elapsed_seconds": 2316.7927674070233}
+{"arm": "rule_rsi", "step": 100, "round": 3, "training_reward": 0.19312641024589539, "elapsed_seconds": 2420.8533947529504}
+{"arm": "rl_rsi", "step": 10, "round": 1, "training_reward": 0.11550402641296387, "elapsed_seconds": 2566.8193859179737}
+{"arm": "rl_rsi", "step": 20, "round": 1, "training_reward": -0.16325730085372925, "elapsed_seconds": 2670.6073465109803}
+{"arm": "rl_rsi", "step": 30, "round": 1, "training_reward": 0.10531899333000183, "elapsed_seconds": 2774.358154040063}
+{"arm": "rl_rsi", "step": 40, "round": 2, "training_reward": 0.06656384468078613, "elapsed_seconds": 2920.148471115972}
+{"arm": "rl_rsi", "step": 50, "round": 2, "training_reward": 0.23410828411579132, "elapsed_seconds": 3024.369886800996}
+{"arm": "rl_rsi", "step": 60, "round": 2, "training_reward": -0.04116475582122803, "elapsed_seconds": 3128.0477865469875}
+{"arm": "rl_rsi", "step": 70, "round": 3, "training_reward": 0.13259711861610413, "elapsed_seconds": 3273.761811834993}
+Traceback (most recent call last):
+  File "/storage/home/ydk297/projects/poisoning/train_and_evaluate_pilot.py", line 405, in main
+    execute(ROOT, output, protocol, cohort, state, persist)
+  File "/storage/home/ydk297/projects/poisoning/train_and_evaluate_pilot.py", line 275, in execute
+    episode, observation = collect(cohort["train"][source_index], f"{method}/train/step_{step:03d}",
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/ydk297/projects/poisoning/train_and_evaluate_pilot.py", line 158, in collect
+    check_time()
+  File "/storage/home/ydk297/projects/poisoning/train_and_evaluate_pilot.py", line 113, in check_time
+    raise TimeoutError("Preregistered pilot wall-time cap reached; no automatic continuation")
+TimeoutError: Preregistered pilot wall-time cap reached; no automatic continuation
+
+{"status": "FAILED", "output": "/storage/home/ydk297/projects/poisoning/outputs/pilot_run_20261104T030649Z_s42"}

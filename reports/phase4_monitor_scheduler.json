@@ -1,0 +1,33 @@
+{
+  "state": {
+    "enabled": true,
+    "installed": true,
+    "interval_hours": 2,
+    "method": "slurm_cpu_successor",
+    "consecutive_failures": 0,
+    "submission_uncertain": false,
+    "pending_submission_token": "90468f77a7144937acc6e12356313fe6",
+    "pending_due_utc": "2026-10-27T20:32:35+00:00",
+    "next_job_id": "86451",
+    "next_due_utc": "2026-10-27T20:32:35+00:00",
+    "last_tick_job_id": "86429",
+    "last_check_outcome": "COMPLETED_WITH_FINDINGS",
+    "last_tick_utc": "2026-10-27T18:33:04.064109+00:00",
+    "last_success_utc": "2026-10-27T18:33:06.597410+00:00",
+    "paused_at": "2026-10-27T06:32:35.109686+00:00",
+    "cancelled_monitor_job_ids": [
+      "86318"
+    ]
+  },
+  "owned_jobs": [
+    {
+      "job_id": "86451",
+      "name": "poisoning-monitor",
+      "comment": "poisoning-monitor-v1:f916f24e0de6:90468f77a7144937acc6e12356313fe6",
+      "state": "PENDING",
+      "start_time": "2026-10-27T16:32:35"
+    }
+  ],
+  "job_tag": "poisoning-monitor-v1:f916f24e0de6",
+  "timing": "7200-second eligibility intervals; actual starts depend on Slurm queue"
+}

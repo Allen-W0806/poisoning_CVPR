@@ -1,0 +1,101 @@
+{
+  "id": "EXP_20261028T024534_d49b0291f584_phase5_dataset_v2",
+  "path": "/storage/home/ydk297/projects/poisoning/data/processed/vqav2_content_v2",
+  "provenance": {
+    "schema_version": "vqav2_content_groups_v2",
+    "records_preserved": 1500,
+    "old_test_records_remain_test": true,
+    "legacy_cross_split_groups": [
+      {
+        "sha256": "fcc1fd100ed50e30ea87b9d84597cb40876c76d955716fc9dd6e936787faf181",
+        "source_splits": [
+          "test",
+          "train"
+        ],
+        "policy": "old heldout takes precedence",
+        "sample_ids": [
+          "397819015",
+          "388662037"
+        ]
+      }
+    ],
+    "category_counts": {
+      "train": {
+        "records": 999,
+        "unique_images": 988,
+        "unique_content_groups": 988,
+        "keyword_candidates": {
+          "color": 33,
+          "animal": 46,
+          "food": 22,
+          "vehicle": 52
+        },
+        "independently_eligible": 0,
+        "verified_SC": 0,
+        "verified_SI_V": 0,
+        "semantic_unknown": 999
+      },
+      "development": {
+        "records": 104,
+        "unique_images": 103,
+        "unique_content_groups": 103,
+        "keyword_candidates": {
+          "vehicle": 5,
+          "food": 3,
+          "animal": 2,
+          "color": 2
+        },
+        "independently_eligible": 0,
+        "verified_SC": 0,
+        "verified_SI_V": 0,
+        "semantic_unknown": 104
+      },
+      "gate": {
+        "records": 96,
+        "unique_images": 94,
+        "unique_content_groups": 94,
+        "keyword_candidates": {
+          "color": 3,
+          "vehicle": 5,
+          "animal": 7
+        },
+        "independently_eligible": 0,
+        "verified_SC": 0,
+        "verified_SI_V": 0,
+        "semantic_unknown": 96
+      },
+      "test": {
+        "records": 301,
+        "unique_images": 299,
+        "unique_content_groups": 298,
+        "keyword_candidates": {
+          "animal": 16,
+          "color": 11,
+          "food": 3,
+          "vehicle": 16
+        },
+        "independently_eligible": 0,
+        "verified_SC": 0,
+        "verified_SI_V": 0,
+        "semantic_unknown": 301
+      }
+    },
+    "near_duplicates": "separate candidate audit, not automatic deletion",
+    "development_gate_exposure": "historically exposed v1 validation; not a fresh scientific selection set",
+    "scientific_gate_ready": false,
+    "independent_semantic_labels": 0,
+    "split_sha256": {
+      "train": "f6fc1dd7b3b3fd1a9e1fd1bba6ab791c3df87acedecc013305fb8de9c58f09b4",
+      "development": "b82b9a3cac57241d151a294f067312807288dfee353565a43c8e0e694ac86131",
+      "gate": "ce7ffba3d124b4a5373560f6eaa644d3bf5ad4c664dc1112f10b8135aee90c00",
+      "test": "98c3b47853e07343a848ea6361713b03f64487ad0c06598e893049c2e06a59ce"
+    },
+    "parent_split_sha256": {
+      "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+      "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044",
+      "test": "996727456ddbe4ce97ac782241c4ffa1c3f9ed8723383f26b58cf30eac18317b"
+    },
+    "official_joins_reverified": 1500,
+    "near_duplicate_candidate_pairs": 0
+  }
+}

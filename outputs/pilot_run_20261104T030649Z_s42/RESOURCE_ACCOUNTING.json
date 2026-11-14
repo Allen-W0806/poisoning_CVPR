@@ -1,0 +1,62 @@
+{
+  "scope": "pilot_run_20261104T030649Z_s42",
+  "user_authorized_cumulative_cap_GPU_seconds": 5400,
+  "actual_allocated_GPU_seconds": 3859,
+  "actual_allocated_GPU_hours": 1.0719444444444444,
+  "remaining_unspent_cap_seconds": 1541,
+  "jobs": [
+    {
+      "job_id": "88916",
+      "state": "FAILED",
+      "elapsed_seconds": 3312,
+      "allocated_TRES": "billing=4,cpu=4,gres/gpu=1,mem=64G,node=1",
+      "exit_code": "1:0",
+      "nodes": "epyc04",
+      "GPU_count": 1,
+      "allocated_GPU_seconds": 3312
+    },
+    {
+      "job_id": "88919",
+      "state": "COMPLETED",
+      "elapsed_seconds": 38,
+      "allocated_TRES": "billing=4,cpu=4,mem=12G,node=1",
+      "exit_code": "0:0",
+      "nodes": "epyc20",
+      "GPU_count": 0,
+      "allocated_GPU_seconds": 0
+    },
+    {
+      "job_id": "88930",
+      "state": "FAILED",
+      "elapsed_seconds": 547,
+      "allocated_TRES": "billing=4,cpu=4,gres/gpu=1,mem=64G,node=1",
+      "exit_code": "1:0",
+      "nodes": "epyc04",
+      "GPU_count": 1,
+      "allocated_GPU_seconds": 547
+    },
+    {
+      "job_id": "88932",
+      "state": "COMPLETED",
+      "elapsed_seconds": 114,
+      "allocated_TRES": "billing=4,cpu=4,mem=12G,node=1",
+      "exit_code": "0:0",
+      "nodes": "epyc20",
+      "GPU_count": 0,
+      "allocated_GPU_seconds": 0
+    }
+  ],
+  "actual_arm_training_updates": {
+    "frozen": 0,
+    "fixed": 0,
+    "ddpo_only": 100,
+    "rule_rsi": 100,
+    "rl_rsi": 100
+  },
+  "actual_generator_optimizer_calls_including_witnesses": 307,
+  "training_sources_unchanged": true,
+  "post_run_reporting_dependency_guard": true,
+  "unrelated_project_jobs_included": false,
+  "historical_budgets_reopened": false,
+  "cluster_disk_free_bytes_after": 282839635460096
+}

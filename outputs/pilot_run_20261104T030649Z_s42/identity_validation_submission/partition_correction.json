@@ -1,0 +1,10 @@
+{
+  "action": "Correct pending CPU-only job partition without adding a GPU or duplicating submission",
+  "job_id": "88919",
+  "old_partition": "epyc-gpu",
+  "new_partition": "epyc-cpu",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "GPU_count": 0
+}

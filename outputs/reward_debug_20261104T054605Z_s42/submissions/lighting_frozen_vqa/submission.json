@@ -1,0 +1,141 @@
+{
+  "stage": "lighting_frozen_vqa",
+  "reservation_GPU_seconds": 900,
+  "seed": 42,
+  "status": "SUBMITTED",
+  "command": [
+    ".venv-editor/bin/python",
+    "scripts/audit_lighting_v3_vqa.py",
+    "--campaign",
+    "outputs/reward_debug_20261104T054605Z_s42"
+  ],
+  "prior_accounting": {
+    "records": [
+      {
+        "job_id": "88948",
+        "stage": "diagnostics",
+        "state": "COMPLETED",
+        "elapsed_seconds": 271,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 271
+      },
+      {
+        "job_id": "88949",
+        "stage": "internal",
+        "state": "CANCELLED by 100127",
+        "elapsed_seconds": 2840,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 2840
+      },
+      {
+        "job_id": "88957",
+        "stage": "internal_v3",
+        "state": "RUNNING",
+        "elapsed_seconds": 17193,
+        "settled": false,
+        "charged_or_reserved_GPU_seconds": 18000
+      },
+      {
+        "job_id": "88952",
+        "stage": "shadowcast_clean",
+        "state": "CANCELLED by 100127",
+        "elapsed_seconds": 233,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 233
+      },
+      {
+        "job_id": "88955",
+        "stage": "shadowcast_clean_repaired",
+        "state": "COMPLETED",
+        "elapsed_seconds": 1649,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 1649
+      },
+      {
+        "job_id": "88954",
+        "stage": "shadowcast_clean_tmpfix",
+        "state": "FAILED",
+        "elapsed_seconds": 7,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 7
+      },
+      {
+        "job_id": "88967",
+        "stage": "shadowcast_eval_0",
+        "state": "COMPLETED",
+        "elapsed_seconds": 652,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 652
+      },
+      {
+        "job_id": "88968",
+        "stage": "shadowcast_eval_50",
+        "state": "COMPLETED",
+        "elapsed_seconds": 575,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 575
+      },
+      {
+        "job_id": "88951",
+        "stage": "shadowcast_poison",
+        "state": "FAILED",
+        "elapsed_seconds": 8,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 8
+      },
+      {
+        "job_id": "88953",
+        "stage": "shadowcast_poison_pathfix",
+        "state": "COMPLETED",
+        "elapsed_seconds": 13255,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 13255
+      },
+      {
+        "job_id": "88966",
+        "stage": "shadowcast_poisoned",
+        "state": "COMPLETED",
+        "elapsed_seconds": 1646,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 1646
+      },
+      {
+        "job_id": "88950",
+        "stage": "shadowcast_smoke",
+        "state": "COMPLETED",
+        "elapsed_seconds": 39,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 39
+      },
+      {
+        "job_id": "88970",
+        "stage": "vizwiz_clean0",
+        "state": "COMPLETED",
+        "elapsed_seconds": 3127,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 3127
+      },
+      {
+        "job_id": "88971",
+        "stage": "vizwiz_poison50",
+        "state": "COMPLETED",
+        "elapsed_seconds": 2636,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 2636
+      }
+    ],
+    "committed_GPU_seconds": 44938,
+    "actual_GPU_seconds": 44131,
+    "cap_GPU_seconds": 72000
+  },
+  "script_SHA256": "6ed623aa2a35bab7b656891ec986d4d58257d6f6d56159a823a3afe10eef16e4",
+  "scratch": "/storage/home/ydk297/projects/poisoning/tmp/rd_88b7696cb92e",
+  "created_UTC": "2026-11-04T11:43:11.817702+00:00",
+  "entrypoint_SHA256": {
+    "scripts/audit_lighting_v3_vqa.py": "ebfa50909d62ccf945105a8fbb403d400dff436647fe5bba75a6bb0730273e23"
+  },
+  "returncode": 0,
+  "stdout": "88972",
+  "stderr": "sbatch:  \nsbatch: Job Resource Tips:\nsbatch:   * Run 'jobstats <jobid>' while your job is running (wait at least 60 seconds before trying) or after job completes.\nsbatch:   * Check CPU, GPU, and memory usage.\nsbatch:   * Adjust your requests to improve efficiency.\nsbatch:   * Optimizing your requests can help shorten queue times and improve cluster utilization.\nsbatch:",
+  "job_id": "88972"
+}

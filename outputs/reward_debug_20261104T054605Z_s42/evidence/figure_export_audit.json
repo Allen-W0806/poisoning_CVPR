@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "native_PPTX_slides": 7,
+  "native_charts": 2,
+  "embedded_literal_workbooks": 2,
+  "native_picture_objects": 100,
+  "PPTX_SHA256": "84a10f63e42fb61c8e6e01211a3f1fe0076007ea09744c3edeccbeb54da7289a",
+  "PDFs": {
+    "reward_calibration.pdf": {
+      "pages": 1,
+      "bytes": 21234,
+      "SHA256": "f6096161f30cc298e0e214440fd5222fe0165f2fd3a7ed392ed733610db11e13"
+    },
+    "editing_parameter_audit.pdf": {
+      "pages": 1,
+      "bytes": 1786369,
+      "SHA256": "af1baf4692fb81ca07b31f75c10f14ce0ac860e9cbd8f78d6e1386330f4253e2"
+    },
+    "lighting_v3_validation.pdf": {
+      "pages": 1,
+      "bytes": 16766,
+      "SHA256": "69fd407bbe893d7b09f371323084b0f1c16ed7ce0db63b060c18b30c4112236c"
+    },
+    "final_editing_assessment.pdf": {
+      "pages": 1,
+      "bytes": 1400065,
+      "SHA256": "df54f388c471f6799712bf9db87bb7fba0fed0ebd43e9e979b483ffeada09bcc"
+    },
+    "final_editing_assessment_full16.pdf": {
+      "pages": 4,
+      "bytes": 5579344,
+      "SHA256": "0b93e14ab413c067450f7331de3735f37487e2d5a575f0b8a5d0a7391b2dcaa9"
+    }
+  },
+  "preview_hashes": [
+    {
+      "slide": 1,
+      "SHA256": "a8f2779e826390ff2867d190052f3415c4e5a387232a3dcdd5a3fffd44aceedf"
+    },
+    {
+      "slide": 2,
+      "SHA256": "f21b4d3129c3524bce56bef4d217b98f7991eba1f444fea4dbdf54a1d253fb01"
+    },
+    {
+      "slide": 3,
+      "SHA256": "f9b97e708f4933c068605d903d271ad8fdea35b8c250f62e737046e6afad8e26"
+    },
+    {
+      "slide": 4,
+      "SHA256": "4f055855dcbafb6af7c78d9acca5b1d5c1c105740552ffb1dc112053e62d5805"
+    },
+    {
+      "slide": 5,
+      "SHA256": "b12d0b999c782a08c8ac43475667d7a7c1c521c940d2e3306d6200026e215728"
+    },
+    {
+      "slide": 6,
+      "SHA256": "a3b8a32a862c0e734acfeb9c15cb236ba1071540a92df61df91ff097cd593e23"
+    },
+    {
+      "slide": 7,
+      "SHA256": "788b05bdacbd6271e067dba79ace7c36943b4b7542136acacb57dd880fe87256"
+    }
+  ],
+  "primary_assistant_unblinded_visual_review": true,
+  "visual_review_scope": "all7 full-size artifact-tool previews; not independent human semantic scoring",
+  "native_PowerPoint_execution_verified": false,
+  "pypdf_version": "6.10.0",
+  "worker_SHA256": "f1b0cc17f2556220a184c0b36336b9d17df85db426d41e70cfaed8c9a8f76281",
+  "source_run_state_SHA256": "6dba340f7c0387bde8b9caf05b679d674aa76d51f40ff624c0f79b3866fb959e",
+  "claim_boundary": "Export structure, source-label coverage and declared preview inspection; not a new model or efficacy test."
+}

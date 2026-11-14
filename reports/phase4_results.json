@@ -1,0 +1,3361 @@
+{
+  "slurm": [
+    [
+      "86430",
+      "COMPLETED",
+      "314"
+    ],
+    [
+      "86433",
+      "COMPLETED",
+      "388"
+    ],
+    [
+      "86434",
+      "COMPLETED",
+      "3227"
+    ],
+    [
+      "86435",
+      "COMPLETED",
+      "2707"
+    ],
+    [
+      "86444",
+      "COMPLETED",
+      "59"
+    ],
+    [
+      "86445",
+      "COMPLETED",
+      "3211"
+    ],
+    [
+      "86446",
+      "COMPLETED",
+      "3216"
+    ]
+  ],
+  "charged_or_reserved_gpu_seconds": 13122,
+  "diagnostic_seconds": 373,
+  "max_gpu_seconds": 14400,
+  "training_updates": 32,
+  "diagnostic_replay_optimizer_updates": 2,
+  "runs": [
+    {
+      "id": "EXP_20261027T164806_f1653f550b92_phase4_slurm_diagnostic",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T164806_f1653f550b92_phase4_slurm_diagnostic",
+        "created_at": "2026-10-27T16:48:09.603831+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "task": "diagnostic",
+          "seed": 42,
+          "additional_phase_budget_seconds": 14400,
+          "charged_before": 0,
+          "reserved_seconds": 720
+        },
+        "hostname": "login01",
+        "gpu": null,
+        "git_commit": "85c2af72126fb7c76a86b02fe0b63f3fcaf9e3e3",
+        "slurm_job_id": null,
+        "source_tree_clean_at_creation": false,
+        "parent_experiment": null,
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T164806_f1653f550b92_phase4_slurm_diagnostic"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {},
+        "status": "CREATED",
+        "config_sha256": "d2724f61a0f14faf0e6f3bef62bbaae4b520bf56d2eca58304389820312132fc"
+      }
+    },
+    {
+      "id": "EXP_20261027T164820_1b8b6e4a33e5_phase4_PH4_RESTART_DIAGNOSTIC",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T164820_1b8b6e4a33e5_phase4_PH4_RESTART_DIAGNOSTIC",
+        "created_at": "2026-10-27T16:48:20.529058+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 42,
+          "origin": "EXP_20261027T143506_e1db622c6126_phase3_generator_rl_smoke",
+          "criterion": "bitwise exact; numerical measures descriptive only",
+          "config": {
+            "phase": 3,
+            "seed": 42,
+            "logical_batch_size": 10,
+            "physical_micro_batch_size": 1,
+            "gradient_accumulation_steps": 10,
+            "precision": "bf16",
+            "adapter_compute_precision": "fp32",
+            "cfg_execution": "sequential",
+            "bf16_reduced_precision_reduction": false,
+            "lora_rank": 8,
+            "lora_alpha": 16,
+            "optimizer": "adamw",
+            "learning_rate": 1e-05,
+            "weight_decay": 0.0,
+            "max_grad_norm": 1.0,
+            "initial_optimizer_updates": 3,
+            "gradient_checkpointing": false,
+            "checkpoint_every_update": true,
+            "algorithm": "DDPO_score_function_single_on_policy_pass",
+            "num_inference_steps": 10,
+            "eta": 1.0,
+            "advantage_baseline": 0.0,
+            "advantage_scale": 1.0,
+            "reward": {
+              "semantic_weight": 1.0,
+              "answer_consistency_weight": 0.5,
+              "distortion_weight": 0.2,
+              "compute_cost_weight": 0.1,
+              "uncertainty_weight": 1.0,
+              "normalization": "fixed_reference",
+              "backdoor_asr_training": false
+            }
+          }
+        },
+        "hostname": "epyc09",
+        "gpu": "NVIDIA A100 80GB PCIe",
+        "git_commit": "85c2af72126fb7c76a86b02fe0b63f3fcaf9e3e3",
+        "slurm_job_id": "86430",
+        "source_tree_clean_at_creation": false,
+        "parent_experiment": "EXP_20261027T164806_f1653f550b92_phase4_slurm_diagnostic",
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T164820_1b8b6e4a33e5_phase4_PH4_RESTART_DIAGNOSTIC"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {
+          "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+          "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044"
+        },
+        "status": "CREATED",
+        "config_sha256": "2f04779612c2abd28c1349f7acd198de334b0231a8874ae01076a0e13095d11b"
+      }
+    },
+    {
+      "id": "EXP_20261027T165331_14e29d03962b_phase4_PH4_SEMANTIC_REVIEW",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T165331_14e29d03962b_phase4_PH4_SEMANTIC_REVIEW",
+        "created_at": "2026-10-27T16:53:32.465999+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 42,
+          "source_table": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T150420_0c1cc77f77e2_phase3_semantic_schema_audit/semantic_validity_table_v2.json",
+          "human_labels": "blank",
+          "new_model_calls": 0
+        },
+        "hostname": "login01",
+        "gpu": null,
+        "git_commit": "5ac39e678b44d1589e62b2dab0e75705cbf4bd2e",
+        "slurm_job_id": null,
+        "source_tree_clean_at_creation": false,
+        "parent_experiment": null,
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T165331_14e29d03962b_phase4_PH4_SEMANTIC_REVIEW"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {},
+        "status": "CREATED",
+        "config_sha256": "f5cdaad7be5bd4891c2895780de352b15870228202919610034a5b49eee7c6ca"
+      }
+    },
+    {
+      "id": "EXP_20261027T165411_139d43dc7fdb_phase4_slurm_frozen",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T165411_139d43dc7fdb_phase4_slurm_frozen",
+        "created_at": "2026-10-27T16:54:13.226574+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "task": "frozen",
+          "seed": 42,
+          "additional_phase_budget_seconds": 14400,
+          "charged_before": 314,
+          "reserved_seconds": 480
+        },
+        "hostname": "login01",
+        "gpu": null,
+        "git_commit": "5ac39e678b44d1589e62b2dab0e75705cbf4bd2e",
+        "slurm_job_id": null,
+        "source_tree_clean_at_creation": false,
+        "parent_experiment": null,
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T165411_139d43dc7fdb_phase4_slurm_frozen"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {},
+        "status": "CREATED",
+        "config_sha256": "9f51e21ed0599dd5722b5e865d9bfd8b2bafc707fcbc169dc75e1810842e9707"
+      }
+    },
+    {
+      "id": "EXP_20261027T165424_eb9045420a43_phase4_PH4_FROZEN_GENERATOR",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T165424_eb9045420a43_phase4_PH4_FROZEN_GENERATOR",
+        "created_at": "2026-10-27T16:54:24.435260+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 42,
+          "logical_batch_size": 10,
+          "physical_micro_batch_size": 1,
+          "gradient_accumulation_steps": 10,
+          "precision": "bf16",
+          "adapter_compute_precision": "fp32",
+          "cfg_execution": "sequential",
+          "bf16_reduced_precision_reduction": false,
+          "lora_rank": 8,
+          "lora_alpha": 16,
+          "optimizer": "adamw",
+          "learning_rate": 1e-05,
+          "weight_decay": 0.0,
+          "max_grad_norm": 1.0,
+          "initial_optimizer_updates": 10,
+          "gradient_checkpointing": false,
+          "checkpoint_every_update": true,
+          "algorithm": "DDPO_score_function_single_on_policy_pass",
+          "num_inference_steps": 10,
+          "eta": 1.0,
+          "advantage_baseline": 0.0,
+          "advantage_scale": 1.0,
+          "reward": {
+            "semantic_weight": 1.0,
+            "answer_consistency_weight": 0.5,
+            "distortion_weight": 0.2,
+            "compute_cost_weight": 0.1,
+            "uncertainty_weight": 1.0,
+            "normalization": "fixed_reference",
+            "backdoor_asr_training": false
+          },
+          "arm": "frozen",
+          "validation_indices": [
+            66,
+            187,
+            101,
+            193,
+            111,
+            121,
+            13,
+            2,
+            64,
+            44
+          ],
+          "training_indices": [
+            776,
+            507,
+            895,
+            922,
+            33,
+            483,
+            85,
+            750,
+            354,
+            523,
+            184,
+            809,
+            418,
+            615,
+            682,
+            501,
+            760,
+            49,
+            732,
+            336,
+            450,
+            790,
+            350,
+            467,
+            622,
+            476,
+            614,
+            554,
+            365,
+            770,
+            630,
+            940,
+            797,
+            496,
+            924,
+            369,
+            596,
+            720,
+            53,
+            426,
+            56,
+            264,
+            772,
+            185,
+            466,
+            789,
+            174,
+            150,
+            741,
+            113,
+            428,
+            965,
+            18,
+            189,
+            414,
+            589,
+            666,
+            763,
+            221,
+            586,
+            581,
+            299,
+            638,
+            386,
+            364,
+            879,
+            334,
+            16,
+            202,
+            1,
+            38,
+            290,
+            493,
+            247,
+            506,
+            896,
+            713,
+            891,
+            76,
+            911,
+            792,
+            508,
+            177,
+            842,
+            200,
+            765,
+            909,
+            538,
+            24,
+            694,
+            210,
+            424,
+            528,
+            34,
+            928,
+            398,
+            607,
+            298,
+            848,
+            668
+          ],
+          "evaluation_seed_formula": "torch.randint stream initialized by seed*10000; per-image seeds saved",
+          "evaluation_updates": [
+            2,
+            4,
+            6,
+            8,
+            10
+          ],
+          "continuation": "fresh initialization only; no restart acceptance inferred",
+          "rsi_rule": "two unresolved positive-gain looks then one LR halving"
+        },
+        "hostname": "epyc09",
+        "gpu": "NVIDIA A100 80GB PCIe",
+        "git_commit": "5ac39e678b44d1589e62b2dab0e75705cbf4bd2e",
+        "slurm_job_id": "86433",
+        "source_tree_clean_at_creation": false,
+        "parent_experiment": "EXP_20261027T165411_139d43dc7fdb_phase4_slurm_frozen",
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T165424_eb9045420a43_phase4_PH4_FROZEN_GENERATOR"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {
+          "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+          "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044"
+        },
+        "status": "CREATED",
+        "config_sha256": "4ade5ddd75bc5c673d131fd53a2776f0a9ac755e531f1d6e0a94e146e0393b68"
+      }
+    },
+    {
+      "id": "EXP_20261027T165452_2d038326075f_phase4_PH4_RESTART_STATE_AUDIT",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T165452_2d038326075f_phase4_PH4_RESTART_STATE_AUDIT",
+        "created_at": "2026-10-27T16:54:52.449128+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 42,
+          "source_run": "EXP_20261027T164820_1b8b6e4a33e5_phase4_PH4_RESTART_DIAGNOSTIC",
+          "cpu_only": true
+        },
+        "hostname": "login01",
+        "gpu": null,
+        "git_commit": "37ed602a1dc78d77e6fed8d9217d7967ba89f874",
+        "slurm_job_id": null,
+        "source_tree_clean_at_creation": false,
+        "parent_experiment": null,
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T165452_2d038326075f_phase4_PH4_RESTART_STATE_AUDIT"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {},
+        "status": "CREATED",
+        "config_sha256": "340c1fd9546f83966880dd3292ca9bd34dca07c550acbb38110529eb52c2dae0"
+      }
+    },
+    {
+      "id": "EXP_20261027T170109_2a9eb9728d5b_phase4_slurm_rl42",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T170109_2a9eb9728d5b_phase4_slurm_rl42",
+        "created_at": "2026-10-27T17:01:11.512103+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "task": "rl42",
+          "seed": 42,
+          "additional_phase_budget_seconds": 14400,
+          "charged_before": 702,
+          "reserved_seconds": 3360
+        },
+        "hostname": "login01",
+        "gpu": null,
+        "git_commit": "ffec8ac18244bba8bfb79f1719ea5ac6c665e930",
+        "slurm_job_id": null,
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": null,
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T170109_2a9eb9728d5b_phase4_slurm_rl42"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {},
+        "status": "CREATED",
+        "config_sha256": "5602df57930d9b542470135395d8fbfd22be9513a126a4b2f9e39c9f449dc3ad"
+      }
+    },
+    {
+      "id": "EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL",
+        "created_at": "2026-10-27T17:01:21.319892+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 42,
+          "logical_batch_size": 10,
+          "physical_micro_batch_size": 1,
+          "gradient_accumulation_steps": 10,
+          "precision": "bf16",
+          "adapter_compute_precision": "fp32",
+          "cfg_execution": "sequential",
+          "bf16_reduced_precision_reduction": false,
+          "lora_rank": 8,
+          "lora_alpha": 16,
+          "optimizer": "adamw",
+          "learning_rate": 1e-05,
+          "weight_decay": 0.0,
+          "max_grad_norm": 1.0,
+          "initial_optimizer_updates": 8,
+          "gradient_checkpointing": false,
+          "checkpoint_every_update": true,
+          "algorithm": "DDPO_score_function_single_on_policy_pass",
+          "num_inference_steps": 10,
+          "eta": 1.0,
+          "advantage_baseline": 0.0,
+          "advantage_scale": 1.0,
+          "reward": {
+            "semantic_weight": 1.0,
+            "answer_consistency_weight": 0.5,
+            "distortion_weight": 0.2,
+            "compute_cost_weight": 0.1,
+            "uncertainty_weight": 1.0,
+            "normalization": "fixed_reference",
+            "backdoor_asr_training": false
+          },
+          "arm": "rl",
+          "validation_indices": [
+            66,
+            187,
+            101,
+            193,
+            111,
+            121,
+            13,
+            2,
+            64,
+            44
+          ],
+          "training_indices": [
+            776,
+            507,
+            895,
+            922,
+            33,
+            483,
+            85,
+            750,
+            354,
+            523,
+            184,
+            809,
+            418,
+            615,
+            682,
+            501,
+            760,
+            49,
+            732,
+            336,
+            450,
+            790,
+            350,
+            467,
+            622,
+            476,
+            614,
+            554,
+            365,
+            770,
+            630,
+            940,
+            797,
+            496,
+            924,
+            369,
+            596,
+            720,
+            53,
+            426,
+            56,
+            264,
+            772,
+            185,
+            466,
+            789,
+            174,
+            150,
+            741,
+            113,
+            428,
+            965,
+            18,
+            189,
+            414,
+            589,
+            666,
+            763,
+            221,
+            586,
+            581,
+            299,
+            638,
+            386,
+            364,
+            879,
+            334,
+            16,
+            202,
+            1,
+            38,
+            290,
+            493,
+            247,
+            506,
+            896,
+            713,
+            891,
+            76,
+            911
+          ],
+          "evaluation_seed_formula": "torch.randint stream initialized by seed*10000; per-image seeds saved",
+          "evaluation_updates": [
+            2,
+            4,
+            6,
+            8
+          ],
+          "continuation": "fresh initialization only; no restart acceptance inferred",
+          "rsi_rule": "two unresolved positive-gain looks then one LR halving"
+        },
+        "hostname": "epyc09",
+        "gpu": "NVIDIA A100 80GB PCIe",
+        "git_commit": "ffec8ac18244bba8bfb79f1719ea5ac6c665e930",
+        "slurm_job_id": "86434",
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": "EXP_20261027T170109_2a9eb9728d5b_phase4_slurm_rl42",
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {
+          "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+          "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044"
+        },
+        "status": "CREATED",
+        "config_sha256": "183e0224660afc3981351a891d467773a56a240f37247e9af3c41b66a2d4b696"
+      }
+    },
+    {
+      "id": "EXP_20261027T170232_4b3dd6ec0ad2_phase4_slurm_rl123",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T170232_4b3dd6ec0ad2_phase4_slurm_rl123",
+        "created_at": "2026-10-27T17:02:33.486081+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "task": "rl123",
+          "seed": 42,
+          "additional_phase_budget_seconds": 14400,
+          "charged_before": 4062,
+          "reserved_seconds": 3360
+        },
+        "hostname": "login01",
+        "gpu": null,
+        "git_commit": "41ad9a09ab97773e36d2c0bca9f0104b507223f1",
+        "slurm_job_id": null,
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": null,
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T170232_4b3dd6ec0ad2_phase4_slurm_rl123"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {},
+        "status": "CREATED",
+        "config_sha256": "510cca439075bd8be9680e270e0a191014f491ea3c4d855a65b1598bc39629ce"
+      }
+    },
+    {
+      "id": "EXP_20261027T170250_c7c7385c8814_phase4_PH4_GENERATOR_RL",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T170250_c7c7385c8814_phase4_PH4_GENERATOR_RL",
+        "created_at": "2026-10-27T17:02:50.718542+00:00",
+        "seed": 123,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 123,
+          "logical_batch_size": 10,
+          "physical_micro_batch_size": 1,
+          "gradient_accumulation_steps": 10,
+          "precision": "bf16",
+          "adapter_compute_precision": "fp32",
+          "cfg_execution": "sequential",
+          "bf16_reduced_precision_reduction": false,
+          "lora_rank": 8,
+          "lora_alpha": 16,
+          "optimizer": "adamw",
+          "learning_rate": 1e-05,
+          "weight_decay": 0.0,
+          "max_grad_norm": 1.0,
+          "initial_optimizer_updates": 8,
+          "gradient_checkpointing": false,
+          "checkpoint_every_update": true,
+          "algorithm": "DDPO_score_function_single_on_policy_pass",
+          "num_inference_steps": 10,
+          "eta": 1.0,
+          "advantage_baseline": 0.0,
+          "advantage_scale": 1.0,
+          "reward": {
+            "semantic_weight": 1.0,
+            "answer_consistency_weight": 0.5,
+            "distortion_weight": 0.2,
+            "compute_cost_weight": 0.1,
+            "uncertainty_weight": 1.0,
+            "normalization": "fixed_reference",
+            "backdoor_asr_training": false
+          },
+          "arm": "rl",
+          "validation_indices": [
+            66,
+            187,
+            101,
+            193,
+            111,
+            121,
+            13,
+            2,
+            64,
+            44
+          ],
+          "training_indices": [
+            178,
+            830,
+            641,
+            410,
+            255,
+            470,
+            433,
+            580,
+            257,
+            450,
+            657,
+            316,
+            628,
+            76,
+            100,
+            633,
+            288,
+            143,
+            19,
+            524,
+            118,
+            191,
+            3,
+            195,
+            636,
+            803,
+            519,
+            306,
+            804,
+            301,
+            960,
+            634,
+            825,
+            770,
+            447,
+            709,
+            900,
+            151,
+            503,
+            5,
+            676,
+            829,
+            290,
+            482,
+            276,
+            242,
+            913,
+            427,
+            239,
+            223,
+            546,
+            256,
+            266,
+            155,
+            244,
+            836,
+            304,
+            327,
+            279,
+            486,
+            956,
+            832,
+            277,
+            502,
+            261,
+            314,
+            232,
+            264,
+            437,
+            766,
+            991,
+            9,
+            647,
+            358,
+            560,
+            515,
+            897,
+            944,
+            763,
+            545
+          ],
+          "evaluation_seed_formula": "torch.randint stream initialized by seed*10000; per-image seeds saved",
+          "evaluation_updates": [
+            2,
+            4,
+            6,
+            8
+          ],
+          "continuation": "fresh initialization only; no restart acceptance inferred",
+          "rsi_rule": "two unresolved positive-gain looks then one LR halving"
+        },
+        "hostname": "epyc11",
+        "gpu": "NVIDIA A100 80GB PCIe",
+        "git_commit": "41ad9a09ab97773e36d2c0bca9f0104b507223f1",
+        "slurm_job_id": "86435",
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": "EXP_20261027T170232_4b3dd6ec0ad2_phase4_slurm_rl123",
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T170250_c7c7385c8814_phase4_PH4_GENERATOR_RL"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {
+          "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+          "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044"
+        },
+        "status": "CREATED",
+        "config_sha256": "0c1e0e0a108a9d05571599bf6ef5aee628b0a5f62b07cec6a1af82e973246414"
+      }
+    },
+    {
+      "id": "EXP_20261027T175515_d691a848a687_phase4_slurm_diagnostic_outcomes",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T175515_d691a848a687_phase4_slurm_diagnostic_outcomes",
+        "created_at": "2026-10-27T17:55:18.798199+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "task": "diagnostic_outcomes",
+          "seed": 42,
+          "additional_phase_budget_seconds": 14400,
+          "charged_before": 6636,
+          "reserved_seconds": 180
+        },
+        "hostname": "login01",
+        "gpu": null,
+        "git_commit": "53b0f1ced6e85f27b98009cd2a888cb4d5a6c125",
+        "slurm_job_id": null,
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": null,
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T175515_d691a848a687_phase4_slurm_diagnostic_outcomes"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {},
+        "status": "CREATED",
+        "config_sha256": "561327ecc817e810d1cb62ed23219fbfbf03f5fe4a6a86d4e50044c93a8295fc"
+      }
+    },
+    {
+      "id": "EXP_20261027T175526_5aee05413ae5_phase4_PH4_RESTART_OUTCOMES",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T175526_5aee05413ae5_phase4_PH4_RESTART_OUTCOMES",
+        "created_at": "2026-10-27T17:55:26.158404+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 42,
+          "source": "EXP_20261027T143506_e1db622c6126_phase3_generator_rl_smoke",
+          "diagnostic": "EXP_20261027T164820_1b8b6e4a33e5_phase4_PH4_RESTART_DIAGNOSTIC",
+          "sources": 2,
+          "models": [
+            "historical_step3",
+            "replay0_step3",
+            "replay1_step3"
+          ],
+          "acceptance": "exact PNG equality only; no semantic or full-restart claim"
+        },
+        "hostname": "epyc09",
+        "gpu": "NVIDIA A100 80GB PCIe",
+        "git_commit": "53b0f1ced6e85f27b98009cd2a888cb4d5a6c125",
+        "slurm_job_id": "86444",
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": "EXP_20261027T175515_d691a848a687_phase4_slurm_diagnostic_outcomes",
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T175526_5aee05413ae5_phase4_PH4_RESTART_OUTCOMES"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {
+          "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+          "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044"
+        },
+        "status": "CREATED",
+        "config_sha256": "f583cf75a418567ee33c871a940503a71b79f079640304786c6a7528c2f437d1"
+      }
+    },
+    {
+      "id": "EXP_20261027T175730_88f1660dc081_phase4_slurm_rsi42",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T175730_88f1660dc081_phase4_slurm_rsi42",
+        "created_at": "2026-10-27T17:57:32.172491+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "task": "rsi42",
+          "seed": 42,
+          "additional_phase_budget_seconds": 14400,
+          "charged_before": 6695,
+          "reserved_seconds": 3360
+        },
+        "hostname": "login01",
+        "gpu": null,
+        "git_commit": "53b0f1ced6e85f27b98009cd2a888cb4d5a6c125",
+        "slurm_job_id": null,
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": null,
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T175730_88f1660dc081_phase4_slurm_rsi42"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {},
+        "status": "CREATED",
+        "config_sha256": "65c12b11ba1f6a12ac28a924ef4845407c4d5aa2bd53fd831b2cbe7239017c8b"
+      }
+    },
+    {
+      "id": "EXP_20261027T175733_58cb8136f49f_phase4_slurm_rsi123",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T175733_58cb8136f49f_phase4_slurm_rsi123",
+        "created_at": "2026-10-27T17:57:34.608969+00:00",
+        "seed": 123,
+        "hyperparameters": {
+          "phase": 4,
+          "task": "rsi123",
+          "seed": 123,
+          "additional_phase_budget_seconds": 14400,
+          "charged_before": 10055,
+          "reserved_seconds": 3360
+        },
+        "hostname": "login01",
+        "gpu": null,
+        "git_commit": "53b0f1ced6e85f27b98009cd2a888cb4d5a6c125",
+        "slurm_job_id": null,
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": null,
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T175733_58cb8136f49f_phase4_slurm_rsi123"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {},
+        "status": "CREATED",
+        "config_sha256": "2f3f1f43dc1d1b1a0474ed02ab1ead1cbd24531dd244eb3d320176dcd085cee3"
+      }
+    },
+    {
+      "id": "EXP_20261027T175741_3b880a4a5fce_phase4_PH4_GENERATOR_RSI",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T175741_3b880a4a5fce_phase4_PH4_GENERATOR_RSI",
+        "created_at": "2026-10-27T17:57:41.837670+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 42,
+          "logical_batch_size": 10,
+          "physical_micro_batch_size": 1,
+          "gradient_accumulation_steps": 10,
+          "precision": "bf16",
+          "adapter_compute_precision": "fp32",
+          "cfg_execution": "sequential",
+          "bf16_reduced_precision_reduction": false,
+          "lora_rank": 8,
+          "lora_alpha": 16,
+          "optimizer": "adamw",
+          "learning_rate": 1e-05,
+          "weight_decay": 0.0,
+          "max_grad_norm": 1.0,
+          "initial_optimizer_updates": 8,
+          "gradient_checkpointing": false,
+          "checkpoint_every_update": true,
+          "algorithm": "DDPO_score_function_single_on_policy_pass",
+          "num_inference_steps": 10,
+          "eta": 1.0,
+          "advantage_baseline": 0.0,
+          "advantage_scale": 1.0,
+          "reward": {
+            "semantic_weight": 1.0,
+            "answer_consistency_weight": 0.5,
+            "distortion_weight": 0.2,
+            "compute_cost_weight": 0.1,
+            "uncertainty_weight": 1.0,
+            "normalization": "fixed_reference",
+            "backdoor_asr_training": false
+          },
+          "arm": "rsi",
+          "validation_indices": [
+            66,
+            187,
+            101,
+            193,
+            111,
+            121,
+            13,
+            2,
+            64,
+            44
+          ],
+          "training_indices": [
+            776,
+            507,
+            895,
+            922,
+            33,
+            483,
+            85,
+            750,
+            354,
+            523,
+            184,
+            809,
+            418,
+            615,
+            682,
+            501,
+            760,
+            49,
+            732,
+            336,
+            450,
+            790,
+            350,
+            467,
+            622,
+            476,
+            614,
+            554,
+            365,
+            770,
+            630,
+            940,
+            797,
+            496,
+            924,
+            369,
+            596,
+            720,
+            53,
+            426,
+            56,
+            264,
+            772,
+            185,
+            466,
+            789,
+            174,
+            150,
+            741,
+            113,
+            428,
+            965,
+            18,
+            189,
+            414,
+            589,
+            666,
+            763,
+            221,
+            586,
+            581,
+            299,
+            638,
+            386,
+            364,
+            879,
+            334,
+            16,
+            202,
+            1,
+            38,
+            290,
+            493,
+            247,
+            506,
+            896,
+            713,
+            891,
+            76,
+            911
+          ],
+          "evaluation_seed_formula": "torch.randint stream initialized by seed*10000; per-image seeds saved",
+          "evaluation_updates": [
+            2,
+            4,
+            6,
+            8
+          ],
+          "continuation": "fresh initialization only; no restart acceptance inferred",
+          "rsi_rule": "two unresolved positive-gain looks then one LR halving"
+        },
+        "hostname": "epyc09",
+        "gpu": "NVIDIA A100 80GB PCIe",
+        "git_commit": "53b0f1ced6e85f27b98009cd2a888cb4d5a6c125",
+        "slurm_job_id": "86445",
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": "EXP_20261027T175730_88f1660dc081_phase4_slurm_rsi42",
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T175741_3b880a4a5fce_phase4_PH4_GENERATOR_RSI"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {
+          "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+          "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044"
+        },
+        "status": "CREATED",
+        "config_sha256": "8b289e487bcf587f9ad9a149eb1d4b840ad73dd2fbc8fbf7cf301a4d1b6ae1a5"
+      }
+    },
+    {
+      "id": "EXP_20261027T175744_255141d217c5_phase4_PH4_GENERATOR_RSI",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T175744_255141d217c5_phase4_PH4_GENERATOR_RSI",
+        "created_at": "2026-10-27T17:57:44.571773+00:00",
+        "seed": 123,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 123,
+          "logical_batch_size": 10,
+          "physical_micro_batch_size": 1,
+          "gradient_accumulation_steps": 10,
+          "precision": "bf16",
+          "adapter_compute_precision": "fp32",
+          "cfg_execution": "sequential",
+          "bf16_reduced_precision_reduction": false,
+          "lora_rank": 8,
+          "lora_alpha": 16,
+          "optimizer": "adamw",
+          "learning_rate": 1e-05,
+          "weight_decay": 0.0,
+          "max_grad_norm": 1.0,
+          "initial_optimizer_updates": 8,
+          "gradient_checkpointing": false,
+          "checkpoint_every_update": true,
+          "algorithm": "DDPO_score_function_single_on_policy_pass",
+          "num_inference_steps": 10,
+          "eta": 1.0,
+          "advantage_baseline": 0.0,
+          "advantage_scale": 1.0,
+          "reward": {
+            "semantic_weight": 1.0,
+            "answer_consistency_weight": 0.5,
+            "distortion_weight": 0.2,
+            "compute_cost_weight": 0.1,
+            "uncertainty_weight": 1.0,
+            "normalization": "fixed_reference",
+            "backdoor_asr_training": false
+          },
+          "arm": "rsi",
+          "validation_indices": [
+            66,
+            187,
+            101,
+            193,
+            111,
+            121,
+            13,
+            2,
+            64,
+            44
+          ],
+          "training_indices": [
+            178,
+            830,
+            641,
+            410,
+            255,
+            470,
+            433,
+            580,
+            257,
+            450,
+            657,
+            316,
+            628,
+            76,
+            100,
+            633,
+            288,
+            143,
+            19,
+            524,
+            118,
+            191,
+            3,
+            195,
+            636,
+            803,
+            519,
+            306,
+            804,
+            301,
+            960,
+            634,
+            825,
+            770,
+            447,
+            709,
+            900,
+            151,
+            503,
+            5,
+            676,
+            829,
+            290,
+            482,
+            276,
+            242,
+            913,
+            427,
+            239,
+            223,
+            546,
+            256,
+            266,
+            155,
+            244,
+            836,
+            304,
+            327,
+            279,
+            486,
+            956,
+            832,
+            277,
+            502,
+            261,
+            314,
+            232,
+            264,
+            437,
+            766,
+            991,
+            9,
+            647,
+            358,
+            560,
+            515,
+            897,
+            944,
+            763,
+            545
+          ],
+          "evaluation_seed_formula": "torch.randint stream initialized by seed*10000; per-image seeds saved",
+          "evaluation_updates": [
+            2,
+            4,
+            6,
+            8
+          ],
+          "continuation": "fresh initialization only; no restart acceptance inferred",
+          "rsi_rule": "two unresolved positive-gain looks then one LR halving"
+        },
+        "hostname": "epyc09",
+        "gpu": "NVIDIA A100 80GB PCIe",
+        "git_commit": "53b0f1ced6e85f27b98009cd2a888cb4d5a6c125",
+        "slurm_job_id": "86446",
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": "EXP_20261027T175733_58cb8136f49f_phase4_slurm_rsi123",
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T175744_255141d217c5_phase4_PH4_GENERATOR_RSI"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {
+          "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+          "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044"
+        },
+        "status": "CREATED",
+        "config_sha256": "046acb5fb04726fbdd320937801c88718aa0231ab068c73a010defd045c1a726"
+      }
+    },
+    {
+      "id": "EXP_20261027T182417_feee4c573de0_phase4_PH4_RSI_CONFIG_REVISION",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T182417_feee4c573de0_phase4_PH4_RSI_CONFIG_REVISION",
+        "created_at": "2026-10-27T18:24:17.536125+00:00",
+        "seed": 123,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 123,
+          "logical_batch_size": 10,
+          "physical_micro_batch_size": 1,
+          "gradient_accumulation_steps": 10,
+          "precision": "bf16",
+          "adapter_compute_precision": "fp32",
+          "cfg_execution": "sequential",
+          "bf16_reduced_precision_reduction": false,
+          "lora_rank": 8,
+          "lora_alpha": 16,
+          "optimizer": "adamw",
+          "learning_rate": 5e-06,
+          "weight_decay": 0.0,
+          "max_grad_norm": 1.0,
+          "initial_optimizer_updates": 8,
+          "gradient_checkpointing": false,
+          "checkpoint_every_update": true,
+          "algorithm": "DDPO_score_function_single_on_policy_pass",
+          "num_inference_steps": 10,
+          "eta": 1.0,
+          "advantage_baseline": 0.0,
+          "advantage_scale": 1.0,
+          "reward": {
+            "semantic_weight": 1.0,
+            "answer_consistency_weight": 0.5,
+            "distortion_weight": 0.2,
+            "compute_cost_weight": 0.1,
+            "uncertainty_weight": 1.0,
+            "normalization": "fixed_reference",
+            "backdoor_asr_training": false
+          },
+          "arm": "rsi",
+          "validation_indices": [
+            66,
+            187,
+            101,
+            193,
+            111,
+            121,
+            13,
+            2,
+            64,
+            44
+          ],
+          "training_indices": [
+            178,
+            830,
+            641,
+            410,
+            255,
+            470,
+            433,
+            580,
+            257,
+            450,
+            657,
+            316,
+            628,
+            76,
+            100,
+            633,
+            288,
+            143,
+            19,
+            524,
+            118,
+            191,
+            3,
+            195,
+            636,
+            803,
+            519,
+            306,
+            804,
+            301,
+            960,
+            634,
+            825,
+            770,
+            447,
+            709,
+            900,
+            151,
+            503,
+            5,
+            676,
+            829,
+            290,
+            482,
+            276,
+            242,
+            913,
+            427,
+            239,
+            223,
+            546,
+            256,
+            266,
+            155,
+            244,
+            836,
+            304,
+            327,
+            279,
+            486,
+            956,
+            832,
+            277,
+            502,
+            261,
+            314,
+            232,
+            264,
+            437,
+            766,
+            991,
+            9,
+            647,
+            358,
+            560,
+            515,
+            897,
+            944,
+            763,
+            545
+          ],
+          "evaluation_seed_formula": "torch.randint stream initialized by seed*10000; per-image seeds saved",
+          "evaluation_updates": [
+            2,
+            4,
+            6,
+            8
+          ],
+          "continuation": "fresh initialization only; no restart acceptance inferred",
+          "rsi_rule": "two unresolved positive-gain looks then one LR halving",
+          "parent_training_run": "EXP_20261027T175744_255141d217c5_phase4_PH4_GENERATOR_RSI",
+          "revision_at_step": 4,
+          "decision": {
+            "step": 4,
+            "accept_schedule_revision": true,
+            "reason": "two unresolved validation gains",
+            "old_lr": 1e-05,
+            "new_lr": 5e-06,
+            "diagnostic_seconds": 0.0022444629576057196
+          }
+        },
+        "hostname": "epyc09",
+        "gpu": "NVIDIA A100 80GB PCIe",
+        "git_commit": "d4efef3cabafb5f0c666802e2f7822b2380891c3",
+        "slurm_job_id": "86446",
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": "EXP_20261027T175733_58cb8136f49f_phase4_slurm_rsi123",
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T182417_feee4c573de0_phase4_PH4_RSI_CONFIG_REVISION"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {
+          "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+          "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044"
+        },
+        "status": "CREATED",
+        "config_sha256": "79f0685e2d0a94b06972f42d4f8f9d23129ebe1980d4e25d1ab2f39f62b20a46"
+      }
+    },
+    {
+      "id": "EXP_20261027T182428_b84e4d1d6803_phase4_PH4_RSI_CONFIG_REVISION",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T182428_b84e4d1d6803_phase4_PH4_RSI_CONFIG_REVISION",
+        "created_at": "2026-10-27T18:24:28.664086+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 42,
+          "logical_batch_size": 10,
+          "physical_micro_batch_size": 1,
+          "gradient_accumulation_steps": 10,
+          "precision": "bf16",
+          "adapter_compute_precision": "fp32",
+          "cfg_execution": "sequential",
+          "bf16_reduced_precision_reduction": false,
+          "lora_rank": 8,
+          "lora_alpha": 16,
+          "optimizer": "adamw",
+          "learning_rate": 5e-06,
+          "weight_decay": 0.0,
+          "max_grad_norm": 1.0,
+          "initial_optimizer_updates": 8,
+          "gradient_checkpointing": false,
+          "checkpoint_every_update": true,
+          "algorithm": "DDPO_score_function_single_on_policy_pass",
+          "num_inference_steps": 10,
+          "eta": 1.0,
+          "advantage_baseline": 0.0,
+          "advantage_scale": 1.0,
+          "reward": {
+            "semantic_weight": 1.0,
+            "answer_consistency_weight": 0.5,
+            "distortion_weight": 0.2,
+            "compute_cost_weight": 0.1,
+            "uncertainty_weight": 1.0,
+            "normalization": "fixed_reference",
+            "backdoor_asr_training": false
+          },
+          "arm": "rsi",
+          "validation_indices": [
+            66,
+            187,
+            101,
+            193,
+            111,
+            121,
+            13,
+            2,
+            64,
+            44
+          ],
+          "training_indices": [
+            776,
+            507,
+            895,
+            922,
+            33,
+            483,
+            85,
+            750,
+            354,
+            523,
+            184,
+            809,
+            418,
+            615,
+            682,
+            501,
+            760,
+            49,
+            732,
+            336,
+            450,
+            790,
+            350,
+            467,
+            622,
+            476,
+            614,
+            554,
+            365,
+            770,
+            630,
+            940,
+            797,
+            496,
+            924,
+            369,
+            596,
+            720,
+            53,
+            426,
+            56,
+            264,
+            772,
+            185,
+            466,
+            789,
+            174,
+            150,
+            741,
+            113,
+            428,
+            965,
+            18,
+            189,
+            414,
+            589,
+            666,
+            763,
+            221,
+            586,
+            581,
+            299,
+            638,
+            386,
+            364,
+            879,
+            334,
+            16,
+            202,
+            1,
+            38,
+            290,
+            493,
+            247,
+            506,
+            896,
+            713,
+            891,
+            76,
+            911
+          ],
+          "evaluation_seed_formula": "torch.randint stream initialized by seed*10000; per-image seeds saved",
+          "evaluation_updates": [
+            2,
+            4,
+            6,
+            8
+          ],
+          "continuation": "fresh initialization only; no restart acceptance inferred",
+          "rsi_rule": "two unresolved positive-gain looks then one LR halving",
+          "parent_training_run": "EXP_20261027T175741_3b880a4a5fce_phase4_PH4_GENERATOR_RSI",
+          "revision_at_step": 4,
+          "decision": {
+            "step": 4,
+            "accept_schedule_revision": true,
+            "reason": "two unresolved validation gains",
+            "old_lr": 1e-05,
+            "new_lr": 5e-06,
+            "diagnostic_seconds": 0.0029644700698554516
+          }
+        },
+        "hostname": "epyc09",
+        "gpu": "NVIDIA A100 80GB PCIe",
+        "git_commit": "d4efef3cabafb5f0c666802e2f7822b2380891c3",
+        "slurm_job_id": "86445",
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": "EXP_20261027T175730_88f1660dc081_phase4_slurm_rsi42",
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T182428_b84e4d1d6803_phase4_PH4_RSI_CONFIG_REVISION"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {
+          "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+          "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044"
+        },
+        "status": "CREATED",
+        "config_sha256": "83140b15862a9af7f23848176ac177e4cfbb48b7c90ec30a2343553d257c41f2"
+      }
+    },
+    {
+      "id": "EXP_20261027T185226_def67c114f64_phase4_PH4_RESOURCE_AUDIT",
+      "status": "PASS",
+      "manifest": {
+        "experiment_id": "EXP_20261027T185226_def67c114f64_phase4_PH4_RESOURCE_AUDIT",
+        "created_at": "2026-10-27T18:52:26.684538+00:00",
+        "seed": 42,
+        "hyperparameters": {
+          "phase": 4,
+          "seed": 42,
+          "cpu_only": true,
+          "ledger": [
+            {
+              "job_id": "86430",
+              "task": "diagnostic",
+              "reserved_seconds": 720,
+              "parent_run": "EXP_20261027T164806_f1653f550b92_phase4_slurm_diagnostic"
+            },
+            {
+              "job_id": "86433",
+              "task": "frozen",
+              "reserved_seconds": 480,
+              "parent_run": "EXP_20261027T165411_139d43dc7fdb_phase4_slurm_frozen"
+            },
+            {
+              "job_id": "86434",
+              "task": "rl42",
+              "reserved_seconds": 3360,
+              "parent_run": "EXP_20261027T170109_2a9eb9728d5b_phase4_slurm_rl42"
+            },
+            {
+              "job_id": "86435",
+              "task": "rl123",
+              "reserved_seconds": 3360,
+              "parent_run": "EXP_20261027T170232_4b3dd6ec0ad2_phase4_slurm_rl123"
+            },
+            {
+              "job_id": "86444",
+              "task": "diagnostic_outcomes",
+              "reserved_seconds": 180,
+              "parent_run": "EXP_20261027T175515_d691a848a687_phase4_slurm_diagnostic_outcomes"
+            },
+            {
+              "job_id": "86445",
+              "task": "rsi42",
+              "reserved_seconds": 3360,
+              "parent_run": "EXP_20261027T175730_88f1660dc081_phase4_slurm_rsi42"
+            },
+            {
+              "job_id": "86446",
+              "task": "rsi123",
+              "reserved_seconds": 3360,
+              "parent_run": "EXP_20261027T175733_58cb8136f49f_phase4_slurm_rsi123"
+            }
+          ]
+        },
+        "hostname": "login01",
+        "gpu": null,
+        "git_commit": "8cf57dffc36b6a01eda91604f4ed782090d7fde9",
+        "slurm_job_id": null,
+        "source_tree_clean_at_creation": true,
+        "parent_experiment": null,
+        "output_paths": {
+          "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T185226_def67c114f64_phase4_PH4_RESOURCE_AUDIT"
+        },
+        "model_identifiers": [
+          "timbrooks/instruct-pix2pix",
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ],
+        "model_revisions": {
+          "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+          "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+        },
+        "dataset_version": "VQAv2-train2014-2017-04-26",
+        "split_hashes": {},
+        "status": "CREATED",
+        "config_sha256": "e13eca338f8a8138029ea4971c2f0caad80830712c71e09d987b9614c83dafcc"
+      }
+    }
+  ],
+  "raw_final_rows": [
+    {
+      "arm": "M0",
+      "seed": 42,
+      "step": 0,
+      "run": "EXP_20261027T165424_eb9045420a43_phase4_PH4_FROZEN_GENERATOR",
+      "semantic": 0.3,
+      "answer_consistency": 0.6,
+      "distortion": 0.1759569302201271,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.43772058650851253,
+      "generation_seconds": 5.867017345200293,
+      "judging_seconds": 11.569332656962796,
+      "vqa_same_answer_fraction": 0.6,
+      "vqa_consistency_raw": 0.6,
+      "edited_reference_score_diagnostic_only": 0.55
+    },
+    {
+      "arm": "M0",
+      "seed": 123,
+      "step": 0,
+      "run": "EXP_20261027T165424_eb9045420a43_phase4_PH4_FROZEN_GENERATOR",
+      "semantic": 0.4,
+      "answer_consistency": 0.8,
+      "distortion": 0.17685662265866994,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.2546136743823687,
+      "generation_seconds": 5.8576536028180275,
+      "judging_seconds": 11.411569156101905,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999
+    },
+    {
+      "arm": "M1",
+      "seed": 42,
+      "step": 8,
+      "run": "EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL",
+      "semantic": 0.2,
+      "answer_consistency": 0.4,
+      "distortion": 0.17425494659692048,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.6247290416186055,
+      "generation_seconds": 5.845633411011659,
+      "judging_seconds": 11.315542468358762,
+      "vqa_same_answer_fraction": 0.5,
+      "vqa_consistency_raw": 0.5,
+      "edited_reference_score_diagnostic_only": 0.45,
+      "paired_frozen": {
+        "mean_delta": -0.18700845511009295,
+        "ci95": [
+          -0.4675121701260408,
+          0.0002261811122297952
+        ],
+        "ci_half_width": 0.23386917561913528,
+        "paired_deltas": [
+          -0.00010612905025486619,
+          0.0,
+          -0.9374740014473597,
+          9.318366646771103e-05,
+          0.0,
+          8.427724242143775e-06,
+          -0.9337307686607043,
+          0.0,
+          0.0,
+          0.001124736666679338
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M1",
+      "seed": 123,
+      "step": 8,
+      "run": "EXP_20261027T170250_c7c7385c8814_phase4_PH4_GENERATOR_RL",
+      "semantic": 0.35,
+      "answer_consistency": 0.7,
+      "distortion": 0.17363562453538178,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.34785916780432063,
+      "generation_seconds": 5.002632413804531,
+      "judging_seconds": 9.525333987735213,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999,
+      "paired_frozen": {
+        "mean_delta": -0.09324549342195194,
+        "ci95": [
+          -0.2812885372396559,
+          0.0011641624625772042
+        ],
+        "ci_half_width": 0.14122634985111657,
+        "paired_deltas": [
+          0.00017623603343963623,
+          0.002351512014865831,
+          0.00010779947042460769,
+          0.0006799399852752686,
+          8.782148361208275e-05,
+          1.630112528794303e-05,
+          0.0026668079197407213,
+          0.0,
+          0.0,
+          -0.9385413522521655
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M2",
+      "seed": 42,
+      "step": 8,
+      "run": "EXP_20261027T175741_3b880a4a5fce_phase4_PH4_GENERATOR_RSI",
+      "semantic": 0.25,
+      "answer_consistency": 0.5,
+      "distortion": 0.1746895620599389,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.5309555345649521,
+      "generation_seconds": 5.903580581513234,
+      "judging_seconds": 11.014055559318512,
+      "vqa_same_answer_fraction": 0.5,
+      "vqa_consistency_raw": 0.5,
+      "edited_reference_score_diagnostic_only": 0.45,
+      "paired_frozen": {
+        "mean_delta": -0.09323494805643955,
+        "ci95": [
+          -0.2801065130634233,
+          0.0003370220661163277
+        ],
+        "ci_half_width": 0.14022176756476984,
+        "paired_deltas": [
+          -0.00010445713996887207,
+          0.0,
+          0.0003551587462425898,
+          6.318613886835411e-05,
+          0.0,
+          -4.1168555617310254e-05,
+          -0.9337307686607043,
+          0.0,
+          0.0,
+          0.0011085689067840132
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M2",
+      "seed": 123,
+      "step": 8,
+      "run": "EXP_20261027T175744_255141d217c5_phase4_PH4_GENERATOR_RSI",
+      "semantic": 0.4,
+      "answer_consistency": 0.8,
+      "distortion": 0.17451205085963012,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.2541514674077431,
+      "generation_seconds": 5.881675614765845,
+      "judging_seconds": 10.596482233679854,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999,
+      "paired_frozen": {
+        "mean_delta": 0.0004622069746255897,
+        "ci95": [
+          3.3651895821087686e-05,
+          0.001021090146154174
+        ],
+        "ci_half_width": 0.0004937191251665431,
+        "paired_deltas": [
+          4.088580608363479e-05,
+          0.001684585213661216,
+          -4.478543996810913e-05,
+          0.0005156576633453813,
+          4.1061639785788806e-05,
+          -8.948147296905518e-05,
+          0.002324465662240982,
+          0.0,
+          0.0,
+          0.00014968067407605812
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    }
+  ],
+  "all_evaluations": [
+    {
+      "arm": "M0",
+      "seed": 42,
+      "step": 0,
+      "run": "EXP_20261027T165424_eb9045420a43_phase4_PH4_FROZEN_GENERATOR",
+      "semantic": 0.3,
+      "answer_consistency": 0.6,
+      "distortion": 0.1759569302201271,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.43772058650851253,
+      "generation_seconds": 5.867017345200293,
+      "judging_seconds": 11.569332656962796,
+      "vqa_same_answer_fraction": 0.6,
+      "vqa_consistency_raw": 0.6,
+      "edited_reference_score_diagnostic_only": 0.55
+    },
+    {
+      "arm": "M0",
+      "seed": 123,
+      "step": 0,
+      "run": "EXP_20261027T165424_eb9045420a43_phase4_PH4_FROZEN_GENERATOR",
+      "semantic": 0.4,
+      "answer_consistency": 0.8,
+      "distortion": 0.17685662265866994,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.2546136743823687,
+      "generation_seconds": 5.8576536028180275,
+      "judging_seconds": 11.411569156101905,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999
+    },
+    {
+      "arm": "M1",
+      "seed": 42,
+      "step": 2,
+      "run": "EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL",
+      "semantic": 0.25,
+      "answer_consistency": 0.5,
+      "distortion": 0.17577835433185102,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.5310817175606887,
+      "generation_seconds": 5.862723204051145,
+      "judging_seconds": 11.535570222814567,
+      "vqa_same_answer_fraction": 0.5,
+      "vqa_consistency_raw": 0.5,
+      "edited_reference_score_diagnostic_only": 0.45,
+      "paired_frozen": {
+        "mean_delta": -0.09336113105217615,
+        "ci95": [
+          -0.2801728542651981,
+          0.0001504050157964307
+        ],
+        "ci_half_width": 0.14016162964049728,
+        "paired_deltas": [
+          -0.00020879209041591018,
+          0.0,
+          -0.0004879072308540122,
+          8.035674691209138e-05,
+          0.0,
+          4.939064383502334e-05,
+          -0.9337307686607043,
+          0.0,
+          0.0,
+          0.0006864100694655706
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M1",
+      "seed": 42,
+      "step": 4,
+      "run": "EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL",
+      "semantic": 0.25,
+      "answer_consistency": 0.5,
+      "distortion": 0.17502882219851018,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.5309980038056771,
+      "generation_seconds": 5.8609099799068645,
+      "judging_seconds": 11.686616307380609,
+      "vqa_same_answer_fraction": 0.6,
+      "vqa_consistency_raw": 0.5,
+      "edited_reference_score_diagnostic_only": 0.45,
+      "paired_frozen": {
+        "mean_delta": -0.09327741729716459,
+        "ci95": [
+          -0.2801339950133115,
+          0.0003009029943496075
+        ],
+        "ci_half_width": 0.14021744900383054,
+        "paired_deltas": [
+          -9.743869304656982e-05,
+          0.0,
+          -0.000303356349468209,
+          0.0002466529607773049,
+          0.0,
+          6.664544343948364e-06,
+          -0.9337307686607043,
+          0.0,
+          0.0,
+          0.001104073226451896
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M1",
+      "seed": 42,
+      "step": 6,
+      "run": "EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL",
+      "semantic": 0.3,
+      "answer_consistency": 0.6,
+      "distortion": 0.17464069928973913,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.4375652151182294,
+      "generation_seconds": 5.852342146076262,
+      "judging_seconds": 10.984458177373744,
+      "vqa_same_answer_fraction": 0.6,
+      "vqa_consistency_raw": 0.6,
+      "edited_reference_score_diagnostic_only": 0.55,
+      "paired_frozen": {
+        "mean_delta": 0.00015537139028311,
+        "ci95": [
+          1.1730976402757332e-05,
+          0.00036608273629098206
+        ],
+        "ci_half_width": 0.00017717587994411238,
+        "paired_deltas": [
+          -7.375478744509056e-05,
+          0.0,
+          0.0003288790583610979,
+          0.00012433454394344956,
+          0.0,
+          1.2573972344331885e-05,
+          0.000178490579128332,
+          0.0,
+          0.0,
+          0.000983190536498979
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M1",
+      "seed": 42,
+      "step": 8,
+      "run": "EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL",
+      "semantic": 0.2,
+      "answer_consistency": 0.4,
+      "distortion": 0.17425494659692048,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.6247290416186055,
+      "generation_seconds": 5.845633411011659,
+      "judging_seconds": 11.315542468358762,
+      "vqa_same_answer_fraction": 0.5,
+      "vqa_consistency_raw": 0.5,
+      "edited_reference_score_diagnostic_only": 0.45,
+      "paired_frozen": {
+        "mean_delta": -0.18700845511009295,
+        "ci95": [
+          -0.4675121701260408,
+          0.0002261811122297952
+        ],
+        "ci_half_width": 0.23386917561913528,
+        "paired_deltas": [
+          -0.00010612905025486619,
+          0.0,
+          -0.9374740014473597,
+          9.318366646771103e-05,
+          0.0,
+          8.427724242143775e-06,
+          -0.9337307686607043,
+          0.0,
+          0.0,
+          0.001124736666679338
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M1",
+      "seed": 123,
+      "step": 2,
+      "run": "EXP_20261027T170250_c7c7385c8814_phase4_PH4_GENERATOR_RL",
+      "semantic": 0.4,
+      "answer_consistency": 0.8,
+      "distortion": 0.17620532754808665,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.2544891128937403,
+      "generation_seconds": 5.017784693650901,
+      "judging_seconds": 9.055858702398837,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999,
+      "paired_frozen": {
+        "mean_delta": 0.00012456148862839412,
+        "ci95": [
+          -5.111292004584822e-05,
+          0.00034790843725207576
+        ],
+        "ci_half_width": 0.000199510678648962,
+        "paired_deltas": [
+          7.331669330590262e-05,
+          0.0005345970392227617,
+          -9.338110685352952e-05,
+          2.6586651802107397e-05,
+          -0.0002921640872954878,
+          4.6754628419853894e-05,
+          0.0009098149836064273,
+          0.0,
+          0.0,
+          4.009008407590553e-05
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M1",
+      "seed": 123,
+      "step": 4,
+      "run": "EXP_20261027T170250_c7c7385c8814_phase4_PH4_GENERATOR_RL",
+      "semantic": 0.35,
+      "answer_consistency": 0.7,
+      "distortion": 0.17481828927993776,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.3475674100716909,
+      "generation_seconds": 5.001713866740465,
+      "judging_seconds": 8.970372755266727,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999,
+      "paired_frozen": {
+        "mean_delta": -0.09295373568932216,
+        "ci95": [
+          -0.27982207952439786,
+          0.0007311106845736128
+        ],
+        "ci_half_width": 0.14027659510448573,
+        "paired_deltas": [
+          -2.6583671570712397e-06,
+          0.0016306608915328535,
+          -0.9332471112410228,
+          0.000451268255710624,
+          -9.028613567352295e-05,
+          -1.8334388732887952e-05,
+          0.001613512635231018,
+          0.0,
+          0.0,
+          0.0001255914568900618
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M1",
+      "seed": 123,
+      "step": 6,
+      "run": "EXP_20261027T170250_c7c7385c8814_phase4_PH4_GENERATOR_RL",
+      "semantic": 0.4,
+      "answer_consistency": 0.8,
+      "distortion": 0.17458044905215503,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.25414654212693366,
+      "generation_seconds": 5.00463540442288,
+      "judging_seconds": 8.958598447404801,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999,
+      "paired_frozen": {
+        "mean_delta": 0.0004671322554349877,
+        "ci95": [
+          5.779731273650724e-05,
+          0.000999371280893677
+        ],
+        "ci_half_width": 0.0004707869840785849,
+        "paired_deltas": [
+          0.00026790201663962065,
+          0.0014939084649085999,
+          -1.4428794384069299e-05,
+          0.000584807991981573,
+          -4.2122602462724146e-05,
+          -0.00011947527527811364,
+          0.002305257320404097,
+          0.0,
+          0.0,
+          0.00019547343254089355
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M1",
+      "seed": 123,
+      "step": 8,
+      "run": "EXP_20261027T170250_c7c7385c8814_phase4_PH4_GENERATOR_RL",
+      "semantic": 0.35,
+      "answer_consistency": 0.7,
+      "distortion": 0.17363562453538178,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.34785916780432063,
+      "generation_seconds": 5.002632413804531,
+      "judging_seconds": 9.525333987735213,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999,
+      "paired_frozen": {
+        "mean_delta": -0.09324549342195194,
+        "ci95": [
+          -0.2812885372396559,
+          0.0011641624625772042
+        ],
+        "ci_half_width": 0.14122634985111657,
+        "paired_deltas": [
+          0.00017623603343963623,
+          0.002351512014865831,
+          0.00010779947042460769,
+          0.0006799399852752686,
+          8.782148361208275e-05,
+          1.630112528794303e-05,
+          0.0026668079197407213,
+          0.0,
+          0.0,
+          -0.9385413522521655
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M2",
+      "seed": 42,
+      "step": 2,
+      "run": "EXP_20261027T175741_3b880a4a5fce_phase4_PH4_GENERATOR_RSI",
+      "semantic": 0.25,
+      "answer_consistency": 0.5,
+      "distortion": 0.1756076741963625,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.5310547025750081,
+      "generation_seconds": 5.907509991666302,
+      "judging_seconds": 11.708933489979245,
+      "vqa_same_answer_fraction": 0.5,
+      "vqa_consistency_raw": 0.5,
+      "edited_reference_score_diagnostic_only": 0.45,
+      "paired_frozen": {
+        "mean_delta": -0.09333411606649558,
+        "ci95": [
+          -0.2801365571990609,
+          0.00014560095965862052
+        ],
+        "ci_half_width": 0.14014107907935974,
+        "paired_deltas": [
+          -0.0003425329923629761,
+          0.0,
+          5.91278076171875e-05,
+          0.00010587647557258606,
+          0.0,
+          4.372000694252698e-06,
+          -0.9337307686607043,
+          0.0,
+          0.0,
+          0.0005627647042274475
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M2",
+      "seed": 42,
+      "step": 4,
+      "run": "EXP_20261027T175741_3b880a4a5fce_phase4_PH4_GENERATOR_RSI",
+      "semantic": 0.25,
+      "answer_consistency": 0.5,
+      "distortion": 0.17459392379969357,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.5309081215287248,
+      "generation_seconds": 5.900196184893138,
+      "judging_seconds": 10.972334170294925,
+      "vqa_same_answer_fraction": 0.5,
+      "vqa_consistency_raw": 0.5,
+      "edited_reference_score_diagnostic_only": 0.45,
+      "paired_frozen": {
+        "mean_delta": -0.09318753502021232,
+        "ci95": [
+          -0.2800789792397991,
+          0.0004350084466859696
+        ],
+        "ci_half_width": 0.14025699384324253,
+        "paired_deltas": [
+          0.00017915964126591355,
+          0.0,
+          0.00019081085920336083,
+          0.00012770071625711754,
+          0.0,
+          2.0950660109542163e-05,
+          -0.9337307686607043,
+          0.0,
+          0.0,
+          0.0013367965817451255
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M2",
+      "seed": 42,
+      "step": 6,
+      "run": "EXP_20261027T175741_3b880a4a5fce_phase4_PH4_GENERATOR_RSI",
+      "semantic": 0.2,
+      "answer_consistency": 0.4,
+      "distortion": 0.17440748400986195,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.6246841348459323,
+      "generation_seconds": 5.904302962915972,
+      "judging_seconds": 12.176420176285319,
+      "vqa_same_answer_fraction": 0.5,
+      "vqa_consistency_raw": 0.5,
+      "edited_reference_score_diagnostic_only": 0.45,
+      "paired_frozen": {
+        "mean_delta": -0.18696354833741982,
+        "ci95": [
+          -0.467468273093303,
+          0.00030059717595577463
+        ],
+        "ci_half_width": 0.2338844351346294,
+        "paired_deltas": [
+          4.349350929255813e-05,
+          0.0,
+          -0.9374740014473597,
+          9.081587195403085e-05,
+          0.0,
+          2.0892918109916003e-05,
+          -0.9337307686607043,
+          0.0,
+          0.0,
+          0.0014140844345092995
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M2",
+      "seed": 42,
+      "step": 8,
+      "run": "EXP_20261027T175741_3b880a4a5fce_phase4_PH4_GENERATOR_RSI",
+      "semantic": 0.25,
+      "answer_consistency": 0.5,
+      "distortion": 0.1746895620599389,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.5309555345649521,
+      "generation_seconds": 5.903580581513234,
+      "judging_seconds": 11.014055559318512,
+      "vqa_same_answer_fraction": 0.5,
+      "vqa_consistency_raw": 0.5,
+      "edited_reference_score_diagnostic_only": 0.45,
+      "paired_frozen": {
+        "mean_delta": -0.09323494805643955,
+        "ci95": [
+          -0.2801065130634233,
+          0.0003370220661163277
+        ],
+        "ci_half_width": 0.14022176756476984,
+        "paired_deltas": [
+          -0.00010445713996887207,
+          0.0,
+          0.0003551587462425898,
+          6.318613886835411e-05,
+          0.0,
+          -4.1168555617310254e-05,
+          -0.9337307686607043,
+          0.0,
+          0.0,
+          0.0011085689067840132
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M2",
+      "seed": 123,
+      "step": 2,
+      "run": "EXP_20261027T175744_255141d217c5_phase4_PH4_GENERATOR_RSI",
+      "semantic": 0.4,
+      "answer_consistency": 0.8,
+      "distortion": 0.17564662154763938,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.25439507024983565,
+      "generation_seconds": 5.881531848292798,
+      "judging_seconds": 11.250785150146111,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999,
+      "paired_frozen": {
+        "mean_delta": 0.00021860413253308453,
+        "ci95": [
+          2.6026595383881748e-05,
+          0.00048409993760292373
+        ],
+        "ci_half_width": 0.000229036671109521,
+        "paired_deltas": [
+          -6.744116544732393e-05,
+          0.0005104720592499223,
+          -9.59932804107666e-05,
+          0.0002523183822632502,
+          0.00024133622646338448,
+          7.246062159538269e-05,
+          0.0012178704142571384,
+          0.0,
+          0.0,
+          5.50180673598577e-05
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M2",
+      "seed": 123,
+      "step": 4,
+      "run": "EXP_20261027T175744_255141d217c5_phase4_PH4_GENERATOR_RSI",
+      "semantic": 0.4,
+      "answer_consistency": 0.8,
+      "distortion": 0.17524290960282088,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.2543092974523703,
+      "generation_seconds": 5.880184080917388,
+      "judging_seconds": 11.04418087634258,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999,
+      "paired_frozen": {
+        "mean_delta": 0.0003043769299983845,
+        "ci95": [
+          5.428940057738973e-06,
+          0.0006988018415868434
+        ],
+        "ci_half_width": 0.0003466864507645522,
+        "paired_deltas": [
+          6.222873926153838e-05,
+          0.001208978891372725,
+          -9.236931800848946e-05,
+          0.00017721056938169166,
+          -5.139708518975272e-05,
+          -4.735738039018944e-05,
+          0.0016259029507637024,
+          0.0,
+          0.0,
+          0.00016057193279261917
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M2",
+      "seed": 123,
+      "step": 6,
+      "run": "EXP_20261027T175744_255141d217c5_phase4_PH4_GENERATOR_RSI",
+      "semantic": 0.4,
+      "answer_consistency": 0.8,
+      "distortion": 0.17468788884580136,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.2542018193254868,
+      "generation_seconds": 5.881385525898077,
+      "judging_seconds": 10.665266822068952,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999,
+      "paired_frozen": {
+        "mean_delta": 0.0004118550568819046,
+        "ci95": [
+          3.171168267727759e-05,
+          0.0009002198278903917
+        ],
+        "ci_half_width": 0.00043425407260655707,
+        "paired_deltas": [
+          -1.0280311107724316e-05,
+          0.0014934659004210982,
+          -2.3888051509879382e-05,
+          0.0004876002669335078,
+          -5.177259445188209e-05,
+          -2.150610089302063e-05,
+          0.002034184336662359,
+          0.0,
+          0.0,
+          0.0002107471227645874
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "arm": "M2",
+      "seed": 123,
+      "step": 8,
+      "run": "EXP_20261027T175744_255141d217c5_phase4_PH4_GENERATOR_RSI",
+      "semantic": 0.4,
+      "answer_consistency": 0.8,
+      "distortion": 0.17451205085963012,
+      "cost": 0.33333333333333337,
+      "invalid_penalty": 1.0,
+      "reward": -0.2541514674077431,
+      "generation_seconds": 5.881675614765845,
+      "judging_seconds": 10.596482233679854,
+      "vqa_same_answer_fraction": 0.9,
+      "vqa_consistency_raw": 0.8,
+      "edited_reference_score_diagnostic_only": 0.6199999999999999,
+      "paired_frozen": {
+        "mean_delta": 0.0004622069746255897,
+        "ci95": [
+          3.3651895821087686e-05,
+          0.001021090146154174
+        ],
+        "ci_half_width": 0.0004937191251665431,
+        "paired_deltas": [
+          4.088580608363479e-05,
+          0.001684585213661216,
+          -4.478543996810913e-05,
+          0.0005156576633453813,
+          4.1061639785788806e-05,
+          -8.948147296905518e-05,
+          0.002324465662240982,
+          0.0,
+          0.0,
+          0.00014968067407605812
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    }
+  ],
+  "rsi_minus_rl": [
+    {
+      "seed": 42,
+      "rsi_minus_rl": {
+        "mean_delta": 0.09377350705365342,
+        "ci95": [
+          -1.8918514251697884e-05,
+          0.28134584888815883
+        ],
+        "ci_half_width": 0.14068238370120525,
+        "paired_deltas": [
+          1.671910285994116e-06,
+          0.0,
+          0.9378291601936023,
+          -2.999752759935692e-05,
+          0.0,
+          -4.959627985945403e-05,
+          0.0,
+          0.0,
+          0.0,
+          -1.6167759895324707e-05
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    },
+    {
+      "seed": 123,
+      "rsi_minus_rl": {
+        "mean_delta": 0.09370770039657753,
+        "ci95": [
+          -0.00027541894093152804,
+          0.28152740653976804
+        ],
+        "ci_half_width": 0.14090141274034979,
+        "paired_deltas": [
+          -0.00013535022735600144,
+          -0.0006669268012046148,
+          -0.00015258491039271682,
+          -0.00016428232192988723,
+          -4.6759843826293945e-05,
+          -0.0001057825982569982,
+          -0.00034234225749973923,
+          0.0,
+          0.0,
+          0.9386910329262416
+        ],
+        "independent_source_count": 10,
+        "bootstrap_seed": 7,
+        "bootstrap_resamples": 10000,
+        "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+      }
+    }
+  ],
+  "fairness": [
+    {
+      "seed": 42,
+      "initial_adapter_exact": true,
+      "training_source_order_exact": true,
+      "training_sampling_seeds_exact": true,
+      "updates": [
+        8,
+        8
+      ],
+      "source_exposures": [
+        80,
+        80
+      ],
+      "validation_trajectories": [
+        40,
+        40
+      ],
+      "actual_gpu_seconds": [
+        3227,
+        3211
+      ],
+      "rsi_decisions": [
+        {
+          "step": 2,
+          "accept_schedule_revision": false,
+          "reason": "insufficient plateau evidence",
+          "old_lr": 1e-05,
+          "new_lr": 1e-05,
+          "diagnostic_seconds": 0.0025531838182359934,
+          "controller_revision": {
+            "revision_number": 1,
+            "timestamp": "2026-10-27T18:11:19.992635+00:00",
+            "previous_config": {
+              "batch_size": 10,
+              "learning_rate": 1e-05,
+              "curriculum": "uniform"
+            },
+            "proposed_config": {
+              "batch_size": 10,
+              "learning_rate": 5e-06,
+              "curriculum": "uniform"
+            },
+            "validation_hash": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044",
+            "validation_score": -0.5310547025750081,
+            "cost_gpu_hours": 0.22392495278527752,
+            "cumulative_cost_gpu_hours": 0.22705867436442834,
+            "accepted_schedule": false,
+            "quality_improvement_accepted": false,
+            "reason": "insufficient plateau evidence",
+            "evidence": [
+              {
+                "mean_delta": -0.09333411606649558,
+                "ci95": [
+                  -0.2801365571990609,
+                  0.00014560095965862052
+                ],
+                "ci_half_width": 0.14014107907935974,
+                "paired_deltas": [
+                  -0.0003425329923629761,
+                  0.0,
+                  5.91278076171875e-05,
+                  0.00010587647557258606,
+                  0.0,
+                  4.372000694252698e-06,
+                  -0.9337307686607043,
+                  0.0,
+                  0.0,
+                  0.0005627647042274475
+                ],
+                "independent_source_count": 10,
+                "bootstrap_seed": 7,
+                "bootstrap_resamples": 10000,
+                "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+              }
+            ],
+            "policy": "single exploratory LR cooldown; no candidate quality-gain or rollback claim"
+          }
+        },
+        {
+          "step": 4,
+          "accept_schedule_revision": true,
+          "reason": "two unresolved validation gains",
+          "old_lr": 1e-05,
+          "new_lr": 5e-06,
+          "diagnostic_seconds": 0.0029644700698554516,
+          "revision_experiment_id": "EXP_20261027T182428_b84e4d1d6803_phase4_PH4_RSI_CONFIG_REVISION",
+          "controller_revision": {
+            "revision_number": 2,
+            "timestamp": "2026-10-27T18:24:28.635930+00:00",
+            "previous_config": {
+              "batch_size": 10,
+              "learning_rate": 1e-05,
+              "curriculum": "uniform"
+            },
+            "proposed_config": {
+              "batch_size": 10,
+              "learning_rate": 5e-06,
+              "curriculum": "uniform"
+            },
+            "validation_hash": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044",
+            "validation_score": -0.5309081215287248,
+            "cost_gpu_hours": 0.21906756450532056,
+            "cumulative_cost_gpu_hours": 0.4461262388697489,
+            "accepted_schedule": true,
+            "quality_improvement_accepted": false,
+            "reason": "two unresolved validation gains",
+            "evidence": [
+              {
+                "mean_delta": -0.09333411606649558,
+                "ci95": [
+                  -0.2801365571990609,
+                  0.00014560095965862052
+                ],
+                "ci_half_width": 0.14014107907935974,
+                "paired_deltas": [
+                  -0.0003425329923629761,
+                  0.0,
+                  5.91278076171875e-05,
+                  0.00010587647557258606,
+                  0.0,
+                  4.372000694252698e-06,
+                  -0.9337307686607043,
+                  0.0,
+                  0.0,
+                  0.0005627647042274475
+                ],
+                "independent_source_count": 10,
+                "bootstrap_seed": 7,
+                "bootstrap_resamples": 10000,
+                "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+              },
+              {
+                "mean_delta": -0.09318753502021232,
+                "ci95": [
+                  -0.2800789792397991,
+                  0.0004350084466859696
+                ],
+                "ci_half_width": 0.14025699384324253,
+                "paired_deltas": [
+                  0.00017915964126591355,
+                  0.0,
+                  0.00019081085920336083,
+                  0.00012770071625711754,
+                  0.0,
+                  2.0950660109542163e-05,
+                  -0.9337307686607043,
+                  0.0,
+                  0.0,
+                  0.0013367965817451255
+                ],
+                "independent_source_count": 10,
+                "bootstrap_seed": 7,
+                "bootstrap_resamples": 10000,
+                "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+              }
+            ],
+            "policy": "single exploratory LR cooldown; no candidate quality-gain or rollback claim"
+          }
+        }
+      ],
+      "exact_execution_reproducibility": false,
+      "pre_schedule_state_difference": {
+        "step": 4,
+        "adapter_changes": {
+          "max_abs_change": 4.343278851592913e-05,
+          "mean_abs_change": 1.6294180766974903e-06,
+          "updated_tensors": 256,
+          "adapter_tensor_count": 256
+        },
+        "optimizer_exact": false,
+        "scope": "checkpoint saved before any schedule revision at this step; same scientific configuration"
+      },
+      "pre_schedule_paired_evaluations": [
+        {
+          "step": 2,
+          "rsi_minus_rl": {
+            "mean_delta": 2.7014985680573477e-05,
+            "ci95": [
+              -5.698867142200914e-05,
+              0.0001543129999190474
+            ],
+            "ci_half_width": 0.00010565083567052827,
+            "paired_deltas": [
+              -0.0001337409019470659,
+              0.0,
+              0.0005470350384711997,
+              2.5519728660494678e-05,
+              0.0,
+              -4.501864314077064e-05,
+              0.0,
+              0.0,
+              0.0,
+              -0.00012364536523812308
+            ],
+            "independent_source_count": 10,
+            "bootstrap_seed": 7,
+            "bootstrap_resamples": 10000,
+            "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+          }
+        },
+        {
+          "step": 4,
+          "rsi_minus_rl": {
+            "mean_delta": 8.988227695226892e-05,
+            "ci95": [
+              -1.0466612875459358e-05,
+              0.0002104726061224915
+            ],
+            "ci_half_width": 0.00011046960949897544,
+            "paired_deltas": [
+              0.0002765983343124834,
+              0.0,
+              0.0004941672086715698,
+              -0.00011895224452018738,
+              0.0,
+              1.4286115765593799e-05,
+              0.0,
+              0.0,
+              0.0,
+              0.00023272335529322952
+            ],
+            "independent_source_count": 10,
+            "bootstrap_seed": 7,
+            "bootstrap_resamples": 10000,
+            "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+          }
+        }
+      ],
+      "original_normalized_answer_disagreements_with_frozen": {
+        "rl": 0,
+        "rsi": 0
+      }
+    },
+    {
+      "seed": 123,
+      "initial_adapter_exact": true,
+      "training_source_order_exact": true,
+      "training_sampling_seeds_exact": true,
+      "updates": [
+        8,
+        8
+      ],
+      "source_exposures": [
+        80,
+        80
+      ],
+      "validation_trajectories": [
+        40,
+        40
+      ],
+      "actual_gpu_seconds": [
+        2707,
+        3216
+      ],
+      "rsi_decisions": [
+        {
+          "step": 2,
+          "accept_schedule_revision": false,
+          "reason": "insufficient plateau evidence",
+          "old_lr": 1e-05,
+          "new_lr": 1e-05,
+          "diagnostic_seconds": 0.0024302019737660885,
+          "controller_revision": {
+            "revision_number": 1,
+            "timestamp": "2026-10-27T18:11:13.426262+00:00",
+            "previous_config": {
+              "batch_size": 10,
+              "learning_rate": 1e-05,
+              "curriculum": "uniform"
+            },
+            "proposed_config": {
+              "batch_size": 10,
+              "learning_rate": 5e-06,
+              "curriculum": "uniform"
+            },
+            "validation_hash": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044",
+            "validation_score": -0.25439507024983565,
+            "cost_gpu_hours": 0.22102883410918164,
+            "cumulative_cost_gpu_hours": 0.22447808664557264,
+            "accepted_schedule": false,
+            "quality_improvement_accepted": false,
+            "reason": "insufficient plateau evidence",
+            "evidence": [
+              {
+                "mean_delta": 0.00021860413253308453,
+                "ci95": [
+                  2.6026595383881748e-05,
+                  0.00048409993760292373
+                ],
+                "ci_half_width": 0.000229036671109521,
+                "paired_deltas": [
+                  -6.744116544732393e-05,
+                  0.0005104720592499223,
+                  -9.59932804107666e-05,
+                  0.0002523183822632502,
+                  0.00024133622646338448,
+                  7.246062159538269e-05,
+                  0.0012178704142571384,
+                  0.0,
+                  0.0,
+                  5.50180673598577e-05
+                ],
+                "independent_source_count": 10,
+                "bootstrap_seed": 7,
+                "bootstrap_resamples": 10000,
+                "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+              }
+            ],
+            "policy": "single exploratory LR cooldown; no candidate quality-gain or rollback claim"
+          }
+        },
+        {
+          "step": 4,
+          "accept_schedule_revision": true,
+          "reason": "two unresolved validation gains",
+          "old_lr": 1e-05,
+          "new_lr": 5e-06,
+          "diagnostic_seconds": 0.0022444629576057196,
+          "revision_experiment_id": "EXP_20261027T182417_feee4c573de0_phase4_PH4_RSI_CONFIG_REVISION",
+          "controller_revision": {
+            "revision_number": 2,
+            "timestamp": "2026-10-27T18:24:17.481274+00:00",
+            "previous_config": {
+              "batch_size": 10,
+              "learning_rate": 1e-05,
+              "curriculum": "uniform"
+            },
+            "proposed_config": {
+              "batch_size": 10,
+              "learning_rate": 5e-06,
+              "curriculum": "uniform"
+            },
+            "validation_hash": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044",
+            "validation_score": -0.2543092974523703,
+            "cost_gpu_hours": 0.2177930769552606,
+            "cumulative_cost_gpu_hours": 0.44227116360083324,
+            "accepted_schedule": true,
+            "quality_improvement_accepted": false,
+            "reason": "two unresolved validation gains",
+            "evidence": [
+              {
+                "mean_delta": 0.00021860413253308453,
+                "ci95": [
+                  2.6026595383881748e-05,
+                  0.00048409993760292373
+                ],
+                "ci_half_width": 0.000229036671109521,
+                "paired_deltas": [
+                  -6.744116544732393e-05,
+                  0.0005104720592499223,
+                  -9.59932804107666e-05,
+                  0.0002523183822632502,
+                  0.00024133622646338448,
+                  7.246062159538269e-05,
+                  0.0012178704142571384,
+                  0.0,
+                  0.0,
+                  5.50180673598577e-05
+                ],
+                "independent_source_count": 10,
+                "bootstrap_seed": 7,
+                "bootstrap_resamples": 10000,
+                "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+              },
+              {
+                "mean_delta": 0.0003043769299983845,
+                "ci95": [
+                  5.428940057738973e-06,
+                  0.0006988018415868434
+                ],
+                "ci_half_width": 0.0003466864507645522,
+                "paired_deltas": [
+                  6.222873926153838e-05,
+                  0.001208978891372725,
+                  -9.236931800848946e-05,
+                  0.00017721056938169166,
+                  -5.139708518975272e-05,
+                  -4.735738039018944e-05,
+                  0.0016259029507637024,
+                  0.0,
+                  0.0,
+                  0.00016057193279261917
+                ],
+                "independent_source_count": 10,
+                "bootstrap_seed": 7,
+                "bootstrap_resamples": 10000,
+                "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+              }
+            ],
+            "policy": "single exploratory LR cooldown; no candidate quality-gain or rollback claim"
+          }
+        }
+      ],
+      "exact_execution_reproducibility": false,
+      "pre_schedule_state_difference": {
+        "step": 4,
+        "adapter_changes": {
+          "max_abs_change": 6.645589019171894e-05,
+          "mean_abs_change": 1.305959708963717e-06,
+          "updated_tensors": 256,
+          "adapter_tensor_count": 256
+        },
+        "optimizer_exact": false,
+        "scope": "checkpoint saved before any schedule revision at this step; same scientific configuration"
+      },
+      "pre_schedule_paired_evaluations": [
+        {
+          "step": 2,
+          "rsi_minus_rl": {
+            "mean_delta": 9.404264390469041e-05,
+            "ci95": [
+              -1.2947320938105911e-05,
+              0.0002187872920185418
+            ],
+            "ci_half_width": 0.00011586730647832386,
+            "paired_deltas": [
+              -0.00014075785875322655,
+              -2.4124979972839355e-05,
+              -2.6121735572370852e-06,
+              0.0002257317304611428,
+              0.0005335003137588723,
+              2.5705993175528796e-05,
+              0.00030805543065071106,
+              0.0,
+              0.0,
+              1.4927983283952173e-05
+            ],
+            "independent_source_count": 10,
+            "bootstrap_seed": 7,
+            "bootstrap_resamples": 10000,
+            "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+          }
+        },
+        {
+          "step": 4,
+          "rsi_minus_rl": {
+            "mean_delta": 0.09325811261932056,
+            "ci95": [
+              -0.00014254739880558754,
+              0.27993802892789243
+            ],
+            "ci_half_width": 0.140040288163349,
+            "paired_deltas": [
+              6.488710641860962e-05,
+              -0.00042168200016012847,
+              0.9331547419230143,
+              -0.00027405768632893235,
+              3.888905048377023e-05,
+              -2.902299165730149e-05,
+              1.2390315532684326e-05,
+              0.0,
+              0.0,
+              3.498047590255737e-05
+            ],
+            "independent_source_count": 10,
+            "bootstrap_seed": 7,
+            "bootstrap_resamples": 10000,
+            "scope": "source sampling uncertainty conditional on one training seed; repeated validation selection is not confirmatory"
+          }
+        }
+      ],
+      "original_normalized_answer_disagreements_with_frozen": {
+        "rl": 0,
+        "rsi": 0
+      }
+    }
+  ],
+  "across_seed_summary": {
+    "M0": {
+      "seed_count": 2,
+      "mean_reward": -0.3461671304454406,
+      "sample_sd": 0.12947613924652557,
+      "components": {
+        "semantic": {
+          "mean": 0.35,
+          "sample_sd": 0.07071067811865478
+        },
+        "answer_consistency": {
+          "mean": 0.7,
+          "sample_sd": 0.14142135623730956
+        },
+        "vqa_consistency_raw": {
+          "mean": 0.7,
+          "sample_sd": 0.14142135623730956
+        },
+        "vqa_same_answer_fraction": {
+          "mean": 0.75,
+          "sample_sd": 0.21213203435596428
+        },
+        "distortion": {
+          "mean": 0.1764067764393985,
+          "sample_sd": 0.0006361786242759092
+        },
+        "cost": {
+          "mean": 0.33333333333333337,
+          "sample_sd": 0.0
+        },
+        "generation_seconds": {
+          "mean": 5.862335474009161,
+          "sample_sd": 0.006621165735783777
+        }
+      }
+    },
+    "M1": {
+      "seed_count": 2,
+      "mean_reward": -0.48629410471146306,
+      "sample_sd": 0.1957765652803446,
+      "components": {
+        "semantic": {
+          "mean": 0.275,
+          "sample_sd": 0.1060660171779821
+        },
+        "answer_consistency": {
+          "mean": 0.55,
+          "sample_sd": 0.2121320343559642
+        },
+        "vqa_consistency_raw": {
+          "mean": 0.65,
+          "sample_sd": 0.21213203435596428
+        },
+        "vqa_same_answer_fraction": {
+          "mean": 0.7,
+          "sample_sd": 0.282842712474619
+        },
+        "distortion": {
+          "mean": 0.17394528556615113,
+          "sample_sd": 0.00043792682945244444
+        },
+        "cost": {
+          "mean": 0.33333333333333337,
+          "sample_sd": 0.0
+        },
+        "generation_seconds": {
+          "mean": 5.424132912408095,
+          "sample_sd": 0.5960917216721817
+        }
+      }
+    },
+    "M2": {
+      "seed_count": 2,
+      "mean_reward": -0.3925535009863476,
+      "sample_sd": 0.19573003294687905,
+      "components": {
+        "semantic": {
+          "mean": 0.325,
+          "sample_sd": 0.10606601717798214
+        },
+        "answer_consistency": {
+          "mean": 0.65,
+          "sample_sd": 0.21213203435596428
+        },
+        "vqa_consistency_raw": {
+          "mean": 0.65,
+          "sample_sd": 0.21213203435596428
+        },
+        "vqa_same_answer_fraction": {
+          "mean": 0.7,
+          "sample_sd": 0.282842712474619
+        },
+        "distortion": {
+          "mean": 0.1746008064597845,
+          "sample_sd": 0.00012551937347490803
+        },
+        "cost": {
+          "mean": 0.33333333333333337,
+          "sample_sd": 0.0
+        },
+        "generation_seconds": {
+          "mean": 5.892628098139539,
+          "sample_sd": 0.01548915052874456
+        }
+      }
+    }
+  },
+  "claims": {
+    "two_seed_rl_proxy_gain_resolved": false,
+    "two_seed_rsi_proxy_gain_resolved": false,
+    "generalization_improvement_established": false,
+    "independent_semantic_improvement_established": false,
+    "larger_compute_followup_justified_now": false,
+    "reason": "Independent semantic review and strict continuation remain incomplete; two-seed repeated-development pilot is exploratory"
+  },
+  "exposure_counts": {
+    "training_source_exposures": 320,
+    "training_diffusion_trajectories": 320,
+    "unique_training_source_images_across_seeds_and_arms": 154,
+    "validation_trajectories_including_frozen": 180,
+    "conditioning_seed_control_extra_generations": 4,
+    "outcome_diagnostic_generations": 6,
+    "measured_qwen_model_calls": 1050
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "searched": [
+    "project local/canonical tree",
+    "C:/Users/jingb/Documents/Codex targeted HTML names",
+    "H:/Project/RSI_video",
+    "Downloads HTML"
+  ],
+  "found_existing_experiment_package": false,
+  "older_conceptual_pages": [
+    "rsi_poisoning_zh.html",
+    "rsi_poisoning_en.html",
+    "Video_RSI_实验报告.html"
+  ],
+  "decision": "retain old conceptual pages; minimal experimental JSON bilingual view added"
+}

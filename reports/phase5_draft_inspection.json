@@ -1,0 +1,96 @@
+{
+  "source": "H:\\Project\\Poisoning\\项目创新性与实验计划.html",
+  "source_sha256": "f64197beecaaa6979cde3abb7354679aaee53c5b2cb9a403fcfffd0664dfc148",
+  "tex_files_found": [],
+  "original_unchanged": true,
+  "excerpts": [
+    {
+      "search": "\\\\pi_\\\\phi",
+      "excerpt": "nd Acceptance 修改 RL 学习设置，并通过固定指标决定是否保留 Component 1–3：RL 控制图像操纵 a t ∼ π ϕ ( a t ∣ s t ; H k ) a_t\\sim\\pi_\\phi(a_t\\mid s_t;\\mathcal H_k) a t ​ ∼ π ϕ ​ ( a t ​ ∣ s t ​ ; H k ​ ) x ~ t + 1 = G ψ ( x ~ t , a t ) \\tilde x_{t+1}=G_\\psi(\\tilde x_t,a_t) x ~ t + 1 ​ = G ψ ​ ( x ~ t ​ , a t ​ ) 这里  a t a_t a t ​  表示编辑决策， G ψ G_\\psi G ψ ​  是图像编辑执行器， π ϕ \\pi_\\phi π ϕ ​  是通过 RL 学"
+    },
+    {
+      "search": "\\\\pi_\\\\phi",
+      "excerpt": " x ~ t + 1 ​ = G ψ ​ ( x ~ t ​ , a t ​ ) 这里  a t a_t a t ​  表示编辑决策， G ψ G_\\psi G ψ ​  是图像编辑执行器， π ϕ \\pi_\\phi π ϕ ​  是通过 RL 学习的 Policy。 初期推荐固定  G ψ G_\\psi G ψ ​ ，只训练  π ϕ \\pi_\\phi π ϕ ​ ，以便隔离 RL 的真实贡献。 Component 4：真正的 Poisoning Objective 这是我相对于你原稿改动最大的一部分。 θ p = F T ( θ 0 , D c ∪ D p ) \\theta_p=\\mathrm{FT}(\\theta_0,\\mathcal D_c\\cup\\mathcal D_p) θ p ​ = FT ( θ 0 ​ , D"
+    },
+    {
+      "search": "\\\\pi_\\\\phi",
+      "excerpt": "ψ G_\\psi G ψ ​  是图像编辑执行器， π ϕ \\pi_\\phi π ϕ ​  是通过 RL 学习的 Policy。 初期推荐固定  G ψ G_\\psi G ψ ​ ，只训练  π ϕ \\pi_\\phi π ϕ ​ ，以便隔离 RL 的真实贡献。 Component 4：真正的 Poisoning Objective 这是我相对于你原稿改动最大的一部分。 θ p = F T ( θ 0 , D c ∪ D p ) \\theta_p=\\mathrm{FT}(\\theta_0,\\mathcal D_c\\cup\\mathcal D_p) θ p ​ = FT ( θ 0 ​ , D c ​ ∪ D p ​ ) θ b = F T ( θ 0 , D c ) \\theta_b=\\mathrm{FT}(\\theta_0,\\"
+    },
+    {
+      "search": "\\\\pi_\\\\phi",
+      "excerpt": "​   是图片， q i q_i q i ​   是问题， y i y_i y i ​   是训练标签。 你的  RL  Policy： a t ∼ π ϕ ( a t ∣ s t ) a_t\\sim\\pi_\\phi(a_t\\mid s_t) a t ​ ∼ π ϕ ​ ( a t ​ ∣ s t ​ ) 负责选择图像编辑决策，再由  Generator  执行： x ~ t + 1 = G ψ ( x ~ t , a t ) \\tilde x_{t+1}=G_\\psi(\\tilde x_t,a_t) x ~ t + 1 ​ = G ψ ​ ( x ~ t ​ , a t ​ ) 例如，一张图片描述的是物体之间的颜色和空间关系。策略需要理解问题依赖哪些视觉属性，并在预先定义的实验约束下选择图像编辑方式。 这里有两种不同的研究设"
+    },
+    {
+      "search": "GRPO",
+      "excerpt": "\n \n 项目创新性与实验计划 跳转到内容 新聊天 搜索 置顶 最近 资料库 ChatGPT 新聊天 定时任务 资料库 插件 探索 置顶 纽约结婚行程 Flash_GRPO Diffusion Model 项目 RSI-Video 分析方法创新与实验设计 5210 RSI-Poisoning 项目创新性与实验计划 完善项目Brief Draft AIStatus_Learnable Augment for diffusion model Proposal concept learning SCDM 老婆的项目 Time series Qwen-GRPO Questioner-Answerer LLaVA_PPOLP UTC windows AI 最近 网络题答案整理 项目创新性与实验"
+    },
+    {
+      "search": "GRPO",
+      "excerpt": "IStatus_Learnable Augment for diffusion model Proposal concept learning SCDM 老婆的项目 Time series Qwen-GRPO Questioner-Answerer LLaVA_PPOLP UTC windows AI 最近 网络题答案整理 项目创新性与实验计划 设置暗黑三中文 模型介绍 分析方法创新与实验设计 申请GPU资源 催促卖家发货 Uber跑腿指南 英语提升计划 会议准备分析 靖博 王 Plus     RSI-Poisoning 分享 今天  18:26 你说： main (10).tex 文件 刚才开会 导师说可以看一下Backdoor Attack on Vision Language Models with Steal"
+    },
+    {
+      "search": "GRPO",
+      "excerpt": "2026） 用  Diffusion  生成  VLM  Clean-label  Backdoor  样本 生成模型  +  Poisoning  并不新 ASO （CVPR  2026） 利用  GRPO  训练图像编辑模型实现视觉攻击 RL  +  Visual  Attack  并不新 Video-RSI （2026） 基于错误诊断和  Harness  Evolution  改进视觉理解  Agent RSI  +  Feedback-driven  Harness  也不是全新 以上结论来自这些论文的公开方法和贡献描述。 Open  Access  CVF +5 因此，如果现在把论文创新点写成： 使用  RL  生成  Poisoning  Images。 使用  RSI  调整  RL  Harness。"
+    },
+    {
+      "search": "GRPO",
+      "excerpt": "某个训练图像修改对最终后门结果作出了多少贡献。 而且多张图片之间可能存在相互作用，单张图片的效果也未必能够线性叠加。 这意味着，直接对每张图片使用  Inference-time  ASR  作为  GRPO  Reward，存在优化目标不匹配的问题。 你现在的  7  页  Draft  已经意识到了这一点，但尚未提出真正解决它的新算法。 缺陷  2：RSI  只修改  Harness，缺乏针对  Poisoning  的学习机制 目前的逻辑是： H k + 1 = U ( H k , M k ) \\mathcal H_{k+1}=U(\\mathcal H_k,\\mathcal M_k) H k + 1 ​ = U ( H k ​ , M k ​ ) 其中  M k \\mathcal M_k M k ​   是实验记"
+    },
+    {
+      "search": "\\\\tilde x",
+      "excerpt": "i(a_t\\mid s_t;\\mathcal H_k) a t ​ ∼ π ϕ ​ ( a t ​ ∣ s t ​ ; H k ​ ) x ~ t + 1 = G ψ ( x ~ t , a t ) \\tilde x_{t+1}=G_\\psi(\\tilde x_t,a_t) x ~ t + 1 ​ = G ψ ​ ( x ~ t ​ , a t ​ ) 这里  a t a_t a t ​  表示编辑决策， G ψ G_\\psi G ψ ​  是图像编辑执行器， π ϕ \\pi_\\phi π ϕ ​  是通过 RL 学习的 Policy。 初期推荐固定  G ψ G_\\psi G ψ ​ ，只训练  π ϕ \\pi_\\phi π ϕ ​ ，以便隔离 RL 的真实贡献。 Component 4：真正的 Poisoning Obje"
+    },
+    {
+      "search": "\\\\tilde x",
+      "excerpt": " H_k) a t ​ ∼ π ϕ ​ ( a t ​ ∣ s t ​ ; H k ​ ) x ~ t + 1 = G ψ ( x ~ t , a t ) \\tilde x_{t+1}=G_\\psi(\\tilde x_t,a_t) x ~ t + 1 ​ = G ψ ​ ( x ~ t ​ , a t ​ ) 这里  a t a_t a t ​  表示编辑决策， G ψ G_\\psi G ψ ​  是图像编辑执行器， π ϕ \\pi_\\phi π ϕ ​  是通过 RL 学习的 Policy。 初期推荐固定  G ψ G_\\psi G ψ ​ ，只训练  π ϕ \\pi_\\phi π ϕ ​ ，以便隔离 RL 的真实贡献。 Component 4：真正的 Poisoning Objective 这是我相对于你原稿改动最大的一部"
+    },
+    {
+      "search": "\\\\tilde x",
+      "excerpt": " s_t) a t ​ ∼ π ϕ ​ ( a t ​ ∣ s t ​ ) 负责选择图像编辑决策，再由  Generator  执行： x ~ t + 1 = G ψ ( x ~ t , a t ) \\tilde x_{t+1}=G_\\psi(\\tilde x_t,a_t) x ~ t + 1 ​ = G ψ ​ ( x ~ t ​ , a t ​ ) 例如，一张图片描述的是物体之间的颜色和空间关系。策略需要理解问题依赖哪些视觉属性，并在预先定义的实验约束下选择图像编辑方式。 这里有两种不同的研究设置： Semantic-preserving：   修改图片后，原问题的正确答案仍然不变。 Semantic-mismatch：   像  BadSem  一样，研究图像与原文本之间的语义错配。 两者不能混为一谈。特别是  Sema"
+    },
+    {
+      "search": "\\\\tilde x",
+      "excerpt": "a t ​ ∣ s t ​ ) 负责选择图像编辑决策，再由  Generator  执行： x ~ t + 1 = G ψ ( x ~ t , a t ) \\tilde x_{t+1}=G_\\psi(\\tilde x_t,a_t) x ~ t + 1 ​ = G ψ ​ ( x ~ t ​ , a t ​ ) 例如，一张图片描述的是物体之间的颜色和空间关系。策略需要理解问题依赖哪些视觉属性，并在预先定义的实验约束下选择图像编辑方式。 这里有两种不同的研究设置： Semantic-preserving：   修改图片后，原问题的正确答案仍然不变。 Semantic-mismatch：   像  BadSem  一样，研究图像与原文本之间的语义错配。 两者不能混为一谈。特别是  Semantic-mismatch  设置下，训练标"
+    },
+    {
+      "search": "真正的 Poisoning Objective",
+      "excerpt": "​  是通过 RL 学习的 Policy。 初期推荐固定  G ψ G_\\psi G ψ ​ ，只训练  π ϕ \\pi_\\phi π ϕ ​ ，以便隔离 RL 的真实贡献。 Component 4：真正的 Poisoning Objective 这是我相对于你原稿改动最大的一部分。 θ p = F T ( θ 0 , D c ∪ D p ) \\theta_p=\\mathrm{FT}(\\theta_0,\\mathcal D_c\\cup\\mathcal D_p) θ p ​ = FT ( θ 0 ​ , D c ​ ∪ D p ​ ) θ b = F T ( θ 0 , D c ) \\theta_b=\\mathrm{FT}(\\theta_0,\\mathcal D_c) θ b ​ = FT ( θ 0 ​ , D c ​ ) 你的主要目标函数可以定义为： J"
+    },
+    {
+      "search": "Component 4",
+      "excerpt": "pi_\\phi π ϕ ​  是通过 RL 学习的 Policy。 初期推荐固定  G ψ G_\\psi G ψ ​ ，只训练  π ϕ \\pi_\\phi π ϕ ​ ，以便隔离 RL 的真实贡献。 Component 4：真正的 Poisoning Objective 这是我相对于你原稿改动最大的一部分。 θ p = F T ( θ 0 , D c ∪ D p ) \\theta_p=\\mathrm{FT}(\\theta_0,\\mathcal D_c\\cup\\mathcal D_p) θ p ​ = FT ( θ 0 ​ , D c ​ ∪ D p ​ ) θ b = F T ( θ 0 , D c ) \\theta_b=\\mathrm{FT}(\\theta_0,\\mathcal D_c) θ b ​ = FT ( θ 0 ​ , "
+    },
+    {
+      "search": "Vision-OPD",
+      "excerpt": "L 是 integrated with RSI的; 初步focus on image understanding,VLM, reasoning model这些  target model是不是可以选择Vision-OPD  https://arxiv.org/pdf/2605.18740 这个文章或者Qwen，Gemini; 我需要在overleaf给出模型细节 以及整个structure图 各个部分的component，objective function等等细节； 你详细给我讲解一下 之后给我overleaf代码和pdf … 显示更多 思考了 15m 10s ChatGPT 说： 这次导师的建议，让项目方向进一步明确了： 核心应该是 Training-time VLM Poisoning，而 RL 和 RSI 是用来学习、改进"
+    },
+    {
+      "search": "Vision-OPD",
+      "excerpt": "方向进一步明确了： 核心应该是 Training-time VLM Poisoning，而 RL 和 RSI 是用来学习、改进训练图像操纵策略的方法。 我核对了两篇 Backdoor 论文和你提供的 Vision-OPD（arXiv:2605.18740），也检查了你上传的  main (10).tex 。 一、导师建议的三篇论文分别能提供什么？ 论文 核心思想 对你项目的价值 BadSem: Backdoor Attack on Vision Language Models with Stealthy Semantic Manipulation 利用图像与文本的语义不一致形成隐式后门条件 提供 Semantic Manipulation 的研究基础 Dual-Key Multimodal Backdoors for Visual"
+    },
+    {
+      "search": "Vision-OPD",
+      "excerpt": "odal Backdoors for Visual Question Answering （CVPR 2022） 图像和问题具有两个条件，只有同时满足时才触发特定行为 提供多模态条件性后门及评测对照 Vision-OPD: Learning to See Fine Details for Multimodal LLMs via On-Policy Self-Distillation （2026） 用局部区域信息指导模型改进整图的细粒度理解 提供现代视觉理解和推理模型的评测对象 其中，BadSem 的核心确实是训练数据中的跨模态语义错配，论文报告在四类 VLM 上取得很高的后门成功率；Dual-Key 则研究视觉条件和文本条件共同控制后门激活，并发布了 TrojVQA 模型集合。 arXiv +1 我建议从这三篇论文中提炼出一个统一"
+    },
+    {
+      "search": "Vision-OPD",
+      "excerpt": "I”  是一致的。 我建议在论文中表达为：RSI Agent 负责诊断、规划和调整生成过程，RL Policy 负责学习具体的决策策略。两者构成一个联合的自我改进框架，而不是两个相互独立的模型。 二、Vision-OPD、Qwen、Gemini 应该怎么选择？ 我核实了一个关键事实： Vision-OPD 不是一种新的 Backdoor Attack，也不是一个纯粹独立的视觉基础架构。 它是一种 On-Policy Self-Distillation 方法，通过全图 Student 和局部裁剪区域 Teacher 之间的分布对齐来改善细粒度视觉理解；作者公开了基于 Qwen3.5 的 4B 和 9B 模型，以及训练代码。 arXiv +2 因此，模型选择可以更科学： 模型 建议用途 理由 Qwen3.5-4B 第一阶段主要实验模型"
+    },
+    {
+      "search": "ASR",
+      "excerpt": "S R c − λ u Δ U t i l i t y L o s s − λ C C o s t \\begin{aligned}\nJ(\\mathcal D_p)={}&\n\\Delta\\mathrm{ASR}_c\\\\\n&-\\lambda_u\\Delta\\mathrm{UtilityLoss}\\\\\n&-\\lambda_C\\mathrm{Cost}\n\\end{aligned} J ( D p ​ ) = ​ Δ ASR c ​ − λ u ​ Δ UtilityLoss − λ C ​ Cost ​ 其中  Δ A S R c \\Delta\\mathrm{ASR}_c Δ ASR c ​  是经过污染数据训练后的模型与干净训练基线在预先定义条件下的成功率差异。 这样可以明确： 我们评估的是训练数据污染对模型造成的影响，而"
+    },
+    {
+      "search": "ASR",
+      "excerpt": "\\\\\n&-\\lambda_u\\Delta\\mathrm{UtilityLoss}\\\\\n&-\\lambda_C\\mathrm{Cost}\n\\end{aligned} J ( D p ​ ) = ​ Δ ASR c ​ − λ u ​ Δ UtilityLoss − λ C ​ Cost ​ 其中  Δ A S R c \\Delta\\mathrm{ASR}_c Δ ASR c ​  是经过污染数据训练后的模型与干净训练基线在预先定义条件下的成功率差异。 这样可以明确： 我们评估的是训练数据污染对模型造成的影响，而不是一次推理时编辑造成的错误。 但这个目标通常需要重新 Fine-tune Victim 才能得到，所以 Reward 很昂贵。PDF 里特别区分了真实下游反馈和需要先验证有效性的低成本 Proxy Reward"
+    },
+    {
+      "search": "ASR",
+      "excerpt": "aligned} J ( D p ​ ) = ​ Δ ASR c ​ − λ u ​ Δ UtilityLoss − λ C ​ Cost ​ 其中  Δ A S R c \\Delta\\mathrm{ASR}_c Δ ASR c ​  是经过污染数据训练后的模型与干净训练基线在预先定义条件下的成功率差异。 这样可以明确： 我们评估的是训练数据污染对模型造成的影响，而不是一次推理时编辑造成的错误。 但这个目标通常需要重新 Fine-tune Victim 才能得到，所以 Reward 很昂贵。PDF 里特别区分了真实下游反馈和需要先验证有效性的低成本 Proxy Reward。 Component 5–6：RSI 集成进 RL RSI 负责改进的对象是： H k = ( A k , ρ k , w k , C k , "
+    },
+    {
+      "search": "ASR",
+      "excerpt": "J ( D p ​ ) = ​ Δ ASR c ​ − λ u ​ Δ UtilityLoss − λ C ​ Cost ​ 其中  Δ A S R c \\Delta\\mathrm{ASR}_c Δ ASR c ​  是经过污染数据训练后的模型与干净训练基线在预先定义条件下的成功率差异。 这样可以明确： 我们评估的是训练数据污染对模型造成的影响，而不是一次推理时编辑造成的错误。 但这个目标通常需要重新 Fine-tune Victim 才能得到，所以 Reward 很昂贵。PDF 里特别区分了真实下游反馈和需要先验证有效性的低成本 Proxy Reward。 Component 5–6：RSI 集成进 RL RSI 负责改进的对象是： H k = ( A k , ρ k , w k , C k , B k ) \\ma"
+    }
+  ]
+}

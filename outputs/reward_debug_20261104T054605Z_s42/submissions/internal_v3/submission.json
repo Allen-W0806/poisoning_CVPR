@@ -1,0 +1,93 @@
+{
+  "stage": "internal_v3",
+  "reservation_GPU_seconds": 18000,
+  "seed": 42,
+  "status": "SUBMITTED",
+  "command": [
+    ".venv-editor/bin/python",
+    "train_lighting_v3.py",
+    "--output_dir",
+    "outputs/reward_debug_20261104T054605Z_s42/internal_pilot"
+  ],
+  "prior_accounting": {
+    "records": [
+      {
+        "job_id": "88948",
+        "stage": "diagnostics",
+        "state": "COMPLETED",
+        "elapsed_seconds": 271,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 271
+      },
+      {
+        "job_id": "88949",
+        "stage": "internal",
+        "state": "CANCELLED by 100127",
+        "elapsed_seconds": 2840,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 2840
+      },
+      {
+        "job_id": "88952",
+        "stage": "shadowcast_clean",
+        "state": "CANCELLED by 100127",
+        "elapsed_seconds": 233,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 233
+      },
+      {
+        "job_id": "88955",
+        "stage": "shadowcast_clean_repaired",
+        "state": "COMPLETED",
+        "elapsed_seconds": 1649,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 1649
+      },
+      {
+        "job_id": "88954",
+        "stage": "shadowcast_clean_tmpfix",
+        "state": "FAILED",
+        "elapsed_seconds": 7,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 7
+      },
+      {
+        "job_id": "88951",
+        "stage": "shadowcast_poison",
+        "state": "FAILED",
+        "elapsed_seconds": 8,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 8
+      },
+      {
+        "job_id": "88953",
+        "stage": "shadowcast_poison_pathfix",
+        "state": "RUNNING",
+        "elapsed_seconds": 2094,
+        "settled": false,
+        "charged_or_reserved_GPU_seconds": 14400
+      },
+      {
+        "job_id": "88950",
+        "stage": "shadowcast_smoke",
+        "state": "COMPLETED",
+        "elapsed_seconds": 39,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 39
+      }
+    ],
+    "committed_GPU_seconds": 19447,
+    "actual_GPU_seconds": 7141,
+    "cap_GPU_seconds": 72000
+  },
+  "script_SHA256": "73a7b6c6ab3293d84c83b02f0d12cef55ed4a122b533cd8672045490eb1f1aa9",
+  "scratch": "/storage/home/ydk297/projects/poisoning/tmp/rd_2fb8e3725172",
+  "created_UTC": "2026-11-04T06:56:37.358056+00:00",
+  "entrypoint_SHA256": {
+    "train_lighting_v3.py": "ff2e6fcbcb0e6b80ee3fec1c7cc1e74648adda11fb63af5a7d095bac88840280"
+  },
+  "returncode": 0,
+  "stdout": "88957",
+  "stderr": "sbatch:  \nsbatch: Job Resource Tips:\nsbatch:   * Run 'jobstats <jobid>' while your job is running (wait at least 60 seconds before trying) or after job completes.\nsbatch:   * Check CPU, GPU, and memory usage.\nsbatch:   * Adjust your requests to improve efficiency.\nsbatch:   * Optimizing your requests can help shorten queue times and improve cluster utilization.\nsbatch:",
+  "job_id": "88957"
+}

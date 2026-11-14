@@ -1,0 +1,8 @@
+{
+  "created_UTC": "2026-11-04T06:56:35.474301+00:00",
+  "new_v3_pilot_not_yet_started": true,
+  "new_final_outputs_not_yet_generated": true,
+  "protocol_SHA256": "0f9cc35e768c5da885535f8279d2009386c8f1d05db5992e19a1e08a67196f23",
+  "worker_SHA256": "ebfa50909d62ccf945105a8fbb403d400dff436647fe5bba75a6bb0730273e23",
+  "VQA_use": "post-hoc editing quality only; never controller/config feedback or ASR"
+}

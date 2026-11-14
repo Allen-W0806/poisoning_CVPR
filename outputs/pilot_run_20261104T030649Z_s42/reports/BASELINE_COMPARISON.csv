@@ -1,0 +1,6 @@
+﻿Method,arm,status,training_seed,measured_assessment_images,optimizer_steps,controller_actions,controller_updates,common_reward,CLIP_cosine,LPIPS,SSIM,delta_common_vs_Frozen,paired_CI95_low,paired_CI95_high,ASR_Proxy,ASR,Delta_Clean,scope,physical_equivalence_control
+Frozen,frozen,MEASURED,42,16,0,0,0,-0.051463,0.152862,0.357187,0.595992,0.000000,0.000000,0.000000,NOT TESTED,NOT TESTED,NOT TESTED,DEVELOPMENT ONLY; one training seed; source-bootstrap CI,
+Fixed Editing (equivalent control),fixed,MEASURED_EQUIVALENT_CONTROL,42,16,0,0,0,-0.051463,0.152862,0.357187,0.595992,0.000000,0.000000,0.000000,NOT TESTED,NOT TESTED,NOT TESTED,DEVELOPMENT ONLY; one training seed; source-bootstrap CI,frozen
+DDPO-only,ddpo_only,MEASURED,42,16,100,0,0,-0.020859,0.153833,0.328526,0.619803,0.030603,0.014557,0.048192,NOT TESTED,NOT TESTED,NOT TESTED,DEVELOPMENT ONLY; one training seed; source-bootstrap CI,
+Rule-based RSI,rule_rsi,MEASURED,42,16,100,0,0,-0.020859,0.153833,0.328526,0.619803,0.030603,0.014557,0.048192,NOT TESTED,NOT TESTED,NOT TESTED,DEVELOPMENT ONLY; one training seed; source-bootstrap CI,
+RL-RSI,rl_rsi,MEASURED,42,16,100,3,3,-0.014295,0.153746,0.321787,0.625512,0.037168,0.018282,0.058240,NOT TESTED,NOT TESTED,NOT TESTED,DEVELOPMENT ONLY; one training seed; source-bootstrap CI,

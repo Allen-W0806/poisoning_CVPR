@@ -1,0 +1,23 @@
+{
+  "scratch_removed": "/storage/home/ydk297/projects/poisoning/tmp/setup_20261027",
+  "source_caches_removed": [
+    "/storage/home/ydk297/projects/poisoning/src/__pycache__",
+    "/storage/home/ydk297/projects/poisoning/src/editing/__pycache__",
+    "/storage/home/ydk297/projects/poisoning/src/utils/__pycache__",
+    "/storage/home/ydk297/projects/poisoning/src/models/__pycache__",
+    "/storage/home/ydk297/projects/poisoning/src/rsi/__pycache__",
+    "/storage/home/ydk297/projects/poisoning/src/evaluation/__pycache__",
+    "/storage/home/ydk297/projects/poisoning/src/data/__pycache__",
+    "/storage/home/ydk297/projects/poisoning/src/rl/__pycache__",
+    "/storage/home/ydk297/projects/poisoning/scripts/__pycache__",
+    "/storage/home/ydk297/projects/poisoning/tests/__pycache__"
+  ],
+  "setup_logs_preserved": "/storage/home/ydk297/projects/poisoning/logs/setup_20261027",
+  "free_bytes_after": 288773132779520,
+  "retained": [
+    ".venv",
+    "data",
+    "experiments",
+    "central Qwen weights"
+  ]
+}

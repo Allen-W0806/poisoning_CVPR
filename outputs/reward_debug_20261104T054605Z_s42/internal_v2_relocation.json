@@ -1,0 +1,8 @@
+{
+  "job": "88949",
+  "reason": "Rejected saturated real-generation brightness term; development-only objective debug",
+  "original_path": "/storage/home/ydk297/projects/poisoning/outputs/reward_debug_20261104T054605Z_s42/internal_pilot",
+  "retained_path": "/storage/home/ydk297/projects/poisoning/outputs/reward_debug_20261104T054605Z_s42/internal_pilot_v2_saturation_probe",
+  "new_final_assessment_never_generated": true,
+  "UTC": "2026-11-04T06:54:01.735657+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "call_number": 1,
+  "purpose": "result-to-claim",
+  "timestamp": "2026-11-04T11:57:48.6529464Z",
+  "agent_id": "/root/completed_results_claim_review",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "duration_ms": -17402347.0,
+  "status": "ok",
+  "broad_claim_supported": "no",
+  "scoped_measurements_supported": "yes",
+  "integrity_status": "unavailable",
+  "routing_action": "record negative broad claim; reframe to diagnostic evidence; no new experiments"
+}

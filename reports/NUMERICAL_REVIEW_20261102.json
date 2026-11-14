@@ -1,0 +1,37 @@
+{
+  "audit_skill": "experiment-audit",
+  "date": "2026-11-02",
+  "reviewer": "fresh Codex subagent /root/targeted_numerical_review",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "scope": "Four numerical-boundary scripts, seven requested result JSON files, and their directly referenced saved tensor/content artifacts",
+  "overall_verdict": "WARN",
+  "integrity_status": "warn",
+  "numerical_acceptance": "FAIL",
+  "root_cause_identified": false,
+  "fix_eligible": false,
+  "scientific_release": false,
+  "model_learning_demonstrated": false,
+  "checks": {
+    "gt_provenance": {"status": "pass", "details": "Explicit numerical witnesses and source-derived brightness proxy; no semantic ground truth fabricated."},
+    "score_normalization": {"status": "pass", "details": "Current values independently verified. Future comparator orientation and zero-denominator aggregation require explicit handling."},
+    "result_existence": {"status": "pass", "details": "Scoped outputs exist; A1/A2 tensor metrics, 28 brightness rows, and all preservation hashes independently verified."},
+    "dead_code": {"status": "pass", "details": "Reviewed metric outputs correspond to executed computations."},
+    "scope": {"status": "warn", "details": "Partial local-module capture; same process and fixed order; save/restore round-trip only; historical assessment roles inconsistent with top-level independence disclaimer."},
+    "eval_type": ["engineering_reproducibility_probe", "self_supervised_proxy"]
+  },
+  "ordinary_repeat": {
+    "initial_rng_trajectories_exact": true,
+    "postclip_affected_tensors": 256,
+    "postclip_affected_elements": 1594333,
+    "postclip_max_abs": 0.00002678763121366501,
+    "postclip_max_tensor_relative_L2": 0.0011192377571042473,
+    "earliest_saved_mismatch": "postclip",
+    "after_affected_tensors": 768,
+    "tolerance_pass": false
+  },
+  "additional_CPU_observation": "A2/B1 are exact on every common saved boundary; instrumentation causality is not established.",
+  "preservation": {"candidate_images": 160, "review_assets": 96, "review_ZIPs": 2, "accepted_human_pairs": 0, "brightness_rows_verified": 28},
+  "report_path": "reports/NUMERICAL_REVIEW_20261102.md",
+  "trace_recording_owner": "parent executor"
+}

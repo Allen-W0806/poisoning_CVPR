@@ -1,0 +1,16 @@
+test_empty_submissions_never_create_labels_or_agreement (tests.test_phase6_followup.FollowupReviewTests.test_empty_submissions_never_create_labels_or_agreement) ... ok
+test_finalization_notification_refreshes_actual_snapshot_and_bounds_retries (tests.test_phase6_followup.FollowupReviewTests.test_finalization_notification_refreshes_actual_snapshot_and_bounds_retries) ... ok
+test_full_dashboard_rebuilds_status_and_measurements_without_releasing_science (tests.test_phase6_followup.FollowupReviewTests.test_full_dashboard_rebuilds_status_and_measurements_without_releasing_science) ... ok
+test_image_mismatch_and_unknown_nonnull_answers_are_rejected (tests.test_phase6_followup.FollowupReviewTests.test_image_mismatch_and_unknown_nonnull_answers_are_rejected) ... ok
+test_malformed_submission_is_recorded_without_crashing_monitor (tests.test_phase6_followup.FollowupReviewTests.test_malformed_submission_is_recorded_without_crashing_monitor) ... ok
+test_operator_attested_disagreement_retained_and_reward_stays_blocked (tests.test_phase6_followup.FollowupReviewTests.test_operator_attested_disagreement_retained_and_reward_stays_blocked) ... /storage/home/ydk297/projects/poisoning/src/evaluation/_vendor/official_vqa.py:62: DeprecationWarning: invalid escape sequence '\d'
+  self.periodStrip  = re.compile("(?!<=\d)(\.)(?!\d)")
+/storage/home/ydk297/projects/poisoning/src/evaluation/_vendor/official_vqa.py:63: DeprecationWarning: invalid escape sequence '\d'
+  self.commaStrip   = re.compile("(\d)(\,)(\d)")
+ok
+test_self_declaration_does_not_equal_operator_verified_truth (tests.test_phase6_followup.FollowupReviewTests.test_self_declaration_does_not_equal_operator_verified_truth) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.012s
+
+OK

@@ -1,0 +1,11 @@
+{
+  "canonical_final_commit": "b78323954a5af4ea49e4692cd0382634eaa86c3c",
+  "allocated_gpu_seconds": 1187,
+  "scratch_removed": true,
+  "scratch_path": "/storage/home/ydk297/projects/poisoning/tmp/phase2_20261027",
+  "project_bytecode_cache_directories_removed": 12,
+  "evidence_archive_sha256_verified_before_removal": "ce94bab162879cf748aac38e5c0b9a036383e12fbb84d446b4bd425cf9ee6a52",
+  "retained_disk": "1.2G\t/storage/home/ydk297/projects/poisoning/.venv-editor\n468M\t/storage/home/ydk297/projects/poisoning/experiments\n2.0G\t/storage/home/ydk297/.cache/huggingface/hub/models--timbrooks--instruct-pix2pix\n",
+  "queue": "JOBID STATE NAME\n",
+  "weights_environments_experiments_preserved": true
+}

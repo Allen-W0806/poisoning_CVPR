@@ -1,0 +1,104 @@
+{
+  "run_id": "overnight_benign_20261102_v2",
+  "audit_skill": "experiment-audit",
+  "review": "narrow CPU/controller/reporting revision recheck",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "verdict": "WARN",
+  "reviewer": "/root/overnight_controller_review",
+  "initial_review_preserved": true,
+  "reviewed_utc": "2026-11-02T06:36:48Z",
+  "sha256": {
+    "scripts/overnight_benign_controller_20261102.py": "40b5415e488d1b0650c91249ca65743d3dcc28a5a0dca44c97d215b82ec3f4bc",
+    "scripts/overnight_benign_reporting_20261102.py": "c39c081402351ab33d8ba5e6a181d2ae3ff008c89949118ef3cd2097be82256d",
+    "scripts/test_overnight_benign_20261102.py": "a05d1f60e014b4057752013c4bbbde33c040f0dc23216b65f1dc0390728e6d8c",
+    "reports/OVERNIGHT_EXPERIMENT_RESULTS.csv": "abbe7ad278738b0ae599c8c0f9161cd8c4fd7eb25a56462b68edb19cb505b095",
+    "reports/OVERNIGHT_EXECUTION_STATUS.md": "07ef40a97d01284da680512e8e4ec2461245a676e95b222017e926f01688dcc2",
+    "reports/OVERNIGHT_FINAL_REPORT.md": "55553692c237934a8c0b167c8dce4e1bd89ac6720c5d9583fe216d0a82b02333",
+    "reports/NUMERICAL_ROOT_CAUSE_LATEST.md": "5a5fe731389bb93e2456ef9979765ba04c1770233ad2644c85f690ac978c26e8",
+    "reports/OVERNIGHT_REVIEW_20261102.json": "1493fb81135cd6384a50faa24f9899ad7b4a7cb8907216e168845ed701e77a65",
+    "reports/OVERNIGHT_REVIEW_20261102.md": "5e1eae5eed75e8e1b03075c4117a6f0f8af6642adebc8629b6a68281d791df44",
+    "reports/overnight_benign_20261102_v2/state.json": "409723e8ca3f53c51b93175e8cc9c09b7d6aa62606278dd653dc5f24e6337105",
+    "reports/overnight_benign_20261102_v2/budget.json": "708cb49114ad80fc3af64f9e601caa8c9ea15c47d9636c8a777b7b88ab3cdabb",
+    "results/overnight_benign_20261102_v2/terminal_receipt.json": "32fb5f1b839a57ded25c8e0589f549c599adba1a45b96f991ec11c44d247ff89",
+    "results/overnight_benign_20261102_v2/CPU_preparation_tests_final.log": "6bd8ce1ab53a9dc863179e5854d6416675b044cbe23bc4dad3ff34ce62de07a5",
+    "results/overnight_benign_20261102_v2/fixed_model_metrics.json": "49fd0d4fad10830a8fc646e9ce3d7d3df0ee4c28330827e48476187995ab99b7",
+    "results/overnight_benign_20261102_v2/fixed_model_metrics_initial.json": "b5cc93af284762d61ea4140e188bf4069c149e4afc687bd926ad9bb62ee57773"
+  },
+  "tests": {
+    "initial_count": 18,
+    "revised_count": 24,
+    "revised_result": "PASS",
+    "repeated_model_work": false,
+    "large_file_rehash": false
+  },
+  "observed": {
+    "charged_gpu_jobs": [
+      88433
+    ],
+    "GPU_seconds": 172,
+    "reserved_seconds": 0,
+    "new_budget_remaining": 35828,
+    "deadline_job": 88431,
+    "deadline_status": "CANCELLED",
+    "deadline_elapsed": 0,
+    "completed_afterany": 88434,
+    "actual_duplicate_callback_noops": 1,
+    "old_ledger_consumed": 2899,
+    "old_ledger_remaining": 701,
+    "old_ledger_contains_88433": false,
+    "learning_eligible": false,
+    "ordinary_resume_executed": false,
+    "sealed_image_reads_by_reviewer": 0
+  },
+  "findings": {
+    "R1": {
+      "status": "mitigated",
+      "evidence": "controller:29-38,85-111,166-193",
+      "remaining": "The delayed read is one-shot. Ambiguous submissions remain fail-closed without automatic token reconciliation."
+    },
+    "R2": {
+      "status": "corrected in reviewed code",
+      "evidence": "controller:166-187,112-120; real terminal receipt and Slurm cancellation"
+    },
+    "R3": {
+      "status": "partial",
+      "evidence": "reporting:24-36; test:98 onward",
+      "confirmed": "Matching two ordinary updates and last ordinary versus single resumed scalar receipt catch norm differences.",
+      "residual": "Empty updates in all receipts vacuously compare equal. In-memory fixture on reviewed code returned exact=true, tolerance=true.",
+      "action": "Require 2 ordinary0, 2 ordinary1 and 1 resumed update. Add empty-data regression."
+    },
+    "R4": {
+      "status": "corrected",
+      "RSI_retained_sources": 10,
+      "RSI_attempted_sources": 20,
+      "identical_per_source_rows": 16,
+      "numerical_metric_changes": 0,
+      "incremental_NFE": [
+        48,
+        168,
+        168,
+        168
+      ],
+      "shared_NFE": 168,
+      "total_NFE": 720,
+      "arm_allocated_GPU_cost": null
+    },
+    "R5": {
+      "status": "corrected in numerical report",
+      "field": "formula-reconstructed clipping coefficient",
+      "evidence": "NUMERICAL_ROOT_CAUSE_LATEST.md:18,22,29"
+    },
+    "R6": {
+      "status": "covered, exception remains",
+      "evidence": "controller:131-139; tests:88-97",
+      "remaining": "One excluded-node retry is possible after a partially started payload. Actual run had one submission."
+    }
+  },
+  "provenance": {
+    "five_archived_scripts_match_initial_hashes": true,
+    "initial_fixed_model_metrics_match": true,
+    "original_test_source_present_in_executed_source_snapshot": false,
+    "original_test_log_and_hash_preserved": true
+  }
+}

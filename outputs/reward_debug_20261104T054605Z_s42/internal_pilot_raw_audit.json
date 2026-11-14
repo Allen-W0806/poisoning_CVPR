@@ -1,0 +1,596 @@
+{
+  "status": "PASS",
+  "UTC": "2026-11-04T11:43:36.362887+00:00",
+  "trained_arms": {
+    "ddpo_only": {
+      "committed_updates": 100,
+      "all_finite_gradients_and_Adam": true,
+      "maximum_behavior_logp_replay_difference": 0.0,
+      "minimum_nonzero_parameter_change": 4.172914486844093e-06
+    },
+    "rule_rsi": {
+      "committed_updates": 100,
+      "all_finite_gradients_and_Adam": true,
+      "maximum_behavior_logp_replay_difference": 0.0,
+      "minimum_nonzero_parameter_change": 1.7817910702433437e-06
+    },
+    "rl_rsi": {
+      "committed_updates": 100,
+      "all_finite_gradients_and_Adam": true,
+      "maximum_behavior_logp_replay_difference": 0.0,
+      "minimum_nonzero_parameter_change": 4.127621650695801e-06
+    }
+  },
+  "numerical_witness": {
+    "status": "PASS",
+    "precision": "fp32",
+    "actual_optimizer_updates": 5,
+    "checks": {
+      "ordinary_first_update": {
+        "exact": true,
+        "tolerance": true,
+        "tensor_count": 1538,
+        "different_elements": 0,
+        "max_absolute_error": 0.0,
+        "structure_errors": []
+      },
+      "ordinary_second_update": {
+        "exact": true,
+        "tolerance": true,
+        "tensor_count": 1538,
+        "different_elements": 0,
+        "max_absolute_error": 0.0,
+        "structure_errors": []
+      },
+      "reload_completed_next_update": {
+        "exact": true,
+        "tolerance": true,
+        "tensor_count": 1538,
+        "different_elements": 0,
+        "max_absolute_error": 0.0,
+        "structure_errors": []
+      }
+    },
+    "BF16_fix_claim": false,
+    "protected_frozen_weights_unchanged": true
+  },
+  "learned_controller_actions": 3,
+  "learned_controller_updates": 3,
+  "physical_assessment_images_checked": 64,
+  "pixel_metric_maximum_error": 2.609024107869118e-15,
+  "editing_fractions": {
+    "frozen": {
+      "n": 16,
+      "edited_assessment_fraction": 1.0,
+      "canvas_area_fraction_tau0": 0.9987006187438965,
+      "content_area_fraction_tau0": 0.9995802574783592,
+      "rows": [
+        {
+          "sample_id": "340345009",
+          "canvas_area_fraction_tau0": 0.9999923706054688,
+          "content_area_fraction_tau0": 0.9999867584745763,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "155177008",
+          "canvas_area_fraction_tau0": 0.9981842041015625,
+          "content_area_fraction_tau0": 0.9992044712793734,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "245528000",
+          "canvas_area_fraction_tau0": 0.9989356994628906,
+          "content_area_fraction_tau0": 0.9993775127923976,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "94416001",
+          "canvas_area_fraction_tau0": 0.9972381591796875,
+          "content_area_fraction_tau0": 0.9988657633463541,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "110821005",
+          "canvas_area_fraction_tau0": 0.9992752075195312,
+          "content_area_fraction_tau0": 0.9992330660994765,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "197570005",
+          "canvas_area_fraction_tau0": 0.99847412109375,
+          "content_area_fraction_tau0": 0.9997529871323529,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "431322007",
+          "canvas_area_fraction_tau0": 0.9984321594238281,
+          "content_area_fraction_tau0": 0.9998321533203125,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "323162000",
+          "canvas_area_fraction_tau0": 0.9999885559082031,
+          "content_area_fraction_tau0": 0.9999885559082031,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "285605001",
+          "canvas_area_fraction_tau0": 0.9986305236816406,
+          "content_area_fraction_tau0": 0.9995263185215947,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "555143000",
+          "canvas_area_fraction_tau0": 0.9982490539550781,
+          "content_area_fraction_tau0": 0.9998458059210527,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "316640000",
+          "canvas_area_fraction_tau0": 0.9995040893554688,
+          "content_area_fraction_tau0": 0.9997886970029239,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "367423003",
+          "canvas_area_fraction_tau0": 0.9977149963378906,
+          "content_area_fraction_tau0": 0.9993374354719764,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "511121005",
+          "canvas_area_fraction_tau0": 0.9999580383300781,
+          "content_area_fraction_tau0": 0.9999366242625368,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "256877002",
+          "canvas_area_fraction_tau0": 0.9979362487792969,
+          "content_area_fraction_tau0": 0.9988521107456141,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "429015001",
+          "canvas_area_fraction_tau0": 0.9971084594726562,
+          "content_area_fraction_tau0": 0.9999237060546875,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "229362028",
+          "canvas_area_fraction_tau0": 0.9995880126953125,
+          "content_area_fraction_tau0": 0.9998321533203125,
+          "any_canvas_pixel_changed": true
+        }
+      ],
+      "scope": "any nonzero integer RGB change; assessment editing fractions, not victim training poisoning rate"
+    },
+    "ddpo_only": {
+      "n": 16,
+      "edited_assessment_fraction": 1.0,
+      "canvas_area_fraction_tau0": 0.99869704246521,
+      "content_area_fraction_tau0": 0.9995590822881933,
+      "rows": [
+        {
+          "sample_id": "340345009",
+          "canvas_area_fraction_tau0": 0.9999732971191406,
+          "content_area_fraction_tau0": 0.9999536546610169,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "155177008",
+          "canvas_area_fraction_tau0": 0.9981002807617188,
+          "content_area_fraction_tau0": 0.9990310868146214,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "245528000",
+          "canvas_area_fraction_tau0": 0.998870849609375,
+          "content_area_fraction_tau0": 0.9992975603070176,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "94416001",
+          "canvas_area_fraction_tau0": 0.9972953796386719,
+          "content_area_fraction_tau0": 0.9989166259765625,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "110821005",
+          "canvas_area_fraction_tau0": 0.9992904663085938,
+          "content_area_fraction_tau0": 0.9992381789921466,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "197570005",
+          "canvas_area_fraction_tau0": 0.9985084533691406,
+          "content_area_fraction_tau0": 0.9997300091911765,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "431322007",
+          "canvas_area_fraction_tau0": 0.9984550476074219,
+          "content_area_fraction_tau0": 0.9998321533203125,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "323162000",
+          "canvas_area_fraction_tau0": 0.9999885559082031,
+          "content_area_fraction_tau0": 0.9999885559082031,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "285605001",
+          "canvas_area_fraction_tau0": 0.9986152648925781,
+          "content_area_fraction_tau0": 0.9995522736710963,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "555143000",
+          "canvas_area_fraction_tau0": 0.9982566833496094,
+          "content_area_fraction_tau0": 0.999874360380117,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "316640000",
+          "canvas_area_fraction_tau0": 0.999481201171875,
+          "content_area_fraction_tau0": 0.9998001187865497,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "367423003",
+          "canvas_area_fraction_tau0": 0.9977684020996094,
+          "content_area_fraction_tau0": 0.9993892883480826,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "511121005",
+          "canvas_area_fraction_tau0": 0.9999542236328125,
+          "content_area_fraction_tau0": 0.9999308628318584,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "256877002",
+          "canvas_area_fraction_tau0": 0.9978179931640625,
+          "content_area_fraction_tau0": 0.9986750730994152,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "429015001",
+          "canvas_area_fraction_tau0": 0.9972038269042969,
+          "content_area_fraction_tau0": 0.9999287923177084,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "229362028",
+          "canvas_area_fraction_tau0": 0.99957275390625,
+          "content_area_fraction_tau0": 0.9998067220052084,
+          "any_canvas_pixel_changed": true
+        }
+      ],
+      "scope": "any nonzero integer RGB change; assessment editing fractions, not victim training poisoning rate"
+    },
+    "rule_rsi": {
+      "n": 16,
+      "edited_assessment_fraction": 1.0,
+      "canvas_area_fraction_tau0": 0.9986984729766846,
+      "content_area_fraction_tau0": 0.9995610706946149,
+      "rows": [
+        {
+          "sample_id": "340345009",
+          "canvas_area_fraction_tau0": 0.9999732971191406,
+          "content_area_fraction_tau0": 0.9999536546610169,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "155177008",
+          "canvas_area_fraction_tau0": 0.9981575012207031,
+          "content_area_fraction_tau0": 0.999061684073107,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "245528000",
+          "canvas_area_fraction_tau0": 0.9988899230957031,
+          "content_area_fraction_tau0": 0.999320403874269,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "94416001",
+          "canvas_area_fraction_tau0": 0.9972915649414062,
+          "content_area_fraction_tau0": 0.9989115397135416,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "110821005",
+          "canvas_area_fraction_tau0": 0.9992866516113281,
+          "content_area_fraction_tau0": 0.9992330660994765,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "197570005",
+          "canvas_area_fraction_tau0": 0.9984970092773438,
+          "content_area_fraction_tau0": 0.9997357536764706,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "431322007",
+          "canvas_area_fraction_tau0": 0.9984283447265625,
+          "content_area_fraction_tau0": 0.9998118082682291,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "323162000",
+          "canvas_area_fraction_tau0": 0.9999885559082031,
+          "content_area_fraction_tau0": 0.9999885559082031,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "285605001",
+          "canvas_area_fraction_tau0": 0.9986038208007812,
+          "content_area_fraction_tau0": 0.9995263185215947,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "555143000",
+          "canvas_area_fraction_tau0": 0.9982490539550781,
+          "content_area_fraction_tau0": 0.9998629385964912,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "316640000",
+          "canvas_area_fraction_tau0": 0.9994659423828125,
+          "content_area_fraction_tau0": 0.9997658534356725,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "367423003",
+          "canvas_area_fraction_tau0": 0.9977302551269531,
+          "content_area_fraction_tau0": 0.9993777654867256,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "511121005",
+          "canvas_area_fraction_tau0": 0.9999580383300781,
+          "content_area_fraction_tau0": 0.9999366242625368,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "256877002",
+          "canvas_area_fraction_tau0": 0.9978752136230469,
+          "content_area_fraction_tau0": 0.9987607364766082,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "429015001",
+          "canvas_area_fraction_tau0": 0.9972152709960938,
+          "content_area_fraction_tau0": 0.9999338785807291,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "229362028",
+          "canvas_area_fraction_tau0": 0.9995651245117188,
+          "content_area_fraction_tau0": 0.9997965494791666,
+          "any_canvas_pixel_changed": true
+        }
+      ],
+      "scope": "any nonzero integer RGB change; assessment editing fractions, not victim training poisoning rate"
+    },
+    "rl_rsi": {
+      "n": 16,
+      "edited_assessment_fraction": 1.0,
+      "canvas_area_fraction_tau0": 0.9986824989318848,
+      "content_area_fraction_tau0": 0.9995471549426401,
+      "rows": [
+        {
+          "sample_id": "340345009",
+          "canvas_area_fraction_tau0": 0.9999847412109375,
+          "content_area_fraction_tau0": 0.9999735169491526,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "155177008",
+          "canvas_area_fraction_tau0": 0.9980430603027344,
+          "content_area_fraction_tau0": 0.998974991840731,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "245528000",
+          "canvas_area_fraction_tau0": 0.9988632202148438,
+          "content_area_fraction_tau0": 0.9993089820906432,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "94416001",
+          "canvas_area_fraction_tau0": 0.9972610473632812,
+          "content_area_fraction_tau0": 0.9988861083984375,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "110821005",
+          "canvas_area_fraction_tau0": 0.9992904663085938,
+          "content_area_fraction_tau0": 0.9992381789921466,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "197570005",
+          "canvas_area_fraction_tau0": 0.9985008239746094,
+          "content_area_fraction_tau0": 0.9997185202205883,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "431322007",
+          "canvas_area_fraction_tau0": 0.9984245300292969,
+          "content_area_fraction_tau0": 0.9998118082682291,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "323162000",
+          "canvas_area_fraction_tau0": 0.9999885559082031,
+          "content_area_fraction_tau0": 0.9999885559082031,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "285605001",
+          "canvas_area_fraction_tau0": 0.9986000061035156,
+          "content_area_fraction_tau0": 0.9995457848837209,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "555143000",
+          "canvas_area_fraction_tau0": 0.9982414245605469,
+          "content_area_fraction_tau0": 0.9998629385964912,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "316640000",
+          "canvas_area_fraction_tau0": 0.9994621276855469,
+          "content_area_fraction_tau0": 0.9997772752192983,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "367423003",
+          "canvas_area_fraction_tau0": 0.9977569580078125,
+          "content_area_fraction_tau0": 0.9993662426253688,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "511121005",
+          "canvas_area_fraction_tau0": 0.9999618530273438,
+          "content_area_fraction_tau0": 0.9999423856932154,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "256877002",
+          "canvas_area_fraction_tau0": 0.9977798461914062,
+          "content_area_fraction_tau0": 0.9986236750730995,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "429015001",
+          "canvas_area_fraction_tau0": 0.9971847534179688,
+          "content_area_fraction_tau0": 0.9999186197916666,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "229362028",
+          "canvas_area_fraction_tau0": 0.9995765686035156,
+          "content_area_fraction_tau0": 0.99981689453125,
+          "any_canvas_pixel_changed": true
+        }
+      ],
+      "scope": "any nonzero integer RGB change; assessment editing fractions, not victim training poisoning rate"
+    },
+    "fixed": {
+      "n": 16,
+      "edited_assessment_fraction": 1.0,
+      "canvas_area_fraction_tau0": 0.9987006187438965,
+      "content_area_fraction_tau0": 0.9995802574783592,
+      "rows": [
+        {
+          "sample_id": "340345009",
+          "canvas_area_fraction_tau0": 0.9999923706054688,
+          "content_area_fraction_tau0": 0.9999867584745763,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "155177008",
+          "canvas_area_fraction_tau0": 0.9981842041015625,
+          "content_area_fraction_tau0": 0.9992044712793734,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "245528000",
+          "canvas_area_fraction_tau0": 0.9989356994628906,
+          "content_area_fraction_tau0": 0.9993775127923976,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "94416001",
+          "canvas_area_fraction_tau0": 0.9972381591796875,
+          "content_area_fraction_tau0": 0.9988657633463541,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "110821005",
+          "canvas_area_fraction_tau0": 0.9992752075195312,
+          "content_area_fraction_tau0": 0.9992330660994765,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "197570005",
+          "canvas_area_fraction_tau0": 0.99847412109375,
+          "content_area_fraction_tau0": 0.9997529871323529,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "431322007",
+          "canvas_area_fraction_tau0": 0.9984321594238281,
+          "content_area_fraction_tau0": 0.9998321533203125,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "323162000",
+          "canvas_area_fraction_tau0": 0.9999885559082031,
+          "content_area_fraction_tau0": 0.9999885559082031,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "285605001",
+          "canvas_area_fraction_tau0": 0.9986305236816406,
+          "content_area_fraction_tau0": 0.9995263185215947,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "555143000",
+          "canvas_area_fraction_tau0": 0.9982490539550781,
+          "content_area_fraction_tau0": 0.9998458059210527,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "316640000",
+          "canvas_area_fraction_tau0": 0.9995040893554688,
+          "content_area_fraction_tau0": 0.9997886970029239,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "367423003",
+          "canvas_area_fraction_tau0": 0.9977149963378906,
+          "content_area_fraction_tau0": 0.9993374354719764,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "511121005",
+          "canvas_area_fraction_tau0": 0.9999580383300781,
+          "content_area_fraction_tau0": 0.9999366242625368,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "256877002",
+          "canvas_area_fraction_tau0": 0.9979362487792969,
+          "content_area_fraction_tau0": 0.9988521107456141,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "429015001",
+          "canvas_area_fraction_tau0": 0.9971084594726562,
+          "content_area_fraction_tau0": 0.9999237060546875,
+          "any_canvas_pixel_changed": true
+        },
+        {
+          "sample_id": "229362028",
+          "canvas_area_fraction_tau0": 0.9995880126953125,
+          "content_area_fraction_tau0": 0.9998321533203125,
+          "any_canvas_pixel_changed": true
+        }
+      ],
+      "scope": "any nonzero integer RGB change; assessment editing fractions, not victim training poisoning rate",
+      "equivalent_to": "frozen",
+      "physical_images": 0
+    }
+  },
+  "all_assessment_checkpoints_still_match_prequery_lock": true,
+  "Frozen_Fixed_equivalent": true,
+  "new_model_calls": 0,
+  "ASR": "NOT TESTED",
+  "BF16_repair": false,
+  "scope": "deterministic checks of this benign development run; not a full independent scientific integrity audit"
+}

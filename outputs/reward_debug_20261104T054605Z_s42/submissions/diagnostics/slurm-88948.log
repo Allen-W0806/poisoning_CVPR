@@ -1,0 +1,30 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+/storage/home/ydk297/miniconda3/envs/lvr_train/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/storage/home/ydk297/miniconda3/envs/lvr_train/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:00<00:00,  6.42it/s]Loading pipeline components...:  60%|██████    | 3/5 [00:00<00:00,  8.69it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:01<00:00,  2.58it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:01<00:00,  3.03it/s]
+{"quality_setting_done": "legacy10_g75_eta1", "elapsed": 30.294479506090283}
+{"quality_setting_done": "steps50_g75_eta1", "elapsed": 73.54348909109831}
+{"quality_setting_done": "steps50_g5_eta1", "elapsed": 116.92838208202738}
+{"quality_setting_done": "steps50_g5_eta0", "elapsed": 160.38306711311452}
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  20%|██        | 1/5 [00:00<00:00,  7.81it/s]Loading pipeline components...:  60%|██████    | 3/5 [00:00<00:00,  9.67it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:01<00:00,  3.12it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:01<00:00,  3.65it/s]
+{
+  "calibration_gate": {
+    "identity_zero": true,
+    "positive_control_above_identity": true,
+    "darken_and_color_controls_below_identity": true
+  },
+  "BF16_ordinary_repeat": {
+    "exact": false,
+    "tolerance": false,
+    "tensor_count": 1538,
+    "different_elements": 1216720,
+    "max_absolute_error": 9.456717180000851e-06,
+    "structure_errors": []
+  },
+  "BF16_gate": "FAIL",
+  "status": "COMPLETED",
+  "elapsed_seconds": 268.5050690860953
+}

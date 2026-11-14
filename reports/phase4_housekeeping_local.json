@@ -1,0 +1,22 @@
+{
+  "repo_cache_bytes_removed": 113631,
+  "model_weights_and_experiment_evidence_deleted": false,
+  "scratch_bytes_removed": 1906343601,
+  "repo_cache_files_removed": 7,
+  "scratch_exists_after": false,
+  "retained_phase4_scientific_evidence_bytes": 2143733976,
+  "scratch_deleted": "H:\\Project\\Poisoning\\tmp\\phase4_20261027",
+  "all_1872_files_verified_before_cleanup": true,
+  "disks": [
+    {
+      "drive": "C",
+      "used_bytes": 209807638528,
+      "free_bytes": 69361037312
+    },
+    {
+      "drive": "H",
+      "used_bytes": 262341468160,
+      "free_bytes": 233089716224
+    }
+  ]
+}

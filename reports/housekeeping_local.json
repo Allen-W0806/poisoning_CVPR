@@ -1,0 +1,29 @@
+{
+  "scratch_removed": "H:\\Project\\Poisoning\\tmp\\setup_20261027",
+  "source_caches_removed": [
+    "H:\\Project\\Poisoning\\src\\__pycache__",
+    "H:\\Project\\Poisoning\\src\\data\\__pycache__",
+    "H:\\Project\\Poisoning\\src\\editing\\__pycache__",
+    "H:\\Project\\Poisoning\\src\\evaluation\\__pycache__",
+    "H:\\Project\\Poisoning\\src\\models\\__pycache__",
+    "H:\\Project\\Poisoning\\src\\rl\\__pycache__",
+    "H:\\Project\\Poisoning\\src\\rsi\\__pycache__",
+    "H:\\Project\\Poisoning\\src\\utils\\__pycache__",
+    "H:\\Project\\Poisoning\\scripts\\__pycache__",
+    "H:\\Project\\Poisoning\\tests\\__pycache__"
+  ],
+  "source_files_verified": 85,
+  "disk_after": [
+    {
+      "Name": "C",
+      "Used": 208184209408,
+      "Free": 70984466432
+    },
+    {
+      "Name": "H",
+      "Used": 259194060800,
+      "Free": 236237123584
+    }
+  ],
+  "retained_experiment_bytes": 1277800.0
+}

@@ -1,0 +1,5 @@
+# Tables5/6/7 evidence boundary
+
+Table5内部LPIPS/SSIM来自良性开发图像，ASR/poison fraction未测。Table6区分文献、外部原任务复现和Ours匹配结果；三者不能混写。Table7 Fixed_config对应配置固定的DDPO，不是Frozen编辑器；未运行scheduler/PBT不填0。Area_frac按整个512画布任意非零整数RGB变化计像素；BASELINE_COMPARISON另列排除白边的content版本。edited_assessment_fraction只描述16张开发评估图中被改变的比例，不等于victim训练poison_sample_fraction。正式accepted revisions机制不存在，不能拿controller action数代替。报告不追求用NOT TESTED伪装80%实测覆盖率。
+
+内部每行n=16历史暴露开发源图、seed=42，每个训练条件100次更新；LPIPS/SSIM/面积均为无量纲。Table6自复现ASR以百分数列出，分母200；完整VizWiz为8000题、7928个图像hash，准确率及DeltaClean以fraction列出，−0.0034375等于−0.34375个百分点。clean0/poison50实际26/27次更新，PGD代码4000步与论文2000步不同，历史EvalAI分区是否匹配尚未核实。区间是固定模型源图区间，不是训练种子区间。

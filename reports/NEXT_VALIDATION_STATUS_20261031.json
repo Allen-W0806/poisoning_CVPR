@@ -1,0 +1,1290 @@
+{
+  "updated_utc": "2026-11-01T00:41:48.281335+00:00",
+  "run_id": "next_validation_20261101T0040Z_v1",
+  "parent": "small_scale_validation_20261031T1928Z_v1",
+  "overall_gate": "NO-GO",
+  "jobs": {
+    "cpu_job": "88013",
+    "gpu_job": "88016",
+    "state": "COMPLETED"
+  },
+  "resource_accounting": {
+    "cap": 3600,
+    "prior": 1676,
+    "new": 279,
+    "consumed": 1955,
+    "reserved": 0,
+    "remaining": 1645,
+    "jobs": [
+      {
+        "job_id": "88013",
+        "state": "COMPLETED",
+        "elapsed": 8,
+        "gpu_seconds": 0,
+        "exit_code": "0:0",
+        "start_cluster_local": "2026-10-31T20:36:02",
+        "end_cluster_local": "2026-10-31T20:36:10"
+      },
+      {
+        "job_id": "88016",
+        "state": "COMPLETED",
+        "elapsed": 279,
+        "gpu_seconds": 279,
+        "exit_code": "0:0",
+        "start_cluster_local": "2026-10-31T20:36:58",
+        "end_cluster_local": "2026-10-31T20:41:37"
+      }
+    ],
+    "raw_sacct": "88013|COMPLETED|8|billing=4,cpu=4,mem=8G,node=1|0:0|2026-10-31T20:36:02|2026-10-31T20:36:10\n88016|COMPLETED|279|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|0:0|2026-10-31T20:36:58|2026-10-31T20:41:37\n",
+    "scope": "validation-only cumulative budget; not lifetime project or unrelated video jobs",
+    "dollar_cost": null
+  },
+  "completion_matrix": [
+    {
+      "item": "Source separation within the 80-source pilot",
+      "item_zh": "80源试验内部来源隔离",
+      "status": "PASS",
+      "evidence": "results/small_scale_validation_20261031T1928Z_v1/audit/data_integrity.json; unique source/hash and cross-split dHash screen; does not certify historical nonexposure"
+    },
+    {
+      "item": "Semantic validity",
+      "item_zh": "编辑语义有效性",
+      "status": "BLOCKED",
+      "evidence": "results/next_validation_20261101T0040Z_v1/semantic_review32/selection_receipt.json; 0 genuine reviews; no valid/changed rate estimable"
+    },
+    {
+      "item": "Image quality metrics",
+      "item_zh": "图像质量指标完整性",
+      "status": "BLOCKED",
+      "evidence": "results/next_validation_20261101T0040Z_v1/aligned_image_quality.csv; aligned SSIM measured for 160; LPIPS implementation absent"
+    },
+    {
+      "item": "Pretrained generator numerical reliability",
+      "item_zh": "预训练生成器数值可靠性",
+      "status": "FAIL",
+      "evidence": "results/next_validation_20261101T0040Z_v1_BF16_ordinary/diagnostic/checks.json and instrumented/diagnostic/checks.json; path-dependent failures and historical full batch continuation unresolved"
+    },
+    {
+      "item": "Clean target fine-tuning and existing checkpoint recheck",
+      "item_zh": "干净目标微调与已有检查点复评",
+      "status": "PASS",
+      "evidence": "results/next_validation_20261101T0040Z_v1/qwen_recheck.json; engineering-only; paired accuracy is development evidence"
+    },
+    {
+      "item": "Benign actual generator RL learning",
+      "item_zh": "良性目标下真实生成器RL更新",
+      "status": "PASS",
+      "evidence": "results/next_validation_20261101T0040Z_v1/integrated/checks.json; tiny random UNet actual production DDPO, not pretrained reliability"
+    },
+    {
+      "item": "Integrated RSI revision, memory and rollback",
+      "item_zh": "RSI提案、记忆与回滚闭环",
+      "status": "PASS",
+      "evidence": "results/next_validation_20261101T0040Z_v1/integrated/results.json; equal-compute fixed control, fixed gate, disk rollback"
+    },
+    {
+      "item": "Independent evaluation readiness",
+      "item_zh": "独立评估就绪",
+      "status": "BLOCKED",
+      "evidence": "results/next_validation_20261101T0040Z_v1/evaluation_provenance.json; historical exposure unresolved; no untouched test"
+    },
+    {
+      "item": "Training-induced behavioral efficacy",
+      "item_zh": "训练诱导行为的科学效力",
+      "status": "NOT TESTED",
+      "evidence": "No backdoor training or ASR optimization; benign changes do not establish this claim"
+    }
+  ],
+  "BF16": {
+    "ordinary": {
+      "summary": {
+        "status": "PASS",
+        "comparisons": [
+          {
+            "mode": "matched_checkpoint_enabled",
+            "earliest_divergence": null,
+            "comparisons": {
+              "checkpoint_restore": true,
+              "conditioning": true,
+              "RNG_seed_draw": true,
+              "stochastic_forward": true,
+              "decoded_pixels": true,
+              "backward_gradients": true,
+              "optimizer_parameters": true,
+              "optimizer_state": true,
+              "scheduler": true,
+              "post_step_RNG": true
+            },
+            "gradient_error": {
+              "exact": true,
+              "max_abs": 0.0,
+              "relative_l2": 0.0
+            },
+            "frozen_parameters_unchanged": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "optimizer_call": 3,
+            "interpretation": "locked strict fresh-object stochastic continuation"
+          },
+          {
+            "mode": "checkpoint_disabled_control",
+            "earliest_divergence": null,
+            "comparisons": {
+              "checkpoint_restore": true,
+              "conditioning": true,
+              "RNG_seed_draw": true,
+              "stochastic_forward": true,
+              "decoded_pixels": true,
+              "backward_gradients": true,
+              "optimizer_parameters": true,
+              "optimizer_state": true,
+              "scheduler": true,
+              "post_step_RNG": true
+            },
+            "gradient_error": {
+              "exact": true,
+              "max_abs": 0.0,
+              "relative_l2": 0.0
+            },
+            "frozen_parameters_unchanged": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "optimizer_call": 4,
+            "interpretation": "checkpoint-disabled control deliberately changes execution; not the strict acceptance comparison"
+          }
+        ],
+        "optimizer_calls": 4,
+        "scope": "Actual pretrained IP2Pix BF16 / rank8 attention LoRA; two stochastic trajectories from one fixed benign original source, two diffusion steps; constant content-independent coefficient. No target VLM or attack reward.",
+        "historical_full_batch10_continuation": "NOT VALIDATED; old backward differences remain preserved; this smaller controlled test does not certify the historical run.",
+        "frozen_hash": "eb372d4dafdbafb69e0cc03437bc59406760b5da66f80efacf4587596e782dd9",
+        "seconds": 65.0853955745697
+      },
+      "checks": {
+        "status": "PASS",
+        "checks": [
+          {
+            "test": "reward_guard_rejects_{}",
+            "status": "PASS"
+          },
+          {
+            "test": "reward_guard_rejects_{'training_eligible': True}",
+            "status": "PASS"
+          },
+          {
+            "test": "reference_frozen_base_unchanged",
+            "status": "PASS"
+          },
+          {
+            "test": "checkpoint_restore",
+            "status": "PASS"
+          },
+          {
+            "test": "conditioning",
+            "status": "PASS"
+          },
+          {
+            "test": "RNG_seed_draw",
+            "status": "PASS"
+          },
+          {
+            "test": "stochastic_forward",
+            "status": "PASS"
+          },
+          {
+            "test": "decoded_pixels",
+            "status": "PASS"
+          },
+          {
+            "test": "backward_gradients",
+            "status": "PASS"
+          },
+          {
+            "test": "optimizer_parameters",
+            "status": "PASS"
+          },
+          {
+            "test": "optimizer_state",
+            "status": "PASS"
+          },
+          {
+            "test": "scheduler",
+            "status": "PASS"
+          },
+          {
+            "test": "post_step_RNG",
+            "status": "PASS"
+          },
+          {
+            "test": "resumed_frozen_base_unchanged",
+            "status": "PASS"
+          },
+          {
+            "test": "optimizer_budget",
+            "status": "PASS"
+          }
+        ],
+        "optimizer_calls": 4,
+        "elapsed_seconds": 65.08716559410095,
+        "source_sha256": "6cad93ecaf8351cdeefe647ffa277c1dceac91237894a3ed7f603ca57345e959"
+      },
+      "status": "PASS",
+      "raw_localization": null
+    },
+    "instrumented": {
+      "summary": {
+        "status": "FAIL",
+        "comparisons": [
+          {
+            "mode": "matched_checkpoint_enabled",
+            "earliest_divergence": "backward_gradients",
+            "comparisons": {
+              "checkpoint_restore": true,
+              "conditioning": true,
+              "RNG_seed_draw": true,
+              "stochastic_forward": true,
+              "decoded_pixels": true,
+              "backward_gradients": false,
+              "optimizer_parameters": false,
+              "optimizer_state": false,
+              "scheduler": true,
+              "post_step_RNG": true
+            },
+            "gradient_error": {
+              "exact": false,
+              "max_abs": 1.5500118024647236e-05,
+              "relative_l2": 0.0001647921355888719
+            },
+            "frozen_parameters_unchanged": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "optimizer_call": 3,
+            "interpretation": "locked strict fresh-object stochastic continuation"
+          },
+          {
+            "mode": "checkpoint_disabled_control",
+            "earliest_divergence": null,
+            "comparisons": {
+              "checkpoint_restore": true,
+              "conditioning": true,
+              "RNG_seed_draw": true,
+              "stochastic_forward": true,
+              "decoded_pixels": true,
+              "backward_gradients": true,
+              "optimizer_parameters": true,
+              "optimizer_state": true,
+              "scheduler": true,
+              "post_step_RNG": true
+            },
+            "gradient_error": {
+              "exact": true,
+              "max_abs": 0.0,
+              "relative_l2": 0.0
+            },
+            "frozen_parameters_unchanged": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "optimizer_call": 4,
+            "interpretation": "checkpoint-disabled control deliberately changes execution; not the strict acceptance comparison"
+          }
+        ],
+        "optimizer_calls": 4,
+        "scope": "Actual pretrained IP2Pix BF16 / rank8 attention LoRA; two stochastic trajectories from one fixed benign original source, two diffusion steps; constant content-independent coefficient. No target VLM or attack reward.",
+        "historical_full_batch10_continuation": "NOT VALIDATED; old backward differences remain preserved; this smaller controlled test does not certify the historical run.",
+        "frozen_hash": "eb372d4dafdbafb69e0cc03437bc59406760b5da66f80efacf4587596e782dd9",
+        "seconds": 53.79189372062683
+      },
+      "checks": {
+        "status": "FAIL",
+        "checks": [
+          {
+            "test": "reward_guard_rejects_{}",
+            "status": "PASS"
+          },
+          {
+            "test": "reward_guard_rejects_{'training_eligible': True}",
+            "status": "PASS"
+          },
+          {
+            "test": "reference_frozen_base_unchanged",
+            "status": "PASS"
+          },
+          {
+            "test": "checkpoint_restore",
+            "status": "PASS"
+          },
+          {
+            "test": "conditioning",
+            "status": "PASS"
+          },
+          {
+            "test": "RNG_seed_draw",
+            "status": "PASS"
+          },
+          {
+            "test": "stochastic_forward",
+            "status": "PASS"
+          },
+          {
+            "test": "decoded_pixels",
+            "status": "PASS"
+          },
+          {
+            "test": "backward_gradients",
+            "status": "FAIL"
+          },
+          {
+            "test": "optimizer_parameters",
+            "status": "FAIL"
+          },
+          {
+            "test": "optimizer_state",
+            "status": "FAIL"
+          },
+          {
+            "test": "scheduler",
+            "status": "PASS"
+          },
+          {
+            "test": "post_step_RNG",
+            "status": "PASS"
+          },
+          {
+            "test": "resumed_frozen_base_unchanged",
+            "status": "PASS"
+          },
+          {
+            "test": "optimizer_budget",
+            "status": "PASS"
+          }
+        ],
+        "optimizer_calls": 4,
+        "elapsed_seconds": 53.79230546951294,
+        "source_sha256": "236e0a9dc2f243806d439f9707193475308f216777d353be51862d3e04f68432"
+      },
+      "status": "FAIL",
+      "raw_localization": {
+        "earliest_gradient_divergence": "raw_backward_gradients",
+        "raw_gradient_error": {
+          "exact": false,
+          "max_abs": 2.834317274391651e-05,
+          "relative_l2": 0.0001648017040489566
+        },
+        "preclip_norm_reference": 1.8282486200332642,
+        "preclip_norm_resumed": 1.8282517194747925,
+        "gradient_layout_equal": true,
+        "postclip_exact": false,
+        "all_instrumentation_is_readonly": true,
+        "acceptance_unchanged": "bitwise equality; original failed run retained"
+      }
+    }
+  },
+  "Qwen": {
+    "status": "PASS",
+    "stats": [
+      {
+        "seed": null,
+        "n": 32,
+        "accuracy": 0.7843749999999999,
+        "paired_difference": 0.0,
+        "paired_ci95": [
+          0.0,
+          0.0
+        ],
+        "changed_answers": 0,
+        "fresh_object_repeat_exact": true,
+        "mean_latency": 0.26470065202738624,
+        "scope": "historical development only"
+      },
+      {
+        "seed": 42,
+        "n": 32,
+        "accuracy": 0.7843749999999999,
+        "paired_difference": 0.0,
+        "paired_ci95": [
+          0.0,
+          0.0
+        ],
+        "changed_answers": 0,
+        "fresh_object_repeat_exact": true,
+        "mean_latency": 0.31916784221539274,
+        "scope": "historical development only"
+      },
+      {
+        "seed": 123,
+        "n": 32,
+        "accuracy": 0.8062499999999999,
+        "paired_difference": 0.021875,
+        "paired_ci95": [
+          0.0,
+          0.06562499999999999
+        ],
+        "changed_answers": 1,
+        "fresh_object_repeat_exact": true,
+        "mean_latency": 0.3188282387036452,
+        "scope": "historical development only"
+      },
+      {
+        "seed": 3407,
+        "n": 32,
+        "accuracy": 0.8062499999999999,
+        "paired_difference": 0.021875,
+        "paired_ci95": [
+          0.0,
+          0.06562499999999999
+        ],
+        "changed_answers": 1,
+        "fresh_object_repeat_exact": true,
+        "mean_latency": 0.3191470800265961,
+        "scope": "historical development only"
+      }
+    ],
+    "checkpoint_integrity": [
+      {
+        "seed": 42,
+        "repeat": 0,
+        "path": "adapter/README.md",
+        "matches": true
+      },
+      {
+        "seed": 42,
+        "repeat": 0,
+        "path": "adapter/adapter_config.json",
+        "matches": true
+      },
+      {
+        "seed": 42,
+        "repeat": 0,
+        "path": "adapter/adapter_model.safetensors",
+        "matches": true
+      },
+      {
+        "seed": 42,
+        "repeat": 0,
+        "path": "continuation_checkpoint.pt",
+        "matches": true
+      },
+      {
+        "seed": 42,
+        "repeat": 0,
+        "path": "final_training_state.pt",
+        "matches": true
+      },
+      {
+        "seed": 42,
+        "repeat": 1,
+        "path": "adapter/README.md",
+        "matches": true
+      },
+      {
+        "seed": 42,
+        "repeat": 1,
+        "path": "adapter/adapter_config.json",
+        "matches": true
+      },
+      {
+        "seed": 42,
+        "repeat": 1,
+        "path": "adapter/adapter_model.safetensors",
+        "matches": true
+      },
+      {
+        "seed": 42,
+        "repeat": 1,
+        "path": "continuation_checkpoint.pt",
+        "matches": true
+      },
+      {
+        "seed": 42,
+        "repeat": 1,
+        "path": "final_training_state.pt",
+        "matches": true
+      },
+      {
+        "seed": 123,
+        "repeat": 0,
+        "path": "adapter/README.md",
+        "matches": true
+      },
+      {
+        "seed": 123,
+        "repeat": 0,
+        "path": "adapter/adapter_config.json",
+        "matches": true
+      },
+      {
+        "seed": 123,
+        "repeat": 0,
+        "path": "adapter/adapter_model.safetensors",
+        "matches": true
+      },
+      {
+        "seed": 123,
+        "repeat": 0,
+        "path": "continuation_checkpoint.pt",
+        "matches": true
+      },
+      {
+        "seed": 123,
+        "repeat": 0,
+        "path": "final_training_state.pt",
+        "matches": true
+      },
+      {
+        "seed": 123,
+        "repeat": 1,
+        "path": "adapter/README.md",
+        "matches": true
+      },
+      {
+        "seed": 123,
+        "repeat": 1,
+        "path": "adapter/adapter_config.json",
+        "matches": true
+      },
+      {
+        "seed": 123,
+        "repeat": 1,
+        "path": "adapter/adapter_model.safetensors",
+        "matches": true
+      },
+      {
+        "seed": 123,
+        "repeat": 1,
+        "path": "continuation_checkpoint.pt",
+        "matches": true
+      },
+      {
+        "seed": 123,
+        "repeat": 1,
+        "path": "final_training_state.pt",
+        "matches": true
+      },
+      {
+        "seed": 3407,
+        "repeat": 0,
+        "path": "adapter/README.md",
+        "matches": true
+      },
+      {
+        "seed": 3407,
+        "repeat": 0,
+        "path": "adapter/adapter_config.json",
+        "matches": true
+      },
+      {
+        "seed": 3407,
+        "repeat": 0,
+        "path": "adapter/adapter_model.safetensors",
+        "matches": true
+      },
+      {
+        "seed": 3407,
+        "repeat": 0,
+        "path": "continuation_checkpoint.pt",
+        "matches": true
+      },
+      {
+        "seed": 3407,
+        "repeat": 0,
+        "path": "final_training_state.pt",
+        "matches": true
+      },
+      {
+        "seed": 3407,
+        "repeat": 1,
+        "path": "adapter/README.md",
+        "matches": true
+      },
+      {
+        "seed": 3407,
+        "repeat": 1,
+        "path": "adapter/adapter_config.json",
+        "matches": true
+      },
+      {
+        "seed": 3407,
+        "repeat": 1,
+        "path": "adapter/adapter_model.safetensors",
+        "matches": true
+      },
+      {
+        "seed": 3407,
+        "repeat": 1,
+        "path": "continuation_checkpoint.pt",
+        "matches": true
+      },
+      {
+        "seed": 3407,
+        "repeat": 1,
+        "path": "final_training_state.pt",
+        "matches": true
+      }
+    ],
+    "optimizer_steps": 0,
+    "n_calls": 256,
+    "model_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "config_sha256": "3332f3213fdee2c8b98b78bc81f202bc30823c6f3f8c0e4dfc83da0fe227d28f"
+  },
+  "integrated": {
+    "status": "PASS",
+    "arms": {
+      "fixed": {
+        "initial_hash": {
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_q.lora_A.weight": "120ad2eb10c2e9e1af5f804feae60c4269cd53e458fde690f6455ee4b0eb2661",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_k.lora_A.weight": "f30174fd2aa1a0fd17b244df34a62025bf165ff884dd58ba85139dd9611ab0aa",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_v.lora_A.weight": "b1dd9d7504406eacb76a2a8c661955056aa5caca54fb247627f26641e47465f2",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_A.weight": "2e5bec26e620b59a5bf4b291879f2936dae247271d66d70429cb97515c791642",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_q.lora_A.weight": "d9fb9b42a08c7bde99bf4cc7820171accb08c0fffc76fd58a6985d160d8a37f3",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_k.lora_A.weight": "a41d831695bce23211257f572c3ff113f9e37ed325c585b9e77577cd3cdad1dc",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_v.lora_A.weight": "6dacfe7a2211678a066bf32d8689823d7b9ffb6d9f7931f44a9714b3f576f2fe",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_A.weight": "80367146d8acabe537defa2e8ede6b2df87ed8641f9701e4f34ba0880b151061",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_q.lora_A.weight": "1cc65fd19621beb93f50514c21c7c3fcb10a9e2f309c344d212c5a283b9a73da",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_k.lora_A.weight": "2e3efb76a24947664be1c2e0f336ddec8d2809a44f2d1f8122c9c670c54661b1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_v.lora_A.weight": "b7ceffbde1e60177bf7e6f860b188a46caffe1d90a27d2b99de2913856cdde0b",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_A.weight": "9b0c479d17c08e3dfc106923909f37e51c68c6ecf4e96b5ec45a27df4372c3d3",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_q.lora_A.weight": "eedba21d616ecaa7f0567c788b8634009c2e94087eebad831e01cdfe9dcc2a10",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_k.lora_A.weight": "79f48fb266c90f32f275992e3d5db01a7ea1c6c6a8007517bd21de4b363ebb52",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_v.lora_A.weight": "2cec747f0a445711c13a574126f1bd09df895b00a8c95520cae1e9fd2875aa63",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_A.weight": "4f22294b30ecbd8f847ed1fbbdf31003d404aea81963080e2e5a8b1945ae43bf",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_q.lora_A.weight": "bdb846608e4c45c09565db5161e76782f23d32c9db394ad8182a7b052a5c2a64",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_k.lora_A.weight": "2d416542bec9592d25133b6b6b7beba27fc0ca4166445a8e461e91438a50dd79",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_v.lora_A.weight": "8bb5d17d883993b7b73b61879fabe94230a4a8cce0746078bae4964f34ba0cb7",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_out.0.lora_A.weight": "01a577ed663bfc7fb99fc14bba2c9dfeaf6a20875009e039ee1ad1045f18d0d9",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_q.lora_A.weight": "10a0761de76ba6c7a4908d95e2aa1240a50ec49bfdd29ec807a2c3fd98142450",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_k.lora_A.weight": "a1b8a60cf0257f592a955f8da1a4a6333a628e6f661b81f250f725de6dbca67f",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_v.lora_A.weight": "4d23d596153d1c3c4307e3cbfbb68c6adcb914fd23a6dacf7b113dc75963f663",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_out.0.lora_A.weight": "56a4168ab81983379431b0f8ef6b5245fa2c727a7d6ac701cf6072c19516fed5",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_q.lora_A.weight": "58167fd120c736c2de9b28210ca2cd14bfabaac3d160e88ba828636a1264ece9",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_k.lora_A.weight": "f176b41f9fa7a4e0a7b23f39edf8d2394ac6eb5a1ca3a3e983083f69b5080bd2",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_v.lora_A.weight": "e35239749bcc3f56a12218f18ff1a8a571f66159be6776b09aa89b8469c290f0",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_A.weight": "7d9c1a677d08c90e5dc72ee3e9ac11108d7d2a835ec7991d7c9cb655a2d1b470",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_q.lora_A.weight": "c5922c09026e355b3beb3fef09a064e8d0ee1eea332b6f3e686c9fe426a3152e",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_k.lora_A.weight": "4de9bbf40769cbdc49b5ba4a1e04c32c9a41838e7fd7d301ce3635c764b109f7",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_v.lora_A.weight": "cf829882acfb096e4b00ca48b4304322dfa1a701d09838eed95b19a7cb6de818",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_A.weight": "7f833662ca2c507824566421bb4b93e494ff30f72e5731c27f2f520c9b564a67",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+        },
+        "receipts": [
+          {
+            "step": 1,
+            "loss": -0.6665580216795206,
+            "reward_mean": 0.3221258223056793,
+            "reward_variance": 0.49560626007678454,
+            "individual_rewards": [
+              -0.9627776145935059,
+              -0.25740981101989746,
+              0.6079093813896179,
+              -0.8546419739723206,
+              0.9918751120567322,
+              0.9862881302833557,
+              0.5318663716316223,
+              0.525418758392334,
+              0.7282309532165527,
+              0.9244989156723022
+            ],
+            "gradient_norm": 0.595090925693512,
+            "finite_gradients": true,
+            "probabilities_finite": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "conditioning_verified": true,
+            "logical_batch_size": 10,
+            "physical_micro_batch_size": 1,
+            "gradient_accumulation_steps": 10,
+            "backward_transition_calls": 20,
+            "optimizer_updates": 1,
+            "changes": {
+              "max_abs_change": 9.99999883788405e-06,
+              "mean_abs_change": 4.999906807912069e-06,
+              "updated_tensors": 32,
+              "adapter_tensor_count": 64
+            },
+            "trainable_max_change": 9.99999883788405e-06,
+            "step_seconds": 1.6967662170063704,
+            "peak_gpu_memory_bytes": 70734336,
+            "algorithm": "DDPO_SF_v1"
+          },
+          {
+            "step": 2,
+            "loss": -0.3899988532066345,
+            "reward_mean": 0.18517260551452636,
+            "reward_variance": 0.7837342726459295,
+            "individual_rewards": [
+              0.9401906728744507,
+              -0.9036343693733215,
+              0.7445571422576904,
+              0.9128177762031555,
+              0.8976874351501465,
+              -0.9472901225090027,
+              -0.8834563493728638,
+              -0.8502281308174133,
+              0.9419710040092468,
+              0.999110996723175
+            ],
+            "gradient_norm": 0.7419359087944031,
+            "finite_gradients": true,
+            "probabilities_finite": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "conditioning_verified": true,
+            "logical_batch_size": 10,
+            "physical_micro_batch_size": 1,
+            "gradient_accumulation_steps": 10,
+            "backward_transition_calls": 20,
+            "optimizer_updates": 1,
+            "changes": {
+              "max_abs_change": 1.001356213237159e-05,
+              "mean_abs_change": 6.269032326811086e-06,
+              "updated_tensors": 64,
+              "adapter_tensor_count": 64
+            },
+            "trainable_max_change": 1.001356213237159e-05,
+            "step_seconds": 1.6336776530370116,
+            "peak_gpu_memory_bytes": 70799872,
+            "algorithm": "DDPO_SF_v1"
+          },
+          {
+            "step": 3,
+            "loss": 0.028564374893903732,
+            "reward_mean": -0.00796116590499878,
+            "reward_variance": 0.6011111356111727,
+            "individual_rewards": [
+              0.9979658722877502,
+              -0.8167389631271362,
+              -0.9150823354721069,
+              -0.5621444582939148,
+              0.9768611192703247,
+              0.3782291114330292,
+              0.3140588104724884,
+              -0.6838449835777283,
+              -0.7519465088844299,
+              0.9830306768417358
+            ],
+            "gradient_norm": 0.5922079086303711,
+            "finite_gradients": true,
+            "probabilities_finite": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "conditioning_verified": true,
+            "logical_batch_size": 10,
+            "physical_micro_batch_size": 1,
+            "gradient_accumulation_steps": 10,
+            "backward_transition_calls": 20,
+            "optimizer_updates": 1,
+            "changes": {
+              "max_abs_change": 1.0026065865531564e-05,
+              "mean_abs_change": 4.922747632474245e-06,
+              "updated_tensors": 64,
+              "adapter_tensor_count": 64
+            },
+            "trainable_max_change": 1.0026065865531564e-05,
+            "step_seconds": 1.62664859398501,
+            "peak_gpu_memory_bytes": 70875648,
+            "algorithm": "DDPO_SF_v1"
+          },
+          {
+            "step": 4,
+            "loss": -0.4245116785168648,
+            "reward_mean": 0.20248368573375047,
+            "reward_variance": 0.34917824601389935,
+            "individual_rewards": [
+              -0.5971398949623108,
+              0.327183336019516,
+              -0.1011374369263649,
+              -0.9430126547813416,
+              -0.006243112962692976,
+              0.9950718879699707,
+              0.4799785017967224,
+              0.36061325669288635,
+              0.5987260341644287,
+              0.9107969403266907
+            ],
+            "gradient_norm": 0.5764192342758179,
+            "finite_gradients": true,
+            "probabilities_finite": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "conditioning_verified": true,
+            "logical_batch_size": 10,
+            "physical_micro_batch_size": 1,
+            "gradient_accumulation_steps": 10,
+            "backward_transition_calls": 20,
+            "optimizer_updates": 1,
+            "changes": {
+              "max_abs_change": 1.0033523722086102e-05,
+              "mean_abs_change": 4.3605507302688085e-06,
+              "updated_tensors": 64,
+              "adapter_tensor_count": 64
+            },
+            "trainable_max_change": 1.0033523722086102e-05,
+            "step_seconds": 1.629023609973956,
+            "peak_gpu_memory_bytes": 70875648,
+            "algorithm": "DDPO_SF_v1"
+          }
+        ],
+        "gate_scores": [
+          0.26393187046051025,
+          0.8735378384590149,
+          -0.757891833782196,
+          -0.9745254516601562,
+          -0.5820327401161194,
+          0.3689822852611542,
+          0.8036957383155823,
+          0.8513689041137695,
+          0.2403184026479721,
+          -0.27675729990005493,
+          0.8663519620895386,
+          -0.6423038840293884,
+          0.14054186642169952,
+          -0.03748967498540878,
+          0.25246697664260864,
+          -0.05839390307664871
+        ],
+        "gate_mean": 0.08323756605386734,
+        "cost": {
+          "training_updates": 4,
+          "recovery_reference_updates": 1,
+          "recovery_replay_updates": 1,
+          "actual_optimizer_calls": 6,
+          "training_trajectories": 40,
+          "recovery_trajectories": 20,
+          "gate_trajectories": 16,
+          "forward_NFE": 272,
+          "backward_transition_calls": 120
+        },
+        "trainable_tensors": 64,
+        "trainable_elements": 4096,
+        "parameter_changes": 64,
+        "final_checkpoint_sha256": "c895c0caa1fabb4c5be3ea6e798594f3982b55b42a304f79847551958ca43c60"
+      },
+      "rsi": {
+        "initial_hash": {
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_q.lora_A.weight": "120ad2eb10c2e9e1af5f804feae60c4269cd53e458fde690f6455ee4b0eb2661",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_k.lora_A.weight": "f30174fd2aa1a0fd17b244df34a62025bf165ff884dd58ba85139dd9611ab0aa",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_v.lora_A.weight": "b1dd9d7504406eacb76a2a8c661955056aa5caca54fb247627f26641e47465f2",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_A.weight": "2e5bec26e620b59a5bf4b291879f2936dae247271d66d70429cb97515c791642",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_q.lora_A.weight": "d9fb9b42a08c7bde99bf4cc7820171accb08c0fffc76fd58a6985d160d8a37f3",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_k.lora_A.weight": "a41d831695bce23211257f572c3ff113f9e37ed325c585b9e77577cd3cdad1dc",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_v.lora_A.weight": "6dacfe7a2211678a066bf32d8689823d7b9ffb6d9f7931f44a9714b3f576f2fe",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_A.weight": "80367146d8acabe537defa2e8ede6b2df87ed8641f9701e4f34ba0880b151061",
+          "down_blocks.0.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_q.lora_A.weight": "1cc65fd19621beb93f50514c21c7c3fcb10a9e2f309c344d212c5a283b9a73da",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_k.lora_A.weight": "2e3efb76a24947664be1c2e0f336ddec8d2809a44f2d1f8122c9c670c54661b1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_v.lora_A.weight": "b7ceffbde1e60177bf7e6f860b188a46caffe1d90a27d2b99de2913856cdde0b",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_A.weight": "9b0c479d17c08e3dfc106923909f37e51c68c6ecf4e96b5ec45a27df4372c3d3",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_q.lora_A.weight": "eedba21d616ecaa7f0567c788b8634009c2e94087eebad831e01cdfe9dcc2a10",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_k.lora_A.weight": "79f48fb266c90f32f275992e3d5db01a7ea1c6c6a8007517bd21de4b363ebb52",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_v.lora_A.weight": "2cec747f0a445711c13a574126f1bd09df895b00a8c95520cae1e9fd2875aa63",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_A.weight": "4f22294b30ecbd8f847ed1fbbdf31003d404aea81963080e2e5a8b1945ae43bf",
+          "up_blocks.0.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_q.lora_A.weight": "bdb846608e4c45c09565db5161e76782f23d32c9db394ad8182a7b052a5c2a64",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_k.lora_A.weight": "2d416542bec9592d25133b6b6b7beba27fc0ca4166445a8e461e91438a50dd79",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_v.lora_A.weight": "8bb5d17d883993b7b73b61879fabe94230a4a8cce0746078bae4964f34ba0cb7",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_out.0.lora_A.weight": "01a577ed663bfc7fb99fc14bba2c9dfeaf6a20875009e039ee1ad1045f18d0d9",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn1.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_q.lora_A.weight": "10a0761de76ba6c7a4908d95e2aa1240a50ec49bfdd29ec807a2c3fd98142450",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_k.lora_A.weight": "a1b8a60cf0257f592a955f8da1a4a6333a628e6f661b81f250f725de6dbca67f",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_v.lora_A.weight": "4d23d596153d1c3c4307e3cbfbb68c6adcb914fd23a6dacf7b113dc75963f663",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_out.0.lora_A.weight": "56a4168ab81983379431b0f8ef6b5245fa2c727a7d6ac701cf6072c19516fed5",
+          "up_blocks.0.attentions.1.transformer_blocks.0.attn2.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_q.lora_A.weight": "58167fd120c736c2de9b28210ca2cd14bfabaac3d160e88ba828636a1264ece9",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_k.lora_A.weight": "f176b41f9fa7a4e0a7b23f39edf8d2394ac6eb5a1ca3a3e983083f69b5080bd2",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_v.lora_A.weight": "e35239749bcc3f56a12218f18ff1a8a571f66159be6776b09aa89b8469c290f0",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_A.weight": "7d9c1a677d08c90e5dc72ee3e9ac11108d7d2a835ec7991d7c9cb655a2d1b470",
+          "mid_block.attentions.0.transformer_blocks.0.attn1.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_q.lora_A.weight": "c5922c09026e355b3beb3fef09a064e8d0ee1eea332b6f3e686c9fe426a3152e",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_q.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_k.lora_A.weight": "4de9bbf40769cbdc49b5ba4a1e04c32c9a41838e7fd7d301ce3635c764b109f7",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_k.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_v.lora_A.weight": "cf829882acfb096e4b00ca48b4304322dfa1a701d09838eed95b19a7cb6de818",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_v.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_A.weight": "7f833662ca2c507824566421bb4b93e494ff30f72e5731c27f2f520c9b564a67",
+          "mid_block.attentions.0.transformer_blocks.0.attn2.to_out.0.lora_B.weight": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+        },
+        "receipts": [
+          {
+            "step": 1,
+            "loss": -0.6665580216795206,
+            "reward_mean": 0.3221258223056793,
+            "reward_variance": 0.49560626007678454,
+            "individual_rewards": [
+              -0.9627776145935059,
+              -0.25740981101989746,
+              0.6079093813896179,
+              -0.8546419739723206,
+              0.9918751120567322,
+              0.9862881302833557,
+              0.5318663716316223,
+              0.525418758392334,
+              0.7282309532165527,
+              0.9244989156723022
+            ],
+            "gradient_norm": 0.595090925693512,
+            "finite_gradients": true,
+            "probabilities_finite": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "conditioning_verified": true,
+            "logical_batch_size": 10,
+            "physical_micro_batch_size": 1,
+            "gradient_accumulation_steps": 10,
+            "backward_transition_calls": 20,
+            "optimizer_updates": 1,
+            "changes": {
+              "max_abs_change": 9.99999883788405e-06,
+              "mean_abs_change": 4.999906807912069e-06,
+              "updated_tensors": 32,
+              "adapter_tensor_count": 64
+            },
+            "trainable_max_change": 9.99999883788405e-06,
+            "step_seconds": 1.6304103950387798,
+            "peak_gpu_memory_bytes": 71994880,
+            "algorithm": "DDPO_SF_v1"
+          },
+          {
+            "step": 2,
+            "loss": -0.3899988532066345,
+            "reward_mean": 0.18517260551452636,
+            "reward_variance": 0.7837342726459295,
+            "individual_rewards": [
+              0.9401906728744507,
+              -0.9036343693733215,
+              0.7445571422576904,
+              0.9128177762031555,
+              0.8976874351501465,
+              -0.9472901225090027,
+              -0.8834563493728638,
+              -0.8502281308174133,
+              0.9419710040092468,
+              0.999110996723175
+            ],
+            "gradient_norm": 0.7419359087944031,
+            "finite_gradients": true,
+            "probabilities_finite": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "conditioning_verified": true,
+            "logical_batch_size": 10,
+            "physical_micro_batch_size": 1,
+            "gradient_accumulation_steps": 10,
+            "backward_transition_calls": 20,
+            "optimizer_updates": 1,
+            "changes": {
+              "max_abs_change": 1.001356213237159e-05,
+              "mean_abs_change": 6.269032326811086e-06,
+              "updated_tensors": 64,
+              "adapter_tensor_count": 64
+            },
+            "trainable_max_change": 1.001356213237159e-05,
+            "step_seconds": 1.6303779049776495,
+            "peak_gpu_memory_bytes": 72060416,
+            "algorithm": "DDPO_SF_v1"
+          },
+          {
+            "step": 3,
+            "loss": 0.028564374893903732,
+            "reward_mean": -0.00796116590499878,
+            "reward_variance": 0.6011111356111727,
+            "individual_rewards": [
+              0.9979658722877502,
+              -0.8167389631271362,
+              -0.9150823354721069,
+              -0.5621444582939148,
+              0.9768611192703247,
+              0.3782291114330292,
+              0.3140588104724884,
+              -0.6838449835777283,
+              -0.7519465088844299,
+              0.9830306768417358
+            ],
+            "gradient_norm": 0.5922079086303711,
+            "finite_gradients": true,
+            "probabilities_finite": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "conditioning_verified": true,
+            "logical_batch_size": 10,
+            "physical_micro_batch_size": 1,
+            "gradient_accumulation_steps": 10,
+            "backward_transition_calls": 20,
+            "optimizer_updates": 1,
+            "changes": {
+              "max_abs_change": 2.005213355005253e-05,
+              "mean_abs_change": 9.845708753009053e-06,
+              "updated_tensors": 64,
+              "adapter_tensor_count": 64
+            },
+            "trainable_max_change": 2.005213355005253e-05,
+            "step_seconds": 1.6351364770089276,
+            "peak_gpu_memory_bytes": 72060416,
+            "algorithm": "DDPO_SF_v1"
+          },
+          {
+            "step": 4,
+            "loss": -0.4245169329806231,
+            "reward_mean": 0.20248627704568206,
+            "reward_variance": 0.3491812942081433,
+            "individual_rewards": [
+              -0.5971563458442688,
+              0.3271907567977905,
+              -0.10112368315458298,
+              -0.9430084824562073,
+              -0.006248000543564558,
+              0.9950712323188782,
+              0.47996020317077637,
+              0.36063438653945923,
+              0.598734438419342,
+              0.910808265209198
+            ],
+            "gradient_norm": 0.576427698135376,
+            "finite_gradients": true,
+            "probabilities_finite": true,
+            "behavior_logp_replay_max_difference": 0.0,
+            "conditioning_verified": true,
+            "logical_batch_size": 10,
+            "physical_micro_batch_size": 1,
+            "gradient_accumulation_steps": 10,
+            "backward_transition_calls": 20,
+            "optimizer_updates": 1,
+            "changes": {
+              "max_abs_change": 2.0067043806193396e-05,
+              "mean_abs_change": 8.851513981472658e-06,
+              "updated_tensors": 64,
+              "adapter_tensor_count": 64
+            },
+            "trainable_max_change": 2.0067043806193396e-05,
+            "step_seconds": 1.6342620280338451,
+            "peak_gpu_memory_bytes": 72060416,
+            "algorithm": "DDPO_SF_v1"
+          }
+        ],
+        "gate_scores": [
+          0.2639017701148987,
+          0.8735213279724121,
+          -0.7578411102294922,
+          -0.97452712059021,
+          -0.5820026993751526,
+          0.36901918053627014,
+          0.8036977648735046,
+          0.8513711094856262,
+          0.2403159737586975,
+          -0.27674058079719543,
+          0.8663241267204285,
+          -0.6423121094703674,
+          0.1404895782470703,
+          -0.03743821382522583,
+          0.252462238073349,
+          -0.05838271602988243
+        ],
+        "gate_mean": 0.0832411574665457,
+        "cost": {
+          "training_updates": 4,
+          "recovery_reference_updates": 1,
+          "recovery_replay_updates": 1,
+          "actual_optimizer_calls": 6,
+          "training_trajectories": 40,
+          "recovery_trajectories": 20,
+          "gate_trajectories": 16,
+          "forward_NFE": 272,
+          "backward_transition_calls": 120
+        },
+        "trainable_tensors": 64,
+        "trainable_elements": 4096,
+        "parameter_changes": 64,
+        "final_checkpoint_sha256": "e4ab1e8edcb742338fd2ba2f0923915b95e4962d12b50d9902e68d90d80ae22c"
+      }
+    },
+    "decision": {
+      "revision_number": 1,
+      "timestamp": "2026-11-01T00:39:43.648447+00:00",
+      "previous_config": {
+        "batch_size": 10,
+        "learning_rate": 1e-05,
+        "curriculum": "uniform"
+      },
+      "proposed_config": {
+        "batch_size": 10,
+        "learning_rate": 2e-05,
+        "curriculum": "uniform"
+      },
+      "validation_hash": "117c4a5ea7d968128229bb9c777902e28da8cae7d20cce2c6d161c0f8e2dc49e",
+      "validation_score": 0.0832411574665457,
+      "cost_gpu_hours": 0.008662270762223569,
+      "accepted": true,
+      "reason": "accepted",
+      "proposed_policy_version": "rsi_candidate_v1",
+      "proposal_reason": "LR_PROPOSAL_0001",
+      "evidence": "integrated/results.json",
+      "rollback": "restore fixed/final when candidate rejected"
+    },
+    "equality_rejection": {
+      "revision_number": 2,
+      "timestamp": "2026-11-01T00:39:43.677975+00:00",
+      "previous_config": {
+        "batch_size": 10,
+        "learning_rate": 2e-05,
+        "curriculum": "uniform"
+      },
+      "proposed_config": {
+        "batch_size": 10,
+        "learning_rate": 2e-05,
+        "curriculum": "uniform"
+      },
+      "validation_hash": "117c4a5ea7d968128229bb9c777902e28da8cae7d20cce2c6d161c0f8e2dc49e",
+      "validation_score": 0.0832411574665457,
+      "cost_gpu_hours": 0.0,
+      "accepted": false,
+      "reason": "no_validation_gain",
+      "proposed_policy_version": "rsi_candidate_v1",
+      "proposal_reason": "locked equality rejection check using cached selected score",
+      "evidence": null,
+      "rollback": "selected checkpoint remains incumbent"
+    },
+    "selected": "rsi",
+    "paired_gate_difference": 3.591412678360939e-06,
+    "paired_bootstrap95": [
+      -9.631318971514701e-06,
+      1.6934884479269377e-05
+    ],
+    "memory_persistence": true,
+    "actual_rollback": true,
+    "scope": "single tiny random UNet seed; 16 synthetic validation conditions; selected on this gate, no untouched test, no autonomous scientific efficacy claim",
+    "selection_cost_GPU_hours": 0.008662270762223569,
+    "seconds": 31.25424368295353
+  },
+  "semantic_review": {
+    "selected": 32,
+    "population": 160,
+    "received": 0,
+    "status": "BLOCKED"
+  },
+  "image_quality": {
+    "n_sources": 160,
+    "all_pairs_decode_hash_PASS": true,
+    "generated_SSIM_mean": 0.7340322949377474,
+    "generated_SSIM_range": [
+      0.3026932613381966,
+      0.94053636185029
+    ],
+    "generated_MAE_mean": 18.34335912068685,
+    "LPIPS": null,
+    "cached_metric_modules": {
+      "lpips": false,
+      "torchmetrics": false,
+      "piq": false
+    },
+    "geometry_interpretation": "SSIM 1 for C5 vs itself is a pipeline control, not native-resolution fidelity or semantic proof"
+  },
+  "source_hashes_verified": {
+    "scripts/next_validation_20261031.py": true,
+    "scripts/integrated_benign_rsi_20261031.py": true,
+    "scripts/run_ip2pix_checkpoint_diagnostic.py": true,
+    "scripts/run_ip2pix_checkpoint_instrumented.py": true,
+    "configs/env-spec.yaml": true,
+    "configs/phase3_generator_rl.yaml": true,
+    "src/rl/reward.py": true,
+    "src/rl/phase5_backend.py": true,
+    "src/rl/reward_normalization.py": true,
+    "src/rl/buffer.py": true,
+    "src/rl/trainer.py": true,
+    "src/rl/__init__.py": true,
+    "src/rl/diffusion_rl_trainer_v2.py": true,
+    "src/rl/diffusion_policy_v2.py": true,
+    "src/rl/diffusion_policy.py": true,
+    "src/rl/reward_v2.py": true,
+    "src/rl/cached_editor_trainer.py": true,
+    "src/rl/diffusion_trajectory.py": true,
+    "src/rl/diffusion_rl_trainer.py": true,
+    "src/rl/optimizer_validation.py": true,
+    "src/rl/policy.py": true,
+    "src/rsi/controller.py": true,
+    "src/rsi/revision.py": true,
+    "src/rsi/memory.py": true,
+    "src/rsi/phase4_schedule.py": true,
+    "src/rsi/__init__.py": true,
+    "src/rsi/harness/harness_executor.py": true,
+    "src/rsi/harness/engineering_fixture.py": true,
+    "src/rsi/harness/revision_proposer.py": true,
+    "src/rsi/harness/revision_validator.py": true,
+    "src/rsi/harness/version_manager.py": true,
+    "src/rsi/harness/harness_spec.py": true,
+    "src/rsi/harness/__init__.py": true,
+    "src/rsi/harness/trace_collector.py": true,
+    "src/rsi/harness/cost_aware_gate.py": true,
+    "src/rsi/harness/failure_investigator.py": true,
+    "src/training/generator_optimizer_interface.py": true,
+    "src/training/__init__.py": true,
+    "src/training/generator_adapter.py": true,
+    "src/training/generator_trainer.py": true
+  },
+  "monitor": {
+    "scheduler": {
+      "enabled": true,
+      "installed": true,
+      "interval_hours": 2,
+      "method": "slurm_cpu_successor",
+      "consecutive_failures": 0,
+      "submission_uncertain": false,
+      "pending_submission_token": "89933f370ddc4bcb907f26076c28c1a6",
+      "pending_due_utc": "2026-11-01T02:32:35+00:00",
+      "next_job_id": "88008",
+      "next_due_utc": "2026-11-01T02:32:35+00:00",
+      "last_tick_job_id": "87971",
+      "last_check_outcome": "COMPLETED_WITH_FINDINGS",
+      "last_tick_utc": "2026-11-01T00:32:48.361719+00:00",
+      "last_success_utc": "2026-11-01T00:32:52.066830+00:00",
+      "paused_at": "2026-10-27T06:32:35.109686+00:00",
+      "cancelled_monitor_job_ids": [
+        "86318"
+      ]
+    },
+    "last_heartbeat_utc": "2026-11-01T00:32:52.062605+00:00",
+    "heartbeat_scope": "prior replication stage only; this new stage has separate accounting",
+    "live_squeue": "88019|poisoning-next-finalize|RUNNING|3:00|(null)\n88008|poisoning-monitor|PENDING|5:00|poisoning-monitor-v1:f916f24e0de6:89933f370ddc4bcb907f26076c28c1a6\n88015|vstate-l2-seed29-bank-a0-finalizer|PENDING|3:00|(null)\n88014|vstate-l2-seed29-bank-a0|RUNNING|10:00|(null)\n",
+    "sacct": "87971|COMPLETED|2026-10-31T20:32:48|2026-10-31T20:32:52|0:0\n88008|PENDING|Unknown|Unknown|0:0\n"
+  },
+  "reward_guard_intact": true
+}

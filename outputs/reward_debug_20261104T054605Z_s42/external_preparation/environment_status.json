@@ -1,0 +1,10 @@
+{
+  "spec_hash": "377dd4df",
+  "status": "GPU_CLIP_BACKWARD_LLAVA_GENERATION_PASS; actual_PGD_and_victim_updates_running",
+  "spec_SHA256": "94df1cdd29afa2d0160b74131299817b22c92d58472fa4ccb8b951df296a24cb",
+  "environment": "/storage/home/ydk297/projects/poisoning/.venv-shadowcast-20261104",
+  "retained_environment_bytes": 3759659830,
+  "source": "?? data\n",
+  "resolution_changes": "Transformers4.31 official pins and DiffJPEG explicit source directory; short TMPDIR CPU IPC witness PASS",
+  "final_binary_dependencies_unchanged_since_GPU_smoke": true
+}

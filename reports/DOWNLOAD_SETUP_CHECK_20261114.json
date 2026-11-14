@@ -1,0 +1,9 @@
+{
+  "syntax_exit": 0,
+  "check_exit": 0,
+  "check_stdout": "{\n  \"status\": \"PASS_EXISTING_ASSET_CHECK\",\n  \"checked_UTC\": \"2026-11-14T05:10:37.419031+00:00\",\n  \"mode\": \"--check\",\n  \"model_snapshots\": 3,\n  \"fixed_source_images\": 1792,\n  \"files_SHA256_checked\": 1796,\n  \"missing_or_changed\": [],\n  \"new_GPU_jobs\": 0,\n  \"downloaded_in_check_mode\": false\n}\n",
+  "check_stderr": "",
+  "new_GPU_jobs": 0,
+  "download_mode_executed": false,
+  "previous_harness_issue": "Initial harness omitted env=env; source helper unchanged"
+}

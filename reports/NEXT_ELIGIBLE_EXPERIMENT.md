@@ -1,0 +1,11 @@
+# Next eligible experiment
+
+PROJECT_ID: RSI-POISONING. UTC 2026-11-02T16:12:42.049377+00:00. Status **ROOT_CAUSE_PARTIALLY_LOCALIZED**.
+
+This debug run is finalized:852/960 A100 seconds used,108 unreserved seconds remain,and the inherited authorization expires2026-11-02T16:17:57.636501+00:00. Do not silently reopen this run or the older finalized controller. No further GPU diagnostic or learning run is currently admitted. Existing two-hour monitoring stays unchanged.
+
+The next falsifiable numerical question is whether full guided-UNet predictions,Gaussian loss inputs and dLoss/dUNet-output match when the selected LoRA upstream adjoint differs. The completed probes stored only selected intermediate forwards,not every relevant full-network/loss boundary. Prepare a minimal recorder for the small4-channel UNet outputs,loss mean/action/logp and output gradients across all20 transitions;avoid a network dump. Compare pre-interpreter CUDA_LAUNCH_BLOCKING1 against the late-bootstrap variant as a separately preregistered single factor if resources are newly authorized. This is an unresolved hypothesis,not a proven cause or approved retry-untilPASS. If upstream inputs match,trace only the first unequal node's causal path;do not start with clipping.
+
+A repair is admissible only after justified localization,original-source retention,targeted regressions,ordinary uninstrumented paired updates,exact raw/postclip/Adam/final parameter checks,separate tolerance checks,checkpoint reload followed by a completed next optimizer update,and frozen/LoRA ownership verification. Current candidate fails these requirements and remains opt-in/defaultFalse.
+
+Benign learning remains blocked. After numerical requirements AND reward/cohort/evaluation admission pass,first use a matched Frozen versus one DDPO-only harmless lighting-editing arm;expand to ordinary scheduler/RSI only after their prerequisites pass. Keep initial checkpoints,seeds,data,query/NFE/compute budgets matched;preserve negative scores and rejected RSI cost. Do not add steps or search parameters to chase a proxy. Original reward guard is not released.160 prospective final-test sources stay sealed;historical development remains development;no fabricated human labels. No poisoning,stealth,backdoor-ASR optimization or attack improvement. ASR NOT TESTED.

@@ -1,0 +1,33 @@
+{
+  "execution_complete": true,
+  "training_optimizer_updates": 32,
+  "diagnostic_optimizer_replays": 2,
+  "actual_a100_gpu_seconds": 13122,
+  "actual_a100_gpu_hours": 3.645,
+  "claims": {
+    "two_seed_rl_proxy_gain_resolved": false,
+    "two_seed_rsi_proxy_gain_resolved": false,
+    "generalization_improvement_established": false,
+    "independent_semantic_improvement_established": false,
+    "larger_compute_followup_justified_now": false,
+    "reason": "Independent semantic review and strict continuation remain incomplete; two-seed repeated-development pilot is exploratory"
+  },
+  "immutable_runs_verified": 19,
+  "artifact_files_verified": 1872,
+  "normalized_lf_source_files_matched": 32,
+  "heldout_marker_unchanged": true,
+  "old_phase3_smoke_still_FAIL": true,
+  "human_labels": 0,
+  "review_images_verified": 20,
+  "local_git_commit": "45eeedd662fb5947d10a57b5f00fb05463cc4e75",
+  "canonical_git_commit": "6565a86ec33db21b4a310992d0f26ffc5b84237b",
+  "both_source_trees_clean_at_final_check": true,
+  "scientific_evidence_bytes_retained_per_location": 2143733976,
+  "local_and_cluster_scratch_deleted": true,
+  "monitor_enabled": true,
+  "monitor_next_job": "86451",
+  "monitor_next_due_utc": "2026-10-27T20:32:35+00:00",
+  "monitor_ownership_count": 1,
+  "active_research_jobs_at_final_check": 0,
+  "canonical_tests_passed": 59
+}

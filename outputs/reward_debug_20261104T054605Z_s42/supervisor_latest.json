@@ -1,0 +1,24 @@
+{
+  "UTC": "2026-11-04T11:44:12.405637+00:00",
+  "internal_status": "COMPLETED",
+  "internal_committed_updates": {
+    "ddpo_only": 100,
+    "rule_rsi": 100,
+    "rl_rsi": 100
+  },
+  "completed_PGD_pairs": 277,
+  "PGD_target_pairs": 277,
+  "external_train_done": {
+    "0": true,
+    "50": true
+  },
+  "external_eval_done": {
+    "0": true,
+    "50": true
+  },
+  "frozen_VQA_done": true,
+  "actual_GPU_h": 12.268333333333333,
+  "committed_GPU_h": 12.268333333333333,
+  "attention": [],
+  "all_GPU_settled": true
+}

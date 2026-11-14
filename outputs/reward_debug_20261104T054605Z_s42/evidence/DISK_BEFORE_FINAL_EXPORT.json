@@ -1,0 +1,20 @@
+{
+  "UTC": "2026-11-04T11:30:24.0917225Z",
+  "estimated_new_final_export_bytes_on_H": 209715200,
+  "model_or_dataset_download_bytes_on_C": 0,
+  "run_scratch": "H:\\Project\\Poisoning\\tmp\\reward_debug_20261104T054605Z",
+  "drives": [
+    {
+      "drive": "C:\\",
+      "type": "Fixed",
+      "available_bytes": 59294031872,
+      "total_bytes": 279168675840
+    },
+    {
+      "drive": "H:\\",
+      "type": "Fixed",
+      "available_bytes": 229295517696,
+      "total_bytes": 495431184384
+    }
+  ]
+}

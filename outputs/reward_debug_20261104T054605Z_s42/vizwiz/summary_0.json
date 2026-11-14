@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETED",
+  "seed": 42,
+  "poison_count": 0,
+  "clean_VizWiz_full_test_accuracy": 0.5569875000000086,
+  "questions": 8000,
+  "dropped_cases": 0,
+  "elapsed_seconds": 3116.180088823661,
+  "raw_predictions_SHA256": "4dee9084beda5bbf83cf798e8990b0fe83e602a63b6c190cd7242174f0c531f0",
+  "scores_SHA256": "4fce12a4267c7f098bbea5be9ff4ea5d5565744d3feb0c83349a5c00458088af",
+  "ASR": "not derived from this utility benchmark",
+  "training_seed_CI": "NOT ESTIMABLE (n=1)",
+  "scope": "VizWiz-VQA full public test8000,2026 reference release",
+  "literature_comparison_limit": "full8000 public self-score; original paper Table3 does not identify its EvalAI partition, so exact split matching is unverified"
+}

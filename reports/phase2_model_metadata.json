@@ -1,0 +1,32 @@
+{
+  "timbrooks/instruct-pix2pix": {
+    "id": "timbrooks/instruct-pix2pix",
+    "revision": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+    "license": "mit",
+    "weight_bytes_all_variants": 24147711395,
+    "variant": "fp16",
+    "files": [
+      "README.md",
+      "model_index.json",
+      "scheduler/scheduler_config.json",
+      "text_encoder/config.json",
+      "text_encoder/model.fp16.safetensors",
+      "tokenizer/merges.txt",
+      "tokenizer/special_tokens_map.json",
+      "tokenizer/tokenizer_config.json",
+      "tokenizer/vocab.json",
+      "unet/config.json",
+      "unet/diffusion_pytorch_model.fp16.safetensors",
+      "vae/config.json",
+      "vae/diffusion_pytorch_model.fp16.safetensors"
+    ],
+    "download_bytes": 2134219076,
+    "path": "/storage/home/ydk297/.cache/huggingface/hub/models--timbrooks--instruct-pix2pix/snapshots/31519b5cb02a7fd89b906d88731cd4d6a7bbf88d"
+  },
+  "stepfun-ai/Step1X-Edit": {
+    "id": "stepfun-ai/Step1X-Edit",
+    "revision": "752c0bc28a43f56249f588432a5964f1878c01ff",
+    "license": "apache-2.0",
+    "weight_bytes_all_variants": 52497329126
+  }
+}

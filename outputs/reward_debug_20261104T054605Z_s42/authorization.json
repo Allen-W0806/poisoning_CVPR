@@ -1,0 +1,8 @@
+{
+  "seed": 42,
+  "cap_GPU_seconds": 72000,
+  "user_authorization": "最多20 GPU小时，允许继续外部复现；先跑1个seed就行",
+  "scope": "Reward debug, benign seed42 pilot, verified external backdoor baseline reproduction",
+  "old_historical_budgets_reopened": false,
+  "created_UTC": "2026-11-04T05:58:10.189335+00:00"
+}

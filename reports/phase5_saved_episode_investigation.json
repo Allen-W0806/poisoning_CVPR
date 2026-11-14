@@ -1,0 +1,109 @@
+{
+  "id": "EXP_20261028T025521_e24fe78ca96a_phase5_active_saved_episode",
+  "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261028T025521_e24fe78ca96a_phase5_active_saved_episode",
+  "results": {
+    "parent": "EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL",
+    "case": "225164001",
+    "queries": [
+      {
+        "query": "image_headers",
+        "case_id": "225164001",
+        "observation": {
+          "actual_size": [
+            512,
+            512
+          ],
+          "expected_size": [
+            512,
+            512
+          ]
+        },
+        "resources": {
+          "wall_seconds": 0.010191285982728004,
+          "cpu_seconds": 0.006473787000000009,
+          "diagnostic_operations": 1,
+          "bytes_read": 316695,
+          "model_calls": 0,
+          "gpu_seconds": 0.0
+        }
+      },
+      {
+        "query": "content_hash",
+        "case_id": "225164001",
+        "observation": {
+          "actual_sha256": "f8099342de24d2c366d77fd6fb40df1df78acb79889689af6ff3aa443d630e3a",
+          "expected_sha256": "f8099342de24d2c366d77fd6fb40df1df78acb79889689af6ff3aa443d630e3a"
+        },
+        "resources": {
+          "wall_seconds": 0.0004680119454860687,
+          "cpu_seconds": 0.0004419890000004756,
+          "diagnostic_operations": 1,
+          "bytes_read": 316695,
+          "model_calls": 0,
+          "gpu_seconds": 0.0
+        }
+      },
+      {
+        "query": "pair_quality",
+        "case_id": "225164001",
+        "observation": {
+          "mse": 0.11848194152116776,
+          "mae": 0.2870456874370575,
+          "ssim": 0.6170399785041809,
+          "ssim_kind": "windowed_skimage",
+          "distortion": 0.23926284909248352
+        },
+        "resources": {
+          "wall_seconds": 0.30459578707814217,
+          "cpu_seconds": 3.0045025830000007,
+          "diagnostic_operations": 1,
+          "bytes_read": 644651,
+          "model_calls": 0,
+          "gpu_seconds": 0.0
+        }
+      },
+      {
+        "query": "trajectory_summary",
+        "case_id": "225164001",
+        "observation": {
+          "sample_id": "225164001",
+          "policy_version": 0,
+          "transitions": 10,
+          "seed": 948234433,
+          "finite_states": true
+        },
+        "resources": {
+          "wall_seconds": 0.010969201102852821,
+          "cpu_seconds": 0.0070988010000005985,
+          "diagnostic_operations": 1,
+          "bytes_read": 2047607,
+          "model_calls": 0,
+          "gpu_seconds": 0.0
+        }
+      }
+    ],
+    "resources": {
+      "wall_seconds": 0.32622428610920906,
+      "cpu_seconds": 3.018517160000002,
+      "diagnostic_operations": 4,
+      "bytes_read": 3325648,
+      "model_calls": 0,
+      "gpu_seconds": 0.0
+    },
+    "source_manifest_matches": true,
+    "stored_quality_reproduced": true,
+    "contradicted": [
+      "saved_vs_recomputed_numeric_quality_discrepancy"
+    ],
+    "quality_scope": "Same implementation recomputation confirms saved arithmetic, not metric implementation or construct validity",
+    "unresolved": [
+      "instruction_following_failure",
+      "question_answer_validity_error",
+      "semantic_verifier_disagreement"
+    ],
+    "revision_proposed": false,
+    "reason": "Source and numerical quality corroborated; independent semantic/task facts absent",
+    "new_model_calls": 0,
+    "new_optimizer_updates": 0
+  }
+}

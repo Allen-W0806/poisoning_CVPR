@@ -1,0 +1,16 @@
+{
+  "UTC": "2026-11-04T07:38:20.997027+00:00",
+  "benchmark_outputs_not_yet_generated": true,
+  "all8000_fixed_cases": true,
+  "all_original_prompts_unchanged": true,
+  "no_gold_answers_in_model_inputs": true,
+  "condition_counts": [
+    0,
+    50
+  ],
+  "maximum_GPU_seconds_per_condition": 7200,
+  "worker_SHA256": "4d96799cf484eca57e08175583aa9dc3637ccc4260911adc8a9fb8cff4066e28",
+  "question_SHA256": "25b71577dafc1e4049b1a273b8e58d0d8bca510510b512e4925730905c3eceac",
+  "annotation_SHA256": "fa113f0e90230ab4690bb41c4d74e40f7087cc7c192dd8363fa4d6bad339b7aa",
+  "no_benchmark_tuning_or_checkpoint_selection": true
+}

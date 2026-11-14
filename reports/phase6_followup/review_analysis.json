@@ -1,0 +1,63 @@
+{
+  "updated_utc": "2026-10-31T19:35:58.384319+00:00",
+  "submission_files": 0,
+  "provenance_consistent_submissions": 0,
+  "validation_errors": [],
+  "operator_attestation_present": false,
+  "verified_reviewer_ids": [],
+  "reviewer_conflicts": [],
+  "independently_reviewed_consensus_pairs": 0,
+  "consensus_pair_ids": [],
+  "available_pairs": 24,
+  "dimension_coverage": {
+    "instruction_completion": {
+      "unique_rated_pairs": 0,
+      "available_pairs": 24
+    },
+    "image_realism": {
+      "unique_rated_pairs": 0,
+      "available_pairs": 24
+    },
+    "content_preservation": {
+      "unique_rated_pairs": 0,
+      "available_pairs": 24
+    },
+    "question_answer_factual_validity": {
+      "unique_rated_pairs": 0,
+      "available_pairs": 24
+    },
+    "image_question_semantic_relationship": {
+      "unique_rated_pairs": 0,
+      "available_pairs": 24
+    },
+    "visible_artifacts": {
+      "unique_rated_pairs": 0,
+      "available_pairs": 24
+    },
+    "evaluation_uncertainty": {
+      "unique_rated_pairs": 0,
+      "available_pairs": 24
+    }
+  },
+  "reviewer_pair_agreement": {
+    "instruction_completion": [],
+    "image_realism": [],
+    "content_preservation": [],
+    "question_answer_factual_validity": [],
+    "image_question_semantic_relationship": [],
+    "visible_artifacts": [],
+    "evaluation_uncertainty": []
+  },
+  "disagreements": [],
+  "proxy_group_summaries": {},
+  "proxy_answer_match": {
+    "numerator": 0,
+    "denominator": 0,
+    "rate": null,
+    "scope": "normalized match to reviewed edited answers, not official10-answer VQA accuracy"
+  },
+  "analysis_unit": "prioritized unique source pair; repeated ratings retained separately, not additional independent images",
+  "training_reward_released": false,
+  "scientific_pilot_ready": false,
+  "scope": "metadata and agreement do not independently prove human authorship or establish representative semantic efficacy"
+}

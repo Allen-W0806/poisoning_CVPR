@@ -1,0 +1,7 @@
+{
+  "resolved_scratch_path": "/storage/home/ydk297/projects/poisoning/tmp/phase5_20261028",
+  "removed_files": 11,
+  "removed_bytes": 450448,
+  "only_run_specific_patches_and_verifier_scripts": true,
+  "removed": true
+}

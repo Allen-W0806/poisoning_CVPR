@@ -1,0 +1,59 @@
+{
+  "diffusers": "0.35.1",
+  "timesteps": [
+    901,
+    801,
+    701,
+    601,
+    501,
+    401,
+    301,
+    201,
+    101,
+    1
+  ],
+  "variances": [
+    0.6026915907859802,
+    0.527775764465332,
+    0.44607365131378174,
+    0.36142662167549133,
+    0.2783713936805725,
+    0.20078472793102264,
+    0.13089369237422943,
+    0.06809862703084946,
+    0.0016797090647742152,
+    0.0004263489390723407
+  ],
+  "scheduler": {
+    "num_train_timesteps": 1000,
+    "beta_start": 0.00085,
+    "beta_end": 0.012,
+    "beta_schedule": "scaled_linear",
+    "trained_betas": null,
+    "clip_sample": false,
+    "set_alpha_to_one": false,
+    "steps_offset": 1,
+    "prediction_type": "epsilon",
+    "thresholding": false,
+    "dynamic_thresholding_ratio": 0.995,
+    "clip_sample_range": 1.0,
+    "sample_max_value": 1.0,
+    "timestep_spacing": "leading",
+    "rescale_betas_zero_snr": false,
+    "_use_default_values": [
+      "prediction_type",
+      "sample_max_value",
+      "thresholding",
+      "trained_betas",
+      "dynamic_thresholding_ratio",
+      "clip_sample_range",
+      "timestep_spacing",
+      "num_train_timesteps",
+      "rescale_betas_zero_snr"
+    ]
+  },
+  "pipeline_source": "/storage/home/ydk297/projects/poisoning/.venv-editor/lib/python3.11/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion_instruct_pix2pix.py",
+  "ddim_source": "/storage/home/ydk297/projects/poisoning/.venv-editor/lib/python3.11/site-packages/diffusers/schedulers/scheduling_ddim.py",
+  "three_branch_cfg_source_present": true,
+  "status": "SOURCE_INSPECTION_ONLY_NOT_GENERATOR_RL_PASS"
+}

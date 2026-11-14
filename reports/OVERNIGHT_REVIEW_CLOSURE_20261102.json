@@ -1,0 +1,50 @@
+{
+  "run": "overnight_benign_20261102_v2",
+  "review": "Narrow closure of empty update receipts and external-index helper",
+  "reviewer": "/root/overnight_controller_review",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewed_utc": "2026-11-02T06:54:11Z",
+  "conditional_comparator_finding": "CLOSED_IN_REVISED_CPU_CODE",
+  "canonical_tests": {
+    "passed": 26,
+    "empty_receipt_regression": true,
+    "artifact_validation_failure_regression": true
+  },
+  "independent_in_memory_results": {
+    "empty_receipts": "rejected",
+    "missing_norm": "rejected",
+    "nan_loss": "rejected",
+    "zero_norm": "rejected",
+    "matching_two_two_one": "passed"
+  },
+  "actual_run": {
+    "gpu_jobs": 1,
+    "job_id": 88433,
+    "gpu_seconds": 172,
+    "remaining": 35828,
+    "ordinary_resume_run": false,
+    "learned_efficacy_run": false,
+    "original_raw_gradient_gate": "FAIL"
+  },
+  "publisher": {
+    "isolated_windows_suite_passed": 14,
+    "external_receipt_installed_at_inspection": false,
+    "remote_readback_performed_by_reviewer": false,
+    "live_publisher_invocations_by_reviewer": 0,
+    "base_approval_unchanged_by_helper": true,
+    "receipt_report_allowlist_count": 6,
+    "gate": "project-bound CLOUD_VERIFIED receipt, full-index digest, six expected receipt filenames and their ID URLs/digests present, all legacy non-index report digests present",
+    "boundary": "Receipt issuer must independently verify exact mapped rows and allowed external links. Substring presence alone does not enforce them."
+  },
+  "sha256": {
+    "scripts/overnight_benign_controller_20261102.py": "f08309aac29224c4d9f56b15d521e7efbc735204f1a801d68745d6be7588ec31",
+    "scripts/overnight_benign_reporting_20261102.py": "ad969fd67587c5722206c2bc32433d040782cde0447c582a2abdd7ae09f93126",
+    "scripts/test_overnight_benign_20261102.py": "21220c8626b4395f017157d14928d72f3d4c5ae7f200719732a8f0d51bb65c9f",
+    "results/overnight_benign_20261102_v2/CPU_preparation_tests_final.log": "44fa41e870ca1d17027a19a4b57ee864a79d9049a80c6e69a76c61821514b5ab",
+    "results/overnight_benign_20261102_v2/fixed_model_metrics.json": "49fd0d4fad10830a8fc646e9ce3d7d3df0ee4c28330827e48476187995ab99b7",
+    "reports/overnight_benign_20261102_v2/budget.json": "708cb49114ad80fc3af64f9e601caa8c9ea15c47d9636c8a777b7b88ab3cdabb",
+    "sync_rsi_poisoning_reports.py": "e5bb904666449ebeb6efc3c67d8c447f43bc28f170247ff1a68da136f377f2cf",
+    "tests/test_rsi_poisoning_report_sync.py": "a8a3feccf14f72671b13b75dd0d88def49c08e9bb8c12f47b45090b34703d095"
+  }
+}

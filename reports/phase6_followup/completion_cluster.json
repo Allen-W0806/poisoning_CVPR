@@ -1,0 +1,39 @@
+{
+  "closed_utc": "2026-10-28T16:08:58.457577+00:00",
+  "root": "/storage/home/ydk297/projects/poisoning",
+  "source_commit": "06bd889d9392c4d53621c3e4af15ad718e84f6c5",
+  "source_status": "",
+  "experiment_id": "EXP_20261028T154458_eefb8fb1fe7a_phase6_review_dashboard_followup",
+  "scientific_decision": "NO-GO",
+  "new_gpu_seconds": 0,
+  "new_model_calls": 0,
+  "completed_phase6_tests_repeated": false,
+  "new_followup_interface_tests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "exact_export_checks": {
+    "rsi_poisoning_zh.html": true,
+    "rsi_poisoning_en.html": true,
+    "index_zh.html": true,
+    "index_en.html": true,
+    "compatibility_json_identical": true,
+    "current_stage_state_exact": true
+  },
+  "snapshot_utc": "2026-10-28T16:05:16.542044+00:00",
+  "independent_submissions": 0,
+  "independently_reviewed_consensus_pairs": 0,
+  "complete_package_zip_sha256": "df832af01f7693d7f0cb36963a5d8aa92d984d7c07ef0a7cddcb0b8d87bc7a2c",
+  "browser_qa_passed": true,
+  "scratch_removed": true,
+  "retained_artifact_bytes": {
+    "dashboard": 2431363,
+    "reviews/workflow": 462881,
+    "reports/phase6_followup": 1859440,
+    "dashboard_package/phase6_supplied_v1": 458288,
+    "experiments/EXP_20261028T154458_eefb8fb1fe7a_phase6_review_dashboard_followup": 1264846
+  },
+  "free_bytes_after_cleanup": 287317315026944,
+  "C_free_bytes_after_cleanup": null,
+  "retained_multigigabyte_artifacts_created_this_run": false
+}

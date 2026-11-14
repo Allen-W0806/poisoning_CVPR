@@ -1,0 +1,31 @@
+{
+  "UTC": "2026-11-04T08:03:27.518596+00:00",
+  "benchmark_outputs_not_yet_generated": true,
+  "all8000_fixed_cases": true,
+  "all_original_prompts_unchanged": true,
+  "no_gold_answers_in_model_inputs": true,
+  "condition_counts": [
+    0,
+    50
+  ],
+  "maximum_GPU_seconds_per_condition": 7200,
+  "worker_SHA256": "0e1af0c961967cc6d3690c4ce5190cab0fd66adfaab2c71a55040c422d271277",
+  "question_SHA256": "25b71577dafc1e4049b1a273b8e58d0d8bca510510b512e4925730905c3eceac",
+  "annotation_SHA256": "fa113f0e90230ab4690bb41c4d74e40f7087cc7c192dd8363fa4d6bad339b7aa",
+  "no_benchmark_tuning_or_checkpoint_selection": true,
+  "version": 3,
+  "scorer_wrapper_SHA256": "0ef017a4f52d672c6ea030664862fd36c3076489d5ae0bdac486883beae01992",
+  "official_scoring_reference": {
+    "protocol": "official_vizwiz_API_accuracy_d26ef7ac_v1",
+    "source_SHA256": "d26ef7ac2db06351444c3531f8d95fd9c454423fbcb9fd5dd984f12281146694",
+    "source_url": "https://vizwiz.cs.colorado.edu/VizWiz_final/vqa_data/API.zip",
+    "accuracy_path": "original VQAEval.evaluate through setAccuracy; caption metrics omitted",
+    "references": "all ten original answers, unchanged as in official VQA JSON loader",
+    "prediction_normalization": "official unconditional punctuation/digit/article/contraction processing"
+  },
+  "correction_reason": "CPU source audit found VQAv2 and VizWiz scoring semantics differ; use official VizWiz accuracy, with no outputs yet generated",
+  "previous_preregistration_SHA256": "a762d15d48b120fc68254eb3fbbd18fe29a8ab5a6a04a92aacab6c71500338c0",
+  "literature_comparison_limit": "full8000 public self-score; original paper Table3 does not identify its EvalAI partition, so exact split matching is unverified",
+  "metadata_correction": "Paper Table3 does not identify its EvalAI partition; earlier old4000 attribution was an unsupported inference, now removed. Dataset, prompts, models, generation and official scorer unchanged.",
+  "previous_v2_preregistration_SHA256": "4cbfe1abacebd8e3657be8cc9650fc64719a6e202150a9f3e9056a58dec304df"
+}

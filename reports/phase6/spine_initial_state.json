@@ -1,0 +1,166 @@
+{
+  "schema_version": "phase6_stage_state_v1",
+  "stages": {
+    "S1_DATA": {
+      "stage_id": "S1_DATA",
+      "state": "NOT_STARTED",
+      "required_inputs": [],
+      "readiness_conditions": "all required stages PASSED; task-specific evidence validated",
+      "allowed_actions": "bounded CPU validate_data",
+      "required_tests": "task assertions and regression receipts",
+      "maximum_resource_budget": {
+        "wall_seconds": 600,
+        "gpu_seconds": 0
+      },
+      "next_eligible_stage": "S1_DATA"
+    },
+    "S1_REVIEW_PACKAGE": {
+      "stage_id": "S1_REVIEW_PACKAGE",
+      "state": "NOT_STARTED",
+      "required_inputs": [
+        "S1_DATA"
+      ],
+      "readiness_conditions": "all required stages PASSED; task-specific evidence validated",
+      "allowed_actions": "bounded CPU review_package",
+      "required_tests": "task assertions and regression receipts",
+      "maximum_resource_budget": {
+        "wall_seconds": 600,
+        "gpu_seconds": 0
+      },
+      "next_eligible_stage": "S1_DATA"
+    },
+    "S1_REWARD_AUDIT": {
+      "stage_id": "S1_REWARD_AUDIT",
+      "state": "PASSED",
+      "required_inputs": [],
+      "readiness_conditions": "all required stages PASSED; task-specific evidence validated",
+      "allowed_actions": "bounded CPU reward_audit",
+      "required_tests": "task assertions and regression receipts",
+      "maximum_resource_budget": {
+        "wall_seconds": 600,
+        "gpu_seconds": 0
+      },
+      "next_eligible_stage": "S1_DATA",
+      "decision": "PASS",
+      "started_at": "2026-10-28T04:31:50.830471+00:00",
+      "evidence": "H:\\Project\\Poisoning\\reports\\phase6\\spine.json",
+      "scope": "entry-point/persistence engineering spine only",
+      "elapsed_wall_seconds": 0.0007955000037327409,
+      "ended_at": "2026-10-28T04:31:50.832070+00:00"
+    },
+    "S1_SEMANTIC_REVIEW": {
+      "stage_id": "S1_SEMANTIC_REVIEW",
+      "state": "NOT_STARTED",
+      "required_inputs": [
+        "S1_REVIEW_PACKAGE"
+      ],
+      "readiness_conditions": "all required stages PASSED; task-specific evidence validated",
+      "allowed_actions": "bounded CPU human_gate",
+      "required_tests": "task assertions and regression receipts",
+      "maximum_resource_budget": {
+        "wall_seconds": 600,
+        "gpu_seconds": 0
+      },
+      "next_eligible_stage": "S1_DATA"
+    },
+    "S2_REAL_HARNESS": {
+      "stage_id": "S2_REAL_HARNESS",
+      "state": "NOT_STARTED",
+      "required_inputs": [
+        "S1_DATA"
+      ],
+      "readiness_conditions": "all required stages PASSED; task-specific evidence validated",
+      "allowed_actions": "bounded CPU real_harness",
+      "required_tests": "task assertions and regression receipts",
+      "maximum_resource_budget": {
+        "wall_seconds": 600,
+        "gpu_seconds": 0
+      },
+      "next_eligible_stage": "S1_DATA"
+    },
+    "S3_RL_ENGINEERING": {
+      "stage_id": "S3_RL_ENGINEERING",
+      "state": "NOT_STARTED",
+      "required_inputs": [],
+      "readiness_conditions": "all required stages PASSED; task-specific evidence validated",
+      "allowed_actions": "bounded CPU rl_checks",
+      "required_tests": "task assertions and regression receipts",
+      "maximum_resource_budget": {
+        "wall_seconds": 600,
+        "gpu_seconds": 0
+      },
+      "next_eligible_stage": "S1_DATA"
+    },
+    "S3_REWARD_RELEASE": {
+      "stage_id": "S3_REWARD_RELEASE",
+      "state": "NOT_STARTED",
+      "required_inputs": [
+        "S1_SEMANTIC_REVIEW",
+        "S1_REWARD_AUDIT"
+      ],
+      "readiness_conditions": "all required stages PASSED; task-specific evidence validated",
+      "allowed_actions": "bounded CPU reward_gate",
+      "required_tests": "task assertions and regression receipts",
+      "maximum_resource_budget": {
+        "wall_seconds": 600,
+        "gpu_seconds": 0
+      },
+      "next_eligible_stage": "S1_DATA"
+    },
+    "S4_STATIC_COMPARISON": {
+      "stage_id": "S4_STATIC_COMPARISON",
+      "state": "NOT_STARTED",
+      "required_inputs": [
+        "S1_DATA"
+      ],
+      "readiness_conditions": "all required stages PASSED; task-specific evidence validated",
+      "allowed_actions": "bounded CPU comparison",
+      "required_tests": "task assertions and regression receipts",
+      "maximum_resource_budget": {
+        "wall_seconds": 600,
+        "gpu_seconds": 0
+      },
+      "next_eligible_stage": "S1_DATA"
+    },
+    "S4_SCIENTIFIC_READY": {
+      "stage_id": "S4_SCIENTIFIC_READY",
+      "state": "NOT_STARTED",
+      "required_inputs": [
+        "S4_STATIC_COMPARISON",
+        "S3_REWARD_RELEASE"
+      ],
+      "readiness_conditions": "all required stages PASSED; task-specific evidence validated",
+      "allowed_actions": "bounded CPU scientific_gate",
+      "required_tests": "task assertions and regression receipts",
+      "maximum_resource_budget": {
+        "wall_seconds": 600,
+        "gpu_seconds": 0
+      },
+      "next_eligible_stage": "S1_DATA"
+    },
+    "S5_PILOT": {
+      "stage_id": "S5_PILOT",
+      "state": "NOT_STARTED",
+      "required_inputs": [
+        "S4_SCIENTIFIC_READY"
+      ],
+      "readiness_conditions": "all required stages PASSED; task-specific evidence validated",
+      "allowed_actions": "bounded CPU pilot_gate",
+      "required_tests": "task assertions and regression receipts",
+      "maximum_resource_budget": {
+        "wall_seconds": 600,
+        "gpu_seconds": 0
+      },
+      "next_eligible_stage": "S1_DATA"
+    }
+  },
+  "retry_counts": {},
+  "updated_at": "2026-10-28T04:31:50.833386+00:00",
+  "scientific_decision": "NO-GO",
+  "authorized_gpu_seconds": 0,
+  "next_eligible_tasks": [
+    "S1_DATA",
+    "S3_RL_ENGINEERING"
+  ],
+  "next_automatic_action": "S1_DATA"
+}

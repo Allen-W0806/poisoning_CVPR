@@ -1,0 +1,27 @@
+test_ambiguous_verification_rejected_before_reward (tests.test_phase5_contracts.Phase5ContractTests.test_ambiguous_verification_rejected_before_reward) ... ok
+test_batch_duplicates_rejected_before_optimizer (tests.test_phase5_contracts.Phase5ContractTests.test_batch_duplicates_rejected_before_optimizer) ... ok
+test_explicit_coefficients_are_executed_and_recorded (tests.test_phase5_contracts.Phase5ContractTests.test_explicit_coefficients_are_executed_and_recorded) ... ok
+test_identity_retains_consistency_credit (tests.test_phase5_contracts.Phase5ContractTests.test_identity_retains_consistency_credit) ... ok
+test_policy_provenance_rejects_missing_source_hash_before_model_use (tests.test_phase5_contracts.Phase5ContractTests.test_policy_provenance_rejects_missing_source_hash_before_model_use) ... ok
+test_runtime_join_and_content_split_guards (tests.test_phase5_contracts.Phase5ContractTests.test_runtime_join_and_content_split_guards) ... ok
+test_runtime_manifest_and_content_checks (tests.test_phase5_contracts.Phase5ContractTests.test_runtime_manifest_and_content_checks) ... ok
+test_semantic_contract_does_not_copy_unknown_facts (tests.test_phase5_contracts.Phase5ContractTests.test_semantic_contract_does_not_copy_unknown_facts) ... ok
+test_valid_invalid_unknown_disputed_are_separate (tests.test_phase5_contracts.Phase5ContractTests.test_valid_invalid_unknown_disputed_are_separate) ... ok
+test_editor_and_investigator_cannot_query_gate (tests.test_phase5_harness.Phase5HarnessTests.test_editor_and_investigator_cannot_query_gate) ... ok
+test_gate_rejects_a_new_error_even_with_large_aggregate_gain (tests.test_phase5_harness.Phase5HarnessTests.test_gate_rejects_a_new_error_even_with_large_aggregate_gain) ... ok
+test_gate_rejects_duplicate_sources_and_unpaired_coverage (tests.test_phase5_harness.Phase5HarnessTests.test_gate_rejects_duplicate_sources_and_unpaired_coverage) ... ok
+test_insufficient_diagnosis_and_natural_validity_never_accepted (tests.test_phase5_harness.Phase5HarnessTests.test_insufficient_diagnosis_and_natural_validity_never_accepted) ... ok
+test_real_investigation_reject_accept_regress_and_rollback (tests.test_phase5_harness.Phase5HarnessTests.test_real_investigation_reject_accept_regress_and_rollback) ... ok
+test_resource_memory_and_curriculum_revisions_execute (tests.test_phase5_harness.Phase5HarnessTests.test_resource_memory_and_curriculum_revisions_execute) ... ok
+test_restricted_program_cannot_modify_metric_or_labels (tests.test_phase5_harness.Phase5HarnessTests.test_restricted_program_cannot_modify_metric_or_labels) ... ok
+test_inference_and_posttraining_populations_never_pool (tests.test_phase5_protocol.Phase5ProtocolTests.test_inference_and_posttraining_populations_never_pool) ... ok
+test_launch_guard_requires_all_independent_evidence (tests.test_phase5_protocol.Phase5ProtocolTests.test_launch_guard_requires_all_independent_evidence) ... ok
+test_preintervention_check_rejects_existing_branch_divergence (tests.test_phase5_protocol.Phase5ProtocolTests.test_preintervention_check_rejects_existing_branch_divergence) ... ok
+test_revision_category_cannot_hide_undeclared_changes (tests.test_phase5_protocol.Phase5ProtocolTests.test_revision_category_cannot_hide_undeclared_changes) ... ok
+test_security_fixture_does_not_become_posttraining_result (tests.test_phase5_protocol.Phase5ProtocolTests.test_security_fixture_does_not_become_posttraining_result) ... ok
+test_v2_groups_duplicate_content_and_never_recycles_old_test (tests.test_phase5_protocol.Phase5ProtocolTests.test_v2_groups_duplicate_content_and_never_recycles_old_test) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.457s
+
+OK

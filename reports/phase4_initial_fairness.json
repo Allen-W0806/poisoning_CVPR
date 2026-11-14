@@ -1,0 +1,38 @@
+[
+  {
+    "seed": 42,
+    "initial_adapter_exact": true,
+    "config_fields_exact": {
+      "training_indices": true,
+      "validation_indices": true,
+      "evaluation_updates": true,
+      "logical_batch_size": true,
+      "learning_rate": true,
+      "lora_rank": true,
+      "lora_alpha": true,
+      "num_inference_steps": true,
+      "eta": true,
+      "reward": true
+    },
+    "fixed_run": "EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL",
+    "rsi_run": "EXP_20261027T175741_3b880a4a5fce_phase4_PH4_GENERATOR_RSI"
+  },
+  {
+    "seed": 123,
+    "initial_adapter_exact": true,
+    "config_fields_exact": {
+      "training_indices": true,
+      "validation_indices": true,
+      "evaluation_updates": true,
+      "logical_batch_size": true,
+      "learning_rate": true,
+      "lora_rank": true,
+      "lora_alpha": true,
+      "num_inference_steps": true,
+      "eta": true,
+      "reward": true
+    },
+    "fixed_run": "EXP_20261027T170250_c7c7385c8814_phase4_PH4_GENERATOR_RL",
+    "rsi_run": "EXP_20261027T175744_255141d217c5_phase4_PH4_GENERATOR_RSI"
+  }
+]

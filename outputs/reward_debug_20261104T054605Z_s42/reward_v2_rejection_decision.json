@@ -1,0 +1,12 @@
+{
+  "created_UTC": "2026-11-04T06:52:08.502583+00:00",
+  "reason": "Task brightness term is effectively constant on real generated outputs despite passing analytic controls",
+  "training_outputs_observed": 44,
+  "hard_minus_one_count": 43,
+  "observed_brightness_progress_min": -1.0,
+  "observed_brightness_progress_max": -0.9999200162672937,
+  "decision": "Stop development v2 after first validation; preserve artifacts; revise mean-property progress with continuous compression, new full100-update per-arm seed42 pilot from initial checkpoint",
+  "selection_data": "development train and validation only; no new final assessment generated",
+  "not_a_completed_comparison": true,
+  "scientific_limit": "Analytic control success was insufficient to admit a non-saturated real-generation objective"
+}

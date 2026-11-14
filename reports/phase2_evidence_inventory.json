@@ -1,0 +1,366 @@
+{
+  "jobs": [
+    {
+      "job_id": "86292",
+      "task": "editor",
+      "reserved_seconds": 900,
+      "parent_run": "EXP_20261027T045854_00a2bc07659a_phase2_slurm_editor"
+    },
+    {
+      "job_id": "86293",
+      "task": "training",
+      "reserved_seconds": 1200,
+      "parent_run": "EXP_20261027T050226_b587248a1238_phase2_slurm_training"
+    },
+    {
+      "job_id": "86299",
+      "task": "training",
+      "reserved_seconds": 900,
+      "parent_run": "EXP_20261027T050443_d70eeb41829e_phase2_slurm_training"
+    },
+    {
+      "job_id": "86300",
+      "task": "vqa_dev",
+      "reserved_seconds": 900,
+      "parent_run": "EXP_20261027T050734_4883b0f3fbde_phase2_slurm_vqa_dev"
+    },
+    {
+      "job_id": "86301",
+      "task": "training",
+      "reserved_seconds": 600,
+      "parent_run": "EXP_20261027T051104_149fb4487202_phase2_slurm_training"
+    },
+    {
+      "job_id": "86302",
+      "task": "training",
+      "reserved_seconds": 600,
+      "parent_run": "EXP_20261027T051338_de75b22010ca_phase2_slurm_training"
+    },
+    {
+      "job_id": "86303",
+      "task": "training",
+      "reserved_seconds": 600,
+      "parent_run": "EXP_20261027T051624_8506a65aa0ca_phase2_slurm_training"
+    },
+    {
+      "job_id": "86304",
+      "task": "training",
+      "reserved_seconds": 600,
+      "parent_run": "EXP_20261027T051835_6a0c63595002_phase2_slurm_training"
+    },
+    {
+      "job_id": "86305",
+      "task": "vqa_test",
+      "reserved_seconds": 900,
+      "parent_run": "EXP_20261027T052236_c5cc0d4d4aab_phase2_slurm_vqa_test"
+    },
+    {
+      "job_id": "86306",
+      "task": "training",
+      "reserved_seconds": 600,
+      "parent_run": "EXP_20261027T052537_301c8d9917c9_phase2_slurm_training"
+    },
+    {
+      "job_id": "86307",
+      "task": "semantics",
+      "reserved_seconds": 900,
+      "parent_run": "EXP_20261027T052704_89747bf85f00_phase2_slurm_semantics"
+    },
+    {
+      "job_id": "86308",
+      "task": "controller",
+      "reserved_seconds": 900,
+      "parent_run": "EXP_20261027T053035_485bf0d613af_phase2_slurm_controller"
+    }
+  ],
+  "scheduler": {
+    "command": [
+      "sacct",
+      "-X",
+      "-j",
+      "86292,86293,86299,86300,86301,86302,86303,86304,86305,86306,86307,86308",
+      "-P",
+      "--format=JobIDRaw,JobName,State,ExitCode,ElapsedRaw,AllocTRES"
+    ],
+    "exit_code": 0,
+    "stdout": "JobIDRaw|JobName|State|ExitCode|ElapsedRaw|AllocTRES\n86292|p2-editor|COMPLETED|0:0|41|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n86293|p2-training|FAILED|1:0|46|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n86299|p2-training|FAILED|1:0|77|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n86300|p2-vqa_dev|COMPLETED|0:0|63|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n86301|p2-training|FAILED|1:0|44|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n86302|p2-training|FAILED|1:0|42|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n86303|p2-training|FAILED|1:0|15|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n86304|p2-training|FAILED|1:0|49|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n86305|p2-vqa_test|COMPLETED|0:0|73|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n86306|p2-training|COMPLETED|0:0|48|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n86307|p2-semantics|COMPLETED|0:0|146|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n86308|p2-controller|COMPLETED|0:0|543|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1\n",
+    "stderr": ""
+  },
+  "disk": {
+    "command": [
+      "du",
+      "-sh",
+      "/storage/home/ydk297/projects/poisoning/.venv-editor",
+      "/storage/home/ydk297/projects/poisoning/experiments",
+      "/storage/home/ydk297/.cache/huggingface/hub/models--timbrooks--instruct-pix2pix"
+    ],
+    "exit_code": 0,
+    "stdout": "1.2G\t/storage/home/ydk297/projects/poisoning/.venv-editor\n468M\t/storage/home/ydk297/projects/poisoning/experiments\n2.0G\t/storage/home/ydk297/.cache/huggingface/hub/models--timbrooks--instruct-pix2pix\n",
+    "stderr": ""
+  },
+  "quota": {
+    "command": [
+      "/usr/lpp/mmfs/bin/mmlsquota",
+      "-u",
+      "ydk297",
+      "--block-size",
+      "auto"
+    ],
+    "exit_code": 0,
+    "stdout": "                         Block Limits                                               |     File Limits\nFilesystem Fileset    type         blocks      quota      limit   in_doubt    grace |    files   quota    limit in_doubt    grace  Remarks\nmmfs1      nvme1-hpc  USR          4.694T         5T       5.5T     1.398G     none |  5141597       0        0      181     none \n",
+    "stderr": ""
+  },
+  "queue": {
+    "command": [
+      "squeue",
+      "-u",
+      "ydk297"
+    ],
+    "exit_code": 0,
+    "stdout": "             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)\n",
+    "stderr": ""
+  },
+  "runs": [
+    {
+      "id": "EXP_20261027T045854_00a2bc07659a_phase2_slurm_editor",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T045854_00a2bc07659a_phase2_slurm_editor",
+      "status": "PASS",
+      "job_id": "86292",
+      "git_commit": "1bc230fc4bd6c30527e883a0303ad74538958818",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T045901_48eded21ef7d_phase2_editor_inference",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T045901_48eded21ef7d_phase2_editor_inference",
+      "status": "PASS",
+      "job_id": "86292",
+      "git_commit": "1bc230fc4bd6c30527e883a0303ad74538958818",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T050226_b587248a1238_phase2_slurm_training",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T050226_b587248a1238_phase2_slurm_training",
+      "status": "FAIL",
+      "job_id": "86293",
+      "git_commit": "67f5aeecc4c700b87141f8d4d8baccbf864b6772",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T050233_d1a8189e815b_phase2_generator_lora_smoke",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T050233_d1a8189e815b_phase2_generator_lora_smoke",
+      "status": "FAIL",
+      "job_id": "86293",
+      "git_commit": "67f5aeecc4c700b87141f8d4d8baccbf864b6772",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T050443_d70eeb41829e_phase2_slurm_training",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T050443_d70eeb41829e_phase2_slurm_training",
+      "status": "FAIL",
+      "job_id": "86299",
+      "git_commit": "d88c0e66bc72a09a4644b6cf1aa427df9856fff3",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T050455_62f4806ace20_phase2_generator_lora_smoke",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T050455_62f4806ace20_phase2_generator_lora_smoke",
+      "status": "FAIL",
+      "job_id": "86299",
+      "git_commit": "d88c0e66bc72a09a4644b6cf1aa427df9856fff3",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T050734_4883b0f3fbde_phase2_slurm_vqa_dev",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T050734_4883b0f3fbde_phase2_slurm_vqa_dev",
+      "status": "PASS",
+      "job_id": "86300",
+      "git_commit": "0b2c8e44d36d2e001c9e5f57bd329a88255fc465",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T050746_4556a0cd5c4e_phase2_qwen_baseline_validation",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T050746_4556a0cd5c4e_phase2_qwen_baseline_validation",
+      "status": "PASS",
+      "job_id": "86300",
+      "git_commit": "0b2c8e44d36d2e001c9e5f57bd329a88255fc465",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T051104_149fb4487202_phase2_slurm_training",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T051104_149fb4487202_phase2_slurm_training",
+      "status": "FAIL",
+      "job_id": "86301",
+      "git_commit": "4af6804840c7052fb09b65c9a75fa86987b58a1f",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T051111_9c5d2763200c_phase2_generator_lora_smoke",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T051111_9c5d2763200c_phase2_generator_lora_smoke",
+      "status": "FAIL",
+      "job_id": "86301",
+      "git_commit": "4af6804840c7052fb09b65c9a75fa86987b58a1f",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T051338_de75b22010ca_phase2_slurm_training",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T051338_de75b22010ca_phase2_slurm_training",
+      "status": "FAIL",
+      "job_id": "86302",
+      "git_commit": "1c4e7189976d758b5c494aa3436cc9fe4c9d3670",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T051344_4868aef599e7_phase2_generator_lora_smoke",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T051344_4868aef599e7_phase2_generator_lora_smoke",
+      "status": "FAIL",
+      "job_id": "86302",
+      "git_commit": "1c4e7189976d758b5c494aa3436cc9fe4c9d3670",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T051624_8506a65aa0ca_phase2_slurm_training",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T051624_8506a65aa0ca_phase2_slurm_training",
+      "status": "FAIL",
+      "job_id": "86303",
+      "git_commit": "2bcabf927dd83a0dc8b5b6f87224949d498a31fd",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T051632_b374e74bd043_phase2_generator_lora_smoke",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T051632_b374e74bd043_phase2_generator_lora_smoke",
+      "status": "FAIL",
+      "job_id": "86303",
+      "git_commit": "2bcabf927dd83a0dc8b5b6f87224949d498a31fd",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T051832_ba75b1635cca_phase2_generator_rl_contract",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T051832_ba75b1635cca_phase2_generator_rl_contract",
+      "status": "BLOCKED",
+      "job_id": null,
+      "git_commit": "056a777cab404080fc885509e67f843e2d6e21fb",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T051835_6a0c63595002_phase2_slurm_training",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T051835_6a0c63595002_phase2_slurm_training",
+      "status": "FAIL",
+      "job_id": "86304",
+      "git_commit": "056a777cab404080fc885509e67f843e2d6e21fb",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T051841_f4c308c19fc1_phase2_generator_lora_smoke",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T051841_f4c308c19fc1_phase2_generator_lora_smoke",
+      "status": "FAIL",
+      "job_id": "86304",
+      "git_commit": "056a777cab404080fc885509e67f843e2d6e21fb",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T052236_c5cc0d4d4aab_phase2_slurm_vqa_test",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T052236_c5cc0d4d4aab_phase2_slurm_vqa_test",
+      "status": "PASS",
+      "job_id": "86305",
+      "git_commit": "056a777cab404080fc885509e67f843e2d6e21fb",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T052245_7a312217676f_phase2_qwen_baseline_test",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T052245_7a312217676f_phase2_qwen_baseline_test",
+      "status": "PASS",
+      "job_id": "86305",
+      "git_commit": "056a777cab404080fc885509e67f843e2d6e21fb",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T052537_301c8d9917c9_phase2_slurm_training",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T052537_301c8d9917c9_phase2_slurm_training",
+      "status": "PASS",
+      "job_id": "86306",
+      "git_commit": "cceb467df32c5c7120a348ab512fa944abf4e8dc",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T052543_a20882fb60de_phase2_generator_lora_smoke",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T052543_a20882fb60de_phase2_generator_lora_smoke",
+      "status": "PASS",
+      "job_id": "86306",
+      "git_commit": "cceb467df32c5c7120a348ab512fa944abf4e8dc",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T052704_89747bf85f00_phase2_slurm_semantics",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T052704_89747bf85f00_phase2_slurm_semantics",
+      "status": "PASS",
+      "job_id": "86307",
+      "git_commit": "cceb467df32c5c7120a348ab512fa944abf4e8dc",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T052713_2e70f825d4bd_phase2_semantic_validation",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T052713_2e70f825d4bd_phase2_semantic_validation",
+      "status": "PASS",
+      "job_id": "86307",
+      "git_commit": "cceb467df32c5c7120a348ab512fa944abf4e8dc",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T053035_485bf0d613af_phase2_slurm_controller",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T053035_485bf0d613af_phase2_slurm_controller",
+      "status": "PASS",
+      "job_id": "86308",
+      "git_commit": "09bf28c2ca7f0aa73e7c2c45680502d6570c4ace",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T053043_7b4b5ce3fe61_phase2_real_editor_feedback",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T053043_7b4b5ce3fe61_phase2_real_editor_feedback",
+      "status": "PASS",
+      "job_id": "86308",
+      "git_commit": "09bf28c2ca7f0aa73e7c2c45680502d6570c4ace",
+      "required_files_present": true
+    },
+    {
+      "id": "EXP_20261027T053938_b24f177856e1_phase2_rl_rsi_validation",
+      "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T053938_b24f177856e1_phase2_rl_rsi_validation",
+      "status": "PASS",
+      "job_id": "86308",
+      "git_commit": "09bf28c2ca7f0aa73e7c2c45680502d6570c4ace",
+      "required_files_present": true
+    }
+  ],
+  "qwen_python": "/storage/home/ydk297/projects/poisoning/.venv/bin/python",
+  "editor_python": "/storage/home/ydk297/projects/poisoning/.venv-editor/bin/python",
+  "registry_unique": true,
+  "phase2_all_registered": true,
+  "all_phase2_required_files_present": true,
+  "checkpoint_selection_audit": {
+    "experiment_id": "EXP_20261027T053938_b24f177856e1_phase2_rl_rsi_validation",
+    "loaded_from_disk": true,
+    "selected": "base",
+    "selected_policy_and_optimizer_equal": true,
+    "candidate_policy_differs_from_base": true,
+    "configuration_matches_selection": true,
+    "rejected_trial_cost_retained": true
+  },
+  "feedback_table_audit": {
+    "experiment_id": "EXP_20261027T053043_7b4b5ce3fe61_phase2_real_editor_feedback",
+    "records": 60,
+    "random_uniform_expected_validation_reward": -0.4628590846020314,
+    "automatic_provisional_agreements": 30,
+    "independently_verified_changed_edits": 0,
+    "note": "Derived read-only from saved feedback; original single-draw random baseline and immutable run metrics retained"
+  },
+  "git_status": {
+    "command": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "report_source_commit": "b78323954a5af4ea49e4692cd0382634eaa86c3c"
+}

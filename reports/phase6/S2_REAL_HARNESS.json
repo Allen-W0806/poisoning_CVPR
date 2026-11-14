@@ -1,0 +1,1013 @@
+{
+  "experiment_id": "EXP_20261028T044805_f12f313ebb56_phase6_s2_real_harness",
+  "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261028T044805_f12f313ebb56_phase6_s2_real_harness",
+  "results": {
+    "investigated_real_train_episodes": 8,
+    "new_diagnostic_queries": 32,
+    "gate_unique_train_sources": 24,
+    "investigation_gate_source_overlap": false,
+    "recorded_positive_cases": 24,
+    "injected_metadata_controls": 48,
+    "diagnoses": [
+      {
+        "case_id": "225164001",
+        "numerical_quality_reproduced": true,
+        "observed": [
+          "source identity matches historical evidence",
+          "finite saved trajectory"
+        ],
+        "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+        "unresolved": [
+          "instruction following",
+          "edited factual answer",
+          "independent semantic validity",
+          "strict stochastic continuation"
+        ],
+        "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+      },
+      {
+        "case_id": "172135001",
+        "numerical_quality_reproduced": true,
+        "observed": [
+          "source identity matches historical evidence",
+          "finite saved trajectory"
+        ],
+        "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+        "unresolved": [
+          "instruction following",
+          "edited factual answer",
+          "independent semantic validity",
+          "strict stochastic continuation"
+        ],
+        "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+      },
+      {
+        "case_id": "61527003",
+        "numerical_quality_reproduced": true,
+        "observed": [
+          "source identity matches historical evidence",
+          "finite saved trajectory"
+        ],
+        "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+        "unresolved": [
+          "instruction following",
+          "edited factual answer",
+          "independent semantic validity",
+          "strict stochastic continuation"
+        ],
+        "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+      },
+      {
+        "case_id": "438795001",
+        "numerical_quality_reproduced": true,
+        "observed": [
+          "source identity matches historical evidence",
+          "finite saved trajectory"
+        ],
+        "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+        "unresolved": [
+          "instruction following",
+          "edited factual answer",
+          "independent semantic validity",
+          "strict stochastic continuation"
+        ],
+        "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+      },
+      {
+        "case_id": "460353001",
+        "numerical_quality_reproduced": true,
+        "observed": [
+          "source identity matches historical evidence",
+          "finite saved trajectory"
+        ],
+        "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+        "unresolved": [
+          "instruction following",
+          "edited factual answer",
+          "independent semantic validity",
+          "strict stochastic continuation"
+        ],
+        "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+      },
+      {
+        "case_id": "436464002",
+        "numerical_quality_reproduced": true,
+        "observed": [
+          "source identity matches historical evidence",
+          "finite saved trajectory"
+        ],
+        "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+        "unresolved": [
+          "instruction following",
+          "edited factual answer",
+          "independent semantic validity",
+          "strict stochastic continuation"
+        ],
+        "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+      },
+      {
+        "case_id": "8944000",
+        "numerical_quality_reproduced": true,
+        "observed": [
+          "source identity matches historical evidence",
+          "finite saved trajectory"
+        ],
+        "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+        "unresolved": [
+          "instruction following",
+          "edited factual answer",
+          "independent semantic validity",
+          "strict stochastic continuation"
+        ],
+        "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+      },
+      {
+        "case_id": "352585004",
+        "numerical_quality_reproduced": true,
+        "observed": [
+          "source identity matches historical evidence",
+          "finite saved trajectory"
+        ],
+        "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+        "unresolved": [
+          "instruction following",
+          "edited factual answer",
+          "independent semantic validity",
+          "strict stochastic continuation"
+        ],
+        "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+      }
+    ],
+    "decisions": [
+      {
+        "revision_number": 1,
+        "parent_version": "H0000",
+        "candidate_version": "H0001",
+        "proposal": {
+          "parent_version": "H0000",
+          "candidate": {
+            "name": "ineffective_reordering",
+            "checks": [
+              "decode",
+              "geometry",
+              "content_hash"
+            ],
+            "schema_version": "workflow_program_v1",
+            "max_diagnostics": 8,
+            "memory_mode": "full_evidence",
+            "curriculum": "input_order"
+          },
+          "change": "reorder same checks",
+          "supporting_evidence": {
+            "diagnoses": [
+              {
+                "case_id": "225164001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "172135001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "61527003",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "438795001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "460353001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "436464002",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "8944000",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "352585004",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              }
+            ],
+            "implementation_fact": "geometry calls Image.load before returning"
+          },
+          "expected_effect": "remove duplicate decode work while retaining geometry/content checks",
+          "affected_modules": [
+            "workflow.checks"
+          ],
+          "regression_tests": [
+            "recorded positives",
+            "wrong-size metadata",
+            "wrong-digest metadata"
+          ],
+          "category": "evidence_acquisition_and_validation_orchestration"
+        },
+        "measured_validation": {
+          "accepted": false,
+          "n_sources": 24,
+          "n_case_rows": 72,
+          "parent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "new_errors_on_previously_correct_rows": 0,
+          "unique_sources_with_new_errors": 0,
+          "accuracy_denominator": "72 equally weighted rows, one recorded-positive plus two metadata-negative controls per source",
+          "diagnostic_operation_saving_fraction": 0.0,
+          "parent_resources": {
+            "wall_seconds": 1.0766344238072634,
+            "cpu_seconds": 1.060970814000008,
+            "diagnostic_operations": 216,
+            "bytes_read": 65302776,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          },
+          "candidate_resources": {
+            "wall_seconds": 1.0751307662576437,
+            "cpu_seconds": 1.0594211059999985,
+            "diagnostic_operations": 216,
+            "bytes_read": 65302776,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          },
+          "scope": "recorded file-integrity workflow with explicitly injected metadata controls; no semantic editing claim",
+          "policy": "same accuracy, zero regression, >=20% diagnostic-operation reduction, fixed before execution",
+          "evaluator_definitions_changed": false,
+          "matched_exposure": true
+        },
+        "accepted": false,
+        "actual_evaluation_resources": {
+          "parent": {
+            "wall_seconds": 1.0766344238072634,
+            "cpu_seconds": 1.060970814000008,
+            "diagnostic_operations": 216,
+            "bytes_read": 65302776,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          },
+          "candidate": {
+            "wall_seconds": 1.0751307662576437,
+            "cpu_seconds": 1.0594211059999985,
+            "diagnostic_operations": 216,
+            "bytes_read": 65302776,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          }
+        }
+      },
+      {
+        "revision_number": 2,
+        "parent_version": "H0000",
+        "candidate_version": "H0002",
+        "proposal": {
+          "parent_version": "H0000",
+          "candidate": {
+            "name": "remove_redundant_decode",
+            "checks": [
+              "geometry",
+              "content_hash"
+            ],
+            "schema_version": "workflow_program_v1",
+            "max_diagnostics": 8,
+            "memory_mode": "full_evidence",
+            "curriculum": "input_order"
+          },
+          "change": "remove duplicate decode",
+          "supporting_evidence": {
+            "diagnoses": [
+              {
+                "case_id": "225164001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "172135001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "61527003",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "438795001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "460353001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "436464002",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "8944000",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "352585004",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              }
+            ],
+            "implementation_fact": "geometry calls Image.load before returning"
+          },
+          "expected_effect": "remove duplicate decode work while retaining geometry/content checks",
+          "affected_modules": [
+            "workflow.checks"
+          ],
+          "regression_tests": [
+            "recorded positives",
+            "wrong-size metadata",
+            "wrong-digest metadata"
+          ],
+          "category": "evidence_acquisition_and_validation_orchestration"
+        },
+        "measured_validation": {
+          "accepted": true,
+          "n_sources": 24,
+          "n_case_rows": 72,
+          "parent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "new_errors_on_previously_correct_rows": 0,
+          "unique_sources_with_new_errors": 0,
+          "accuracy_denominator": "72 equally weighted rows, one recorded-positive plus two metadata-negative controls per source",
+          "diagnostic_operation_saving_fraction": 0.33333333333333337,
+          "parent_resources": {
+            "wall_seconds": 1.0758105646818876,
+            "cpu_seconds": 1.0601298000000074,
+            "diagnostic_operations": 216,
+            "bytes_read": 65302776,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          },
+          "candidate_resources": {
+            "wall_seconds": 0.553511843085289,
+            "cpu_seconds": 0.5440209950000003,
+            "diagnostic_operations": 144,
+            "bytes_read": 43535184,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          },
+          "scope": "recorded file-integrity workflow with explicitly injected metadata controls; no semantic editing claim",
+          "policy": "same accuracy, zero regression, >=20% diagnostic-operation reduction, fixed before execution",
+          "evaluator_definitions_changed": false,
+          "matched_exposure": true
+        },
+        "accepted": true,
+        "actual_evaluation_resources": {
+          "parent": {
+            "wall_seconds": 1.0758105646818876,
+            "cpu_seconds": 1.0601298000000074,
+            "diagnostic_operations": 216,
+            "bytes_read": 65302776,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          },
+          "candidate": {
+            "wall_seconds": 0.553511843085289,
+            "cpu_seconds": 0.5440209950000003,
+            "diagnostic_operations": 144,
+            "bytes_read": 43535184,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          }
+        }
+      },
+      {
+        "revision_number": 3,
+        "parent_version": "H0002",
+        "candidate_version": "H0003",
+        "proposal": {
+          "parent_version": "H0002",
+          "candidate": {
+            "name": "regression_drops_identity",
+            "checks": [
+              "geometry"
+            ],
+            "schema_version": "workflow_program_v1",
+            "max_diagnostics": 8,
+            "memory_mode": "full_evidence",
+            "curriculum": "input_order"
+          },
+          "change": "drop content identity check",
+          "supporting_evidence": {
+            "diagnoses": [
+              {
+                "case_id": "225164001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "172135001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "61527003",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "438795001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "460353001",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "436464002",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "8944000",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              },
+              {
+                "case_id": "352585004",
+                "numerical_quality_reproduced": true,
+                "observed": [
+                  "source identity matches historical evidence",
+                  "finite saved trajectory"
+                ],
+                "workflow_observation": "geometry tool already fully decodes; an additional decode check duplicates this work",
+                "unresolved": [
+                  "instruction following",
+                  "edited factual answer",
+                  "independent semantic validity",
+                  "strict stochastic continuation"
+                ],
+                "scope": "same metric recomputation is arithmetic reproducibility, not construct validation"
+              }
+            ],
+            "implementation_fact": "geometry calls Image.load before returning"
+          },
+          "expected_effect": "remove duplicate decode work while retaining geometry/content checks",
+          "affected_modules": [
+            "workflow.checks"
+          ],
+          "regression_tests": [
+            "recorded positives",
+            "wrong-size metadata",
+            "wrong-digest metadata"
+          ],
+          "category": "evidence_acquisition_and_validation_orchestration"
+        },
+        "measured_validation": {
+          "accepted": false,
+          "n_sources": 24,
+          "n_case_rows": 72,
+          "parent_accuracy": 1.0,
+          "candidate_accuracy": 0.6666666666666666,
+          "new_errors_on_previously_correct_rows": 24,
+          "unique_sources_with_new_errors": 24,
+          "accuracy_denominator": "72 equally weighted rows, one recorded-positive plus two metadata-negative controls per source",
+          "diagnostic_operation_saving_fraction": 0.5,
+          "parent_resources": {
+            "wall_seconds": 0.5568894855678082,
+            "cpu_seconds": 0.5471034859999921,
+            "diagnostic_operations": 144,
+            "bytes_read": 43535184,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          },
+          "candidate_resources": {
+            "wall_seconds": 0.5279249362647533,
+            "cpu_seconds": 0.5219920319999911,
+            "diagnostic_operations": 72,
+            "bytes_read": 21767592,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          },
+          "scope": "recorded file-integrity workflow with explicitly injected metadata controls; no semantic editing claim",
+          "policy": "same accuracy, zero regression, >=20% diagnostic-operation reduction, fixed before execution",
+          "evaluator_definitions_changed": false,
+          "matched_exposure": true
+        },
+        "accepted": false,
+        "actual_evaluation_resources": {
+          "parent": {
+            "wall_seconds": 0.5568894855678082,
+            "cpu_seconds": 0.5471034859999921,
+            "diagnostic_operations": 144,
+            "bytes_read": 43535184,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          },
+          "candidate": {
+            "wall_seconds": 0.5279249362647533,
+            "cpu_seconds": 0.5219920319999911,
+            "diagnostic_operations": 72,
+            "bytes_read": 21767592,
+            "model_calls": 0,
+            "gpu_seconds": 0.0
+          }
+        }
+      }
+    ],
+    "ineffective_rejected": true,
+    "regression_rejected": true,
+    "rollback_verified": true,
+    "accepted_workflow": "H0002",
+    "selected_result": {
+      "accepted": true,
+      "n_sources": 24,
+      "n_case_rows": 72,
+      "parent_accuracy": 1.0,
+      "candidate_accuracy": 1.0,
+      "new_errors_on_previously_correct_rows": 0,
+      "unique_sources_with_new_errors": 0,
+      "accuracy_denominator": "72 equally weighted rows, one recorded-positive plus two metadata-negative controls per source",
+      "diagnostic_operation_saving_fraction": 0.33333333333333337,
+      "parent_resources": {
+        "wall_seconds": 1.0758105646818876,
+        "cpu_seconds": 1.0601298000000074,
+        "diagnostic_operations": 216,
+        "bytes_read": 65302776,
+        "model_calls": 0,
+        "gpu_seconds": 0.0
+      },
+      "candidate_resources": {
+        "wall_seconds": 0.553511843085289,
+        "cpu_seconds": 0.5440209950000003,
+        "diagnostic_operations": 144,
+        "bytes_read": 43535184,
+        "model_calls": 0,
+        "gpu_seconds": 0.0
+      },
+      "scope": "recorded file-integrity workflow with explicitly injected metadata controls; no semantic editing claim",
+      "policy": "same accuracy, zero regression, >=20% diagnostic-operation reduction, fixed before execution",
+      "evaluator_definitions_changed": false,
+      "matched_exposure": true
+    },
+    "total_search_resources": {
+      "wall_seconds": 5.820236200466752,
+      "cpu_seconds": 5.723810066000006,
+      "diagnostic_operations": 1040,
+      "bytes_read": 332716553,
+      "model_calls": 0,
+      "gpu_seconds": 0.0
+    },
+    "new_model_calls": 0,
+    "new_optimizer_updates": 0,
+    "natural_image_semantic_improvement": null,
+    "scope": "real saved workflow and file-integrity efficiency only; semantic causes unresolved",
+    "resources": {
+      "wall_seconds": 6.561234751716256,
+      "cpu_seconds": 5.859969115,
+      "gpu_seconds": 0,
+      "model_calls": 0
+    },
+    "source_provenance": [
+      {
+        "experiment_id": "EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL",
+        "manifest": {
+          "experiment_id": "EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL",
+          "created_at": "2026-10-27T17:01:21.319892+00:00",
+          "seed": 42,
+          "hyperparameters": {
+            "phase": 4,
+            "seed": 42,
+            "logical_batch_size": 10,
+            "physical_micro_batch_size": 1,
+            "gradient_accumulation_steps": 10,
+            "precision": "bf16",
+            "adapter_compute_precision": "fp32",
+            "cfg_execution": "sequential",
+            "bf16_reduced_precision_reduction": false,
+            "lora_rank": 8,
+            "lora_alpha": 16,
+            "optimizer": "adamw",
+            "learning_rate": 1e-05,
+            "weight_decay": 0.0,
+            "max_grad_norm": 1.0,
+            "initial_optimizer_updates": 8,
+            "gradient_checkpointing": false,
+            "checkpoint_every_update": true,
+            "algorithm": "DDPO_score_function_single_on_policy_pass",
+            "num_inference_steps": 10,
+            "eta": 1.0,
+            "advantage_baseline": 0.0,
+            "advantage_scale": 1.0,
+            "reward": {
+              "semantic_weight": 1.0,
+              "answer_consistency_weight": 0.5,
+              "distortion_weight": 0.2,
+              "compute_cost_weight": 0.1,
+              "uncertainty_weight": 1.0,
+              "normalization": "fixed_reference",
+              "backdoor_asr_training": false
+            },
+            "arm": "rl",
+            "validation_indices": [
+              66,
+              187,
+              101,
+              193,
+              111,
+              121,
+              13,
+              2,
+              64,
+              44
+            ],
+            "training_indices": [
+              776,
+              507,
+              895,
+              922,
+              33,
+              483,
+              85,
+              750,
+              354,
+              523,
+              184,
+              809,
+              418,
+              615,
+              682,
+              501,
+              760,
+              49,
+              732,
+              336,
+              450,
+              790,
+              350,
+              467,
+              622,
+              476,
+              614,
+              554,
+              365,
+              770,
+              630,
+              940,
+              797,
+              496,
+              924,
+              369,
+              596,
+              720,
+              53,
+              426,
+              56,
+              264,
+              772,
+              185,
+              466,
+              789,
+              174,
+              150,
+              741,
+              113,
+              428,
+              965,
+              18,
+              189,
+              414,
+              589,
+              666,
+              763,
+              221,
+              586,
+              581,
+              299,
+              638,
+              386,
+              364,
+              879,
+              334,
+              16,
+              202,
+              1,
+              38,
+              290,
+              493,
+              247,
+              506,
+              896,
+              713,
+              891,
+              76,
+              911
+            ],
+            "evaluation_seed_formula": "torch.randint stream initialized by seed*10000; per-image seeds saved",
+            "evaluation_updates": [
+              2,
+              4,
+              6,
+              8
+            ],
+            "continuation": "fresh initialization only; no restart acceptance inferred",
+            "rsi_rule": "two unresolved positive-gain looks then one LR halving"
+          },
+          "hostname": "epyc09",
+          "gpu": "NVIDIA A100 80GB PCIe",
+          "git_commit": "ffec8ac18244bba8bfb79f1719ea5ac6c665e930",
+          "slurm_job_id": "86434",
+          "source_tree_clean_at_creation": true,
+          "parent_experiment": "EXP_20261027T170109_2a9eb9728d5b_phase4_slurm_rl42",
+          "output_paths": {
+            "root": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL"
+          },
+          "model_identifiers": [
+            "timbrooks/instruct-pix2pix",
+            "Qwen/Qwen3-VL-2B-Instruct"
+          ],
+          "model_revisions": {
+            "timbrooks/instruct-pix2pix": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+            "Qwen/Qwen3-VL-2B-Instruct": "89644892e4d85e24eaac8bacfd4f463576704203"
+          },
+          "dataset_version": "VQAv2-train2014-2017-04-26",
+          "split_hashes": {
+            "train": "954006468b9585ef0fc49796cec6298cddb5148a346fc3745cb49c87ec90eae8",
+            "validation": "14274c3e52e7b835f607d4c526a28c8f7bab1198b1f53d8a632f10cce0023044"
+          },
+          "status": "CREATED",
+          "config_sha256": "183e0224660afc3981351a891d467773a56a240f37247e9af3c41b66a2d4b696"
+        }
+      }
+    ],
+    "audit_context_versions": {
+      "dataset": "vqav2_content_v2",
+      "reward": "reward_compat_v2_diagnostic_only, not released or executed as training reward"
+    }
+  },
+  "output_manifest_sha256": "c31fed816ee0af07b62f61d28befc39ed5836960a5ba08dcda594a4e1953b1d8"
+}

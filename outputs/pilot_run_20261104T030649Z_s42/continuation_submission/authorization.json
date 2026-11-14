@@ -1,0 +1,13 @@
+{
+  "cumulative_cap_GPU_seconds": 5400,
+  "max_continuations": 1,
+  "user_authorization": "User explicitly approved checkpoint continuation with cumulative single-GPU cap 90 minutes",
+  "created_UTC": "2026-11-04T04:03:21.099473+00:00",
+  "previous_job": "88916",
+  "previous_actual_GPU_seconds": 3312,
+  "new_reservation_GPU_seconds": 1800,
+  "worst_case_total_GPU_seconds": 5112,
+  "new_GPU_count": 1,
+  "scientific_settings_unchanged": true,
+  "worker_SHA256": "99767b2a802dfda6c4530c50ffa5bc5e9e55a1a140538f85ee93d2844c7c02f9"
+}

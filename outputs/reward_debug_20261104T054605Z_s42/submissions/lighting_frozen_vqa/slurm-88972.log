@@ -1,0 +1,6 @@
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"group": "pixel_source", "n": 16, "score": 0.8125}
+{"group": "frozen", "n": 16, "score": 0.6875}
+{"group": "ddpo_only", "n": 16, "score": 0.6875}
+{"group": "rule_rsi", "n": 16, "score": 0.6875}
+{"group": "rl_rsi", "n": 16, "score": 0.6875}

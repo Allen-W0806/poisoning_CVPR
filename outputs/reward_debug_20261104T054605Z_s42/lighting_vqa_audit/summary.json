@@ -1,0 +1,59 @@
+{
+  "status": "COMPLETED",
+  "groups": {
+    "pixel_source": {
+      "n": 16,
+      "source_answer_accuracy": 0.8125,
+      "source_prediction_agreement": 1.0
+    },
+    "frozen": {
+      "n": 16,
+      "source_answer_accuracy": 0.6875,
+      "source_prediction_agreement": 0.75
+    },
+    "ddpo_only": {
+      "n": 16,
+      "source_answer_accuracy": 0.6875,
+      "source_prediction_agreement": 0.75
+    },
+    "rule_rsi": {
+      "n": 16,
+      "source_answer_accuracy": 0.6875,
+      "source_prediction_agreement": 0.75
+    },
+    "rl_rsi": {
+      "n": 16,
+      "source_answer_accuracy": 0.6875,
+      "source_prediction_agreement": 0.8125
+    },
+    "fixed": {
+      "n": 16,
+      "source_answer_accuracy": 0.6875,
+      "source_prediction_agreement": 0.75,
+      "equivalent_to": "frozen",
+      "physical_queries": 0
+    }
+  },
+  "model": {
+    "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+    "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "dtype": "torch.bfloat16",
+    "device": "cuda",
+    "padding_side": "left",
+    "image_size": {
+      "shortest_edge": 4096,
+      "longest_edge": 262144
+    },
+    "load_seconds": 8.262054505059496,
+    "max_new_tokens": 32,
+    "do_sample": false,
+    "system_prompt": "Answer the question using only a short word or phrase. Do not include an explanation.",
+    "model_calls": 80,
+    "samples": 80,
+    "frozen": true
+  },
+  "scope": "additional editing-quality diagnostic, not victim fine-tuning or ASR",
+  "ASR": "NOT TESTED",
+  "Delta_Clean": "NOT TESTED",
+  "elapsed_seconds": 16.86715703899972
+}

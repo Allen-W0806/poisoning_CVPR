@@ -1,0 +1,10 @@
+{
+  "PPTX_native_charts": 1,
+  "embedded_workbooks": 1,
+  "embedded_media": 0,
+  "PDF_pages": 1,
+  "PDF_bitmap_objects": 0,
+  "delivered_SHA256": "35c34b8863d01e2019f6792f45320a48910ee6736677c7dba3290286dadb3e9f",
+  "PowerPoint_application_open_test": "NOT PERFORMED",
+  "plot_rounding_max_abs": 4.509935341845406e-10
+}

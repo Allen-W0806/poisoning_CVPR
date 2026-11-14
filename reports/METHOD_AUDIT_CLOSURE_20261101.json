@@ -1,0 +1,67 @@
+{
+  "run_id": "method_code_audit_20261101T0510Z_v1",
+  "updated_UTC": "2026-11-01T05:25:12.799177+00:00",
+  "scientific_gate": "NO-GO",
+  "jobs": [
+    {
+      "job_id": "88083",
+      "state": "COMPLETED",
+      "start_EDT": "2026-11-01T01:08:44",
+      "end_EDT": "2026-11-01T01:08:55",
+      "elapsed_seconds": 11,
+      "gpu_seconds": 0,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "88084",
+      "state": "COMPLETED",
+      "start_EDT": "2026-11-01T01:10:02",
+      "end_EDT": "2026-11-01T01:10:37",
+      "elapsed_seconds": 35,
+      "gpu_seconds": 35,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "88085",
+      "state": "COMPLETED",
+      "start_EDT": "2026-11-01T01:16:53",
+      "end_EDT": "2026-11-01T01:16:56",
+      "elapsed_seconds": 3,
+      "gpu_seconds": 0,
+      "exit_code": "0:0"
+    },
+    {
+      "job_id": "88090",
+      "state": "COMPLETED",
+      "start_EDT": "2026-11-01T01:20:32",
+      "end_EDT": "2026-11-01T01:20:34",
+      "elapsed_seconds": 2,
+      "gpu_seconds": 0,
+      "exit_code": "0:0"
+    }
+  ],
+  "budget": {
+    "cap": 3600,
+    "prior": 2246,
+    "new": 35,
+    "consumed": 2281,
+    "reserved": 0,
+    "remaining": 1319,
+    "scope": "validation-only subtotal including all earlier failures, not lifetime whole-project cost"
+  },
+  "local_VJP": "PASS_LOCAL_VJP_ONLY",
+  "full_graph_BF16_restart": "NOT VALIDATED",
+  "independent_edited_labels": 0,
+  "actual_task_learning": "NOT VALIDATED",
+  "scientific_improvement": "NOT VALIDATED",
+  "four_arm_image_training": "BLOCKED_NOT_LAUNCHED",
+  "monitor": {
+    "method": "slurm_cpu_successor",
+    "last_success_UTC": "2026-11-01T04:32:51.929261+00:00",
+    "next_job_id": "88064",
+    "next_due_UTC": "2026-11-01T06:32:35+00:00",
+    "scheduler_evidence": "88064|PENDING|2026-11-01T01:32:35|poisoning-monitor-v1:f916f24e0de6:ec957b65b56e40c1b1d83b61080d5d4b",
+    "duplicate_created": false
+  },
+  "tensor_integrity_files": 27
+}

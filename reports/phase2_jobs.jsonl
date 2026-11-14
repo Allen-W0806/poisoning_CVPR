@@ -1,0 +1,12 @@
+{"job_id": "86292", "task": "editor", "reserved_seconds": 900, "parent_run": "EXP_20261027T045854_00a2bc07659a_phase2_slurm_editor"}
+{"job_id": "86293", "task": "training", "reserved_seconds": 1200, "parent_run": "EXP_20261027T050226_b587248a1238_phase2_slurm_training"}
+{"job_id": "86299", "task": "training", "reserved_seconds": 900, "parent_run": "EXP_20261027T050443_d70eeb41829e_phase2_slurm_training"}
+{"job_id": "86300", "task": "vqa_dev", "reserved_seconds": 900, "parent_run": "EXP_20261027T050734_4883b0f3fbde_phase2_slurm_vqa_dev"}
+{"job_id": "86301", "task": "training", "reserved_seconds": 600, "parent_run": "EXP_20261027T051104_149fb4487202_phase2_slurm_training"}
+{"job_id": "86302", "task": "training", "reserved_seconds": 600, "parent_run": "EXP_20261027T051338_de75b22010ca_phase2_slurm_training"}
+{"job_id": "86303", "task": "training", "reserved_seconds": 600, "parent_run": "EXP_20261027T051624_8506a65aa0ca_phase2_slurm_training"}
+{"job_id": "86304", "task": "training", "reserved_seconds": 600, "parent_run": "EXP_20261027T051835_6a0c63595002_phase2_slurm_training"}
+{"job_id": "86305", "task": "vqa_test", "reserved_seconds": 900, "parent_run": "EXP_20261027T052236_c5cc0d4d4aab_phase2_slurm_vqa_test"}
+{"job_id": "86306", "task": "training", "reserved_seconds": 600, "parent_run": "EXP_20261027T052537_301c8d9917c9_phase2_slurm_training"}
+{"job_id": "86307", "task": "semantics", "reserved_seconds": 900, "parent_run": "EXP_20261027T052704_89747bf85f00_phase2_slurm_semantics"}
+{"job_id": "86308", "task": "controller", "reserved_seconds": 900, "parent_run": "EXP_20261027T053035_485bf0d613af_phase2_slurm_controller"}

@@ -1,0 +1,236 @@
+{
+  "checked_UTC": "2026-11-14T01:35:03.282779+00:00",
+  "source_files": [
+    {
+      "path": "H:\\Project\\Poisoning\\src\\rl\\diffusion_policy.py",
+      "SHA256": "0e8a0d32275ea994e2c76076a4a4c652776f01edff88a5a479f1d3fd157063e2",
+      "syntax_parse": "PASS",
+      "same_as_prior_run_source_snapshot": true,
+      "functions": [
+        {
+          "name": "fp32_adapter_linear",
+          "line": 11
+        },
+        {
+          "name": "cfg_inputs",
+          "line": 17
+        },
+        {
+          "name": "guided_prediction",
+          "line": 21
+        },
+        {
+          "name": "__init__",
+          "line": 26
+        },
+        {
+          "name": "condition",
+          "line": 52
+        },
+        {
+          "name": "predict",
+          "line": 61
+        },
+        {
+          "name": "sample",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "path": "H:\\Project\\Poisoning\\src\\rl\\diffusion_trajectory.py",
+      "SHA256": "b8815a143aaca90bbed6d5e15cef6ee6c840ac682f8e51466bd6bb5f8b77b501",
+      "syntax_parse": "PASS",
+      "same_as_prior_run_source_snapshot": true,
+      "functions": [
+        {
+          "name": "transition",
+          "line": 10
+        },
+        {
+          "name": "assert_fresh",
+          "line": 53
+        },
+        {
+          "name": "assert_fresh_batch",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "path": "H:\\Project\\Poisoning\\src\\mini_pilot\\engine.py",
+      "SHA256": "a42195d13e4639aa2ea8454743063b5818f08d3f4fda74219955d41ca6cfcb4f",
+      "syntax_parse": "PASS",
+      "same_as_prior_run_source_snapshot": true,
+      "functions": [
+        {
+          "name": "frozen_digest",
+          "line": 22
+        },
+        {
+          "name": "cpu_copy",
+          "line": 32
+        },
+        {
+          "name": "compare_trees",
+          "line": 42
+        },
+        {
+          "name": "predict",
+          "line": 18
+        },
+        {
+          "name": "walk",
+          "line": 46
+        },
+        {
+          "name": "__init__",
+          "line": 79
+        },
+        {
+          "name": "update",
+          "line": 98
+        },
+        {
+          "name": "state",
+          "line": 167
+        },
+        {
+          "name": "save",
+          "line": 176
+        },
+        {
+          "name": "restore",
+          "line": 188
+        },
+        {
+          "name": "witness",
+          "line": 210
+        }
+      ]
+    },
+    {
+      "path": "H:\\Project\\Poisoning\\src\\mini_pilot\\controller_v3.py",
+      "SHA256": "538933bf3243d24947ac4424ca7ced07bf90da881a8ad96c3b98135752a12dd3",
+      "syntax_parse": "PASS",
+      "same_as_prior_run_source_snapshot": true,
+      "functions": [
+        {
+          "name": "apply_rsi_action",
+          "line": 19
+        },
+        {
+          "name": "controller_state",
+          "line": 32
+        },
+        {
+          "name": "__init__",
+          "line": 10
+        },
+        {
+          "name": "forward",
+          "line": 15
+        },
+        {
+          "name": "__init__",
+          "line": 39
+        },
+        {
+          "name": "choose",
+          "line": 48
+        },
+        {
+          "name": "learn",
+          "line": 56
+        },
+        {
+          "name": "state_dict",
+          "line": 78
+        },
+        {
+          "name": "load_state_dict",
+          "line": 84
+        }
+      ]
+    },
+    {
+      "path": "H:\\Project\\Poisoning\\src\\training\\clean_vlm_pipeline.py",
+      "SHA256": "528aedd65e8cb7c456d639d39bd79b6d6f102c436cc72ba48cf3edfcb3649b07",
+      "syntax_parse": "PASS",
+      "same_as_prior_run_source_snapshot": true,
+      "functions": [
+        {
+          "name": "rng_state",
+          "line": 16
+        },
+        {
+          "name": "restore_rng",
+          "line": 21
+        },
+        {
+          "name": "parameter_hash",
+          "line": 26
+        },
+        {
+          "name": "response_labels",
+          "line": 35
+        },
+        {
+          "name": "attach_language_lora",
+          "line": 45
+        },
+        {
+          "name": "__init__",
+          "line": 56
+        },
+        {
+          "name": "example",
+          "line": 68
+        },
+        {
+          "name": "update",
+          "line": 80
+        },
+        {
+          "name": "state",
+          "line": 104
+        },
+        {
+          "name": "save",
+          "line": 109
+        },
+        {
+          "name": "restore",
+          "line": 116
+        },
+        {
+          "name": "evaluate",
+          "line": 129
+        }
+      ]
+    },
+    {
+      "path": "H:\\Project\\Poisoning\\src\\training\\paired_generator_data.py",
+      "SHA256": "2dd55a1adfd4af2d19257f8b012b835777e9ad72304e8a557ce535bd38616c20",
+      "syntax_parse": "PASS",
+      "same_as_prior_run_source_snapshot": "NOT_IN_TRAINED_SNAPSHOT",
+      "functions": [
+        {
+          "name": "load_training_pair",
+          "line": 9
+        }
+      ]
+    }
+  ],
+  "existing_clean_run_evidence": {
+    "path": "H:\\Project\\Poisoning\\outputs\\overnight_benign_20261112T051015Z\\final_read_only_audit.json",
+    "SHA256": "c397fab949359eb3e380d84e64ebc772835a11010eb560d4f266913e8f034e0a",
+    "audit_status": "PASS_READ_ONLY_FINAL_COHORT_AUDIT",
+    "evidence_checked_UTC": "2026-11-12T08:03:24.591206+00:00",
+    "new_training_this_turn": false
+  },
+  "attachment_module_imports_detected_in_src_scripts": [],
+  "scope_of_reference_search": "rg of literal asr_poison_rl or generate_poison_batch in src/scripts .py; no matches",
+  "GPU_jobs_submitted": 0,
+  "modified_training_sources": []
+}

@@ -1,0 +1,122 @@
+{
+  "run": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu",
+  "tests": [
+    {
+      "test": "A",
+      "name": "environment",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python scripts/check_environment.py --output /storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/environment_probe.json",
+      "exit_code": 0,
+      "wall_seconds": 5.558764381916262,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_A_environment.log"
+    },
+    {
+      "test": "C",
+      "name": "dataset",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python scripts/smoke_dataset.py",
+      "exit_code": 0,
+      "wall_seconds": 2.7357002949574962,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_C_dataset.log"
+    },
+    {
+      "test": "D",
+      "name": "editor",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python scripts/smoke_editor.py",
+      "exit_code": 0,
+      "wall_seconds": 2.699079890968278,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_D_editor.log"
+    },
+    {
+      "test": "E",
+      "name": "rl",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python scripts/smoke_rl.py --device cuda",
+      "exit_code": 0,
+      "wall_seconds": 5.029876883025281,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_E_rl.log"
+    },
+    {
+      "test": "F",
+      "name": "rsi",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python scripts/smoke_rsi.py",
+      "exit_code": 0,
+      "wall_seconds": 2.4493285010103136,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_F_rsi.log"
+    },
+    {
+      "test": "G",
+      "name": "evaluation_units",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python -m unittest tests.test_evaluation_reward -v",
+      "exit_code": 0,
+      "wall_seconds": 0.22501293709501624,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_G_evaluation_units.log"
+    },
+    {
+      "test": "G_SECURITY",
+      "name": "security_fixture",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python scripts/run_evaluation.py --fixture tests/fixtures/security_synthetic.json --fixture-id synthetic-observations-v1 --synthetic",
+      "exit_code": 0,
+      "wall_seconds": 2.438587559037842,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_G_SECURITY_security_fixture.log"
+    },
+    {
+      "test": "G_ORACLE",
+      "name": "clean_fixture",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python scripts/run_clean_baseline.py --oracle-fixture",
+      "exit_code": 0,
+      "wall_seconds": 5.6829673669999465,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_G_ORACLE_clean_fixture.log"
+    },
+    {
+      "test": "H",
+      "name": "logging",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python scripts/smoke_logging.py",
+      "exit_code": 0,
+      "wall_seconds": 2.9957500939490274,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_H_logging.log"
+    },
+    {
+      "test": "UNIT",
+      "name": "all_units",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python -m unittest discover -v",
+      "exit_code": 0,
+      "wall_seconds": 3.316930280998349,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_UNIT_all_units.log"
+    },
+    {
+      "test": "B",
+      "name": "qwen",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python scripts/smoke_qwen.py --device cuda",
+      "exit_code": 0,
+      "wall_seconds": 11.072290641022846,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_B_qwen.log"
+    },
+    {
+      "test": "G_REAL",
+      "name": "clean_vqav2",
+      "status": "PASS",
+      "command": "/storage/home/ydk297/projects/poisoning/.venv/bin/python scripts/run_clean_baseline.py --device cuda --limit 10",
+      "exit_code": 0,
+      "wall_seconds": 12.477558487909846,
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu/test_G_REAL_clean_vqav2.log"
+    },
+    {
+      "test": "I",
+      "name": "slurm",
+      "status": "PASS",
+      "command": "python scripts/submit_smoke.py",
+      "job_id": "86260",
+      "output_path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261027T035054_8851028cc7e5_slurm_smoke_gpu",
+      "reason": "Executed inside allocated GPU job"
+    }
+  ]
+}

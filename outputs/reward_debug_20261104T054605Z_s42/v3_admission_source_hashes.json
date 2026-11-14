@@ -1,0 +1,9 @@
+{
+  "train_lighting_v3.py": "ff2e6fcbcb0e6b80ee3fec1c7cc1e74648adda11fb63af5a7d095bac88840280",
+  "src/mini_pilot/lighting_reward_v3.py": "479e0713562dd5afd7f431902e14b0fae60e087dfca5fa2ea0817429c0735e42",
+  "src/mini_pilot/lighting_reward_v2.py": "367db68f6d6c9667fb7801b257250a003a9222b49b84f113684505879d8ad23c",
+  "src/mini_pilot/reporting_v3.py": "d42c05b6d179b9ed58885ed4ea03b01f0ea2b1674a19f1afc689b58fecb5e04f",
+  "src/mini_pilot/controller_v3.py": "39496f8e1fccef9764a40d170fe032287ab9bcab14a09dfb320a0667cf5691fd",
+  "scripts/calibrate_lighting_v3.py": "f49d53818913556c35fa448c79cb8c9610f75d114c683bb4a97c67d7d2ab65dc",
+  "docs/REWARD_DEBUG_20261104.md": "1e3b3f7d0ee7790fd0fe7e3f3c7b1d3fb009e7c77e2007356f26b5ef26f2d163"
+}

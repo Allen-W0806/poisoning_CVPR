@@ -1,0 +1,11 @@
+{
+  "skill": "result-to-claim",
+  "run_id": "2026-11-04_run01",
+  "started_at": "2026-11-04T11:47:51.6473130Z",
+  "executor": "codex",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "project_dir": "H:\\Project\\Poisoning",
+  "integrity_status": "unavailable"
+}

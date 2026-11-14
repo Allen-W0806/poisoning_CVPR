@@ -1,0 +1,52 @@
+{
+  "canonical_commit": "534dd80a80d6f86a0b9d131e5b180e50576fccb3",
+  "source_tree_clean": true,
+  "gpu_allocated_seconds": 1610,
+  "gpu_budget_seconds": 7200,
+  "batch10_smoke_id": "EXP_20261027T143506_e1db622c6126_phase3_generator_rl_smoke",
+  "batch10_training_updates": 3,
+  "batch10_full_status": "FAIL",
+  "generator_single_update_full_pass": "EXP_20261027T143134_4f17668ff54a_phase3_generator_rl_one",
+  "strict_batch10_restart_adapter_difference": 2.8720805858029053e-06,
+  "sampling_accounting": {
+    "source_images": 10,
+    "training_trajectories": 30,
+    "restart_trajectories": 10,
+    "seed_control_extra_generations": 1,
+    "total_generations": 41,
+    "transitions_per_generation": 10,
+    "training_backward_transitions": 300,
+    "restart_backward_transitions": 100
+  },
+  "qwen_model_calls_observed": 81,
+  "unet_model_calls_derived": 2442,
+  "unet_count_scope": "Derived logical API calls: 41*10*3 sampling + 40*10*3 training +4*3 conditioning/reward probes. Final counter was not persisted after failed restart assertion. No activation-checkpoint recomputations in this config.",
+  "human_verified_changed_edits": 0,
+  "reviewed_pairs_unverified": 10,
+  "canonical_regression_tests_passed": 52,
+  "monitor_status": {
+    "timestamp": "2026-10-27T15:09:11.709241+00:00",
+    "status": "COMPLETED_WITH_FINDINGS",
+    "tracked_experiments": 86,
+    "completed_since_previous": [],
+    "next_scheduled_check": "2026-10-27T16:32:35+00:00",
+    "next_job_id": "86410",
+    "remaining_blockers": [
+      "Batch10 generator RL strict continuation not fully validated",
+      "Changed natural-image semantics await independent review",
+      "No scientific RSI advantage established"
+    ],
+    "idle_no_research_submission": true,
+    "latest_json": "/storage/home/ydk297/projects/poisoning/reports/monitoring/CHECK_20261027T150913_100997_55d3ed.json",
+    "latest_report": "/storage/home/ydk297/projects/poisoning/reports/monitoring/CHECK_20261027T150913_100997_55d3ed.md",
+    "active_experiment_ids": [],
+    "problems": 27,
+    "automatic_fixes": 0,
+    "blocked_actions": 2,
+    "automatic_recovery_attempts": 0,
+    "new_experiment_ids": []
+  },
+  "no_new_gpu_job_on_idle_monitor": true,
+  "retained_phase3_bytes": 515947616,
+  "registry_unique": true
+}

@@ -1,0 +1,18 @@
+{
+  "status": "FAILED",
+  "started": 1793772146.122772,
+  "free_before": 282713546293248,
+  "C_drive_bytes": 0,
+  "estimated_model_data_env_bytes": 20000000000,
+  "models": {},
+  "archive_SHA256": "15b88ffc5e030d7e0e4aa39aae3d5b93817cde16c8918dec74073f52d1d7ade2",
+  "archive_entries": 20728,
+  "extracted_bytes": 529758086,
+  "top_paths": [
+    "__MACOSX",
+    "data_VLM_poisoning"
+  ],
+  "failure": "RuntimeError: Official archive schema differs from README",
+  "free_after": 282711759519744,
+  "elapsed_seconds": 29.433154106140137
+}

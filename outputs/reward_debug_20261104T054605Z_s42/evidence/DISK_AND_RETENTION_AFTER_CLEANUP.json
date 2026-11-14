@@ -1,0 +1,51 @@
+{
+  "UTC": "2026-11-04T12:08:55.5983989Z",
+  "local_campaign_files": 623,
+  "local_campaign_bytes": 143401237.0,
+  "largest_local_artifacts": [
+    {
+      "path": "figures\\reward_debug_editable_figures.pptx",
+      "bytes": 37704822
+    },
+    {
+      "path": "figures\\final_editing_assessment_full16.pdf",
+      "bytes": 5579344
+    },
+    {
+      "path": "vizwiz\\scores_0.jsonl",
+      "bytes": 3725268
+    },
+    {
+      "path": "vizwiz\\scores_50.jsonl",
+      "bytes": 3724626
+    },
+    {
+      "path": "submissions\\shadowcast_poison_pathfix\\slurm-88953.log",
+      "bytes": 3515943
+    }
+  ],
+  "cluster_retained_tensor_files": 45,
+  "cluster_retained_tensor_bytes": 4290820716.0,
+  "cluster_Shadowcast_dataset_bytes": 594423100,
+  "cluster_VizWiz_dataset_bytes": 3992543771,
+  "cluster_isolated_Shadowcast_environment_bytes": 3714826721,
+  "new_Shadowcast_model_snapshot_bytes_from_resource_receipts": 15235031485,
+  "C_model_or_dataset_download_bytes_this_run": 0,
+  "local_run_scratch_absent": true,
+  "remote_scratch_deleted_bytes": 232432778,
+  "drives": [
+    {
+      "drive": "C:\\",
+      "type": "Fixed",
+      "available_bytes": 59194966016,
+      "total_bytes": 279168675840
+    },
+    {
+      "drive": "H:\\",
+      "type": "Fixed",
+      "available_bytes": 229222207488,
+      "total_bytes": 495431184384
+    }
+  ],
+  "selected_manifest_SHA256": "da30046285c7dac40ebaa874f1eb25d5e1c38f263eb8b256b08915ecfa98b0f0"
+}

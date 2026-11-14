@@ -1,0 +1,46 @@
+{
+  "config_paths": {
+    "M0": "/storage/home/ydk297/projects/poisoning/configs/phase5/M0.yaml",
+    "M1": "/storage/home/ydk297/projects/poisoning/configs/phase5/M1.yaml",
+    "M2": "/storage/home/ydk297/projects/poisoning/configs/phase5/M2.yaml",
+    "M3": "/storage/home/ydk297/projects/poisoning/configs/phase5/M3.yaml",
+    "M4": "/storage/home/ydk297/projects/poisoning/configs/phase5/M4.yaml",
+    "M5": "/storage/home/ydk297/projects/poisoning/configs/phase5/M5.yaml"
+  },
+  "readiness": {
+    "independent_editing_validity": false,
+    "validated_training_reward": false,
+    "content_disjoint_splits": true,
+    "active_harness_tests": true,
+    "conventional_scheduler_baseline": true,
+    "pre_intervention_comparability": false,
+    "private_gate_isolation": false,
+    "frozen_resource_protocol": true
+  },
+  "overall_decision": "NO-GO",
+  "resource_estimate": {
+    "type": "planning_estimate_not_an_allocation",
+    "historical_gpu_seconds_per_8update_run": [
+      3227,
+      3211,
+      2707,
+      3216
+    ],
+    "historical_validation_seconds_per_observation_median": 15.777721368474886,
+    "scenario": {
+      "seeds": 3,
+      "trained_arms": 5,
+      "updates_per_arm": 8,
+      "development_sources": 64,
+      "gate_sources": 64,
+      "attempts_per_evolution_arm": 2
+    },
+    "trained_plus_development_gpu_hours": 27.58953256496073,
+    "frozen_generation_gpu_hours": 0.8414784729853273,
+    "paired_gate_gpu_hours": 6.731827783882618,
+    "subtotal_gpu_hours": 35.16283882182868,
+    "with_20percent_planning_overhead_gpu_hours": 42.19540658619441,
+    "limits": "Old automatic-verifier runtime only. Independent human review labor and future evaluator/model-call behavior are not measured. No clean-target fine-tuning cost estimate is asserted.",
+    "next_authorized_engineering_gpu_hours": 0
+  }
+}

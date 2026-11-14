@@ -1,0 +1,79 @@
+{
+  "audit_skill": "experiment-audit",
+  "verdict": "WARN",
+  "reason_code": "single_seed_proxy_scope_and_corrected_training_not_run",
+  "summary": "Artifact-level engineering results reproduced; editing efficacy and RSI unverified.",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "reviewer_family": "openai",
+  "executor_model": "codex",
+  "executor_family": "openai",
+  "agent_id": "/root/benign_integrity_review",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "trace_path": "experiments\\benign_ddpo_audit_20261111_v1\\REVIEW_TRACE.md",
+  "generated_at": "2026-11-12T03:20:11.206196+00:00",
+  "date": "2026-11-11",
+  "audited_input_hashes": {
+    "src/mini_pilot/benign_validation.py": "sha256:a7da2eebd7533fef9a1032802452839a6ea55fbdcd29d3b7c55cfd687d4870a8",
+    "src/mini_pilot/engine.py": "sha256:a42195d13e4639aa2ea8454743063b5818f08d3f4fda74219955d41ca6cfcb4f",
+    "src/rl/diffusion_policy.py": "sha256:0e8a0d32275ea994e2c76076a4a4c652776f01edff88a5a479f1d3fd157063e2",
+    "src/rl/diffusion_trajectory.py": "sha256:b8815a143aaca90bbed6d5e15cef6ee6c840ac682f8e51466bd6bb5f8b77b501",
+    "src/training/generator_adapter.py": "sha256:0f4b3733417566407c7353db2213c2a56787bd7353f5deee90dffef0b9fec881",
+    "scripts/run_benign_ddpo_minimal.py": "sha256:bd1d9c10a673cddaa47c3e5236feead7bb9a8ebc54d59495fa538759b52e0981",
+    "scripts/test_benign_ddpo_audit.py": "sha256:14a71b6b18070b6bc0617b1d5e583799ad25e42b50e06a9cdda710afdb413b29",
+    "tests/test_benign_ddpo_audit.py": "sha256:c88bee11b7709a0abccf4526defb3cdda39ea0e0421797ce5bd82f397f88a368",
+    "configs/benign_ddpo_minimal.json": "sha256:e0ab8b7a660a510ad15249a6e0d6ef29a882ff642137b40d180d48d04a2ad8a9",
+    "experiments/benign_ddpo_audit_20261111_v1/remote/gpu/status.json": "sha256:87f4524944fe3f85dc76e14d9f1bbdbe679324883e8b0d6734348c0e016e28e9",
+    "experiments/benign_ddpo_audit_20261111_v1/remote/gpu/source_manifest.json": "sha256:24bf7a8fb99c06c715f36d2e51d748c2b6b226da2d9985adb39b8bda016315d1",
+    "experiments/benign_ddpo_audit_20261111_v1/remote/gpu/fp32/inner_comparison.json": "sha256:aa11568ab23032ef9d5eb8c80d4e0c7e7d0002ac103cad349620e8a93e235804",
+    "experiments/benign_ddpo_audit_20261111_v1/remote/gpu/fp32/outer_comparison.json": "sha256:01e2ef31e25882f1bc79766852328e0789fb82f8b994e8421bc1e039ac121dfd",
+    "experiments/benign_ddpo_audit_20261111_v1/postrun_fix/cpu/cpu_tests.json": "sha256:9069530922e2982d36d4855e12ee65dc1bbcac04279775ae4b469c6115beece5",
+    "experiments/benign_ddpo_audit_20261111_v1/postrun_fix/crop_audit.json": "sha256:d930b1b159e84806677f26dd1235d5c8de27605e8d64bff093a36be38e030aa0"
+  },
+  "overall_verdict": "warn",
+  "integrity_status": "warn",
+  "checks": {
+    "gt_provenance": {
+      "status": "pass"
+    },
+    "score_normalization": {
+      "status": "pass"
+    },
+    "result_existence": {
+      "status": "pass"
+    },
+    "dead_code": {
+      "status": "pass",
+      "limit": "positive promotion untested"
+    },
+    "scope": {
+      "status": "warn"
+    },
+    "eval_type": "self_supervised_proxy",
+    "synthetic_CPU_tests_eval_type": "simulation_only"
+  },
+  "final_review_residual_code_issues_resolved": true,
+  "claims": [
+    {
+      "id": "bounded_engineering_execution",
+      "impact": "supported"
+    },
+    {
+      "id": "short_shape_precision_restore",
+      "impact": "qualified"
+    },
+    {
+      "id": "original_negative_paired_measurements",
+      "impact": "supported"
+    },
+    {
+      "id": "useful_editing_or_RSI",
+      "impact": "unsupported"
+    },
+    {
+      "id": "corrected_training_effectiveness",
+      "impact": "unmeasured"
+    }
+  ]
+}

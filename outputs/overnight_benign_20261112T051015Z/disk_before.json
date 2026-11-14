@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "C",
+    "Root": "C:\\",
+    "Used": 217751609344,
+    "Free": 61417066496
+  },
+  {
+    "Name": "D",
+    "Root": "D:\\",
+    "Used": 10637217792,
+    "Free": 174046371840
+  },
+  {
+    "Name": "E",
+    "Root": "E:\\",
+    "Used": 97824137216,
+    "Free": 9603518464
+  },
+  {
+    "Name": "F",
+    "Root": "F:\\",
+    "Used": 20551012352,
+    "Free": 409009676288
+  },
+  {
+    "Name": "G",
+    "Root": "G:\\",
+    "Used": 1033735696384,
+    "Free": 469502853120
+  },
+  {
+    "Name": "H",
+    "Root": "H:\\",
+    "Used": 267270991872,
+    "Free": 228160192512
+  },
+  {
+    "Name": "I",
+    "Root": "I:\\",
+    "Used": null,
+    "Free": null
+  },
+  {
+    "Name": "Temp",
+    "Root": "C:\\Users\\jingb\\AppData\\Local\\Packages\\sandbox.{76cfedb2-1f36-4888-b3d6-cde9c88a914a}\\AC\\Temp\\",
+    "Used": 217751609344,
+    "Free": 61417066496
+  }
+]

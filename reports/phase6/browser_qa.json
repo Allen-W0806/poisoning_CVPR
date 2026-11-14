@@ -1,0 +1,38 @@
+{
+  "browser": "installed Chrome, Playwright, headless",
+  "results": [
+    {
+      "language": "zh",
+      "width": 1440,
+      "status": 200,
+      "page_errors": [],
+      "overflow": false,
+      "snapshot": "2026-10-28T05:00:42.100218+00:00",
+      "links_checked": 3
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "status": 200,
+      "page_errors": [],
+      "overflow": false,
+      "snapshot": "2026-10-28T05:00:42.100218+00:00",
+      "links_checked": 3
+    },
+    {
+      "language": "zh",
+      "width": 390,
+      "status": 200,
+      "page_errors": [],
+      "overflow": false,
+      "snapshot": "2026-10-28T05:00:42.100218+00:00",
+      "links_checked": 3
+    }
+  ],
+  "review": {
+    "images": 48,
+    "missing": 0,
+    "filled": 0,
+    "forms": 24
+  }
+}

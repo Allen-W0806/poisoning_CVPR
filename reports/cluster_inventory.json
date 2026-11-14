@@ -1,0 +1,106 @@
+{
+  "location": "/storage/home/ydk297/projects/poisoning",
+  "python": "/storage/home/ydk297/projects/poisoning/.venv/bin/python",
+  "partitions": {
+    "command": [
+      "sinfo",
+      "-o",
+      "%P %a %l %D %G"
+    ],
+    "exit_code": 0,
+    "stdout": "PARTITION AVAIL TIMELIMIT NODES GRES\nepyc-cpu up 5-00:00:00 13 (null)\nepyc-cpu-on-gpu up 5-00:00:00 16 gpu:tesla_a100_80gb:2\nepyc-gpu up 5-00:00:00 16 gpu:tesla_a100_80gb:2\nfirefly-cpu up 5-00:00:00 4 (null)\nfirefly-cpu-on-gpu up 5-00:00:00 4 gpu:tesla_v100_32gb:4\nfirefly-gpu up 5-00:00:00 4 gpu:tesla_v100_32gb:4\nlookout-cpu up 5-00:00:00 6 (null)\nts-cpu up 5-00:00:00 32 gpu:tesla_p100:1\nts-gpu up 5-00:00:00 32 gpu:tesla_p100:1\n",
+    "stderr": ""
+  },
+  "associations": {
+    "command": [
+      "sacctmgr",
+      "-nP",
+      "show",
+      "assoc",
+      "where",
+      "user=ydk297",
+      "format=Cluster,Account,Partition,QOS"
+    ],
+    "exit_code": 0,
+    "stdout": "mocshpc|allusers||u-default\n",
+    "stderr": ""
+  },
+  "queue": {
+    "command": [
+      "squeue",
+      "-u",
+      "ydk297"
+    ],
+    "exit_code": 0,
+    "stdout": "             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)\n",
+    "stderr": ""
+  },
+  "disk": {
+    "command": [
+      "df",
+      "-h",
+      "/storage/home/ydk297/projects/poisoning"
+    ],
+    "exit_code": 0,
+    "stdout": "Filesystem      Size  Used Avail Use% Mounted on\nmmfs1           566T  303T  263T  54% /storage/home\n",
+    "stderr": ""
+  },
+  "quota": {
+    "command": [
+      "/usr/lpp/mmfs/bin/mmlsquota",
+      "-u",
+      "ydk297",
+      "--block-size",
+      "auto"
+    ],
+    "exit_code": 0,
+    "stdout": "                         Block Limits                                               |     File Limits\nFilesystem Fileset    type         blocks      quota      limit   in_doubt    grace |    files   quota    limit in_doubt    grace  Remarks\nmmfs1      nvme1-hpc  USR           4.69T         5T       5.5T     2.383G     none |  5127304       0        0      251     none \n",
+    "stderr": ""
+  },
+  "retained_sizes": {
+    "command": [
+      "du",
+      "-sh",
+      "/storage/home/ydk297/projects/poisoning/.venv",
+      "/storage/home/ydk297/projects/poisoning/data",
+      "/storage/home/ydk297/projects/poisoning/experiments",
+      "/storage/home/ydk297/.cache/huggingface/hub/models--Qwen--Qwen3-VL-2B-Instruct"
+    ],
+    "exit_code": 0,
+    "stdout": "987M\t/storage/home/ydk297/projects/poisoning/.venv\n339M\t/storage/home/ydk297/projects/poisoning/data\n14M\t/storage/home/ydk297/projects/poisoning/experiments\n4.0G\t/storage/home/ydk297/.cache/huggingface/hub/models--Qwen--Qwen3-VL-2B-Instruct\n",
+    "stderr": ""
+  },
+  "scheduler_accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "86254,86256,86259,86260",
+      "--format=JobID,JobName,State,ExitCode,Elapsed,AllocTRES,MaxRSS",
+      "-P"
+    ],
+    "exit_code": 0,
+    "stdout": "JobID|JobName|State|ExitCode|Elapsed|AllocTRES|MaxRSS\n86254|poison-smoke|COMPLETED|0:0|00:00:59|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|\n86254.batch|batch|COMPLETED|0:0|00:00:59|cpu=4,gres/gpu=1,mem=32G,node=1|7413204K\n86254.extern|extern|COMPLETED|0:0|00:00:59|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|\n86256|poison-smoke|COMPLETED|0:0|00:01:30|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|\n86256.batch|batch|COMPLETED|0:0|00:01:30|cpu=4,gres/gpu=1,mem=32G,node=1|1360796K\n86256.extern|extern|COMPLETED|0:0|00:01:30|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|\n86259|poison-smoke|COMPLETED|0:0|00:01:57|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|\n86259.batch|batch|COMPLETED|0:0|00:01:57|cpu=4,gres/gpu=1,mem=32G,node=1|5815032K\n86259.extern|extern|COMPLETED|0:0|00:01:57|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|\n86260|poison-smoke|COMPLETED|0:0|00:00:59|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|\n86260.batch|batch|COMPLETED|0:0|00:00:59|cpu=4,gres/gpu=1,mem=32G,node=1|3258516K\n86260.extern|extern|COMPLETED|0:0|00:01:00|billing=4,cpu=4,gres/gpu=1,mem=32G,node=1|\n",
+    "stderr": ""
+  },
+  "git_history": {
+    "command": [
+      "git",
+      "log",
+      "--format=%H %s"
+    ],
+    "exit_code": 0,
+    "stdout": "2e54f4aeb35039f9dfae07a31a3e564a303ddaf1 Document measured resource limits and next executable validation\na291c214bdf5d7b010e24412db2ce5a14df29c24 Finalize reproducible evidence import and report rendering\nfaa0c48704a773da59991afb0c8f6dbb1dcab981 Calibrate clean VQA answer format without changing questions or labels\nba7779c93c4a20a4df8da812c9841108968dc386 Record reviewed smoke overrides and distinguish oracle calls from VLM calls\n6cdb73f5fc1d0d0cff79bb66fe1166a7e4d9ebbd Bind replay contracts, distinguish model use, and sample clean smoke deterministically\n71ed84c0a1c81206e8d4ebdcabcb74a099ea85fb Document measured interfaces and retry complete GPU smoke after data staging\n62239a3e1fb604a5ce55f35dc322154ffbefa587 Implement benign augmentation RL, validation controller and independent smoke evaluation\n",
+    "stderr": ""
+  },
+  "freeze": {
+    "command": [
+      "/storage/home/ydk297/projects/poisoning/.venv/bin/python",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "exit_code": 0,
+    "stdout": "accelerate==1.11.0\naiohappyeyeballs==2.6.1\naiohttp==3.11.18\naiosignal==1.3.2\nannotated-doc==0.0.4\nannotated-types==0.7.0\nanyio==4.13.0\nasttokens @ file:///home/conda/feedstock_root/build_artifacts/asttokens_1733250440834/work\nattrs==25.3.0\nav==14.2.0\nbitsandbytes==0.45.5\ncertifi==2025.4.26\ncharset-normalizer==3.4.1\nclick==8.1.8\ncomm @ file:///home/conda/feedstock_root/build_artifacts/comm_1733502965406/work\ncuda-bindings==13.2.0\ncuda-pathfinder==1.5.4\ncuda-toolkit==13.0.2\ndatasets==3.5.1\ndebugpy @ file:///home/conda/feedstock_root/build_artifacts/debugpy_1744321233760/work\ndecorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1740384970518/work\ndecord==0.6.0\ndeepspeed==0.16.7\ndill==0.3.8\ndocker-pycreds==0.4.0\neinops==0.8.1\nexceptiongroup @ file:///home/conda/feedstock_root/build_artifacts/exceptiongroup_1733208806608/work\nexecuting @ file:///home/conda/feedstock_root/build_artifacts/executing_1745502089858/work\nfilelock==3.13.1\nflash_attn==2.8.3\nfrozenlist==1.6.0\nfsspec==2024.6.1\ngitdb==4.0.12\nGitPython==3.1.44\nh11==0.16.0\nhf-xet==1.5.0\nhjson==3.1.0\nhttpcore==1.0.9\nhttpx==0.28.1\nhuggingface-hub==0.35.3\nidna==3.10\nImageIO==2.38.1\nimportlib_metadata @ file:///home/conda/feedstock_root/build_artifacts/importlib-metadata_1737420181517/work\nipykernel @ file:///home/conda/feedstock_root/build_artifacts/ipykernel_1719845459717/work\nipython @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_ipython_1745672166/work\nipython_pygments_lexers @ file:///home/conda/feedstock_root/build_artifacts/ipython_pygments_lexers_1737123620466/work\nipywidgets==8.1.6\njedi @ file:///home/conda/feedstock_root/build_artifacts/jedi_1733300866624/work\nJinja2==3.1.4\njupyter_client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1733440914442/work\njupyter_core @ file:///home/conda/feedstock_root/build_artifacts/jupyter_core_1727163409502/work\njupyterlab_widgets==3.0.14\nlazy-loader==0.6\nliger_kernel==0.5.8\nmarkdown-it-py==3.0.0\nMarkupSafe==2.1.5\nmatplotlib-inline @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-inline_1733416936468/work\nmdurl==0.1.2\nmpmath==1.3.0\nmsgpack==1.1.0\nmultidict==6.4.3\nmultiprocess==0.70.16\nnest_asyncio @ file:///home/conda/feedstock_root/build_artifacts/nest-asyncio_1733325553580/work\nnetworkx==3.3\nninja==1.11.1.4\nnumpy==2.1.2\nnvidia-cublas==13.1.0.3\nnvidia-cublas-cu12==12.4.5.8\nnvidia-cuda-cupti==13.0.85\nnvidia-cuda-cupti-cu12==12.4.127\nnvidia-cuda-nvrtc==13.0.88\nnvidia-cuda-nvrtc-cu12==12.4.127\nnvidia-cuda-runtime==13.0.96\nnvidia-cuda-runtime-cu12==12.4.127\nnvidia-cudnn-cu12==9.1.0.70\nnvidia-cudnn-cu13==9.19.0.56\nnvidia-cufft==12.0.0.61\nnvidia-cufft-cu12==11.2.1.3\nnvidia-cufile==1.15.1.6\nnvidia-curand==10.4.0.35\nnvidia-curand-cu12==10.3.5.147\nnvidia-cusolver==12.0.4.66\nnvidia-cusolver-cu12==11.6.1.9\nnvidia-cusparse==12.6.3.3\nnvidia-cusparse-cu12==12.3.1.170\nnvidia-cusparselt-cu12==0.6.2\nnvidia-cusparselt-cu13==0.8.0\nnvidia-nccl-cu12==2.21.5\nnvidia-nccl-cu13==2.28.9\nnvidia-nvjitlink==13.0.88\nnvidia-nvjitlink-cu12==12.4.127\nnvidia-nvshmem-cu13==3.4.5\nnvidia-nvtx==13.0.85\nnvidia-nvtx-cu12==12.4.127\nopencv-python==4.11.0.86\npackaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1745345660/work\npandas==2.2.3\nparso @ file:///home/conda/feedstock_root/build_artifacts/parso_1733271261340/work\npeft==0.15.2\npexpect @ file:///home/conda/feedstock_root/build_artifacts/pexpect_1733301927746/work\npickleshare @ file:///home/conda/feedstock_root/build_artifacts/pickleshare_1733327343728/work\npillow==11.0.0\nplatformdirs @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_platformdirs_1742485085/work\nprompt_toolkit @ file:///home/conda/feedstock_root/build_artifacts/prompt-toolkit_1744724089886/work\npropcache==0.3.1\nprotobuf==6.30.2\npsutil @ file:///home/conda/feedstock_root/build_artifacts/psutil_1740663149797/work\nptyprocess @ file:///home/conda/feedstock_root/build_artifacts/ptyprocess_1733302279685/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl#sha256=92c32ff62b5fd8cf325bec5ab90d7be3d2a8ca8c8a3813ff487a8d2002630d1f\npure_eval @ file:///home/conda/feedstock_root/build_artifacts/pure_eval_1733569405015/work\npy-cpuinfo==9.0.0\npyarrow==20.0.0\npydantic==2.11.3\npydantic_core==2.33.1\nPygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1736243443484/work\npython-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateutil_1733215673016/work\npytz==2025.2\nPyYAML==6.0.2\npyzmq @ file:///home/conda/feedstock_root/build_artifacts/pyzmq_1743831245578/work\nqwen-vl-utils==0.0.14\nregex==2024.11.6\nrequests==2.32.3\nrich==14.0.0\nsafetensors==0.5.3\nscikit-image==0.25.2\nscipy==1.17.1\nsentry-sdk==2.27.0\nsetproctitle==1.3.5\nshellingham==1.5.4\nsix @ file:///home/conda/feedstock_root/build_artifacts/six_1733380938961/work\nsmmap==5.0.2\nstack_data @ file:///home/conda/feedstock_root/build_artifacts/stack_data_1733569443808/work\nsympy==1.13.1\ntensorboardX==2.6.2.2\ntifffile==2026.3.3\ntokenizers==0.22.2\ntorch==2.6.0\ntorchaudio==2.6.0\ntorchvision==0.21.0\ntornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1732615904614/work\ntqdm==4.67.1\ntraitlets @ file:///home/conda/feedstock_root/build_artifacts/traitlets_1733367359838/work\ntransformers==4.57.1\ntriton==3.2.0\ntrl==0.17.0\ntyper==0.25.1\ntyping-inspection==0.4.0\ntyping_extensions @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_typing_extensions_1744302253/work\ntzdata==2025.2\nujson==5.10.0\nurllib3==2.4.0\nwandb==0.19.10\nwcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_1733231326287/work\nwidgetsnbextension==4.0.14\nxxhash==3.5.0\nyarl==1.20.0\nzipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1732827521216/work\n",
+    "stderr": ""
+  }
+}

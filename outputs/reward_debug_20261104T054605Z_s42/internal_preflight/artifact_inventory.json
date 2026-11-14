@@ -1,0 +1,150 @@
+{
+  "files": [
+    {
+      "path": "environment.json",
+      "bytes": 1007,
+      "SHA256": "0a0868707671fd6498db1c6d73fa9b3aa334ef905e5b8a831083071037b8cfec"
+    },
+    {
+      "path": "cohort.json",
+      "bytes": 30628,
+      "SHA256": "2d5a11c64da5505a3b12d2dde2facd81dc452fe5e9f827a09939cef40b32ae07"
+    },
+    {
+      "path": "run_state.json",
+      "bytes": 2397,
+      "SHA256": "6b9a9b927d9dabfccca8ef9cab2ff78cddee3d8c13515780562800fda11dd039"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 3851,
+      "SHA256": "81e725c05c34cf26f0701b247261f15a1fe304486baf8998369316d6d83c7d9b"
+    },
+    {
+      "path": "reports/NEXT_STEPS.md",
+      "bytes": 257,
+      "SHA256": "d6710327cff8aaafef45feaf0eec351f7dad801e64ffb1e16d0f092e4a9b7639"
+    },
+    {
+      "path": "reports/BASELINE_COMPARISON.md",
+      "bytes": 1529,
+      "SHA256": "7f1ebb85757d02685df3424fc13491ec87f4a6774cb682022db53086504b0ed9"
+    },
+    {
+      "path": "reports/VALIDATION.json",
+      "bytes": 3,
+      "SHA256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "reports/BASELINE_COMPARISON.csv",
+      "bytes": 1899,
+      "SHA256": "c0940127de711722b09422428a48c0c14e57463f2c1e5afbe65c67c99f047fd2"
+    },
+    {
+      "path": "source_snapshot/train_lighting_v2.py",
+      "bytes": 28083,
+      "SHA256": "aa2cbd0e6fef51325dba57fa450d5f7de5fffd8c45a48ee3f6472f5c4aa595ec"
+    },
+    {
+      "path": "source_snapshot/run_mini_pilot.sh",
+      "bytes": 1129,
+      "SHA256": "b4d12b5ec1886a852685d15175b87ec2e9958dab6089299f22ad327ab5f4142b"
+    },
+    {
+      "path": "source_snapshot/train_and_evaluate_pilot.py",
+      "bytes": 27102,
+      "SHA256": "f01709d58d36bd532e127dcba1c4ae0ac1dce9e417d6d233eb594338175028dd"
+    },
+    {
+      "path": "source_snapshot/scripts/audit_padding_reward_20261104.py",
+      "bytes": 4013,
+      "SHA256": "fd52001a0c8774aafa13745b30410f9bfea528b05bfbe42499dee444a0eec7ad"
+    },
+    {
+      "path": "source_snapshot/src/editing/pretrained_editor.py",
+      "bytes": 5115,
+      "SHA256": "0c3c347bb4ff8d2b6b994efdb9768afac563ae613c9b256b87d630b2e55ab425"
+    },
+    {
+      "path": "source_snapshot/src/models/pretrained_editor_loader.py",
+      "bytes": 806,
+      "SHA256": "1955c2549f9e9b235d6f16cf717bd4865df176730b3861e18905cb22d721a635"
+    },
+    {
+      "path": "source_snapshot/src/mini_pilot/engine.py",
+      "bytes": 10425,
+      "SHA256": "6345ec3f49ad14ab66d297997c0e05d953ef2434fe5ac96c2e06a7ccc04ba9b1"
+    },
+    {
+      "path": "source_snapshot/src/mini_pilot/controller.py",
+      "bytes": 3839,
+      "SHA256": "dba3fdefa4427961db4b9db2e56fbe7fc05cb3fc02088ecd2ce08c23836cc098"
+    },
+    {
+      "path": "source_snapshot/src/mini_pilot/reward.py",
+      "bytes": 5521,
+      "SHA256": "a903a94629e1bac148bb54734d608efa62adb90a5bb0238e545b7ea63b6466c0"
+    },
+    {
+      "path": "source_snapshot/src/mini_pilot/lighting_reward_v2.py",
+      "bytes": 4373,
+      "SHA256": "367db68f6d6c9667fb7801b257250a003a9222b49b84f113684505879d8ad23c"
+    },
+    {
+      "path": "source_snapshot/src/mini_pilot/data.py",
+      "bytes": 4673,
+      "SHA256": "31d2a92b43051fd5fcf8860f99bbd72bba5e5d2275f49cc297dbfa3acda76492"
+    },
+    {
+      "path": "source_snapshot/src/mini_pilot/reporting.py",
+      "bytes": 12682,
+      "SHA256": "556fa1af01eca634acb211466aad0ef3f6ff0380cbcdd89b1d074fd1bcd082e2"
+    },
+    {
+      "path": "source_snapshot/src/mini_pilot/__init__.py",
+      "bytes": 73,
+      "SHA256": "38029f88a07eb0399df924f631092504072e2a07308dfcbcc506321313a90cdb"
+    },
+    {
+      "path": "source_snapshot/src/mini_pilot/reporting_v2.py",
+      "bytes": 4208,
+      "SHA256": "4e74bc3f35e4aee1b3f3d3926d4f84f10fc7f8368f58fd4672388336cbb65c68"
+    },
+    {
+      "path": "source_snapshot/src/mini_pilot/controller_v2.py",
+      "bytes": 3948,
+      "SHA256": "912eec1c60f4a8b7497e6fcf6e764ca8103e8538396813b500c6814fc21d788f"
+    },
+    {
+      "path": "source_snapshot/src/rl/reward.py",
+      "bytes": 2308,
+      "SHA256": "56f3c5bf4e99e92af700e10c248da3b06d1710bcaf1c295dbd92d760caf448ac"
+    },
+    {
+      "path": "source_snapshot/src/rl/phase5_backend.py",
+      "bytes": 1140,
+      "SHA256": "73b480ae552990e6d41c560713f2c47137379d7f7ec7049b64fe6c7709552712"
+    },
+    {
+      "path": "source_snapshot/src/rl/diffusion_policy.py",
+      "bytes": 5963,
+      "SHA256": "3ed947bf7cffeb7ae754b101cf8774fa4a68bf269a210089bfd54c77f2352ed1"
+    },
+    {
+      "path": "source_snapshot/src/rl/diffusion_trajectory.py",
+      "bytes": 3124,
+      "SHA256": "65328f5787f6584c00387402bbaaa6d1950973a0a9f6b981e2ad4ba9e5e3ca2b"
+    },
+    {
+      "path": "source_snapshot/src/rl/diffusion_rl_trainer.py",
+      "bytes": 6161,
+      "SHA256": "6be0f6d9837166730e2f72ae8ed0891c1d673efc66fcd53de644a344ffaf2348"
+    },
+    {
+      "path": "source_snapshot/src/training/generator_adapter.py",
+      "bytes": 1863,
+      "SHA256": "9a5e282bfda4b440e3747cf899a095e8ade0d9a90760326ffa3489113a119c51"
+    }
+  ],
+  "retained_bytes": 178120
+}

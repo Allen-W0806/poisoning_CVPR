@@ -1,0 +1,52 @@
+{
+  "UTC": "2026-11-04T12:11:27.319Z",
+  "status": "PASS",
+  "verified_remote_local_files": 11,
+  "files": [
+    {
+      "path": "reports/DEBUG_REPORT.md",
+      "SHA256": "f4a68b3d9fd1a7095227a003ac0ab525f86ba99a0c636ae2bbc22c390a63d4ec"
+    },
+    {
+      "path": "reports/BASELINE_COMPARISON.csv",
+      "SHA256": "c177db53ae13d2f39137d569ac57300be260f4bea4db27d8acb8116f5a57d6e2"
+    },
+    {
+      "path": "reports/NEXT_STEPS.md",
+      "SHA256": "f35410f51175c273e7a5add3eff69c9822198397c79ac0ee2872301979bf9931"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/figures/reward_debug_editable_figures.pptx",
+      "SHA256": "84a10f63e42fb61c8e6e01211a3f1fe0076007ea09744c3edeccbeb54da7289a"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/SELECTED_DELIVERY_MANIFEST.json",
+      "SHA256": "da30046285c7dac40ebaa874f1eb25d5e1c38f263eb8b256b08915ecfa98b0f0"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/SELECTED_DELIVERY_RECEIPT.json",
+      "SHA256": "a9e3ac56f3d447e60226c178b2e71bd0daebae3b5ce51dbc5f6c0a0e78a8f512"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/SCRATCH_CLEANUP_RECEIPT.json",
+      "SHA256": "4a4cdd16c1c1221e468c36e5e90d0a15d70bbd9880a082bb6ed76f6f1135a7e5"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/local_final_delivery_readback.json",
+      "SHA256": "237c5b475f6caa1950630728f165e17049b0fce46ac2f6b111f437f0d9e60cf6"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/FINAL_LOCAL_VERIFICATION.json",
+      "SHA256": "4caeb5f7f08d46bf667e8bf26123655d92762286ea73612cf6be9c55b6e01c73"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/LOCAL_SCRATCH_CLEANUP_RECEIPT.json",
+      "SHA256": "56e081cd0c979fb3c5e2d2f713598503de80430bd204add04bc45c46da2eb727"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/DISK_AND_RETENTION_AFTER_CLEANUP.json",
+      "SHA256": "390b25aa374e7b127ffdaa8a060c5619824ac134777121d0c90c32a29839544e"
+    }
+  ],
+  "scope": "Post-cleanup remote SHA256 readback for final reports, native figures, selected-delivery records and supplementary verification/cleanup metadata. The selected616-file manifest remains unchanged."
+}

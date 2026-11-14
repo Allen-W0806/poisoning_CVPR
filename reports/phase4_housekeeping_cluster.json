@@ -1,0 +1,11 @@
+{
+  "scratch_deleted": "/storage/home/ydk297/projects/poisoning/tmp/phase4_20261027_1648",
+  "scratch_bytes_removed": 1906341062,
+  "repo_cache_files_removed": 8,
+  "repo_cache_bytes_removed": 75501,
+  "retained_phase4_scientific_evidence_bytes": 2143733976,
+  "local_copy_verified_before_cleanup": true,
+  "model_weights_and_experiment_evidence_deleted": false,
+  "scratch_exists_after": false,
+  "free_canonical_filesystem_bytes": 288587425775616
+}

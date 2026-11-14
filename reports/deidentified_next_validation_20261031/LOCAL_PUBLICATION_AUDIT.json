@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "whitelisted_aggregate_rows": 63,
+  "files": {
+    "NEXT_VALIDATION_DECISION_20261031.md": {
+      "sha256": "4292541e7782ae420ca110e45fd771abaf688016f2018da6c608eeecebbb7b33",
+      "bytes": 3356
+    },
+    "NEXT_VALIDATION_AGGREGATES_20261031.csv": {
+      "sha256": "1263d7c70f4c1b2c21ec2c6230a8fd066e2887c27ac7fb2374840bfbce05d1c1",
+      "bytes": 4753
+    }
+  }
+}

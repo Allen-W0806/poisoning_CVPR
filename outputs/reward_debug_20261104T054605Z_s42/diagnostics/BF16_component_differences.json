@@ -1,0 +1,50 @@
+{
+  "adapter": {
+    "exact": false,
+    "tolerance": false,
+    "tensor_count": 256,
+    "different_elements": 234694,
+    "max_absolute_error": 9.456717180000851e-06,
+    "structure_errors": []
+  },
+  "optimizer": {
+    "exact": false,
+    "tolerance": false,
+    "tensor_count": 768,
+    "different_elements": 491006,
+    "max_absolute_error": 2.537281034165062e-07,
+    "structure_errors": []
+  },
+  "raw_gradients": {
+    "exact": false,
+    "tolerance": false,
+    "tensor_count": 256,
+    "different_elements": 245510,
+    "max_absolute_error": 2.5372864911332726e-06,
+    "structure_errors": []
+  },
+  "postclip_gradients": {
+    "exact": false,
+    "tolerance": false,
+    "tensor_count": 256,
+    "different_elements": 245510,
+    "max_absolute_error": 2.5372864911332726e-06,
+    "structure_errors": []
+  },
+  "rng_torch": {
+    "exact": true,
+    "tolerance": true,
+    "tensor_count": 1,
+    "different_elements": 0,
+    "max_absolute_error": 0.0,
+    "structure_errors": []
+  },
+  "rng_cuda": {
+    "exact": true,
+    "tolerance": true,
+    "tensor_count": 1,
+    "different_elements": 0,
+    "max_absolute_error": 0.0,
+    "structure_errors": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "UTC": "2026-11-04T08:07:39.551059+00:00",
+  "primary_assessment_not_yet_generated": true,
+  "metric": "fraction of pixels with any nonzero integer RGB difference",
+  "domains": [
+    "entire512x512canvas",
+    "verified original content box excluding white padding"
+  ],
+  "units": "mean image fraction; edited assessment case fraction separately; neither is a victim training poisoning rate",
+  "all64physical_assessment_images": true,
+  "fixed_shares_frozen": true,
+  "worker_SHA256": "101c93113690b2e23a5dd52dd8eaa6c0b2c3be03f8d5ebc29022ddaa9836772b",
+  "new_model_calls": 0
+}

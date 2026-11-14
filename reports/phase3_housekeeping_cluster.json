@@ -1,0 +1,30 @@
+{
+  "scratch_path": "/storage/home/ydk297/projects/poisoning/tmp/phase3",
+  "resolved_target_verified": true,
+  "scratch_removed": true,
+  "removed_scratch_bytes": 342761770,
+  "removed_scratch_files": [
+    "monitorfix.tgz",
+    "source.tgz",
+    "diagnostic.tgz",
+    "semantic.tgz",
+    "fix3.tgz",
+    "finalreportsource.tgz",
+    "package_evidence.py",
+    "schemafix.tgz",
+    "deliverysource.tgz",
+    "finalmonitor.tgz",
+    "fix2.tgz",
+    "cleanup.py",
+    "monitor.tgz",
+    "inspection.json",
+    "evidence.tgz",
+    "statusfix.tgz",
+    "fix.tgz"
+  ],
+  "removed_new_cache_files": [],
+  "retained_phase3_experiment_bytes": 515947616,
+  "experiments_checkpoints_failed_runs_model_cache_environments_history_preserved": true,
+  "project_free_bytes_after": 288490302472192,
+  "git_commit": "534dd80a80d6f86a0b9d131e5b180e50576fccb3"
+}

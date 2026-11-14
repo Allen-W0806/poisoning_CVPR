@@ -1,0 +1,18 @@
+{
+  "checked_UTC": "2026-11-12T05:43:43.9341416Z",
+  "local_run_bytes": 3327857.0,
+  "disk": [
+    {
+      "Name": "C",
+      "Used": 217771917312,
+      "Free": 61396758528
+    },
+    {
+      "Name": "H",
+      "Used": 267275120640,
+      "Free": 228156063744
+    }
+  ],
+  "removed_empty_run_scratch": "H:\\Project\\Poisoning\\tmp\\overnight_benign_20261112T051015Z",
+  "large_C_artifacts_created": false
+}

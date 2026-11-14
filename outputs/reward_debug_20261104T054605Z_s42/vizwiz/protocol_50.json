@@ -1,0 +1,40 @@
+{
+  "seed": 42,
+  "dataset": "VizWiz-VQA full public test8000,2026 reference release",
+  "images": 8000,
+  "references_per_question": 10,
+  "question_SHA256": "25b71577dafc1e4049b1a273b8e58d0d8bca510510b512e4925730905c3eceac",
+  "annotation_SHA256": "fa113f0e90230ab4690bb41c4d74e40f7087cc7c192dd8363fa4d6bad339b7aa",
+  "source_loader": "pinned Shadowcast LLaVA/llava/eval/model_vqa_loader.py",
+  "conversation": "vicuna_v1",
+  "temperature": 0.0,
+  "max_new_tokens": 128,
+  "num_beams": 1,
+  "physical_batch": 1,
+  "data_workers": 4,
+  "model_selection": "same final clean0/poison50 checkpoints locked before either original-task evaluation",
+  "scoring": "official VizWiz API accuracy path; ten literal original answers; unconditional prediction normalization",
+  "literature_comparison_limit": "full8000 public self-score; original paper Table3 does not identify its EvalAI partition, so exact split matching is unverified",
+  "labels_passed_to_model": false,
+  "GQA": "NOT TESTED",
+  "cases_dropped": 0,
+  "checkpoint_path_compatibility": "symlink aliases containing llava and lora route the unmodified official loader to its multimodal adapter branch; identical locked checkpoint files",
+  "model_path_aliases": {
+    "0": "/storage/home/ydk297/projects/poisoning/outputs/reward_debug_20261104T054605Z_s42/vizwiz/llava-v1.5-7b-poison0-lora",
+    "50": "/storage/home/ydk297/projects/poisoning/outputs/reward_debug_20261104T054605Z_s42/vizwiz/llava-v1.5-7b-poison50-lora"
+  },
+  "official_scoring_reference": {
+    "protocol": "official_vizwiz_API_accuracy_d26ef7ac_v1",
+    "source_SHA256": "d26ef7ac2db06351444c3531f8d95fd9c454423fbcb9fd5dd984f12281146694",
+    "source_url": "https://vizwiz.cs.colorado.edu/VizWiz_final/vqa_data/API.zip",
+    "accuracy_path": "original VQAEval.evaluate through setAccuracy; caption metrics omitted",
+    "references": "all ten original answers, unchanged as in official VQA JSON loader",
+    "prediction_normalization": "official unconditional punctuation/digit/article/contraction processing"
+  },
+  "poison_count": 50,
+  "model": "/storage/home/ydk297/projects/poisoning/outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_50_seed42_lora",
+  "Slurm_job": "88971",
+  "model_path_alias": "/storage/home/ydk297/projects/poisoning/outputs/reward_debug_20261104T054605Z_s42/vizwiz/llava-v1.5-7b-poison50-lora",
+  "loader_SHA256": "34a57f4d6fb1de55ac88fac355dc6df2db80338ee8142970bef1cd9aa29dc663",
+  "I/O_only_change": "line-buffer raw answers so failed jobs retain their completed responses"
+}

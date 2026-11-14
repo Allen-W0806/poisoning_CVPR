@@ -1,0 +1,380 @@
+{
+  "experiment_id": "EXP_20261028T154458_eefb8fb1fe7a_phase6_review_dashboard_followup",
+  "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261028T154458_eefb8fb1fe7a_phase6_review_dashboard_followup",
+  "results": {
+    "packet_audit": {
+      "pairs": 24,
+      "image_files_verified": 48,
+      "exact_episode_matches": 24,
+      "raw_original_pixel_associations_checked": 24,
+      "all_reference_fields_match": true,
+      "all_unreviewed_answers_unknown": true,
+      "new_model_calls": 0
+    },
+    "reward_separation": {
+      "n": 500,
+      "lower_clipped": 230,
+      "upper_clipped": 0,
+      "constant_historical_U": true,
+      "constant_normalized_C": true,
+      "S_equals_half_A": true,
+      "instruction_success_missing": 500,
+      "calibrated_uncertainty_missing": 500,
+      "independent_labels": 0,
+      "generation_seconds": {
+        "min": 4.716762911528349,
+        "max": 5.970018163090572,
+        "mean": 5.65620496585127
+      },
+      "automatic_judgment_seconds": {
+        "min": 5.068783923983574,
+        "max": 19.59105943609029,
+        "mean": 10.606911577044986
+      },
+      "training_reward_released": false,
+      "coefficients_changed": false,
+      "raw_scalar_separated": true,
+      "new_model_calls": 0
+    },
+    "new_harness_candidates": {
+      "source_accepted_harness": {
+        "experiment_id": "EXP_20261028T044805_f12f313ebb56_phase6_s2_real_harness",
+        "version": "H0002"
+      },
+      "decisions": [
+        {
+          "revision_number": 1,
+          "parent_version": "H0000",
+          "candidate_version": "H0001",
+          "proposal": {
+            "parent_version": "H0000",
+            "candidate": {
+              "name": "content_first",
+              "checks": [
+                "content_hash",
+                "geometry"
+              ],
+              "schema_version": "workflow_program_v1",
+              "max_diagnostics": 8,
+              "memory_mode": "full_evidence",
+              "curriculum": "input_order"
+            },
+            "change": "Test whether reordering reduces frozen diagnostic cost",
+            "supporting_evidence": {
+              "source_experiment": "EXP_20261028T044805_f12f313ebb56_phase6_s2_real_harness",
+              "fixed_gate": "same24 sources/72 rows; same >=20% operation saving and zero regression",
+              "hypothesis": "check order or evidence representation may alter resources; improvement not assumed"
+            },
+            "expected_effect": "measured cost reduction, otherwise reject",
+            "affected_modules": [
+              "workflow.checks"
+            ],
+            "regression_tests": [
+              "unchanged positive geometry/content decisions",
+              "unchanged48 metadata-negative controls"
+            ],
+            "category": "evidence_acquisition_and_validation_orchestration"
+          },
+          "measured_validation": {
+            "accepted": false,
+            "n_sources": 24,
+            "n_case_rows": 72,
+            "parent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "new_errors_on_previously_correct_rows": 0,
+            "unique_sources_with_new_errors": 0,
+            "accuracy_denominator": "72 equally weighted rows, one recorded-positive plus two metadata-negative controls per source",
+            "diagnostic_operation_saving_fraction": 0.0,
+            "parent_resources": {
+              "wall_seconds": 0.49881188198924065,
+              "cpu_seconds": 0.488941265999999,
+              "diagnostic_operations": 144,
+              "bytes_read": 43535184,
+              "model_calls": 0,
+              "gpu_seconds": 0.0
+            },
+            "candidate_resources": {
+              "wall_seconds": 0.49595737643539906,
+              "cpu_seconds": 0.48833322499999987,
+              "diagnostic_operations": 144,
+              "bytes_read": 43535184,
+              "model_calls": 0,
+              "gpu_seconds": 0.0
+            },
+            "scope": "recorded file-integrity workflow with explicitly injected metadata controls; no semantic editing claim",
+            "policy": "same accuracy, zero regression, >=20% diagnostic-operation reduction, fixed before execution",
+            "evaluator_definitions_changed": false,
+            "matched_exposure": true
+          },
+          "accepted": false,
+          "actual_evaluation_resources": {
+            "parent": {
+              "wall_seconds": 0.49881188198924065,
+              "cpu_seconds": 0.488941265999999,
+              "diagnostic_operations": 144,
+              "bytes_read": 43535184,
+              "model_calls": 0,
+              "gpu_seconds": 0.0
+            },
+            "candidate": {
+              "wall_seconds": 0.49595737643539906,
+              "cpu_seconds": 0.48833322499999987,
+              "diagnostic_operations": 144,
+              "bytes_read": 43535184,
+              "model_calls": 0,
+              "gpu_seconds": 0.0
+            }
+          }
+        },
+        {
+          "revision_number": 2,
+          "parent_version": "H0000",
+          "candidate_version": "H0002",
+          "proposal": {
+            "parent_version": "H0000",
+            "candidate": {
+              "name": "summary_memory",
+              "checks": [
+                "geometry",
+                "content_hash"
+              ],
+              "schema_version": "workflow_program_v1",
+              "max_diagnostics": 8,
+              "memory_mode": "summary",
+              "curriculum": "input_order"
+            },
+            "change": "Test summary memory without altering fixed acceptance criterion",
+            "supporting_evidence": {
+              "source_experiment": "EXP_20261028T044805_f12f313ebb56_phase6_s2_real_harness",
+              "fixed_gate": "same24 sources/72 rows; same >=20% operation saving and zero regression",
+              "hypothesis": "check order or evidence representation may alter resources; improvement not assumed"
+            },
+            "expected_effect": "measured cost reduction, otherwise reject",
+            "affected_modules": [
+              "workflow.memory_mode"
+            ],
+            "regression_tests": [
+              "unchanged positive geometry/content decisions",
+              "unchanged48 metadata-negative controls"
+            ],
+            "category": "experience_memory"
+          },
+          "measured_validation": {
+            "accepted": false,
+            "n_sources": 24,
+            "n_case_rows": 72,
+            "parent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "new_errors_on_previously_correct_rows": 0,
+            "unique_sources_with_new_errors": 0,
+            "accuracy_denominator": "72 equally weighted rows, one recorded-positive plus two metadata-negative controls per source",
+            "diagnostic_operation_saving_fraction": 0.0,
+            "parent_resources": {
+              "wall_seconds": 0.49686685018241405,
+              "cpu_seconds": 0.4874007150000019,
+              "diagnostic_operations": 144,
+              "bytes_read": 43535184,
+              "model_calls": 0,
+              "gpu_seconds": 0.0
+            },
+            "candidate_resources": {
+              "wall_seconds": 0.4969002455472946,
+              "cpu_seconds": 0.4880243430000015,
+              "diagnostic_operations": 144,
+              "bytes_read": 43535184,
+              "model_calls": 0,
+              "gpu_seconds": 0.0
+            },
+            "scope": "recorded file-integrity workflow with explicitly injected metadata controls; no semantic editing claim",
+            "policy": "same accuracy, zero regression, >=20% diagnostic-operation reduction, fixed before execution",
+            "evaluator_definitions_changed": false,
+            "matched_exposure": true
+          },
+          "accepted": false,
+          "actual_evaluation_resources": {
+            "parent": {
+              "wall_seconds": 0.49686685018241405,
+              "cpu_seconds": 0.4874007150000019,
+              "diagnostic_operations": 144,
+              "bytes_read": 43535184,
+              "model_calls": 0,
+              "gpu_seconds": 0.0
+            },
+            "candidate": {
+              "wall_seconds": 0.4969002455472946,
+              "cpu_seconds": 0.4880243430000015,
+              "diagnostic_operations": 144,
+              "bytes_read": 43535184,
+              "model_calls": 0,
+              "gpu_seconds": 0.0
+            }
+          }
+        }
+      ],
+      "newly_accepted_revisions": 0,
+      "unchanged_validation_criterion": true,
+      "new_cost": {
+        "wall_seconds": 1.9885363541543484,
+        "cpu_seconds": 1.9526995490000023,
+        "diagnostic_operations": 576,
+        "bytes_read": 174140736,
+        "model_calls": 0,
+        "gpu_seconds": 0.0
+      },
+      "reused_prior_investigation_cost": {
+        "wall_seconds": 5.820236200466752,
+        "cpu_seconds": 5.723810066000006,
+        "diagnostic_operations": 1040,
+        "bytes_read": 332716553,
+        "model_calls": 0,
+        "gpu_seconds": 0.0
+      },
+      "prior_evidence_not_reexecuted": true,
+      "scope": "unchanged structural task; no semantic improvement claim; old evidence cost not charged twice"
+    },
+    "pilot_comparison": {
+      "actual_historical_step0_cpu_checks": [
+        {
+          "seed": "42",
+          "left": "experiments/EXP_20261027T170121_a6ed0fa129ca_phase4_PH4_GENERATOR_RL/checkpoints/step_0000/training_state.pt",
+          "right": "experiments/EXP_20261027T175741_3b880a4a5fce_phase4_PH4_GENERATOR_RSI/checkpoints/step_0000/training_state.pt",
+          "comparison": {
+            "adapter": true,
+            "optimizer": true,
+            "scheduler": true,
+            "step": true,
+            "version": true,
+            "contract": false,
+            "consumed": true,
+            "rng_torch": true,
+            "rng_cuda": true,
+            "rng_numpy": true,
+            "rng_python": true,
+            "adapter_max_abs_difference": 0.0,
+            "contract_full_metadata_exact": false,
+            "contract_scientific_exact": true,
+            "nonempty_state_contract": true,
+            "all_required_fields_exact": true,
+            "causal_intervention_comparison_ready": false,
+            "additional_required_evidence": [
+              "verified frozen-weight identity",
+              "training image-content/source order",
+              "per-source rollout noise seeds",
+              "independent pre-intervention execution comparability"
+            ],
+            "scope": "Exact observed checkpoint fields; does not prove subsequent stochastic continuation"
+          }
+        },
+        {
+          "seed": "123",
+          "left": "experiments/EXP_20261027T170250_c7c7385c8814_phase4_PH4_GENERATOR_RL/checkpoints/step_0000/training_state.pt",
+          "right": "experiments/EXP_20261027T175744_255141d217c5_phase4_PH4_GENERATOR_RSI/checkpoints/step_0000/training_state.pt",
+          "comparison": {
+            "adapter": true,
+            "optimizer": true,
+            "scheduler": true,
+            "step": true,
+            "version": true,
+            "contract": false,
+            "consumed": true,
+            "rng_torch": true,
+            "rng_cuda": true,
+            "rng_numpy": true,
+            "rng_python": true,
+            "adapter_max_abs_difference": 0.0,
+            "contract_full_metadata_exact": false,
+            "contract_scientific_exact": true,
+            "nonempty_state_contract": true,
+            "all_required_fields_exact": true,
+            "causal_intervention_comparison_ready": false,
+            "additional_required_evidence": [
+              "verified frozen-weight identity",
+              "training image-content/source order",
+              "per-source rollout noise seeds",
+              "independent pre-intervention execution comparability"
+            ],
+            "scope": "Exact observed checkpoint fields; does not prove subsequent stochastic continuation"
+          }
+        }
+      ],
+      "new_pilot_initialization_verified": false,
+      "fresh_isolated_semantic_gate_available": false,
+      "scientific_gpu_budget_seconds": 0,
+      "full_comparison_forecast_gpu_hours": 42.19540658619441,
+      "forecast_is_authorization": false,
+      "human_and_future_independent_evaluator_cost": "UNKNOWN; excluded from historical forecast",
+      "statistical_unit": "unique source-content cluster within fixed seed, not transitions/questions; limited diagnostic review queue",
+      "pilot_status": "BLOCKED",
+      "strict_continuation": "UNRESOLVED; not rerun"
+    },
+    "independent_review_analysis": {
+      "updated_utc": "2026-10-28T15:45:03.145612+00:00",
+      "submission_files": 0,
+      "provenance_consistent_submissions": 0,
+      "validation_errors": [],
+      "operator_attestation_present": false,
+      "verified_reviewer_ids": [],
+      "reviewer_conflicts": [],
+      "independently_reviewed_consensus_pairs": 0,
+      "consensus_pair_ids": [],
+      "available_pairs": 24,
+      "dimension_coverage": {
+        "instruction_completion": {
+          "unique_rated_pairs": 0,
+          "available_pairs": 24
+        },
+        "image_realism": {
+          "unique_rated_pairs": 0,
+          "available_pairs": 24
+        },
+        "content_preservation": {
+          "unique_rated_pairs": 0,
+          "available_pairs": 24
+        },
+        "question_answer_factual_validity": {
+          "unique_rated_pairs": 0,
+          "available_pairs": 24
+        },
+        "image_question_semantic_relationship": {
+          "unique_rated_pairs": 0,
+          "available_pairs": 24
+        },
+        "visible_artifacts": {
+          "unique_rated_pairs": 0,
+          "available_pairs": 24
+        },
+        "evaluation_uncertainty": {
+          "unique_rated_pairs": 0,
+          "available_pairs": 24
+        }
+      },
+      "reviewer_pair_agreement": {
+        "instruction_completion": [],
+        "image_realism": [],
+        "content_preservation": [],
+        "question_answer_factual_validity": [],
+        "image_question_semantic_relationship": [],
+        "visible_artifacts": [],
+        "evaluation_uncertainty": []
+      },
+      "disagreements": [],
+      "proxy_group_summaries": {},
+      "proxy_answer_match": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "scope": "normalized match to reviewed edited answers, not official10-answer VQA accuracy"
+      },
+      "analysis_unit": "prioritized unique source pair; repeated ratings retained separately, not additional independent images",
+      "training_reward_released": false,
+      "scientific_pilot_ready": false,
+      "scope": "metadata and agreement do not independently prove human authorship or establish representative semantic efficacy"
+    },
+    "resources": {
+      "wall_seconds": 4.1853696051985025,
+      "cpu_seconds": 2.5388665080000004,
+      "gpu_seconds": 0,
+      "model_calls": 0
+    }
+  }
+}

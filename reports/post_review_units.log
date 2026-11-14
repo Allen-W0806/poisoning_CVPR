@@ -1,0 +1,12 @@
+test_fixture_editor_and_integrity (tests.test_data_edit_eval.DataEditTest.test_fixture_editor_and_integrity) ... ok
+test_official_sampling_deterministic (tests.test_data_edit_eval.DataEditTest.test_official_sampling_deterministic) ... ok
+test_consensus_and_clean_pipeline (tests.test_evaluation_reward.EvaluationRewardTest.test_consensus_and_clean_pipeline) ... ok
+test_independent_security_denominators (tests.test_evaluation_reward.EvaluationRewardTest.test_independent_security_denominators) ... ok
+test_reward_clipping_and_unknown_semantics (tests.test_evaluation_reward.EvaluationRewardTest.test_reward_clipping_and_unknown_semantics) ... ok
+test_heldout_and_acceptance (tests.test_rsi_logging.RSILoggingTest.test_heldout_and_acceptance) ... ok
+test_unique_and_immutable_runs (tests.test_rsi_logging.RSILoggingTest.test_unique_and_immutable_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.906s
+
+OK

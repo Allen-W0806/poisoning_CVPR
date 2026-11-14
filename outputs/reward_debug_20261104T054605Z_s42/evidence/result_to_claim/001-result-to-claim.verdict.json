@@ -1,0 +1,128 @@
+{
+  "claim_supported": "no",
+  "scoped_measurements_supported": "yes",
+  "scoped_measurements_acceptance": "provisional",
+  "what_results_support": [
+    "One seed42 benign 32/16/16 development pilot completed 100 updates per trained arm, with logged finite FP32 updates and a bounded stored numerical witness.",
+    "V3 is an explicit task-objective revision that avoids the observed v2 saturation; its analytical controls and saved rescoring are not efficacy results.",
+    "All three trained arms improve the common development proxy descriptively over Frozen; RL does not establish an advantage over DDPO.",
+    "Separate Shadowcast fixed-victim keyword success is 189/200 versus 0/200, under 27 versus 26 actual updates.",
+    "Full8000 VizWiz scores show a paired clean-accuracy decline of 0.0034375, conditional on the fixed victims.",
+    "All fixed stages settled at 12.268333333333333 GPUh."
+  ],
+  "what_results_dont_support": [
+    "Proposed-method semantic backdoor efficacy or attack success: no internal poisoned victim or ASR was evaluated.",
+    "RL-controller superiority or equivalence to DDPO; formal accepted revisions; training-seed generalization.",
+    "Complete semantic/color preservation, successful target editing, or unchanged clean utility.",
+    "Matched superiority to external methods, exact paper reproduction, GQA results, or BF16 repair."
+  ],
+  "missing_evidence": [
+    "Internal attack endpoints and matched poisoned-victim/clean controls.",
+    "Untouched evaluation sources, repeated training seeds, equal-update controls and suitable multiplicity/selection handling for broad inference.",
+    "Blinded target-attribute/non-target semantic assessment and human validation of the keyword endpoint.",
+    "Prespecified clean-utility noninferiority margin; exact literature partition match.",
+    "Formal experiment-integrity audit, near-duplicate/pretraining contamination checks, and independent cross-family/human review."
+  ],
+  "suggested_claim_revision": "Reframe as reward-objective diagnosis and a single-seed benign adaptive-editing pilot with no demonstrated RL-over-DDPO advantage, plus a separate Shadowcast reference experiment showing 94.5% keyword ASR and a 0.34375-percentage-point VizWiz decline. Do not claim proposed semantic-backdoor efficacy or utility preservation.",
+  "next_experiments_needed": [
+    {
+      "recommendation": "Define and validate target/non-target edit-success criteria and diagnose observed color/target failures.",
+      "execute_now": false
+    },
+    {
+      "recommendation": "Only under a separately authorized plan, preregister untouched evaluation sources, repeated seeds, equal-update/source/compute controls and a clean-utility margin before efficacy/matched-baseline testing.",
+      "execute_now": false
+    },
+    {
+      "recommendation": "If broader endpoint claims are pursued, validate keyword success with blinded semantic review and appropriate contamination checks.",
+      "execute_now": false
+    }
+  ],
+  "confidence": "high",
+  "confidence_scope": "High confidence that the broad claim is unsupported; not a general integrity or cross-seed efficacy certification.",
+  "integrity_status": "unavailable",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "evidence_precheck_status": "WARN",
+  "evidence_helper_status": "UNRESOLVED",
+  "material_numerical_errors_found": [],
+  "minor_reporting_corrections": [
+    {
+      "file": "internal_pilot/source_snapshot/src/mini_pilot/lighting_reward_v3.py",
+      "field": "LightingRewardV3.__init__.receipt.rejected_prior",
+      "current": "42/43 development generations",
+      "complete_evidence": "lighting_v3_calibration.json:43/44 v2 progress values equal -1",
+      "action": "Annotate final completed count in reporting; preserve frozen source/receipt as historical evidence."
+    },
+    {
+      "file": "reports/TABLES5_6_7_INSERTION.tex",
+      "field": "standalone table notes",
+      "action": "Carry explicit n, metric units, tau0 area definition, Shadowcast 26/27 updates and code-setting/original-task caveats into any standalone paper insertion. Main measured values need no correction."
+    }
+  ],
+  "verified_measurements": {
+    "internal_final_sources": 16,
+    "RL_minus_DDPO_reward": {
+      "difference": -0.00042665592432652305,
+      "source_CI95": [
+        -0.012725111644544203,
+        0.012161135779698972
+      ]
+    },
+    "RL_target_improved_sources": 6,
+    "RL_target_worsened_sources": 10,
+    "RL_all16_rewards_below_identity_zero": true,
+    "RL_mean_target_luma_error": 0.01237690018393569,
+    "identity_mean_target_luma_error": 0.0072346807076382694,
+    "quality_source_accuracy": 0.8125,
+    "quality_edited_accuracy_all_four_physical_arms": 0.6875,
+    "Shadowcast_ASR_clean0": {
+      "numerator": 0,
+      "denominator": 200
+    },
+    "Shadowcast_ASR_poison50": {
+      "numerator": 189,
+      "denominator": 200,
+      "fraction": 0.945
+    },
+    "VizWiz_clean0": 0.5569875,
+    "VizWiz_poison50": 0.55355,
+    "VizWiz_paired_delta": -0.0034375,
+    "VizWiz_delta_source_CI95": [
+      -0.0062148711068735416,
+      -0.0006749135269613419
+    ],
+    "VizWiz_questions": 8000,
+    "VizWiz_unique_source_hashes": 7928,
+    "actual_GPU_seconds": 44166,
+    "actual_GPU_hours": 12.268333333333333
+  },
+  "reviewer_checks": {
+    "manifest_files_rehashed": 534,
+    "manifest_bytes": 90021086,
+    "manifest_failures": 0,
+    "all16000_VizWiz_raw_scores_recomputed": true,
+    "VizWiz_raw_score_max_error": 0.0,
+    "all80_quality_scores_recomputed": true,
+    "all400_Shadowcast_keyword_decisions_recomputed": true,
+    "all300_update_logs_checked": true,
+    "all25_current_protocol_source_hashes_match": true,
+    "local_source_snapshots_matching": 24,
+    "local_source_snapshot_omitted": "run_mini_pilot.sh; current project copy matches protocol hash",
+    "new_tensor_comparison": false,
+    "new_CLIP_LPIPS_or_model_inference": false,
+    "qualitative_raw_pairs_viewed": [
+      "155177008",
+      "323162000"
+    ],
+    "qualitative_scope": "unblinded assistant review of two examples, not human endpoint scoring"
+  },
+  "route": "Record unsupported broad claim and reframe to scoped diagnostics. No automatic supplementary experiments or ablations.",
+  "new_experiment_authority": false,
+  "writes": [
+    "001-result-to-claim.response.md",
+    "001-result-to-claim.verdict.json"
+  ],
+  "scratch_created": false,
+  "completed_UTC": "2026-11-04T11:53:01.520482+00:00"
+}

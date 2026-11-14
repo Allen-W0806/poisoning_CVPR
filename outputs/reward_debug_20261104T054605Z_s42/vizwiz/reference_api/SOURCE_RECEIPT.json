@@ -1,0 +1,39 @@
+{
+  "UTC": "2026-11-04T07:49:21.3052733Z",
+  "source_url": "https://vizwiz.cs.colorado.edu/VizWiz_final/vqa_data/API.zip",
+  "official_dataset_page": "https://vizwiz.org/tasks-and-datasets/vqa/",
+  "archive_bytes": 185601325,
+  "archive_SHA256": "76de4354ca2fbc57dd2369b579dc9bb5684e41d6a135b36b324a5ba25b7b9ca2",
+  "archive_ETag": "\"b100d2d-5f706f9ea99e6\"",
+  "archive_Last_Modified": "2023/3/16 16:30:18 +00:00",
+  "central_directory_offset": 185581678,
+  "central_directory_bytes": 19625,
+  "member_retrieval": "HTTP206 byte ranges; raw member bytes preserved without text conversion",
+  "archive_hash": "Full API.zip streamed through SHA256 in memory; archive not saved",
+  "image_bytes_opened_or_rehashed": 0,
+  "implementation_changes": 0,
+  "members": [
+    {
+      "archive_member": "PythonEvaluationTools/vqaEvaluation/vqaEval.py",
+      "local_file": "H:\\Project\\Poisoning\\outputs\\reward_debug_20261104T054605Z_s42\\vizwiz\\reference_api\\vqaEval.py",
+      "bytes": 11856,
+      "SHA256": "d26ef7ac2db06351444c3531f8d95fd9c454423fbcb9fd5dd984f12281146694",
+      "zip_CRC32": "4bf39090",
+      "compression_method": 8,
+      "compressed_bytes": 3438,
+      "local_header_offset": 18174,
+      "payload_offset": 18278
+    },
+    {
+      "archive_member": "PythonHelperTools/vqaTools/vqa.py",
+      "local_file": "H:\\Project\\Poisoning\\outputs\\reward_debug_20261104T054605Z_s42\\vizwiz\\reference_api\\vqa.py",
+      "bytes": 2389,
+      "SHA256": "38efaab71cf6193230bca6aa5360742a82a2402dc46a6a2975b08f8a644b8f07",
+      "zip_CRC32": "854b47db",
+      "compression_method": 8,
+      "compressed_bytes": 991,
+      "local_header_offset": 185573914,
+      "payload_offset": 185574005
+    }
+  ]
+}

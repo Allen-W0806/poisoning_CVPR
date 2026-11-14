@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "verified_UTC": "2026-11-01T00:44:13.550774+00:00",
+  "scope": "two exact deidentified publications, byte hashes and existing parent verified",
+  "files": [
+    {
+      "name": "NEXT_VALIDATION_DECISION_20261031.md",
+      "id": "1gS9MwUngiGC5iQzrxl22ANcBpgKuiWdQ",
+      "url": "https://drive.google.com/file/d/1gS9MwUngiGC5iQzrxl22ANcBpgKuiWdQ/view?usp=drivesdk",
+      "parent_ids": [
+        "1Z2WI9kEyoZfddrF29xoGZxOW1MT_nZwS"
+      ]
+    },
+    {
+      "name": "NEXT_VALIDATION_AGGREGATES_20261031.csv",
+      "id": "1DyU7PndMAERsoKfrUimNRIG4vCUPIoEX",
+      "url": "https://drive.google.com/file/d/1DyU7PndMAERsoKfrUimNRIG4vCUPIoEX/view?usp=drivesdk",
+      "parent_ids": [
+        "1Z2WI9kEyoZfddrF29xoGZxOW1MT_nZwS"
+      ]
+    }
+  ]
+}

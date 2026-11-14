@@ -1,0 +1,6 @@
+{
+  "sacct_stdout": "JobIDRaw|State|ExitCode|ElapsedRaw|ReqTRES|AllocTRES\n86601|COMPLETED|0:0|33|billing=1,cpu=1,mem=12G,node=1|billing=1,cpu=1,mem=12G,node=1\n86602|COMPLETED|0:0|26|billing=1,cpu=1,mem=12G,node=1|billing=1,cpu=1,mem=12G,node=1\n",
+  "exit_code": 0,
+  "science_gpu_seconds": 0,
+  "scope": "CPU-only allocations; login CPU checks excluded from Slurm elapsed accounting"
+}

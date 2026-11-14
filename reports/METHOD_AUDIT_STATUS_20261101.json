@@ -1,0 +1,792 @@
+{
+  "run_id": "method_code_audit_20261101T0510Z_v1",
+  "updated_UTC": "2026-11-01T05:16:56.482704+00:00",
+  "method_snapshot_coherent": false,
+  "scientific_gate": "NO-GO",
+  "jobs": [
+    {
+      "job_id": "88083",
+      "state": "COMPLETED",
+      "elapsed_seconds": 11,
+      "gpu_seconds": 0,
+      "exit_code": "0:0",
+      "start_cluster_local": "2026-11-01T01:08:44",
+      "end_cluster_local": "2026-11-01T01:08:55",
+      "node": "epyc16"
+    },
+    {
+      "job_id": "88084",
+      "state": "COMPLETED",
+      "elapsed_seconds": 35,
+      "gpu_seconds": 35,
+      "exit_code": "0:0",
+      "start_cluster_local": "2026-11-01T01:10:02",
+      "end_cluster_local": "2026-11-01T01:10:37",
+      "node": "epyc11"
+    }
+  ],
+  "budget": {
+    "cap": 3600,
+    "prior": 2246,
+    "new": 35,
+    "consumed": 2281,
+    "reserved": 0,
+    "remaining": 1319,
+    "scope": "validation-only subtotal including all earlier failures, not lifetime whole-project cost"
+  },
+  "local_VJP": "PASS",
+  "independent_semantic_pairs": 0,
+  "four_arm_image_training": "BLOCKED",
+  "guard_sha256": "73b480ae552990e6d41c560713f2c47137379d7f7ec7049b64fe6c7709552712",
+  "monitor": {
+    "existing": {
+      "enabled": true,
+      "installed": true,
+      "interval_hours": 2,
+      "method": "slurm_cpu_successor",
+      "consecutive_failures": 0,
+      "submission_uncertain": false,
+      "pending_submission_token": "ec957b65b56e40c1b1d83b61080d5d4b",
+      "pending_due_utc": "2026-11-01T06:32:35+00:00",
+      "next_job_id": "88064",
+      "next_due_utc": "2026-11-01T06:32:35+00:00",
+      "last_tick_job_id": "88051",
+      "last_check_outcome": "COMPLETED_WITH_FINDINGS",
+      "last_tick_utc": "2026-11-01T04:32:49.361874+00:00",
+      "last_success_utc": "2026-11-01T04:32:51.929261+00:00",
+      "paused_at": "2026-10-27T06:32:35.109686+00:00",
+      "cancelled_monitor_job_ids": [
+        "86318"
+      ]
+    },
+    "next_New_York": "2026-11-01T01:32:35-05:00",
+    "actual_sacct": "88008|COMPLETED|2026-10-31T22:32:49|2026-10-31T22:32:52|3|0:0\n88051|COMPLETED|2026-11-01T00:32:49|2026-11-01T00:32:51|2|0:0\n88064|PENDING|Unknown|Unknown|0|0:0\n"
+  },
+  "source_index": {
+    "src/rl/diffusion_policy.py": {
+      "sha256": "3ed947bf7cffeb7ae754b101cf8774fa4a68bf269a210089bfd54c77f2352ed1",
+      "symbols": [
+        {
+          "name": "fp32_adapter_linear",
+          "line": 11,
+          "end": 15
+        },
+        {
+          "name": "cfg_inputs",
+          "line": 17,
+          "end": 19
+        },
+        {
+          "name": "guided_prediction",
+          "line": 21,
+          "end": 23
+        },
+        {
+          "name": "DiffusionPolicy",
+          "line": 25,
+          "end": 92
+        },
+        {
+          "name": "__init__",
+          "line": 26,
+          "end": 49
+        },
+        {
+          "name": "condition",
+          "line": 52,
+          "end": 59
+        },
+        {
+          "name": "predict",
+          "line": 61,
+          "end": 72
+        },
+        {
+          "name": "sample",
+          "line": 75,
+          "end": 92
+        }
+      ]
+    },
+    "src/rl/diffusion_rl_trainer.py": {
+      "sha256": "6be0f6d9837166730e2f72ae8ed0891c1d673efc66fcd53de644a344ffaf2348",
+      "symbols": [
+        {
+          "name": "DiffusionRLTrainer",
+          "line": 16,
+          "end": 85
+        },
+        {
+          "name": "__init__",
+          "line": 17,
+          "end": 24
+        },
+        {
+          "name": "update",
+          "line": 27,
+          "end": 68
+        },
+        {
+          "name": "save",
+          "line": 70,
+          "end": 76
+        },
+        {
+          "name": "restore",
+          "line": 78,
+          "end": 85
+        }
+      ]
+    },
+    "src/rl/diffusion_trajectory.py": {
+      "sha256": "65328f5787f6584c00387402bbaaa6d1950973a0a9f6b981e2ad4ba9e5e3ca2b",
+      "symbols": [
+        {
+          "name": "transition",
+          "line": 10,
+          "end": 42
+        },
+        {
+          "name": "assert_fresh",
+          "line": 45,
+          "end": 49
+        },
+        {
+          "name": "assert_fresh_batch",
+          "line": 52,
+          "end": 61
+        }
+      ]
+    },
+    "src/training/generator_adapter.py": {
+      "sha256": "9a5e282bfda4b440e3747cf899a095e8ade0d9a90760326ffa3489113a119c51",
+      "symbols": [
+        {
+          "name": "add_attention_lora",
+          "line": 5,
+          "end": 19
+        },
+        {
+          "name": "frozen_hashes",
+          "line": 22,
+          "end": 29
+        },
+        {
+          "name": "adapter_state",
+          "line": 32,
+          "end": 34
+        },
+        {
+          "name": "load_adapter_state",
+          "line": 37,
+          "end": 41
+        }
+      ]
+    },
+    "src/rl/trainer.py": {
+      "sha256": "9d4faa31a875c9ab91ad73d392dd7d67a0b5fbf69961e7a2c5477a5ec8f77f35",
+      "symbols": [
+        {
+          "name": "synthetic_feedback",
+          "line": 15,
+          "end": 22
+        },
+        {
+          "name": "PolicyTrainer",
+          "line": 25,
+          "end": 86
+        },
+        {
+          "name": "__init__",
+          "line": 26,
+          "end": 41
+        },
+        {
+          "name": "update",
+          "line": 43,
+          "end": 86
+        }
+      ]
+    },
+    "src/rl/reward.py": {
+      "sha256": "35b71b25358e8b2cdcc23723875cc47fe7bf1cd519d51158817684eca10425ad",
+      "symbols": [
+        {
+          "name": "RewardWeights",
+          "line": 6,
+          "end": 11
+        },
+        {
+          "name": "validation_reward",
+          "line": 14,
+          "end": 25
+        }
+      ]
+    },
+    "src/rl/reward_normalization.py": {
+      "sha256": "1c1dd8595634382bb0cf10017c2eea29f83c6b47d36b937c4c2325f6d3823604",
+      "symbols": [
+        {
+          "name": "fixed_advantage",
+          "line": 4,
+          "end": 7
+        }
+      ]
+    },
+    "src/models/qwen_loader.py": {
+      "sha256": "53ac0d7b78644e1661e3a1d81d81f6815e9987a0314afab1a688e7b40d674733",
+      "symbols": [
+        {
+          "name": "QwenVQA",
+          "line": 7,
+          "end": 61
+        },
+        {
+          "name": "__init__",
+          "line": 8,
+          "end": 32
+        },
+        {
+          "name": "answer",
+          "line": 35,
+          "end": 52
+        },
+        {
+          "name": "metadata",
+          "line": 54,
+          "end": 61
+        }
+      ]
+    },
+    "src/rsi/controller.py": {
+      "sha256": "9770e9131efa24074dac682b01807cedffca2af28df6abc6609609e7eb8bb456",
+      "symbols": [
+        {
+          "name": "RSIController",
+          "line": 8,
+          "end": 48
+        },
+        {
+          "name": "__init__",
+          "line": 9,
+          "end": 19
+        },
+        {
+          "name": "revise",
+          "line": 21,
+          "end": 48
+        }
+      ]
+    },
+    "src/rsi/revision.py": {
+      "sha256": "92bc004b897aa8404c322fc9b84b64ee65a8e0a216eb90801d847bf9aa28bc09",
+      "symbols": [
+        {
+          "name": "validate_revision",
+          "line": 6,
+          "end": 17
+        }
+      ]
+    },
+    "src/rsi/phase4_schedule.py": {
+      "sha256": "b8d2f32c2e8e085bcca8299ac1d1622a2cab9c8ae07d492b29b8b6c9b5651bf5",
+      "symbols": [
+        {
+          "name": "Phase4ScheduleController",
+          "line": 13,
+          "end": 34
+        },
+        {
+          "name": "revise_schedule",
+          "line": 14,
+          "end": 34
+        }
+      ]
+    },
+    "src/rsi/harness/revision_proposer.py": {
+      "sha256": "99ead769c18ab087213c79bb0029c7f496dad3df3c3e5f5d2012e8f4f03c65af",
+      "symbols": [
+        {
+          "name": "propose",
+          "line": 4,
+          "end": 15
+        }
+      ]
+    },
+    "src/rsi/harness/version_manager.py": {
+      "sha256": "a18f9e1df565be17a20f913d86d975854c0ee17991618108cc75d21734bfb8d3",
+      "symbols": [
+        {
+          "name": "VersionManager",
+          "line": 9,
+          "end": 39
+        },
+        {
+          "name": "__init__",
+          "line": 10,
+          "end": 13
+        },
+        {
+          "name": "_save_program",
+          "line": 15,
+          "end": 16
+        },
+        {
+          "name": "_pointer",
+          "line": 18,
+          "end": 18
+        },
+        {
+          "name": "program",
+          "line": 20,
+          "end": 21
+        },
+        {
+          "name": "evaluate",
+          "line": 23,
+          "end": 34
+        },
+        {
+          "name": "rollback",
+          "line": 36,
+          "end": 39
+        }
+      ]
+    },
+    "src/evaluation/semantic_validation.py": {
+      "sha256": "f55dc7eb22de7f29f575eee45682875b6532228adeb19e5b940bd1bafb38411a",
+      "symbols": [
+        {
+          "name": "question_attributes",
+          "line": 6,
+          "end": 11
+        },
+        {
+          "name": "parse_judgment",
+          "line": 14,
+          "end": 24
+        },
+        {
+          "name": "semantic_decision",
+          "line": 27,
+          "end": 46
+        },
+        {
+          "name": "review_pair",
+          "line": 49,
+          "end": 64
+        }
+      ]
+    },
+    "src/evaluation/image_quality.py": {
+      "sha256": "27d708c2ea11fe1f9e589b2a75588fd7ae4d0662759d35dbc561888b9e361d3a",
+      "symbols": [
+        {
+          "name": "image_quality",
+          "line": 4,
+          "end": 23
+        }
+      ]
+    },
+    "src/evaluation/vqa_official_compatible.py": {
+      "sha256": "2357b5edc68722de6ef8cac9dce2858e2bc0a1696e48c3b8af07b01411d60f30",
+      "symbols": [
+        {
+          "name": "reference_metadata",
+          "line": 14,
+          "end": 15
+        },
+        {
+          "name": "_reference",
+          "line": 18,
+          "end": 25
+        },
+        {
+          "name": "normalize_answer",
+          "line": 28,
+          "end": 31
+        },
+        {
+          "name": "score_answer",
+          "line": 34,
+          "end": 52
+        },
+        {
+          "name": "Stub",
+          "line": 20,
+          "end": 24
+        },
+        {
+          "name": "__init__",
+          "line": 21,
+          "end": 22
+        },
+        {
+          "name": "getQuesIds",
+          "line": 23,
+          "end": 24
+        }
+      ]
+    },
+    "src/evaluation/security_metrics.py": {
+      "sha256": "57552b1e26c78c6c1b52dcb589158896c41566dd5b1ea088756e5d79f2d52a3b",
+      "symbols": [
+        {
+          "name": "_rate",
+          "line": 5,
+          "end": 6
+        },
+        {
+          "name": "security_metrics",
+          "line": 9,
+          "end": 36
+        }
+      ]
+    },
+    "scripts/smoke_generator_rl.py": {
+      "sha256": "bf509e6d2316dbcba22b6313d2133c9f2e4b2ca68f42e08582a2eeb04127c5c8",
+      "symbols": [
+        {
+          "name": "rng_state",
+          "line": 30,
+          "end": 31
+        },
+        {
+          "name": "collect",
+          "line": 34,
+          "end": 64
+        },
+        {
+          "name": "conditioning_and_reward_test",
+          "line": 67,
+          "end": 96
+        },
+        {
+          "name": "main",
+          "line": 98,
+          "end": 172
+        }
+      ]
+    },
+    "scripts/run_phase4_rsi.py": {
+      "sha256": "68d76d5f7ffc219662d065b63080316d3a456b9ccc92e4055b42b96d95d9d502",
+      "symbols": [
+        {
+          "name": "Collection",
+          "line": 28,
+          "end": 32
+        },
+        {
+          "name": "subset",
+          "line": 34,
+          "end": 42
+        },
+        {
+          "name": "obtain",
+          "line": 45,
+          "end": 53
+        },
+        {
+          "name": "main",
+          "line": 55,
+          "end": 143
+        },
+        {
+          "name": "__init__",
+          "line": 29,
+          "end": 31
+        },
+        {
+          "name": "event",
+          "line": 32,
+          "end": 32
+        }
+      ]
+    },
+    "scripts/benign_threeway_20261101_v2.py": {
+      "sha256": "c7295e7e2525219d7b6f76051c4623f1849727ddb65ee09d6f6ffbbe144ab9c4",
+      "symbols": [
+        {
+          "name": "put",
+          "line": 13,
+          "end": 15
+        },
+        {
+          "name": "sha",
+          "line": 16,
+          "end": 16
+        },
+        {
+          "name": "scheduler_metadata",
+          "line": 17,
+          "end": 24
+        },
+        {
+          "name": "main",
+          "line": 25,
+          "end": 95
+        },
+        {
+          "name": "check",
+          "line": 27,
+          "end": 29
+        },
+        {
+          "name": "construct",
+          "line": 30,
+          "end": 36
+        },
+        {
+          "name": "episodes",
+          "line": 39,
+          "end": 46
+        },
+        {
+          "name": "evaluate",
+          "line": 47,
+          "end": 47
+        },
+        {
+          "name": "snapshot",
+          "line": 48,
+          "end": 49
+        },
+        {
+          "name": "predict",
+          "line": 35,
+          "end": 35
+        }
+      ]
+    },
+    "src/data/dataset.py": {
+      "sha256": "c050a96c91bf0b3118cd6ea2d4bdd5b4c03ad3b5f668deb5ef068b66c351cc01",
+      "symbols": [
+        {
+          "name": "sha256",
+          "line": 7,
+          "end": 12
+        },
+        {
+          "name": "VQADataset",
+          "line": 15,
+          "end": 46
+        },
+        {
+          "name": "validate_disjoint",
+          "line": 49,
+          "end": 55
+        },
+        {
+          "name": "__init__",
+          "line": 16,
+          "end": 33
+        },
+        {
+          "name": "image_path",
+          "line": 35,
+          "end": 37
+        },
+        {
+          "name": "__len__",
+          "line": 39,
+          "end": 40
+        },
+        {
+          "name": "__getitem__",
+          "line": 42,
+          "end": 46
+        }
+      ]
+    },
+    "src/rl/phase5_backend.py": {
+      "sha256": "73b480ae552990e6d41c560713f2c47137379d7f7ec7049b64fe6c7709552712",
+      "symbols": [
+        {
+          "name": "make_backend",
+          "line": 7,
+          "end": 9
+        },
+        {
+          "name": "diagnostic_feedback",
+          "line": 11,
+          "end": 14
+        },
+        {
+          "name": "require_training_reward",
+          "line": 16,
+          "end": 18
+        }
+      ]
+    },
+    "src/rl/diffusion_policy_v2.py": {
+      "sha256": "ef57c8726a554101c32e839e822e23dbd738887b716a66d4fbc2abaaca96e32f",
+      "symbols": [
+        {
+          "name": "ContentBoundDiffusionPolicy",
+          "line": 5,
+          "end": 15
+        },
+        {
+          "name": "condition",
+          "line": 6,
+          "end": 10
+        },
+        {
+          "name": "sample",
+          "line": 12,
+          "end": 15
+        }
+      ]
+    },
+    "src/rl/diffusion_rl_trainer_v2.py": {
+      "sha256": "0a79e6ea77c918a13c58adc969bdfebd73610a6675a198d6f1fa9ba90c24a28a",
+      "symbols": [
+        {
+          "name": "validate_unique_batch",
+          "line": 5,
+          "end": 17
+        },
+        {
+          "name": "GuardedDiffusionRLTrainer",
+          "line": 19,
+          "end": 24
+        },
+        {
+          "name": "update",
+          "line": 20,
+          "end": 24
+        }
+      ]
+    },
+    "src/rl/reward_v2.py": {
+      "sha256": "294afbdc546365fae5601978defe263e9d98f6d7a4a1af9453edd1e3ccc4c0c3",
+      "symbols": [
+        {
+          "name": "RewardConfigV2",
+          "line": 10,
+          "end": 31
+        },
+        {
+          "name": "aggregate_diagnostic",
+          "line": 33,
+          "end": 47
+        },
+        {
+          "name": "saturation_and_redundancy",
+          "line": 49,
+          "end": 60
+        },
+        {
+          "name": "__post_init__",
+          "line": 19,
+          "end": 24
+        },
+        {
+          "name": "from_dict",
+          "line": 27,
+          "end": 29
+        },
+        {
+          "name": "to_dict",
+          "line": 31,
+          "end": 31
+        }
+      ]
+    },
+    "src/evaluation/semantic_validation_v2.py": {
+      "sha256": "8dc5698fc67a35b73776b0c86f4bb84d583eaf36d2447d93772a9b0c43963bb7",
+      "symbols": [
+        {
+          "name": "validate_validity",
+          "line": 5,
+          "end": 20
+        },
+        {
+          "name": "decision_v2",
+          "line": 22,
+          "end": 32
+        },
+        {
+          "name": "consistency_eligible",
+          "line": 34,
+          "end": 36
+        }
+      ]
+    },
+    "src/data/semantic_contract_v2.py": {
+      "sha256": "f3ec86ffcfa5a550d54bb1e8fbc1381613f75b48164048cb86a15d3caf1c918b",
+      "symbols": [
+        {
+          "name": "candidate_categories",
+          "line": 13,
+          "end": 15
+        },
+        {
+          "name": "unknown",
+          "line": 17,
+          "end": 17
+        },
+        {
+          "name": "from_original",
+          "line": 19,
+          "end": 29
+        },
+        {
+          "name": "_evidence",
+          "line": 31,
+          "end": 38
+        },
+        {
+          "name": "validate",
+          "line": 40,
+          "end": 73
+        },
+        {
+          "name": "eligible_for_semantic_study",
+          "line": 75,
+          "end": 81
+        }
+      ]
+    },
+    "src/rsi/harness/cost_aware_gate.py": {
+      "sha256": "f1239f97e61b4f119a7f9b01aaa0db60b0f5908f350dbf8b0e95b3712307edde",
+      "symbols": [
+        {
+          "name": "GatePolicy",
+          "line": 8,
+          "end": 19
+        },
+        {
+          "name": "IndependentGate",
+          "line": 21,
+          "end": 58
+        },
+        {
+          "name": "__post_init__",
+          "line": 15,
+          "end": 19
+        },
+        {
+          "name": "__init__",
+          "line": 22,
+          "end": 30
+        },
+        {
+          "name": "compare",
+          "line": 32,
+          "end": 58
+        }
+      ]
+    },
+    "scripts/verify_method_contracts_20261101.py": {
+      "sha256": "5e7fc452698e4202b290de4e48975cc841ab978b14b76e92c102bfc180723b55",
+      "symbols": [
+        {
+          "name": "verify",
+          "line": 10,
+          "end": 27
+        }
+      ]
+    }
+  }
+}

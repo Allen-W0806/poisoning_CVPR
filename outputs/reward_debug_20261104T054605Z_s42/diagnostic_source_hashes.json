@@ -1,0 +1,13 @@
+{
+  "scripts/debug_lighting_v2.py": "c33154a75734cfab67fe67e6d3955bd9462904257fe5927da334fb948e2b23d1",
+  "scripts/audit_padding_reward_20261104.py": "fd52001a0c8774aafa13745b30410f9bfea528b05bfbe42499dee444a0eec7ad",
+  "scripts/submit_reward_campaign.py": "1f1883c38432c85c4606d7bda3c280e6923c4ddc1b5e4c25bf8d6794653054f3",
+  "src/mini_pilot/lighting_reward_v2.py": "367db68f6d6c9667fb7801b257250a003a9222b49b84f113684505879d8ad23c",
+  "src/mini_pilot/reward.py": "a903a94629e1bac148bb54734d608efa62adb90a5bb0238e545b7ea63b6466c0",
+  "src/mini_pilot/engine.py": "6345ec3f49ad14ab66d297997c0e05d953ef2434fe5ac96c2e06a7ccc04ba9b1",
+  "src/rl/diffusion_policy.py": "3ed947bf7cffeb7ae754b101cf8774fa4a68bf269a210089bfd54c77f2352ed1",
+  "src/rl/diffusion_trajectory.py": "65328f5787f6584c00387402bbaaa6d1950973a0a9f6b981e2ad4ba9e5e3ca2b",
+  "src/training/generator_adapter.py": "9a5e282bfda4b440e3747cf899a095e8ade0d9a90760326ffa3489113a119c51",
+  "docs/REWARD_DEBUG_20261104.md": "939de7ff0ad018a8615c14cc5e968983959972da9cf54fd83312a4536a969ee2",
+  "tests/test_lighting_reward_v2.py": "5c78040a6503516fc1a984396be85741640e0e4647ce667444268b15216e0d8f"
+}

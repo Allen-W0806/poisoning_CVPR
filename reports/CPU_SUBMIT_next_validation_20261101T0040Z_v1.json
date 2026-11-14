@@ -1,0 +1,19 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--no-requeue",
+    "--partition=epyc-cpu,intel-cpu",
+    "--account=allusers",
+    "--cpus-per-task=4",
+    "--mem=8G",
+    "--time=00:05:00",
+    "--job-name=poisoning-next-cpu",
+    "--output=/storage/home/ydk297/projects/poisoning/logs/next_validation_20261101T0040Z_v1-cpu-%j.out",
+    "--error=/storage/home/ydk297/projects/poisoning/logs/next_validation_20261101T0040Z_v1-cpu-%j.err",
+    "--wrap=cd /storage/home/ydk297/projects/poisoning && OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 PYTHONDONTWRITEBYTECODE=1 /storage/home/ydk297/projects/poisoning/.venv-editor/bin/python -B scripts/next_validation_20261031.py prepare --run-id next_validation_20261101T0040Z_v1"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "sbatch: error:  \nsbatch: error: Job Resource Tips:\nsbatch: error:   * Run 'jobstats <jobid>' while your job is running (wait at least 60 seconds before trying) or after job completes.\nsbatch: error:   * Check CPU, GPU, and memory usage.\nsbatch: error:   * Adjust your requests to improve efficiency.\nsbatch: error:   * Optimizing your requests can help shorten queue times and improve cluster utilization.\nsbatch: error:  \nsbatch: error: invalid partition specified: intel-cpu\nsbatch: error: Batch job submission failed: Invalid partition name specified\n"
+}

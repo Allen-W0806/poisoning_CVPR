@@ -1,0 +1,71 @@
+{
+  "experiment_id": "EXP_20261028T044752_b0572261ea61_phase6_s1_data",
+  "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261028T044752_b0572261ea61_phase6_s1_data",
+  "results": {
+    "counts": {
+      "train": {
+        "records": 999,
+        "unique_image_ids": 988,
+        "content_groups": 988,
+        "repeated_content_records": 11,
+        "repeated_id_records": 11,
+        "independently_eligible": 0
+      },
+      "development": {
+        "records": 104,
+        "unique_image_ids": 103,
+        "content_groups": 103,
+        "repeated_content_records": 1,
+        "repeated_id_records": 1,
+        "independently_eligible": 0
+      },
+      "gate": {
+        "records": 96,
+        "unique_image_ids": 94,
+        "content_groups": 94,
+        "repeated_content_records": 2,
+        "repeated_id_records": 2,
+        "independently_eligible": 0
+      },
+      "test": {
+        "records": 301,
+        "unique_image_ids": 299,
+        "content_groups": 298,
+        "repeated_content_records": 3,
+        "repeated_id_records": 2,
+        "independently_eligible": 0
+      }
+    },
+    "official_joins_reverified": 1500,
+    "content_split_isolation": true,
+    "deterministic_source_batch10": [
+      "ab1bbf24c765e1d544b1b4626017633e8caa88a2c630786ecc2e482f38e9afe0",
+      "1c02a436eaaaef322935dd1d2df043dc5d60731f36b3412c73227ce41ea417da",
+      "055e0fcb53b02440e69f4fcc78cf52504be563c3e2b53d75788e2810f382ff3a",
+      "c99fa0e5598da0714c91bbb1228b3f290cb478e7addb4b77b679081b6e437479",
+      "4bd167d12e7e075736d77b0545a7c3af2e9b742c24f9600c837dd41a91d4e76b",
+      "4285aa06beac04d78a0b30fc351a7268cb43cebb9affb334d876039d34a36f32",
+      "3d299f94bdef8ac778ff0f969fd9ecceaae64babb5217fd6e07d17be9f8794b8",
+      "2724859b5895c9d5cf38711c570e1547db6c4f6ea08a31c6f6421d9f37817d17",
+      "c8251633d86996ec283d9cd38728867916ba97de86714354aa7c2ce0ab73758d",
+      "18cd4ec3f036f047b72e0054e1af1a27ffe3bf1b477f67468a9445db6d3437f7"
+    ],
+    "old_test_members_preserved": true,
+    "independent_semantic_truth_available": false,
+    "edited_answers_not_inferred": true,
+    "new_manifest_needed": false,
+    "historically_exposed_dev_gate": true,
+    "resources": {
+      "wall_seconds": 11.480717953294516,
+      "cpu_seconds": 10.644545469,
+      "gpu_seconds": 0,
+      "model_calls": 0
+    },
+    "source_provenance": [],
+    "audit_context_versions": {
+      "dataset": "vqav2_content_v2",
+      "reward": "reward_compat_v2_diagnostic_only, not released or executed as training reward"
+    }
+  },
+  "output_manifest_sha256": "f8efa4d96ead4fe4d04e71aa3bb4acb9261fe9c173e95f3a1c4d0f7c7ae2c7f5"
+}

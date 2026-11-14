@@ -1,0 +1,6 @@
+﻿Configuration,ASR,Accepted_revisions,Recorded_config_actions,Controller_updates,Generator_updates,Lighting_reward_v3,Status
+Fixed_config (DDPO),NOT TESTED,N/A: no formal acceptance gate,0,0,100,-2.3447473855428838,MEASURED
+Ordinary_scheduler,NOT TESTED,NOT TESTED,NOT TESTED,NOT TESTED,NOT TESTED,NOT TESTED,NOT TESTED
+Rule_RSI,NOT TESTED,N/A: no formal acceptance gate,1,0,100,-2.364121579706492,MEASURED
+PBT_config_search,NOT TESTED,NOT TESTED,NOT TESTED,NOT TESTED,NOT TESTED,NOT TESTED,NOT TESTED
+RL_controller,NOT TESTED,N/A: no formal acceptance gate,3,3,100,-2.34517404146721,MEASURED

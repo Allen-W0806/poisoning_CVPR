@@ -1,0 +1,3 @@
+# Tables5/6/7 evidence boundary
+
+Table5内部LPIPS/SSIM来自良性开发图像，ASR/poison fraction未测。Table6区分文献、外部原任务复现和Ours匹配结果；三者不能混写。Table7 Fixed_config对应配置固定的DDPO，不是Frozen编辑器；未运行scheduler/PBT不填0。Area_frac按整个512画布任意非零整数RGB变化计像素；BASELINE_COMPARISON另列排除白边的content版本。edited_assessment_fraction只描述16张开发评估图中被改变的比例，不等于victim训练poison_sample_fraction。正式accepted revisions机制不存在，不能拿controller action数代替。报告不追求用NOT TESTED伪装80%实测覆盖率。

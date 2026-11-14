@@ -1,0 +1,161 @@
+{
+  "status": "COMPLETED",
+  "raw_full_precision_series": [
+    {
+      "name": "Frozen / Fixed",
+      "values": [
+        -0.09589995164424181,
+        -0.09589995164424181,
+        -0.09589995164424181,
+        -0.09589995164424181
+      ],
+      "line": {
+        "style": "solid",
+        "fill": "#1f77b4",
+        "width": 3
+      },
+      "marker": {
+        "symbol": "square",
+        "size": 8,
+        "fill": "#1f77b4"
+      }
+    },
+    {
+      "name": "DDPO-only",
+      "values": [
+        -0.09589995164424181,
+        -0.07320178672671318,
+        -0.05139263067394495,
+        -0.027125424705445766
+      ],
+      "line": {
+        "style": "solid",
+        "fill": "#ff7f0e",
+        "width": 3
+      },
+      "marker": {
+        "symbol": "circle",
+        "size": 8,
+        "fill": "#ff7f0e"
+      }
+    },
+    {
+      "name": "Rule-based RSI",
+      "values": [
+        -0.09589995164424181,
+        -0.07320178672671318,
+        -0.05139263067394495,
+        -0.027125424705445766
+      ],
+      "line": {
+        "style": "solid",
+        "fill": "#2ca02c",
+        "width": 2
+      },
+      "marker": {
+        "symbol": "diamond",
+        "size": 6,
+        "fill": "#2ca02c"
+      }
+    },
+    {
+      "name": "RL-RSI",
+      "values": [
+        -0.09589995164424181,
+        -0.07697504945099354,
+        -0.05291162896901369,
+        -0.015453527215868235
+      ],
+      "line": {
+        "style": "solid",
+        "fill": "#d62728",
+        "width": 3
+      },
+      "marker": {
+        "symbol": "triangle",
+        "size": 8,
+        "fill": "#d62728"
+      }
+    }
+  ],
+  "plotted_series": [
+    {
+      "name": "Frozen / Fixed",
+      "values": [
+        -0.095899952,
+        -0.095899952,
+        -0.095899952,
+        -0.095899952
+      ],
+      "line": {
+        "style": "solid",
+        "fill": "#1f77b4",
+        "width": 3
+      },
+      "marker": {
+        "symbol": "square",
+        "size": 8,
+        "fill": "#1f77b4"
+      }
+    },
+    {
+      "name": "DDPO-only",
+      "values": [
+        -0.095899952,
+        -0.073201787,
+        -0.051392631,
+        -0.027125425
+      ],
+      "line": {
+        "style": "solid",
+        "fill": "#ff7f0e",
+        "width": 3
+      },
+      "marker": {
+        "symbol": "circle",
+        "size": 8,
+        "fill": "#ff7f0e"
+      }
+    },
+    {
+      "name": "Rule-based RSI",
+      "values": [
+        -0.095899952,
+        -0.073201787,
+        -0.051392631,
+        -0.027125425
+      ],
+      "line": {
+        "style": "solid",
+        "fill": "#2ca02c",
+        "width": 2
+      },
+      "marker": {
+        "symbol": "diamond",
+        "size": 6,
+        "fill": "#2ca02c"
+      }
+    },
+    {
+      "name": "RL-RSI",
+      "values": [
+        -0.095899952,
+        -0.076975049,
+        -0.052911629,
+        -0.015453527
+      ],
+      "line": {
+        "style": "solid",
+        "fill": "#d62728",
+        "width": 3
+      },
+      "marker": {
+        "symbol": "triangle",
+        "size": 8,
+        "fill": "#d62728"
+      }
+    }
+  ],
+  "plot_decimal_places": 9,
+  "maximum_plot_rounding_error": 4.509935341845406e-10
+}

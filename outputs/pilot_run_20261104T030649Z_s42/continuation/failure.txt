@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/storage/home/ydk297/projects/poisoning/scripts/continue_mini_pilot.py", line 274, in main
+    make_figures(output, state)
+  File "/storage/home/ydk297/projects/poisoning/src/mini_pilot/reporting.py", line 135, in make_figures
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'

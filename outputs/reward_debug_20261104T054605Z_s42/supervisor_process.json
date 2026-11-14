@@ -1,0 +1,8 @@
+{
+  "PID": 1798321,
+  "host": "login02",
+  "max_seconds": 21600,
+  "worker_SHA256": "c2c84f966b0e595034db788dae771156729ca36f45e3838310ad5d2a77ab9ca0",
+  "auto_retry": false,
+  "scope": "bounded one-run orchestration of fixed preregistered stages; no tuning or recurring automation"
+}

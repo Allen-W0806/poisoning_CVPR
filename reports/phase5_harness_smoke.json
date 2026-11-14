@@ -1,0 +1,106 @@
+{
+  "id": "EXP_20261028T025518_c497cfd041ee_phase5_harness_evolution",
+  "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261028T025518_c497cfd041ee_phase5_harness_evolution",
+  "results": {
+    "diagnosis": {
+      "case_id": "train_0000",
+      "hypotheses": [
+        {
+          "cause": "dataset_corruption_or_duplication",
+          "prediction": "actual file digest differs from the recorded manifest"
+        },
+        {
+          "cause": "image_quality_measurement_error",
+          "prediction": "reported geometry disagrees with an independent header read"
+        }
+      ],
+      "supported": [
+        "dataset_corruption_or_duplication"
+      ],
+      "contradicted": [
+        "geometry_checker_reported_wrong_size"
+      ],
+      "unresolved": [
+        "instruction_following_failure",
+        "image_quality_measurement_error",
+        "question_answer_validity_error",
+        "semantic_verifier_disagreement",
+        "reward_or_configuration_error",
+        "gradient_or_optimizer_instability",
+        "checkpoint_continuation_discrepancy",
+        "evaluation_leakage",
+        "resource_inefficiency"
+      ],
+      "contradiction_scope": "Header agreement contradicts only the proposed wrong-geometry explanation, not every quality measurement error",
+      "evidence_queries": [
+        "image_headers",
+        "content_hash"
+      ],
+      "diagnosis_status": "SUPPORTED_SCOPED",
+      "scope": "digest discrepancy; not a claim of intentional corruption or semantic failure root cause"
+    },
+    "ineffective_rejected": true,
+    "useful_revision_accepted": true,
+    "regression_rejected": true,
+    "rollback_verified": true,
+    "final_incumbent": "H0002",
+    "accepted_validation_aggregate": {
+      "accepted": true,
+      "n_sources": 32,
+      "parent_accuracy": 0.5,
+      "candidate_accuracy": 1.0,
+      "accuracy_delta": 0.5,
+      "parent_false_valid": 16,
+      "candidate_false_valid": 0,
+      "new_false_valid": 0,
+      "new_errors_on_previously_correct_sources": 0,
+      "parent_resources": {
+        "wall_seconds": 0.005248861387372017,
+        "cpu_seconds": 0.005199414999995433,
+        "diagnostic_operations": 32,
+        "bytes_read": 3135,
+        "model_calls": 0,
+        "gpu_seconds": 0.0
+      },
+      "candidate_resources": {
+        "wall_seconds": 0.006171492859721184,
+        "cpu_seconds": 0.006154341000002894,
+        "diagnostic_operations": 64,
+        "bytes_read": 6270,
+        "model_calls": 0,
+        "gpu_seconds": 0.0
+      },
+      "policy": {
+        "min_sources": 24,
+        "minimum_accuracy_gain": 0.05,
+        "maximum_operation_growth": 1.0,
+        "minimum_operation_reduction": 0.2,
+        "schema_version": "fixed_integrity_oracle_gate_v1"
+      },
+      "evaluator_definitions_changed": false,
+      "matched_exposure": true,
+      "reason": "verified engineering gain within fixed operation budget",
+      "scope": "deterministic harmless task; not a natural-image semantic or security result"
+    },
+    "total_search_resources": {
+      "wall_seconds": 0.0901463758200407,
+      "cpu_seconds": 0.07946717500000045,
+      "diagnostic_operations": 259,
+      "bytes_read": 25389,
+      "model_calls": 0,
+      "gpu_seconds": 0.0
+    },
+    "selected_harness_execution_resources": {
+      "wall_seconds": 0.006171492859721184,
+      "cpu_seconds": 0.006154341000002894,
+      "diagnostic_operations": 64,
+      "bytes_read": 6270,
+      "model_calls": 0,
+      "gpu_seconds": 0.0
+    },
+    "trace_events": 5,
+    "new_scientific_updates": 0,
+    "new_model_calls": 0,
+    "scope": "Deterministic engineering oracle only; natural-image and security validity not established"
+  }
+}

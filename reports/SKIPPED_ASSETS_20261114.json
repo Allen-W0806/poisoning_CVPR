@@ -1,0 +1,1432 @@
+{
+  "large_or_raw_assets": [
+    {
+      "path": "/storage/home/ydk297/.cache/huggingface/hub/models--Qwen--Qwen3-VL-2B-Instruct/snapshots/89644892e4d85e24eaac8bacfd4f463576704203/model.safetensors",
+      "bytes": 4255140312,
+      "reason": "base model weight; >=100MB; reproduce from pinned HuggingFace ID instead"
+    },
+    {
+      "path": "/storage/home/ydk297/.cache/huggingface/hub/models--timbrooks--instruct-pix2pix/snapshots/31519b5cb02a7fd89b906d88731cd4d6a7bbf88d/text_encoder/model.fp16.safetensors",
+      "bytes": 246144864,
+      "reason": "base model weight; >=100MB; reproduce from pinned HuggingFace ID instead"
+    },
+    {
+      "path": "/storage/home/ydk297/.cache/huggingface/hub/models--timbrooks--instruct-pix2pix/snapshots/31519b5cb02a7fd89b906d88731cd4d6a7bbf88d/unet/diffusion_pytorch_model.fp16.safetensors",
+      "bytes": 1719148344,
+      "reason": "base model weight; >=100MB; reproduce from pinned HuggingFace ID instead"
+    },
+    {
+      "path": "/storage/home/ydk297/.cache/huggingface/hub/models--timbrooks--instruct-pix2pix/snapshots/31519b5cb02a7fd89b906d88731cd4d6a7bbf88d/vae/diffusion_pytorch_model.fp16.safetensors",
+      "bytes": 167335342,
+      "reason": "base model weight; >=100MB; reproduce from pinned HuggingFace ID instead"
+    },
+    {
+      "path": "/storage/home/ydk297/.cache/huggingface/hub/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41/model.safetensors",
+      "bytes": 1710540580,
+      "reason": "base model weight; >=100MB; reproduce from pinned HuggingFace ID instead"
+    },
+    {
+      "path": "/storage/home/ydk297/.cache/torch/hub/checkpoints/alexnet-owt-7be5be79.pth",
+      "bytes": 244408911,
+      "reason": "metric backbone weight; >=100MB; download source recorded instead"
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/data/raw/vqav2/v2_Questions_Train_mscoco.zip",
+      "bytes": 7239401,
+      "reason": "raw dataset archive excluded irrespective of individual size"
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/data/raw/vqav2/v2_Annotations_Train_mscoco.zip",
+      "bytes": 21708861,
+      "reason": "raw dataset archive excluded irrespective of individual size"
+    },
+    {
+      "path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/images",
+      "bytes": 279061722,
+      "files": 1792,
+      "reason": "raw source images; manifest and source URLs published instead"
+    }
+  ],
+  "text_files_not_selected": [
+    {
+      "path": "outputs/overnight_benign_20261112T051015Z/remote/controlplane_revisions/1794461467_before.py.txt",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/overnight_benign_20261112T051015Z/remote/controlplane_revisions/1794461731_before_no_requeue.py.txt",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/pilot_run_20261104T030649Z_s42/reproduction_code/docs/MINI_PILOT.md",
+      "reason": "source/cache/image/checkpoint subtree"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/cpu_submissions/shadowcast_quality/slurm-88965.log",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/cpu_submissions/shadowcast_quality/submission.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/posthoc_source/configs/lighting_v3_posthoc_vqa.json",
+      "reason": "source/cache/image/checkpoint subtree"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/posthoc_source/configs/shadowcast_env_20261104.json",
+      "reason": "source/cache/image/checkpoint subtree"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/posthoc_source/docs/BF16_REDUCTION_CANDIDATE.md",
+      "reason": "source/cache/image/checkpoint subtree"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/posthoc_source/docs/LIGHTING_V3_TIMECAP_CONTINUATION.md",
+      "reason": "source/cache/image/checkpoint subtree"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/posthoc_source/docs/REWARD_CAMPAIGN_SUPERVISOR.md",
+      "reason": "source/cache/image/checkpoint subtree"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/posthoc_source/docs/REWARD_DEBUG_20261104.md",
+      "reason": "source/cache/image/checkpoint subtree"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/posthoc_source/docs/SHADOWCAST_SEED42.md",
+      "reason": "source/cache/image/checkpoint subtree"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/posthoc_source/docs/SHADOWCAST_VIZWIZ_CLEAN.md",
+      "reason": "source/cache/image/checkpoint subtree"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/evidence/shadowcast_package_versions.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/external_source_snapshot/.aris/compute/utc-shadowcast.md",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/external_source_snapshot/configs/shadowcast_env_20261104.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/external_source_snapshot/docs/SHADOWCAST_SEED42.md",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/checkpoint_evaluation_lock.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/clean_argument_collision_88954.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/clean_tmpdir_failure.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/eval_0.jsonl",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/eval_0_summary.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/eval_50.jsonl",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/eval_50_summary.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/exact_split_overlap_audit.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/failed_clean_tmpdir_88952/train_0_arguments.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/GPU_smoke.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_0_seed42_lora/adapter_config.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_0_seed42_lora/config.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_0_seed42_lora/README.md",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_0_seed42_lora/trainer_state.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_50_seed42_lora/adapter_config.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_50_seed42_lora/config.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_50_seed42_lora/README.md",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_50_seed42_lora/trainer_state.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_completed.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_progress.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_quality.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/poison_tokenization_audit.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/protocol.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/train_0_arguments.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/train_0_completed.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/train_50_arguments.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/train_50_completed.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/shadowcast/verified_statistics.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_clean/slurm-88952.log",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_clean/submission.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_clean_repaired/slurm-88955.log",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_clean_repaired/submission.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_clean_tmpfix/slurm-88954.log",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_clean_tmpfix/submission.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_eval_0/slurm-88967.log",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_eval_0/submission.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_eval_50/slurm-88968.log",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_eval_50/submission.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_poison/slurm-88951.log",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_poison/submission.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_poison_pathfix/slurm-88953.log",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_poison_pathfix/submission.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_poisoned/slurm-88966.log",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_poisoned/submission.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_smoke/slurm-88950.log",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "outputs/reward_debug_20261104T054605Z_s42/submissions/shadowcast_smoke/submission.json",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "reports/DRIVE_SYNC_AUTH_RECOVERY.md",
+      "reason": "excluded control/authentication/history utility"
+    },
+    {
+      "path": "reports/monitor/check_20261112_002537.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_002603.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_002651.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_002704.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_002744.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_002815.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_002842.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_003019.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_003107.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_003303.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_003438.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_003611.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_003749.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_003906.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_004349.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_004505.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_005422.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_025600.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_030324.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/check_20261112_030430.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/codex_automation_receipt.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/final_manual_test_receipt.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/heartbeat.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/scheduler_20261112_002651.log",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/scheduler_20261112_003749.log",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/scheduler_20261112_004349.log",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/scheduler_20261112_004504.log",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/scheduler_receipt.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitor/windows_task_disabled_receipt.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/activation_failures.jsonl",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/activation_failures_raw.txt",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/activation_status.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/activation_verification.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T060924_706180_5ea9b8.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T060924_706180_5ea9b8.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T062254_389844_3ff37e.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T062254_389844_3ff37e.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T063130_386281_6431fc.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T063130_386281_6431fc.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T063236_976795_cf700a.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T063236_976795_cf700a.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T083304_592902_973e62.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T083304_592902_973e62.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T103305_070722_49763a.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T103305_070722_49763a.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T123242_312785_221df0.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T123242_312785_221df0.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T143253_292728_3dcee7.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T143253_292728_3dcee7.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T144323_607903_ff5683.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T144323_607903_ff5683.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T150046_432177_1c4cfe.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T150046_432177_1c4cfe.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T150652_960406_2f4127.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T150652_960406_2f4127.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T150913_100997_55d3ed.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T150913_100997_55d3ed.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T185604_610673_45a518.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/CHECK_20261027T185604_610673_45a518.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/final_units.log",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/housekeeping_cluster.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/housekeeping_local.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/idempotence_probe.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/pause_probe.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/pause_status.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/PROGRESS_SUMMARY_20261027_ZH.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/repairs.jsonl",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/resume_probe.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/scheduler.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/scheduler_events.jsonl",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/source_mirror_manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/state.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/monitoring/synthetic_tests.log",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/audit/local_report_package_before_sync/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/audit/local_report_package_before_sync/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/audit/local_report_package_before_sync/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/audit/local_report_package_before_sync/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/audit/local_report_package_before_sync/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/audit/local_report_package_before_sync/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/audit/local_report_package_before_sync/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/audit/local_report_package_before_sync/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/audit/local_report_package_before_sync/SYNC_TEST.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/audit/state_before_forensics_path_fix.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T054513_157139Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T054530_806684Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T054741_098146Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T054922_925725Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T054940_737024Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T055107_316926Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T055122_740868Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T063255_244667Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T083253_864091Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T103256_112030Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T123255_567849Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T143256_810632Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/check_20261101T144756_912969Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/cloud_last_attempt.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/auth_status.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_before_recovery/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_before_recovery/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_before_recovery/reports/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_before_recovery/reports/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_before_recovery/reports/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_before_recovery/reports/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_before_recovery/reports/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_before_recovery/reports/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_before_recovery/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_debug_readback.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_download_diagnosis.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/baseline_readback_debug.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/cleanup_receipt.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/closure_2026-11-01T153109.000766_0000.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/closure_latest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/cloud_baseline_backup.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/control_tests.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/delivery_history.jsonl",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/diagnosed_retry_88201.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/dispatch.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/engineering_fix_20261101T151806Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/environment_comparison.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/environment_job_submission.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/final_receipt.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/final_scheduler_evidence.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/interactive_diagnosis.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/interactive_environment.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/interactive_probe.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/jobs.jsonl",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/logging_level_control.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/monitor_verification_submission.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/post_backoff_single_read.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/probes/auth_probe_20261101T150648_interactive_1327cd65.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/probes/auth_probe_20261101T150651_slurm_c3a60f40.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/provider_failure_20261101T153008_111982.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/slurm_environment.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/slurm_probe.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/source/20261101T152514Z/control_tests.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/source/20261101T152514Z/worker_failures.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/verified_versions.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/worker_failures.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/drive_auth_recovery/worker_last.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/final_tick_submission.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/forensics_fix_event_submission.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/heartbeat.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/history.jsonl",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/installation_receipt.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/1fe5f9754830b1467f08b82e/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/1fe5f9754830b1467f08b82e/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/1fe5f9754830b1467f08b82e/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/1fe5f9754830b1467f08b82e/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/1fe5f9754830b1467f08b82e/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/1fe5f9754830b1467f08b82e/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/1fe5f9754830b1467f08b82e/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/1fe5f9754830b1467f08b82e/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/1fe5f9754830b1467f08b82e/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/373d2e502e78502971b7d081/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/373d2e502e78502971b7d081/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/373d2e502e78502971b7d081/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/373d2e502e78502971b7d081/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/373d2e502e78502971b7d081/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/373d2e502e78502971b7d081/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/373d2e502e78502971b7d081/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/373d2e502e78502971b7d081/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/373d2e502e78502971b7d081/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/49a01ab8ed1d93e238d3a97c/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/49a01ab8ed1d93e238d3a97c/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/49a01ab8ed1d93e238d3a97c/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/49a01ab8ed1d93e238d3a97c/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/49a01ab8ed1d93e238d3a97c/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/49a01ab8ed1d93e238d3a97c/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/49a01ab8ed1d93e238d3a97c/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/49a01ab8ed1d93e238d3a97c/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/49a01ab8ed1d93e238d3a97c/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/4a2fdff52644683b40b70acd/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/4a2fdff52644683b40b70acd/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/4a2fdff52644683b40b70acd/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/4a2fdff52644683b40b70acd/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/4a2fdff52644683b40b70acd/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/4a2fdff52644683b40b70acd/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/4a2fdff52644683b40b70acd/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/4a2fdff52644683b40b70acd/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/4a2fdff52644683b40b70acd/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/743a95c2653c4c8bdcaa5192/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/743a95c2653c4c8bdcaa5192/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/743a95c2653c4c8bdcaa5192/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/743a95c2653c4c8bdcaa5192/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/743a95c2653c4c8bdcaa5192/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/743a95c2653c4c8bdcaa5192/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/743a95c2653c4c8bdcaa5192/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/743a95c2653c4c8bdcaa5192/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/743a95c2653c4c8bdcaa5192/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8250391d944b2fd92a777d1d/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8250391d944b2fd92a777d1d/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8250391d944b2fd92a777d1d/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8250391d944b2fd92a777d1d/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8250391d944b2fd92a777d1d/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8250391d944b2fd92a777d1d/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8250391d944b2fd92a777d1d/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8250391d944b2fd92a777d1d/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8250391d944b2fd92a777d1d/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/82f6f1c206e6bf603830fb61/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/82f6f1c206e6bf603830fb61/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/82f6f1c206e6bf603830fb61/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/82f6f1c206e6bf603830fb61/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/82f6f1c206e6bf603830fb61/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/82f6f1c206e6bf603830fb61/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/82f6f1c206e6bf603830fb61/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/82f6f1c206e6bf603830fb61/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/82f6f1c206e6bf603830fb61/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8f84328ae604d86ab0d08ab3/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8f84328ae604d86ab0d08ab3/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8f84328ae604d86ab0d08ab3/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8f84328ae604d86ab0d08ab3/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8f84328ae604d86ab0d08ab3/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8f84328ae604d86ab0d08ab3/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8f84328ae604d86ab0d08ab3/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8f84328ae604d86ab0d08ab3/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/8f84328ae604d86ab0d08ab3/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/96e348db3eeecab92d8ecf5f/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/96e348db3eeecab92d8ecf5f/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/96e348db3eeecab92d8ecf5f/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/96e348db3eeecab92d8ecf5f/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/96e348db3eeecab92d8ecf5f/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/96e348db3eeecab92d8ecf5f/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/96e348db3eeecab92d8ecf5f/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/96e348db3eeecab92d8ecf5f/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/96e348db3eeecab92d8ecf5f/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/cec8589f6d901fdcdd5a0114/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/cec8589f6d901fdcdd5a0114/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/cec8589f6d901fdcdd5a0114/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/cec8589f6d901fdcdd5a0114/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/cec8589f6d901fdcdd5a0114/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/cec8589f6d901fdcdd5a0114/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/cec8589f6d901fdcdd5a0114/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/cec8589f6d901fdcdd5a0114/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/cec8589f6d901fdcdd5a0114/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/d6bb4b385d6c0065387b1f86/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/d6bb4b385d6c0065387b1f86/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/d6bb4b385d6c0065387b1f86/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/d6bb4b385d6c0065387b1f86/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/d6bb4b385d6c0065387b1f86/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/d6bb4b385d6c0065387b1f86/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/d6bb4b385d6c0065387b1f86/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/d6bb4b385d6c0065387b1f86/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/d6bb4b385d6c0065387b1f86/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/f445480e3b19b1ad2c1c526d/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/f445480e3b19b1ad2c1c526d/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/f445480e3b19b1ad2c1c526d/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/f445480e3b19b1ad2c1c526d/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/f445480e3b19b1ad2c1c526d/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/f445480e3b19b1ad2c1c526d/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/f445480e3b19b1ad2c1c526d/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/f445480e3b19b1ad2c1c526d/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/f445480e3b19b1ad2c1c526d/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/ff22f2a5a1505f2de6cee975/CURRENT_STAGE.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/ff22f2a5a1505f2de6cee975/EXPERIMENT_AUDIT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/ff22f2a5a1505f2de6cee975/EXPERIMENT_SUMMARY.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/ff22f2a5a1505f2de6cee975/GPU_COST_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/ff22f2a5a1505f2de6cee975/LATEST_REPORT_INDEX.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/ff22f2a5a1505f2de6cee975/manifest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/ff22f2a5a1505f2de6cee975/NEXT_ACTIONS.md",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/ff22f2a5a1505f2de6cee975/RESULTS_SUMMARY.csv",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/outbox/ff22f2a5a1505f2de6cee975/STATUS.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/overnight_supervisor/state.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/active_stage.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T052446_869961Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T052625_417619Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T052631_448260Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T052749_708719Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T052805_646301Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T052925_403409Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T053052_680970Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T053317_744244Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T053512_493387Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T053617_149214Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T053919_401614Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/check_20261029T054107_260286Z.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/failure_detection_selftest.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/heartbeat.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/history.jsonl",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/installation_receipt.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    },
+    {
+      "path": "reports/rsi_stage_monitor/periodic_entry_test_submission.json",
+      "reason": "account-specific operations metadata, not paper metrics"
+    }
+  ]
+}

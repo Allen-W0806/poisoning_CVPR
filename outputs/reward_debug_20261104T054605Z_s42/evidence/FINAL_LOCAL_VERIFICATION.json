@@ -1,0 +1,22 @@
+{
+  "UTC": "2026-11-04T12:05:33.7044739Z",
+  "selected_delivery_files_verified": 616,
+  "review_inputs_reconstructed_and_hash_verified": 534,
+  "frozen_source_snapshot_and_current_files_verified": 25,
+  "published_reports": [
+    {
+      "name": "NEXT_STEPS.md",
+      "SHA256": "f35410f51175c273e7a5add3eff69c9822198397c79ac0ee2872301979bf9931"
+    },
+    {
+      "name": "DEBUG_REPORT.md",
+      "SHA256": "f4a68b3d9fd1a7095227a003ac0ab525f86ba99a0c636ae2bbc22c390a63d4ec"
+    },
+    {
+      "name": "BASELINE_COMPARISON.csv",
+      "SHA256": "c177db53ae13d2f39137d569ac57300be260f4bea4db27d8acb8116f5a57d6e2"
+    }
+  ],
+  "all_checks_passed": true,
+  "models_or_tensors_copied": false
+}

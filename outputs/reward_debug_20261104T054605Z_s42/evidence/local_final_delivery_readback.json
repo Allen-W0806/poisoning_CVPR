@@ -1,0 +1,11 @@
+{
+  "UTC": "2026-11-04T12:04:43.669407+00:00",
+  "phase": "final",
+  "local_root": "H:\\Project\\Poisoning\\outputs\\reward_debug_20261104T054605Z_s42",
+  "archive_SHA256": "5b8254c0d857ea7580607152cbe820c3c4a7273ab5453d645015fbf7cc5fbff5",
+  "manifest_SHA256": "da30046285c7dac40ebaa874f1eb25d5e1c38f263eb8b256b08915ecfa98b0f0",
+  "verified_files": 616,
+  "verified_bytes": 143265205,
+  "all_selected_files_passed_local_SHA256_readback": true,
+  "cluster_tensor_checkpoints_or_model_weights_copied": false
+}

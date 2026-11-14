@@ -1,0 +1,7 @@
+{
+  "cap": 3600,
+  "consumed": 2762,
+  "reserved": 0,
+  "reservations": [],
+  "scope": "validation subtotal; includes failed and diagnostic allocations; not project lifetime"
+}

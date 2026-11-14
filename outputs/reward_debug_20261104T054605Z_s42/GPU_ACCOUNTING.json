@@ -1,0 +1,127 @@
+{
+  "records": [
+    {
+      "job_id": "88948",
+      "stage": "diagnostics",
+      "state": "COMPLETED",
+      "elapsed_seconds": 271,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 271
+    },
+    {
+      "job_id": "88949",
+      "stage": "internal",
+      "state": "CANCELLED by 100127",
+      "elapsed_seconds": 2840,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 2840
+    },
+    {
+      "job_id": "88957",
+      "stage": "internal_v3",
+      "state": "COMPLETED",
+      "elapsed_seconds": 17195,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 17195
+    },
+    {
+      "job_id": "88972",
+      "stage": "lighting_frozen_vqa",
+      "state": "COMPLETED",
+      "elapsed_seconds": 33,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 33
+    },
+    {
+      "job_id": "88952",
+      "stage": "shadowcast_clean",
+      "state": "CANCELLED by 100127",
+      "elapsed_seconds": 233,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 233
+    },
+    {
+      "job_id": "88955",
+      "stage": "shadowcast_clean_repaired",
+      "state": "COMPLETED",
+      "elapsed_seconds": 1649,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 1649
+    },
+    {
+      "job_id": "88954",
+      "stage": "shadowcast_clean_tmpfix",
+      "state": "FAILED",
+      "elapsed_seconds": 7,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 7
+    },
+    {
+      "job_id": "88967",
+      "stage": "shadowcast_eval_0",
+      "state": "COMPLETED",
+      "elapsed_seconds": 652,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 652
+    },
+    {
+      "job_id": "88968",
+      "stage": "shadowcast_eval_50",
+      "state": "COMPLETED",
+      "elapsed_seconds": 575,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 575
+    },
+    {
+      "job_id": "88951",
+      "stage": "shadowcast_poison",
+      "state": "FAILED",
+      "elapsed_seconds": 8,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 8
+    },
+    {
+      "job_id": "88953",
+      "stage": "shadowcast_poison_pathfix",
+      "state": "COMPLETED",
+      "elapsed_seconds": 13255,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 13255
+    },
+    {
+      "job_id": "88966",
+      "stage": "shadowcast_poisoned",
+      "state": "COMPLETED",
+      "elapsed_seconds": 1646,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 1646
+    },
+    {
+      "job_id": "88950",
+      "stage": "shadowcast_smoke",
+      "state": "COMPLETED",
+      "elapsed_seconds": 39,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 39
+    },
+    {
+      "job_id": "88970",
+      "stage": "vizwiz_clean0",
+      "state": "COMPLETED",
+      "elapsed_seconds": 3127,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 3127
+    },
+    {
+      "job_id": "88971",
+      "stage": "vizwiz_poison50",
+      "state": "COMPLETED",
+      "elapsed_seconds": 2636,
+      "settled": true,
+      "charged_or_reserved_GPU_seconds": 2636
+    }
+  ],
+  "committed_GPU_seconds": 44166,
+  "actual_GPU_seconds": 44166,
+  "cap_GPU_seconds": 72000
+}

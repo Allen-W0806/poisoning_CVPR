@@ -1,0 +1,16 @@
+# Semantic Review Status
+
+Run `semantic_clean_20261029_v1`, updated 2026-10-28T22:26:37-04:00. Review-kit engineering **PASS**. Independent human semantic review **BLOCKED**: 0/160 edited cases have genuine dual-human labels; preservation, invalidity and ambiguity rates remain unknown. No human results or agreement coefficients are fabricated.
+
+The self-contained [offline review kit](../results/semantic_clean_20261029_v1/semantic_review/index.html) contains 160 original/C4 pairs, an optional C5 geometry control, original questions and ten references, lighting instruction, image dimensions and SHA256. Target predictions, risk flags and other reviewers' labels are absent. Full-resolution images open on click. Nine assessment fields plus notes, stable reviewer IDs, truthful independence attestation, timestamps and reviewer-scoped local storage support separate exports. [Instructions](../results/semantic_clean_20261029_v1/semantic_review/INSTRUCTIONS.md), [reviewer 1 template](../results/semantic_clean_20261029_v1/semantic_review/reviewer_1_template.csv), [reviewer 2 template](../results/semantic_clean_20261029_v1/semantic_review/reviewer_2_template.csv), [adjudication template](../results/semantic_clean_20261029_v1/semantic_review/adjudication_template.csv), and [40 complete blinded contact sheets](../results/semantic_clean_20261029_v1/semantic_review/contact_sheets/) are prepared.
+
+Seven synthetic contract tests verify rejection of unattested, contradictory, duplicate and wrong-image reviews, pending single reviews, agreement and disagreement paths. These use synthetic IDs only and create zero human research records. The ingestion tool computes original-label agreement and Cohen kappa before adjudication, requires two distinct independent reviewer IDs and a distinct adjudicator for disagreement, validates hashes and records rejected rows. Reviewer identity and independence are attested rather than externally authenticated. No reviewers were contacted.
+
+All 160 technical outputs remain; 102 automated flags are prioritization diagnostics only. The [failure summary](../results/semantic_clean_20261029_v1/analysis_initial/failure_category_summary.json) is **BLOCKED**: no confirmed population failure category counts exist. Earlier assistant illustrations remain explicitly separate and are not independent labels. Semantic-valid and invalid/ambiguous statistical analyses are **BLOCKED**. C5 is also not independently semantically certified. Blinded contact sheets are suitable for review; old sheets containing model answers must be withheld until independent judgments are locked.
+
+The interface has no network dependencies. Browser testing over localhost checks navigation, image decoding and rejection of unattested records. Direct file-URL browser automation is blocked by the browser tool's protocol policy; direct-file rendering therefore has static dependency checks rather than a browser execution certificate.
+
+Reanalyze genuine human exports without inference, using a new exclusive analysis directory:
+```text
+python -B scripts/analyze_semantic_clean_stage.py --run-id semantic_clean_20261029_v1 --analysis-id analysis_reviewed_UNIQUE --review-csv reviewer1.csv --review-csv reviewer2.csv --adjudication-csv adjudication.csv
+```

@@ -1,0 +1,81 @@
+{
+  "run_id": "p0_foundations_20261111_v1",
+  "raw_metrics_path": "H:\\Project\\Poisoning\\experiments\\p0_foundations_20261111_v1\\remote\\clean_vlm\\metrics.json",
+  "status": "PASS_ENGINEERING_ONLY",
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "seed": 42,
+  "retained_optimizer_steps": 2,
+  "actual_optimizer_calls": 3,
+  "train_sources_used": 4,
+  "dev": {
+    "n_sources": 4,
+    "mean": 0.975,
+    "source_SD": 0.04999999999999999,
+    "source_bootstrap_95CI": [
+      0.9249999999999999,
+      1.0
+    ],
+    "resamples": 10000,
+    "analysis_seed": 20261111,
+    "training_seed_uncertainty": "NOT_ESTIMATED"
+  },
+  "dev_before": {
+    "n_sources": 4,
+    "mean": 0.975,
+    "source_SD": 0.04999999999999999,
+    "source_bootstrap_95CI": [
+      0.9249999999999999,
+      1.0
+    ],
+    "resamples": 10000,
+    "analysis_seed": 20261111,
+    "training_seed_uncertainty": "NOT_ESTIMATED"
+  },
+  "test": {
+    "n_sources": 4,
+    "mean": 0.725,
+    "source_SD": 0.48562674281111556,
+    "source_bootstrap_95CI": [
+      0.25,
+      1.0
+    ],
+    "resamples": 10000,
+    "analysis_seed": 20261111,
+    "training_seed_uncertainty": "NOT_ESTIMATED"
+  },
+  "transfer_clean_QA": {
+    "n_sources": 4,
+    "mean": 1.0,
+    "source_SD": 0.0,
+    "source_bootstrap_95CI": [
+      1.0,
+      1.0
+    ],
+    "resamples": 10000,
+    "analysis_seed": 20261111,
+    "training_seed_uncertainty": "NOT_ESTIMATED"
+  },
+  "edited_dev_original_reference_consistency_proxy": {
+    "n_sources": 4,
+    "mean": 0.975,
+    "source_SD": 0.04999999999999999,
+    "source_bootstrap_95CI": [
+      0.9249999999999999,
+      1.0
+    ],
+    "resamples": 10000,
+    "analysis_seed": 20261111,
+    "training_seed_uncertainty": "NOT_ESTIMATED"
+  },
+  "fresh_object_next_step_exact": true,
+  "fresh_final_predictions_exact": true,
+  "frozen_base_unchanged": true,
+  "frozen_base_SHA256": "390847f15e9f70f12042da573246290cdef48b6150bbfce52b279d1a47ff0458",
+  "final_checkpoint_SHA256": "ace072cfbbb3150b334fd252deedd3198fa737281514d197c368390d00a3ed97",
+  "final_adapter_parameter_SHA256": "97f502db25806698c1a0285a112a42cdaaae4c5b3122c12f3957a8c90298e942",
+  "peak_GPU_bytes": 8599158272,
+  "full_model_training": false,
+  "scientific_learning_benefit": "NOT_ESTABLISHED",
+  "independent_task_family_RSI": "NOT_RUN"
+}

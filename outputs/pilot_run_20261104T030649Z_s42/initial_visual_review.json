@@ -1,0 +1,19 @@
+{
+  "status": "AGENT_VISUAL_INSPECTION_NOT_INDEPENDENT_GROUND_TRUTH",
+  "phase": "shared_initial_validation",
+  "selection": "first four preregistered validation records; no cherry picking",
+  "sample_ids": [
+    "538530002",
+    "382669003",
+    "200221004",
+    "417090002"
+  ],
+  "observations": [
+    "Grass and animal-scene colors shifted toward yellow/brown; not only luminance.",
+    "The black-and-white motorcyclist scene acquired a strong yellow/brown color cast and blurred detail.",
+    "The indoor child/bookshelf scene lost substantial texture and face/object detail, with a warm lighting cast.",
+    "The collage retained its broad layout but altered color/saturation and small text/food/person details."
+  ],
+  "limits": "Four initial control examples only; no independent semantic annotation, VQA accuracy, ASR, or final-arm comparison.",
+  "evidence": "figures/initial_control_contact_sheet.png"
+}

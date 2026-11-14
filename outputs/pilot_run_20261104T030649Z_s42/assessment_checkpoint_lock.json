@@ -1,0 +1,42 @@
+{
+  "frozen": {
+    "status": "GENERATOR_READY",
+    "optimizer_steps": 0,
+    "controller_actions": 0,
+    "controller_updates": 0,
+    "checkpoint": "checkpoints/shared_initial",
+    "checkpoint_SHA256": "ff908415dd63645cd46ad1cdbb8688cbcb872ca9a7023c43f40186f6168eebba"
+  },
+  "fixed": {
+    "status": "GENERATOR_READY",
+    "optimizer_steps": 0,
+    "controller_actions": 0,
+    "controller_updates": 0,
+    "checkpoint": "checkpoints/shared_initial",
+    "checkpoint_SHA256": "ff908415dd63645cd46ad1cdbb8688cbcb872ca9a7023c43f40186f6168eebba"
+  },
+  "ddpo_only": {
+    "status": "GENERATOR_READY",
+    "optimizer_steps": 100,
+    "controller_actions": 0,
+    "controller_updates": 0,
+    "checkpoint": "checkpoints/ddpo_only/round_3",
+    "checkpoint_SHA256": "ebfea51e37b7e3a2894f3d003d42fd0ed5605f06cdaf0ba88e41ad4dc1806053"
+  },
+  "rule_rsi": {
+    "status": "GENERATOR_READY",
+    "optimizer_steps": 100,
+    "controller_actions": 0,
+    "controller_updates": 0,
+    "checkpoint": "checkpoints/rule_rsi/round_3",
+    "checkpoint_SHA256": "3117a61df32730c3d1499a8714e7525acae0e44dd9bb665dbc4334d3bd23aa5b"
+  },
+  "rl_rsi": {
+    "status": "GENERATOR_READY",
+    "optimizer_steps": 100,
+    "controller_actions": 3,
+    "controller_updates": 3,
+    "checkpoint": "checkpoints/rl_rsi/round_3",
+    "checkpoint_SHA256": "915421883b800e1b22a7da3f419b1ad4c18968d9c20943494c1f73b1fed028ef"
+  }
+}

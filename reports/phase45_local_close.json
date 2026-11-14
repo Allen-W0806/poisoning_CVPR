@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-10-28T00:11:58.311258+00:00",
+  "local_scratch_removed": true,
+  "local_files_match_mirrored_delivery_manifest": 22,
+  "canonical_completion_receipt_sha256": "ee7b5a7f4494853212775377aeb3a014e037d7393bac018302fd18c80290561b",
+  "C_free_bytes": 71974633472,
+  "H_free_bytes": 233083191296,
+  "H_drive_type": "Fixed; verified via System.IO.DriveInfo",
+  "retained_audit_payload_bytes": 389931,
+  "retained_large_new_artifacts": [],
+  "historical_experiment_outputs_modified": false,
+  "all_179_report_local_source_links_and_line_anchors_checked": true,
+  "housekeeping_probe_note": "Get-Volume CIM read was unavailable; System.IO.DriveInfo verified H Fixed and shutil.disk_usage checked free space."
+}

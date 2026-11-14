@@ -1,0 +1,280 @@
+{
+  "audit_skill": "experiment-audit",
+  "run_id": "overnight_benign_20261102_v2",
+  "verdict": "WARN",
+  "integrity_status": "warn",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_id": "/root/overnight_controller_review",
+  "family": "openai",
+  "reviewed_at_utc": "2026-11-02T06:24:01Z",
+  "canonical_root": "/storage/home/ydk297/projects/poisoning",
+  "scope": "Executed overnight controller, numerical diagnostic and reused fixed historical arms",
+  "work_performed": {
+    "new_scheduler_submissions": 0,
+    "model_updates": 0,
+    "model_inference_calls": 0,
+    "sealed_final_images_read": 0,
+    "verified_by": "Read-only UTC scheduler/accounting, canonical scripts and saved evidence. Recomputed four raw pair reductions, per-tensor FP64 sums and source bootstrap intervals from saved data.",
+    "lpips_reinference": false
+  },
+  "scheduler": {
+    "GPU_job": 88433,
+    "node": "epyc00",
+    "actual_gpu_count": 1,
+    "scheduler_state": "COMPLETED",
+    "exit": "0:0",
+    "worker_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "GPU_seconds": 172,
+    "reserved_GPU_seconds": 0,
+    "remaining_GPU_seconds": 35828,
+    "cap_GPU_seconds": 36000,
+    "numerical_cap_GPU_seconds": 1200,
+    "init_UTC": "2026-11-02T06:17:57.636501+00:00",
+    "deadline_UTC": "2026-11-02T16:17:57.636501+00:00",
+    "registered_CPU": {
+      "bootstrap": 88432,
+      "afterany": 88434,
+      "deadline": 88431
+    },
+    "separate_validation_ledger": {
+      "cap": 3600,
+      "consumed": 2762,
+      "remaining": 838
+    }
+  },
+  "numerical": {
+    "scientific_check": "FAIL",
+    "classification": "RAW_BACKWARD_GRADIENT_MISMATCH",
+    "exact_pass": false,
+    "tolerance_pass": false,
+    "threshold": "abs(first - second) <= 1e-7 + 1e-5 * abs(first)",
+    "matched_initial_and_conditioning_all_pairs": true,
+    "valid_ordered_gradients_each": 256,
+    "rows": [
+      {
+        "pair": "fresh0__fresh1",
+        "affected_tensors": 32,
+        "affected_elements": 76295,
+        "max_abs": 2.19675712287426e-7,
+        "relative_L2": 0.0000022258120320765595,
+        "tolerance_pass": false
+      },
+      {
+        "pair": "resident0__resident1",
+        "affected_tensors": 32,
+        "affected_elements": 96017,
+        "max_abs": 0.000028346199542284012,
+        "relative_L2": 0.00034068571329322345,
+        "tolerance_pass": false
+      },
+      {
+        "pair": "fresh0__resident0",
+        "affected_tensors": 32,
+        "affected_elements": 95710,
+        "max_abs": 0.000028045382350683212,
+        "relative_L2": 0.0003395631051614105,
+        "tolerance_pass": false
+      },
+      {
+        "pair": "fresh0__resident1",
+        "affected_tensors": 32,
+        "affected_elements": 92748,
+        "max_abs": 0.0000031050294637680054,
+        "relative_L2": 0.00003606813199991624,
+        "tolerance_pass": false
+      }
+    ],
+    "updates": [
+      {
+        "name": "fresh0/update0",
+        "measured_norm": 1.033760666847229,
+        "derived_clip_coefficient": 0.9673410058021545,
+        "FP64_reference": 1.0337607544359944,
+        "auditor_FP64_dot": 1.0337607544359941
+      },
+      {
+        "name": "fresh1/update0",
+        "measured_norm": 1.033760666847229,
+        "derived_clip_coefficient": 0.9673410058021545,
+        "FP64_reference": 1.0337607815803325,
+        "auditor_FP64_dot": 1.0337607815803322
+      },
+      {
+        "name": "resident/update0",
+        "measured_norm": 1.0337610244750977,
+        "derived_clip_coefficient": 0.9673406481742859,
+        "FP64_reference": 1.0337610898345555,
+        "auditor_FP64_dot": 1.0337610898345553
+      },
+      {
+        "name": "resident/update1",
+        "measured_norm": 1.0337615013122559,
+        "derived_clip_coefficient": 0.9673402309417725,
+        "FP64_reference": 1.0337614871943024,
+        "auditor_FP64_dot": 1.0337614871943024
+      }
+    ],
+    "root_cause_established": false,
+    "fix_confirmed": false,
+    "ordinary_resume_run": false,
+    "learning_eligible": false
+  },
+  "fixed_models": {
+    "source_exposure": "historical exposed engineering development",
+    "unique_assessment_sources": 4,
+    "seeds": 1,
+    "source_observations": 16,
+    "sealed_manifest_count": 160,
+    "known_exact_ID_or_hash_overlaps": 0,
+    "NFE": {
+      "shared": 168,
+      "incremental": [
+        48,
+        168,
+        168,
+        168
+      ],
+      "total": 720
+    },
+    "historical_job": 88392,
+    "shared_allocated_GPU_seconds": 242,
+    "shared_cost_charge_count": 1,
+    "overnight_GPU_seconds": 0,
+    "per_arm_allocated_GPU_seconds": null,
+    "real_human_labels": 0,
+    "ASR": "NOT TESTED",
+    "RSI": {
+      "attempted_sources": 20,
+      "retained_sources": 10,
+      "attempted_steps": 2,
+      "retained_steps": 1
+    }
+  },
+  "checks": {
+    "gt_provenance": {
+      "status": "PASS",
+      "evaluation_type": "synthetic engineering proxy",
+      "details": "Source-defined brightness proxy is explicitly identified. Independent semantic edit validity unavailable."
+    },
+    "score_normalization": {
+      "status": "PASS",
+      "details": "Raw proxy and fixed-scale image similarity are recorded. No prediction-derived normalizer used to claim accuracy."
+    },
+    "result_existence": {
+      "status": "PASS",
+      "details": "Four witness files, paired comparisons and four fixed-checkpoint rows exist. Hashes and numeric aggregates cross-checked."
+    },
+    "dead_code": {
+      "status": "WARN",
+      "details": "Conditional ordinary verification was correctly gated off. Its comparator omits measured canonical norm and loss."
+    },
+    "scope": {
+      "status": "WARN",
+      "details": "Engineering diagnosis and retrospective fixed-image metrics only. RSI selected and attempted training-source counts differ."
+    },
+    "evaluation_type": [
+      "instrumented fixed-input reproducibility fixture",
+      "source-defined synthetic proxy",
+      "CPU fixed-output image similarity"
+    ]
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "status": "WARN",
+      "title": "Callback liveness",
+      "evidence": "Executed controller 47-55, 111, 135-150",
+      "details": "A lock collision or delayed sacct read can drop a one-shot event. Unknown-intent submission blocks duplicates without reconciling held jobs. Actual parent was processed."
+    },
+    {
+      "id": "R2",
+      "status": "WARN",
+      "title": "Deadline overwrites scientific stop state",
+      "evidence": "Executed controller 147-148",
+      "details": "Preserve terminal reasons and reconcile already-terminal unprocessed work before closing."
+    },
+    {
+      "id": "R3",
+      "status": "WARN",
+      "title": "Ordinary preclip norm absent from conditional comparison",
+      "evidence": "Reporting 24-31 and ordinary worker 28-37",
+      "details": "Add comparisons of measured norm and loss at corresponding ordinary and resumed updates. This stage was never executed."
+    },
+    {
+      "id": "R4",
+      "status": "WARN",
+      "title": "Table exposure and cost labels",
+      "evidence": "Reporting 55-58 and historical pilot 65,82,87",
+      "details": "Separate attempted from selected training source counts and distinguish incremental from shared NFE and shared nonadditive GPU cost."
+    },
+    {
+      "id": "R5",
+      "status": "WARN",
+      "title": "Coefficient is reconstructed from returned norm",
+      "evidence": "Gradient capture 26-30, reporting 96",
+      "details": "Distinguish returned runtime norm from formula-derived coefficient."
+    },
+    {
+      "id": "R6",
+      "status": "WARN",
+      "title": "Extra NODE_FAIL submission possible",
+      "evidence": "Executed controller 104-108 and tests 43-45",
+      "details": "A node failure can trigger a repeat even after partial execution. A strict one-submission cap is not enforced. Not triggered."
+    }
+  ],
+  "claims": [
+    {
+      "claim": "Raw gradients differ before clipping on this diagnostic",
+      "impact": "supported"
+    },
+    {
+      "claim": "One GPU, 172 seconds, one diagnostic, no conditional stage",
+      "impact": "supported"
+    },
+    {
+      "claim": "Separate SSIM, LPIPS, brightness and source-paired uncertainty for historical fixed outputs",
+      "impact": "supported within the four exposed sources"
+    },
+    {
+      "claim": "Root cause, confirmed fix, independent edit quality, learned efficacy, ASR or holdout performance",
+      "impact": "unsupported"
+    }
+  ],
+  "audited_input_hashes": {
+    "scripts/overnight_benign_controller_20261102.py": "5a89ab5079a243a82c8071243bb628d7ce3ca47d8f018cffc18011aebec2e9a6",
+    "scripts/gradient_boundary_capture_20261102.py": "19e05b593401c327a32809d032606140be5f7783c05157b677cf536c4b545b9a",
+    "scripts/run_overnight_norm_fixture_20261102.py": "498116d9cbf0b850cb4b6cd6604a3ad7fd83af344c3a4953231d80ae5907371c",
+    "scripts/run_overnight_ordinary_resume_20261102.py": "4bc01c171a2e6c59e1030490f9e9c016b873e6dc49b82851852ba88d1c73cf68",
+    "scripts/overnight_benign_reporting_20261102.py": "c8ea84fd184c27e13767cb0db0f364c5337508d80c8f5f5ec00c0e806dc1c635",
+    "scripts/test_overnight_benign_20261102.py": "28dc3e032a46b54f72ed42d61dbc30895f90a2b4f1522ba58ded69f2a500f05b",
+    "scripts/numerical_boundaries_20261102.py": "e708e5da9fcb488e3998d245af5355abc6897eb2402446023225781622d53b6c",
+    "scripts/run_pretrained_benign_pilot_20261102.py": "c49ba15d757842efd7678da05f5cba413032c2359fa27ebdad0df704a350c4bc",
+    "reports/overnight_benign_20261102_v2/state.json": "2ee203f5f12d2f02cdd0814c7684fa2a8e6ac71eb856feb19cfebb623e3296dc",
+    "reports/overnight_benign_20261102_v2/budget.json": "708cb49114ad80fc3af64f9e601caa8c9ea15c47d9636c8a777b7b88ab3cdabb",
+    "reports/OVERNIGHT_EXECUTION_STATUS.md": "9afcb17fce2b8934e9030a410238c55be7609bd8b38d4445ca7a5c5ddb2fa688",
+    "reports/OVERNIGHT_EXPERIMENT_RESULTS.csv": "62134f597adffecedfce36c7672fcc5db06d21d4341b9ad0df96f0e980a05251",
+    "results/overnight_benign_20261102_v2/numerical_a0/protocol.json": "12700be4e2aca1314450d5b1d4bd5f8db09967541a82634439b4e076d50cd3f0",
+    "results/overnight_benign_20261102_v2/numerical_a0/numerical_results.json": "e5a6c52b54395596dd0e02f45922e7b4fe5f6c82df59489913ad3c878383cc01",
+    "results/overnight_benign_20261102_v2/numerical_a0/checks.json": "1ea3d555df23498fcf652284537c927d370908bead7dca36b8319db0605aa9f4",
+    "results/overnight_benign_20261102_v2/numerical_a0/executions.json": "918aa3ff5a9c5a3d71ccdb2ae475c01389f674ae1c790fa6ca23126f7019b4ba",
+    "results/overnight_benign_20261102_v2/numerical_a0/process_exit.json": "e9cb8f9b4e51087cf77262b3004e297149e724f00275900e253999e44ad0628a",
+    "results/overnight_benign_20261102_v2/fixed_model_metrics.json": "b5cc93af284762d61ea4140e188bf4069c149e4afc687bd926ad9bb62ee57773",
+    "results/overnight_benign_20261102_v2/CPU_preparation_tests.log": "9337f98a6499298b253028417bcabbc893e072576b16baa2a96af9d7499a5a22",
+    "results/overnight_benign_20261102_v2/numerical_a0/fresh0/update0.pt": "f13ba340d6ebbe9814aebbb0feefceecca68b3928670a2cc1c9015ad739b50c1",
+    "results/overnight_benign_20261102_v2/numerical_a0/fresh1/update0.pt": "8ad8e011b3d4bbbc74124e21e705997b1993566e5fd743e3e13c56923814631e",
+    "results/overnight_benign_20261102_v2/numerical_a0/resident/update0.pt": "a157140a4b3379ac6b8e0b50cefdfa27c4326f87b0023318a366c06ee92a62b5",
+    "results/overnight_benign_20261102_v2/numerical_a0/resident/update1.pt": "e1566686342891d46db3e620a40bc8b03f78bed93704ae97a0d87e191ab71c7d",
+    "src/rl/phase5_backend.py": "73b480ae552990e6d41c560713f2c47137379d7f7ec7049b64fe6c7709552712",
+    "src/rl/diffusion_rl_trainer.py": "6be0f6d9837166730e2f72ae8ed0891c1d673efc66fcd53de644a344ffaf2348",
+    "src/monitoring/common.py": "ade97462bf4c725200e2438fc8dd6be0ff6faaf6b054e87a8187fe60131189c3",
+    "results/execution_remediation_20261102_v1_pretrained_pilot/results.json": "2f2d9f3e9561540fc5454828b3f0082d3d23bfea74188c8f8fd4ef481b3b46b6",
+    "results/execution_remediation_20261102_v1_pretrained_pilot/source_manifest.json": "33c10c58a5c4636ec4dea30b256a6451f91aece71052a0fd709a00367349ee70",
+    "results/execution_remediation_20261102_v1_pretrained_pilot/prediction_observations.json": "27a524849d790b89efaaf2760e6f51969cf537b1805f857707b48e467d3e8401",
+    "results/execution_remediation_20261102_v1/prospective/candidate_content_manifest.json": "bed2e4fd36f6c11317ea65d89465aea2254d0a48524338c190bff1d79426d577"
+  }
+}

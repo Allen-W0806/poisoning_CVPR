@@ -1,0 +1,33 @@
+{
+  "RL_RSI_minus_DDPO_lighting_v3": {
+    "difference": -0.00042665592432652305,
+    "CI95_low": -0.012725111644544203,
+    "CI95_high": 0.012161135779698972,
+    "resampling_unit": "paired source image, one trained seed; NOT seed uncertainty"
+  },
+  "RL_RSI_minus_DDPO_content_luma": {
+    "difference": 7.863308107190284e-05,
+    "CI95_low": -2.350545702239752e-05,
+    "CI95_high": 0.00020156600001295275,
+    "resampling_unit": "paired source image, one trained seed; NOT seed uncertainty"
+  },
+  "ddpo_only_minus_Frozen_lighting_v3": {
+    "difference": 0.13859604620749447,
+    "CI95_low": 0.04724550356830845,
+    "CI95_high": 0.22210736684632426,
+    "resampling_unit": "paired source image, one trained seed; NOT seed uncertainty"
+  },
+  "rule_rsi_minus_Frozen_lighting_v3": {
+    "difference": 0.11922185204388615,
+    "CI95_low": 0.04230393387842685,
+    "CI95_high": 0.19265870387487635,
+    "resampling_unit": "paired source image, one trained seed; NOT seed uncertainty"
+  },
+  "rl_rsi_minus_Frozen_lighting_v3": {
+    "difference": 0.13816939028316794,
+    "CI95_low": 0.042206782968955865,
+    "CI95_high": 0.22598077433127894,
+    "resampling_unit": "paired source image, one trained seed; NOT seed uncertainty"
+  },
+  "comparison_scope": "RL-minus-DDPO is the requested comparison; additional frozen comparisons are descriptive, one fixed seed, no multiplicity-adjusted efficacy claim"
+}

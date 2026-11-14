@@ -1,0 +1,7 @@
+86430|COMPLETED|314|0:0|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|epyc09
+86433|COMPLETED|388|0:0|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|epyc09
+86434|COMPLETED|3227|0:0|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|epyc09
+86435|COMPLETED|2707|0:0|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|epyc11
+86444|COMPLETED|59|0:0|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|epyc09
+86445|COMPLETED|3211|0:0|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|epyc09
+86446|COMPLETED|3216|0:0|billing=4,cpu=4,gres/gpu=1,mem=48G,node=1|epyc09

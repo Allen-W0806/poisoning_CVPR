@@ -1,0 +1,52 @@
+{
+  "observed_failures": [
+    {
+      "kind": "monitor_schema_collision",
+      "original_error": "TypeError: int object is not iterable at check_associations; metrics.observations=500",
+      "correction": "versioned v6 monitor handles image-record lists only",
+      "regression": "test_monitor_does_not_interpret_audit_counts_as_image_records",
+      "original_runs_preserved": true
+    },
+    {
+      "kind": "PowerShell_runtime_compatibility",
+      "errors": [
+        "File.Move3 overload unavailable",
+        "File.Replace null backup marshaled as illegal path"
+      ],
+      "correction": "explicit same-volume scratch backup path; atomic Replace/Move; two bounded retries then successful real sync"
+    },
+    {
+      "kind": "dashboard_overflow",
+      "observed": "headless Chrome detected horizontal overflow",
+      "correction": "box sizing, fixed table layout, min-width and wrapping; desktop/mobile browser QA passed"
+    },
+    {
+      "kind": "browser_tool_unavailable",
+      "original_error": "cua failed to write kernel assets",
+      "fallback": "installed headless Chrome via bundled Playwright; local file rendering verified"
+    },
+    {
+      "kind": "preview_network",
+      "observed": "localhost browser access denied/timeout",
+      "correction": "direct local HTML browser QA; no server-hosting claim"
+    },
+    {
+      "kind": "source_provenance_and_completion_review",
+      "observed": "two-round gaps retained; first audits used context versions as source labels",
+      "correction": "new immutable descendant audits86602; source manifests separated from audit context"
+    },
+    {
+      "kind": "last_review_recovery_branches",
+      "observed": "failed-attempt identity, same-cycle dependent invalidation and interrupted Slurm recovery gaps",
+      "correction": "current-attempt pointer, transitive invalidation, terminal accounting reconciliation; executor tests only after final review"
+    }
+  ],
+  "scientific_blockers": [
+    "independent labels absent",
+    "reward validity unresolved",
+    "fresh private evaluator absent",
+    "strict continuation unresolved",
+    "scientific GPU budget0"
+  ],
+  "no_failed_or_negative_results_deleted": true
+}

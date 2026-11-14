@@ -1,0 +1,438 @@
+{
+  "updated_UTC": "2026-11-01T01:28:15.514837+00:00",
+  "run_id": "audit_remediation_20261101T0120Z_v1",
+  "repair_run": "audit_remediation_20261101T0120Z_v1_threeway_repair_v1",
+  "scientific_gate": "NO-GO",
+  "jobs": [
+    {
+      "job_id": "88029",
+      "state": "COMPLETED",
+      "elapsed_seconds": 147,
+      "gpu_seconds": 147,
+      "exit_code": "0:0",
+      "start_EDT": "2026-10-31T21:18:48",
+      "end_EDT": "2026-10-31T21:21:15",
+      "node": "epyc01"
+    },
+    {
+      "job_id": "88030",
+      "state": "COMPLETED",
+      "elapsed_seconds": 9,
+      "gpu_seconds": 0,
+      "exit_code": "0:0",
+      "start_EDT": "2026-10-31T21:21:37",
+      "end_EDT": "2026-10-31T21:21:46",
+      "node": "epyc16"
+    },
+    {
+      "job_id": "88032",
+      "state": "COMPLETED",
+      "elapsed_seconds": 144,
+      "gpu_seconds": 144,
+      "exit_code": "0:0",
+      "start_EDT": "2026-10-31T21:22:42",
+      "end_EDT": "2026-10-31T21:25:06",
+      "node": "epyc01"
+    }
+  ],
+  "budget": {
+    "cap": 3600,
+    "prior": 1955,
+    "new": 291,
+    "consumed": 2246,
+    "reserved": 0,
+    "remaining": 1354,
+    "scope": "bounded validation subtotal only; includes failed child tests and failed first three-way attempt; not whole-project lifetime"
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "status": "PASS",
+      "title": "Claim/estimand mismatch",
+      "root_cause": "The historical work measures benign preservation, not BadSem.",
+      "fix_attempted": "Explicit current-method and preregistered benign synthetic scope; no objective change.",
+      "verification": "Protocol names cosine engineering task and no VLM/security reward.",
+      "remaining_risk": "No BadSem reproduction or security efficacy has been established.",
+      "evidence": "docs/CURRENT_METHOD_20261101.md"
+    },
+    {
+      "id": "F02",
+      "status": "BLOCKED",
+      "title": "Same-model semantic verification",
+      "root_cause": "The reward provider is also the semantic proxy.",
+      "fix_attempted": "Existing random32 kit reused and hashes checked; real dual-review ingestion inspected.",
+      "verification": "0 genuine reviewed pairs; no human/model error rate available.",
+      "remaining_risk": "Independent reviewer agreement and semantic validity remain unknown.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/cpu_audit/review32_status.json"
+    },
+    {
+      "id": "F03",
+      "status": "FAIL",
+      "title": "Reward redundancy and floor censoring",
+      "root_cause": "S and A encode one gate; U/C are constant and clipping suppresses variation.",
+      "fix_attempted": "Read-only reanalysis of500 observations; no coefficient edits.",
+      "verification": "500/500 S=.5A;230/500 floor; centered component rank2.",
+      "remaining_risk": "Feedback construct is not validated for scientific learning.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/cpu_audit/feedback_distribution.json"
+    },
+    {
+      "id": "F04",
+      "status": "BLOCKED",
+      "title": "Instruction success absent",
+      "root_cause": "Preservation can be maximized by doing no edit.",
+      "fix_attempted": "No-op controls, identity caller audit and independent instruction rubric retained.",
+      "verification": "C0/C1 scores identical for160; identity exceeds all historical changed rewards.",
+      "remaining_risk": "No human-confirmed lighting success rate; no new objective introduced.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/cpu_audit/identity_and_config_audit.json"
+    },
+    {
+      "id": "F05",
+      "status": "BLOCKED",
+      "title": "RSI versus ordinary scheduling",
+      "root_cause": "Historical RSI is a learning-rate schedule extension.",
+      "fix_attempted": "Added fixed, ordinary ReduceLROnPlateau and RSIController branches with equal queries.",
+      "verification": "New comparison PASS; modest LR/rollback mechanism explicitly described.",
+      "remaining_risk": "Providing a scheduler baseline does not prove novel RSI or autonomous superiority.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1_threeway_repair_v1/threeway/results.json"
+    },
+    {
+      "id": "F06",
+      "status": "PASS",
+      "title": "Preadaptation causal confounding",
+      "root_cause": "Historical arms differ before LR intervention.",
+      "fix_attempted": "New identical independently replayed prefixes; strict full-state, gradient and prediction checks before adaptation.",
+      "verification": "Disk initial/prefix comparisons: 12; all equal=True.",
+      "remaining_risk": "Only the new FP32 tiny-model comparison is repaired; historical BF16 causal claims remain invalid.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/audit/preadaptation_disk_verification.json"
+    },
+    {
+      "id": "F07",
+      "status": "BLOCKED",
+      "title": "Reused data and weak replication",
+      "root_cause": "Old development images were repeatedly used for selection.",
+      "fix_attempted": "Audited latest80 and three clean seeds; no new natural-image test opened.",
+      "verification": "Newest32 assessment sources:4 prior inference,10 in old opened-test manifest.",
+      "remaining_risk": "No real-image generalization claim; three seeds cannot substitute independent data.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/cpu_audit/data_leakage.json"
+    },
+    {
+      "id": "F08",
+      "status": "PASS",
+      "title": "Exact-content split leakage",
+      "root_cause": "Historical v1 train/test has one exact duplicate under different IDs.",
+      "fix_attempted": "Preserved v1; independently checked new80 cross-split IDs and SHA.",
+      "verification": "Zero ID/hash overlaps within latest32/16/32; all80 file hashes valid.",
+      "remaining_risk": "PASS for new internal split only, not historical v1 or exposure independence.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/cpu_audit/data_leakage.json"
+    },
+    {
+      "id": "F09",
+      "status": "FAIL",
+      "title": "Pretrained stochastic continuation",
+      "root_cause": "Earlier exact backward/optimizer continuation failed.",
+      "fix_attempted": "One preregistered ordinary+instrumented BF16 pair this run, with unchanged bitwise checks.",
+      "verification": "Both new paths PASS; earlier ordinary and instrumented failures preserved.",
+      "remaining_risk": "Intermittent path-dependent history is unresolved; batch10 continuation is unaccepted.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1_BF16_ordinary/diagnostic/checks.json"
+    },
+    {
+      "id": "F10",
+      "status": "BLOCKED",
+      "title": "Question versus global preservation",
+      "root_cause": "A question-specific answer proxy does not certify all objects/colors/counts.",
+      "fix_attempted": "Blinded review covers global attributes, answer validity and instruction compliance.",
+      "verification": "Forms prepared; zero human labels.",
+      "remaining_risk": "Rubric availability is not semantic remediation.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/cpu_audit/review32_status.json"
+    },
+    {
+      "id": "F11",
+      "status": "PASS",
+      "title": "Step proxy versus measured compute",
+      "root_cause": "Legacy C=10/30 excludes target/model/diagnostic overhead.",
+      "fix_attempted": "Retain C unchanged and label it a step proxy; measure Slurm totals and synchronized one-GPU component time.",
+      "verification": "Both GPU attempts charged; per-branch actual GPU-held seconds retained.",
+      "remaining_risk": "No claim that old C is measured cost or has become a validated cost objective.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/final_status.json"
+    },
+    {
+      "id": "F12",
+      "status": "FAIL",
+      "title": "Identity loses consistency credit",
+      "root_cause": "Caller gates A solely on provisionally_valid; verified identity lacks that key.",
+      "fix_attempted": "Executed a clearly synthetic identity fixture; objective left unchanged.",
+      "verification": "Caller gives A0 and reward.9666667 versus1.4666667 with declared credit.",
+      "remaining_risk": "Bug still present in legacy caller; no historical reward overwritten.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/cpu_audit/identity_and_config_audit.json"
+    },
+    {
+      "id": "F13",
+      "status": "PASS",
+      "title": "Exposure versus realized compute",
+      "root_cause": "Matched exposure does not imply equal runtime.",
+      "fix_attempted": "Equal update/NFE/query budgets; report actual time rather than claim runtime equivalence.",
+      "verification": "Each branch4 updates,320 forward NFEs,48 validation+32 test queries.",
+      "remaining_risk": "Measured times differ; sequential same-node timings are not a latency benchmark.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1_threeway_repair_v1/threeway/results.json"
+    },
+    {
+      "id": "F14",
+      "status": "BLOCKED",
+      "title": "Suspected editing/padding failures",
+      "root_cause": "Padding and content changes confound legacy pixel quality.",
+      "fix_attempted": "Reconstructed all160 geometry controls exactly and retained full-frame metrics plus review rubric.",
+      "verification": "Geometry reconstruction160/160; aligned SSIM mean.7340322949; LPIPS absent.",
+      "remaining_risk": "No human-confirmed edit/instruction failure rates.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/cpu_audit/preprocessing_aligned_quality.csv"
+    },
+    {
+      "id": "F15",
+      "status": "BLOCKED",
+      "title": "Active-contract reconstruction",
+      "root_cause": "Production revisions require matching current contract/config to resume.",
+      "fix_attempted": "New tiny branches save initial/prefix/candidate/selected and check retained LR against optimizer.",
+      "verification": "New config/optimizer and rollback checks PASS.",
+      "remaining_risk": "General production pretrained resume across a historical revision remains unvalidated.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1_threeway_repair_v1/threeway/checks.json"
+    },
+    {
+      "id": "F16",
+      "status": "PASS",
+      "title": "Obsolete method entry",
+      "root_cause": "METHOD.md described only the early PIL controller.",
+      "fix_attempted": "Added dated current-method entry and explicit historical banner; archived original body.",
+      "verification": "Original body byte text preserved after removing banner; code paths checked.",
+      "remaining_risk": "Documentation does not certify scientific benefit.",
+      "evidence": "docs/CURRENT_METHOD_20261101.md"
+    },
+    {
+      "id": "F17",
+      "status": "BLOCKED",
+      "title": "Backward primitive not localized",
+      "root_cause": "First observed mismatch is backward, not restored forward/RNG.",
+      "fix_attempted": "Preserved all historical first divergences and collected a new fixed paired diagnostic.",
+      "verification": "Previous instrumented raw error2.834317e-5; new pair exact; no stable path effect.",
+      "remaining_risk": "No specific CUDA primitive or unique causal mechanism identified.",
+      "evidence": "results/next_validation_20261101T0040Z_v1_BF16_instrumented/diagnostic/raw_backward_localization.json"
+    },
+    {
+      "id": "F18",
+      "status": "BLOCKED",
+      "title": "Independent validity unknown",
+      "root_cause": "No genuine dual-review evidence exists.",
+      "fix_attempted": "Reused predeclared32 random subset, separate reviewer/adjudication files and validator.",
+      "verification": "0 reviewed pairs; disagreement and validity rates remain unknown.",
+      "remaining_risk": "Human-dependent task cannot be replaced by model flags.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/cpu_audit/review32_status.json"
+    },
+    {
+      "id": "F19",
+      "status": "FAIL",
+      "title": "Reward config/default mismatch",
+      "root_cause": "Dataclass defaults, not YAML, supply executed coefficients.",
+      "fix_attempted": "Audited actual call and recorded defaults without rewiring reward.",
+      "verification": "Values match historical campaign; wiring gap persists.",
+      "remaining_risk": "Editing YAML alone would not change coefficients; future version needs explicit contract.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/cpu_audit/identity_and_config_audit.json"
+    },
+    {
+      "id": "F20",
+      "status": "FAIL",
+      "title": "Runtime data guards weaker",
+      "root_cause": "Generic loader lacks per-read image SHA and official source-join enforcement.",
+      "fix_attempted": "Run-specific source/content audits performed; no generic loader repair claimed.",
+      "verification": "All80 latest image hashes PASS; historical official join receipt retained.",
+      "remaining_risk": "Audit success does not make runtime loader a corruption detector.",
+      "evidence": "src/data/dataset.py"
+    },
+    {
+      "id": "F21",
+      "status": "BLOCKED",
+      "title": "Near-duplicates/pretraining exposure",
+      "root_cause": "Content hashes cannot certify crop/re-encode or foundation-model nonexposure.",
+      "fix_attempted": "Retained dHash screen and separated known inference/manifest exposure witnesses.",
+      "verification": "All80 prior-exposure flags true; latest split only source-disjoint.",
+      "remaining_risk": "Foundation-model contamination and unrecorded prior exposure unknown.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/cpu_audit/data_leakage.json"
+    },
+    {
+      "id": "F22",
+      "status": "BLOCKED",
+      "title": "Real post-training scientific/security evidence absent",
+      "root_cause": "Synthetic aggregation and clean LoRA are not a controlled backdoor assessment.",
+      "fix_attempted": "No security/ASR optimization or new post-training security campaign.",
+      "verification": "Absent denominators remain missing; scientific gate NO-GO.",
+      "remaining_risk": "Natural-image efficacy and training-induced security behavior untested.",
+      "evidence": "reports/AUDIT_DECISION_MATRIX.md"
+    },
+    {
+      "id": "F23",
+      "status": "PASS",
+      "title": "Within-batch duplicate freshness gap",
+      "root_cause": "Previous IDs were added to consumed only after a complete update.",
+      "fix_attempted": "Added non-mutating per-batch ID validation before model/gradient work; archived old source.",
+      "verification": "Prepatch duplicate accepted;5 regression tests PASS including real trainer early rejection.",
+      "remaining_risk": "Distinct trajectories for the same condition remain explicitly permitted; no historical duplicate was inferred.",
+      "evidence": "results/audit_remediation_20261101T0120Z_v1/audit/F23_after.json"
+    }
+  ],
+  "branches": [
+    {
+      "seed": 42,
+      "arm": "fixed",
+      "test_mean": 0.1571662166970782,
+      "candidate_lr": 1e-05,
+      "retained_lr": 1e-05,
+      "optimizer_calls": 4,
+      "forward_NFE": 320,
+      "backward_transition_calls": 80,
+      "validation_queries": 48,
+      "test_queries": 32,
+      "GPU_held_seconds_measured": 15.650035028986167
+    },
+    {
+      "seed": 42,
+      "arm": "adaptive_scheduler",
+      "test_mean": 0.1571662166970782,
+      "candidate_lr": 1e-05,
+      "retained_lr": 1e-05,
+      "optimizer_calls": 4,
+      "forward_NFE": 320,
+      "backward_transition_calls": 80,
+      "validation_queries": 48,
+      "test_queries": 32,
+      "GPU_held_seconds_measured": 15.025346628041007
+    },
+    {
+      "seed": 42,
+      "arm": "rsi",
+      "test_mean": 0.1571633513085544,
+      "candidate_lr": 2e-05,
+      "retained_lr": 1e-05,
+      "optimizer_calls": 4,
+      "forward_NFE": 320,
+      "backward_transition_calls": 80,
+      "validation_queries": 48,
+      "test_queries": 32,
+      "GPU_held_seconds_measured": 15.045673152024392
+    },
+    {
+      "seed": 123,
+      "arm": "fixed",
+      "test_mean": 0.08391959220170975,
+      "candidate_lr": 1e-05,
+      "retained_lr": 1e-05,
+      "optimizer_calls": 4,
+      "forward_NFE": 320,
+      "backward_transition_calls": 80,
+      "validation_queries": 48,
+      "test_queries": 32,
+      "GPU_held_seconds_measured": 15.008278752968181
+    },
+    {
+      "seed": 123,
+      "arm": "adaptive_scheduler",
+      "test_mean": 0.08391167526133358,
+      "candidate_lr": 5e-06,
+      "retained_lr": 5e-06,
+      "optimizer_calls": 4,
+      "forward_NFE": 320,
+      "backward_transition_calls": 80,
+      "validation_queries": 48,
+      "test_queries": 32,
+      "GPU_held_seconds_measured": 15.014150152972434
+    },
+    {
+      "seed": 123,
+      "arm": "rsi",
+      "test_mean": 0.08391167526133358,
+      "candidate_lr": 5e-06,
+      "retained_lr": 5e-06,
+      "optimizer_calls": 4,
+      "forward_NFE": 320,
+      "backward_transition_calls": 80,
+      "validation_queries": 48,
+      "test_queries": 32,
+      "GPU_held_seconds_measured": 15.042912152013741
+    },
+    {
+      "seed": 3407,
+      "arm": "fixed",
+      "test_mean": 0.1394203220261261,
+      "candidate_lr": 1e-05,
+      "retained_lr": 1e-05,
+      "optimizer_calls": 4,
+      "forward_NFE": 320,
+      "backward_transition_calls": 80,
+      "validation_queries": 48,
+      "test_queries": 32,
+      "GPU_held_seconds_measured": 15.0151497820043
+    },
+    {
+      "seed": 3407,
+      "arm": "adaptive_scheduler",
+      "test_mean": 0.1394203220261261,
+      "candidate_lr": 1e-05,
+      "retained_lr": 1e-05,
+      "optimizer_calls": 4,
+      "forward_NFE": 320,
+      "backward_transition_calls": 80,
+      "validation_queries": 48,
+      "test_queries": 32,
+      "GPU_held_seconds_measured": 15.013945750019047
+    },
+    {
+      "seed": 3407,
+      "arm": "rsi",
+      "test_mean": 0.13942696386948228,
+      "candidate_lr": 2e-05,
+      "retained_lr": 2e-05,
+      "optimizer_calls": 4,
+      "forward_NFE": 320,
+      "backward_transition_calls": 80,
+      "validation_queries": 48,
+      "test_queries": 32,
+      "GPU_held_seconds_measured": 15.027921030996367
+    }
+  ],
+  "threeway_status": "PASS",
+  "comparisons": [
+    {
+      "comparison": "rsi_minus_fixed",
+      "mean": -1.3801618479192257e-06,
+      "per_seed_means": [
+        -2.86538852378726e-06,
+        -7.916940376162529e-06,
+        6.641843356192112e-06
+      ],
+      "crossed_seed_condition_bootstrap95": [
+        -1.1316767389265198e-05,
+        8.26225732453165e-06
+      ],
+      "independent_training_seeds": 3,
+      "shared_test_conditions": 32,
+      "scope": "synthetic held-out noise, conditional on tiny architecture; only three training seeds, exploratory"
+    },
+    {
+      "comparison": "rsi_minus_adaptive_scheduler",
+      "mean": 1.258818277468284e-06,
+      "per_seed_means": [
+        -2.86538852378726e-06,
+        0.0,
+        6.641843356192112e-06
+      ],
+      "crossed_seed_condition_bootstrap95": [
+        -5.2800169214606285e-06,
+        9.22750623431055e-06
+      ],
+      "independent_training_seeds": 3,
+      "shared_test_conditions": 32,
+      "scope": "synthetic held-out noise, conditional on tiny architecture; only three training seeds, exploratory"
+    }
+  ],
+  "independent_human_pairs": 0,
+  "latest_real_split": "source-disjoint historical development, not independent",
+  "review_kit": "results/next_validation_20261101T0040Z_v1/semantic_review32/index.html",
+  "input_hashes_unchanged": true,
+  "reward_guard_sha256": "73b480ae552990e6d41c560713f2c47137379d7f7ec7049b64fe6c7709552712"
+}

@@ -1,0 +1,10 @@
+{
+  "canonical_root": "/storage/home/ydk297/projects/poisoning/outputs/pilot_run_20261104T030649Z_s42",
+  "verified_selected_files": 101,
+  "all_selected_SHA256_match_remote_inventory": true,
+  "remote_inventory_SHA256": "cf25d41a4fd1b98e1b9e9671f121037ce40f933469c29c1b287280a9d107ec52",
+  "cluster_retained_bytes_excluding_inventory": 688993558,
+  "local_retained_bytes_before_receipt": 4166022,
+  "GPU_seconds": 3859,
+  "full_large_checkpoint_gradient_image_evidence_retained_on_cluster": true
+}

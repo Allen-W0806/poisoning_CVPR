@@ -1,0 +1,7 @@
+{"job_id": "86403", "task": "one", "reserved_seconds": 600, "parent_run": "EXP_20261027T141314_7f2c3dc26636_phase3_slurm_one"}
+{"job_id": "86404", "task": "one", "reserved_seconds": 600, "parent_run": "EXP_20261027T141845_9b4a88c37076_phase3_slurm_one"}
+{"job_id": "86405", "task": "one", "reserved_seconds": 600, "parent_run": "EXP_20261027T142201_648c36328684_phase3_slurm_one"}
+{"job_id": "86408", "task": "backward", "reserved_seconds": 300, "parent_run": "EXP_20261027T142708_33e331a1db43_phase3_slurm_backward"}
+{"job_id": "86409", "task": "one", "reserved_seconds": 600, "parent_run": "EXP_20261027T143117_b4453cea2d66_phase3_slurm_one"}
+{"job_id": "86411", "task": "smoke", "reserved_seconds": 1200, "parent_run": "EXP_20261027T143457_03808d628b67_phase3_slurm_smoke"}
+{"job_id": "86412", "task": "semantics", "reserved_seconds": 300, "parent_run": "EXP_20261027T145338_d0c6788762ba_phase3_slurm_semantics"}

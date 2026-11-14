@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "views": [
+    {
+      "language": "zh",
+      "width": 1440,
+      "errors": [],
+      "overflow": false,
+      "result_rows": 6,
+      "embedded_matches_authority": true
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "errors": [],
+      "overflow": false,
+      "result_rows": 6,
+      "embedded_matches_authority": true
+    },
+    {
+      "language": "zh",
+      "width": 390,
+      "errors": [],
+      "overflow": false,
+      "result_rows": 6,
+      "embedded_matches_authority": true
+    }
+  ],
+  "run": "small_scale_validation_20261031T1928Z_v1"
+}

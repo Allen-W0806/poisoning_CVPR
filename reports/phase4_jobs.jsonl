@@ -1,0 +1,7 @@
+{"job_id": "86430", "task": "diagnostic", "reserved_seconds": 720, "parent_run": "EXP_20261027T164806_f1653f550b92_phase4_slurm_diagnostic"}
+{"job_id": "86433", "task": "frozen", "reserved_seconds": 480, "parent_run": "EXP_20261027T165411_139d43dc7fdb_phase4_slurm_frozen"}
+{"job_id": "86434", "task": "rl42", "reserved_seconds": 3360, "parent_run": "EXP_20261027T170109_2a9eb9728d5b_phase4_slurm_rl42"}
+{"job_id": "86435", "task": "rl123", "reserved_seconds": 3360, "parent_run": "EXP_20261027T170232_4b3dd6ec0ad2_phase4_slurm_rl123"}
+{"job_id": "86444", "task": "diagnostic_outcomes", "reserved_seconds": 180, "parent_run": "EXP_20261027T175515_d691a848a687_phase4_slurm_diagnostic_outcomes"}
+{"job_id": "86445", "task": "rsi42", "reserved_seconds": 3360, "parent_run": "EXP_20261027T175730_88f1660dc081_phase4_slurm_rsi42"}
+{"job_id": "86446", "task": "rsi123", "reserved_seconds": 3360, "parent_run": "EXP_20261027T175733_58cb8136f49f_phase4_slurm_rsi123"}

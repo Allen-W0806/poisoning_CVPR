@@ -1,0 +1,8 @@
+{
+  "created_UTC": "2026-11-04T06:35:27.553730+00:00",
+  "internal_status_at_preregistration": "TRAINING",
+  "new_final_assessment_not_yet_measured": true,
+  "protocol_SHA256": "ce67890e47545dc4531718c1e9b8fcd88c4b61d8ac9729ba96f21eb1fcd0122d",
+  "worker_SHA256": "8a724e62452d70c8ec127d58d6e18a37e6b0487c9141bb5977eba0829448326a",
+  "interpretation": "frozen-model VQA quality only, not ASR or full semantic certification"
+}

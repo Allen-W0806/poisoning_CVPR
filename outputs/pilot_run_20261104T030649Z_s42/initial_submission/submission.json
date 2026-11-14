@@ -1,0 +1,17 @@
+{
+  "run_id": "pilot_run_20261104T030649Z_s42",
+  "created_UTC": "2026-11-04T03:07:40.173542+00:00",
+  "GPU_cap_seconds": 3600,
+  "process_cap_seconds": 3300,
+  "GPU_count": 1,
+  "automatic_retries": 0,
+  "authorization": "Current user request for 32/16/16 benign five-arm pilot",
+  "separate_from_finalized_historical_budgets": true,
+  "script_SHA256": "dd15c2129796de7700f3f8f0dc7c9b697cab9758272a5798d01aaefd68be1b81",
+  "status": "SUBMITTED",
+  "output": "/storage/home/ydk297/projects/poisoning/outputs/pilot_run_20261104T030649Z_s42",
+  "sbatch_returncode": 0,
+  "stdout": "88916",
+  "stderr": "sbatch:  \nsbatch: Job Resource Tips:\nsbatch:   * Run 'jobstats <jobid>' while your job is running (wait at least 60 seconds before trying) or after job completes.\nsbatch:   * Check CPU, GPU, and memory usage.\nsbatch:   * Adjust your requests to improve efficiency.\nsbatch:   * Optimizing your requests can help shorten queue times and improve cluster utilization.\nsbatch:",
+  "job_id": "88916"
+}

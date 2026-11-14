@@ -1,0 +1,117 @@
+{
+  "status": "STAGED_NOT_GPU_VALIDATED",
+  "started": 1793772146.122772,
+  "free_before": 282713546293248,
+  "C_drive_bytes": 0,
+  "estimated_model_data_env_bytes": 20000000000,
+  "models": {
+    "liuhaotian/llava-v1.5-7b": {
+      "revision": "4481d270cc22fd5c4d1bb5df129622006ccd9234",
+      "path": "/storage/home/ydk297/.cache/huggingface/hub/models--liuhaotian--llava-v1.5-7b/snapshots/4481d270cc22fd5c4d1bb5df129622006ccd9234",
+      "files": [
+        {
+          "path": "config.json",
+          "bytes": 1161,
+          "SHA256": "f112de882e31171a105f0d3f69d9e6e8700a40149f0944f4b507d3a41789e492"
+        },
+        {
+          "path": "generation_config.json",
+          "bytes": 124,
+          "SHA256": "e453057ea6a89d902d7326b3addbe312a7a6c8faabf777a521c9f2d563f79b8d"
+        },
+        {
+          "path": "pytorch_model-00001-of-00002.bin",
+          "bytes": 9976634558,
+          "SHA256": "492fdfa63cf314097d99da81a3586d54a97adc1471a0ae0535f5caa269b86314"
+        },
+        {
+          "path": "pytorch_model-00002-of-00002.bin",
+          "bytes": 3542276251,
+          "SHA256": "c0eb94eb3fa578a4c63567f2eca6b0acf6a44a891c257aca0df88ffa891de72e"
+        },
+        {
+          "path": "pytorch_model.bin.index.json",
+          "bytes": 27068,
+          "SHA256": "487578d3f7ec21c057596d0f9dc71084acc349eb8f13bd8b5af86c26460f2d31"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 438,
+          "SHA256": "719833ff26ac897a3ec8ed946028a135de2a351470af59b4008744ab1f0ee9b7"
+        },
+        {
+          "path": "tokenizer.model",
+          "bytes": 499723,
+          "SHA256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 749,
+          "SHA256": "cf01145c6de57f061991ff871e85d0402c38481f968daea8874c431cd0c7740f"
+        }
+      ],
+      "bytes": 13519440072
+    },
+    "openai/clip-vit-large-patch14-336": {
+      "revision": "ce19dc912ca5cd21c8a653c79e251e808ccabcd1",
+      "path": "/storage/home/ydk297/.cache/huggingface/hub/models--openai--clip-vit-large-patch14-336/snapshots/ce19dc912ca5cd21c8a653c79e251e808ccabcd1",
+      "files": [
+        {
+          "path": "config.json",
+          "bytes": 4757,
+          "SHA256": "51b1c14aabcdf639c4a0370eeda1010b773bbe1df78319c7d0f5882c22ac0ac0"
+        },
+        {
+          "path": "merges.txt",
+          "bytes": 524657,
+          "SHA256": "f526393189112391ce6f9795d4695f704121ce452c3aad1f5335cc41337eba85"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "bytes": 316,
+          "SHA256": "d253881f65322dc546df59cf925a408e5538b8ecb5a1b496cdd36af9992686d4"
+        },
+        {
+          "path": "pytorch_model.bin",
+          "bytes": 1711974081,
+          "SHA256": "c6032c2e0caae3dc2d4fba35535fa6307dbb49df59c7e182b1bc4b3329b81801"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 389,
+          "SHA256": "f8c0d6c39aee3f8431078ef6646567b0aba7f2246e9c54b8b99d55c22b707cbf"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 2224041,
+          "SHA256": "b556ac8c99757ffb677208af34bc8c6721572114111a6e0aaf5fa69ff0b8d842"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 844,
+          "SHA256": "83cef1a5979147985887a84eda9cb13bae5f3f5413c74c92360f310a35361755"
+        },
+        {
+          "path": "vocab.json",
+          "bytes": 862328,
+          "SHA256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363"
+        }
+      ],
+      "bytes": 1715591413
+    }
+  },
+  "archive_SHA256": "15b88ffc5e030d7e0e4aa39aae3d5b93817cde16c8918dec74073f52d1d7ade2",
+  "archive_entries": 20728,
+  "extracted_bytes": 529758086,
+  "top_paths": [
+    "__MACOSX",
+    "data_VLM_poisoning"
+  ],
+  "failure": "RuntimeError: Official archive schema differs from README",
+  "free_after": 282711759519744,
+  "elapsed_seconds": 29.433154106140137,
+  "data_root": "/storage/home/ydk297/projects/poisoning/data/external/shadowcast_20261104/data_VLM_poisoning",
+  "schema_resolution": "official archive uses data_VLM_poisoning wrapper, README says data",
+  "data_files": 10332,
+  "data_bytes": 528036081
+}

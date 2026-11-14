@@ -1,0 +1,129 @@
+{
+  "stage": "vizwiz_clean0",
+  "reservation_GPU_seconds": 7200,
+  "seed": 42,
+  "status": "SUBMITTED",
+  "command": [
+    ".venv-shadowcast-20261104/bin/python",
+    "scripts/evaluate_shadowcast_vizwiz.py",
+    "--campaign",
+    "outputs/reward_debug_20261104T054605Z_s42",
+    "--stage",
+    "evaluate",
+    "--poison-count",
+    "0"
+  ],
+  "prior_accounting": {
+    "records": [
+      {
+        "job_id": "88948",
+        "stage": "diagnostics",
+        "state": "COMPLETED",
+        "elapsed_seconds": 271,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 271
+      },
+      {
+        "job_id": "88949",
+        "stage": "internal",
+        "state": "CANCELLED by 100127",
+        "elapsed_seconds": 2840,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 2840
+      },
+      {
+        "job_id": "88957",
+        "stage": "internal_v3",
+        "state": "RUNNING",
+        "elapsed_seconds": 13014,
+        "settled": false,
+        "charged_or_reserved_GPU_seconds": 18000
+      },
+      {
+        "job_id": "88952",
+        "stage": "shadowcast_clean",
+        "state": "CANCELLED by 100127",
+        "elapsed_seconds": 233,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 233
+      },
+      {
+        "job_id": "88955",
+        "stage": "shadowcast_clean_repaired",
+        "state": "COMPLETED",
+        "elapsed_seconds": 1649,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 1649
+      },
+      {
+        "job_id": "88954",
+        "stage": "shadowcast_clean_tmpfix",
+        "state": "FAILED",
+        "elapsed_seconds": 7,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 7
+      },
+      {
+        "job_id": "88967",
+        "stage": "shadowcast_eval_0",
+        "state": "RUNNING",
+        "elapsed_seconds": 76,
+        "settled": false,
+        "charged_or_reserved_GPU_seconds": 2700
+      },
+      {
+        "job_id": "88968",
+        "stage": "shadowcast_eval_50",
+        "state": "RUNNING",
+        "elapsed_seconds": 39,
+        "settled": false,
+        "charged_or_reserved_GPU_seconds": 2700
+      },
+      {
+        "job_id": "88951",
+        "stage": "shadowcast_poison",
+        "state": "FAILED",
+        "elapsed_seconds": 8,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 8
+      },
+      {
+        "job_id": "88953",
+        "stage": "shadowcast_poison_pathfix",
+        "state": "COMPLETED",
+        "elapsed_seconds": 13255,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 13255
+      },
+      {
+        "job_id": "88966",
+        "stage": "shadowcast_poisoned",
+        "state": "COMPLETED",
+        "elapsed_seconds": 1646,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 1646
+      },
+      {
+        "job_id": "88950",
+        "stage": "shadowcast_smoke",
+        "state": "COMPLETED",
+        "elapsed_seconds": 39,
+        "settled": true,
+        "charged_or_reserved_GPU_seconds": 39
+      }
+    ],
+    "committed_GPU_seconds": 43348,
+    "actual_GPU_seconds": 33077,
+    "cap_GPU_seconds": 72000
+  },
+  "script_SHA256": "1e848bd99006eae8333ef7fabacf867bcd9177763b109c3f45b63329c575ffcb",
+  "scratch": "/storage/home/ydk297/projects/poisoning/tmp/rd_1da8a00349a4",
+  "created_UTC": "2026-11-04T10:33:32.383729+00:00",
+  "entrypoint_SHA256": {
+    "scripts/evaluate_shadowcast_vizwiz.py": "d47e01fb43e54a5b706a201ae1b5f592b4cdb8a26d0f42d78a7267f1ab0eefc8"
+  },
+  "returncode": 0,
+  "stdout": "88970",
+  "stderr": "sbatch:  \nsbatch: Job Resource Tips:\nsbatch:   * Run 'jobstats <jobid>' while your job is running (wait at least 60 seconds before trying) or after job completes.\nsbatch:   * Check CPU, GPU, and memory usage.\nsbatch:   * Adjust your requests to improve efficiency.\nsbatch:   * Optimizing your requests can help shorten queue times and improve cluster utilization.\nsbatch:",
+  "job_id": "88970"
+}

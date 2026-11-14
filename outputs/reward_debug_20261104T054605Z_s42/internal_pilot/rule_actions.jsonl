@@ -1,0 +1,1 @@
+{"round": 2, "action": "halve_LR", "config": {"lr": 2.5e-06, "weight_sem": 2.0, "weight_stealth": 1.0}, "basis": "previous common validation reward declined"}

@@ -1,0 +1,283 @@
+{
+  "checked_UTC": "2026-11-14T05:03:56.342914+00:00",
+  "models": [
+    {
+      "repo_id": "Qwen/Qwen3-VL-2B-Instruct",
+      "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+      "absolute_path": "/storage/home/ydk297/.cache/huggingface/hub/models--Qwen--Qwen3-VL-2B-Instruct/snapshots/89644892e4d85e24eaac8bacfd4f463576704203",
+      "exists": true,
+      "files": [
+        {
+          "relative": "README.md",
+          "bytes": 7136
+        },
+        {
+          "relative": "chat_template.json",
+          "bytes": 5502
+        },
+        {
+          "relative": "config.json",
+          "bytes": 1505
+        },
+        {
+          "relative": "generation_config.json",
+          "bytes": 269
+        },
+        {
+          "relative": "merges.txt",
+          "bytes": 1671839
+        },
+        {
+          "relative": "model.safetensors",
+          "bytes": 4255140312
+        },
+        {
+          "relative": "preprocessor_config.json",
+          "bytes": 390
+        },
+        {
+          "relative": "tokenizer.json",
+          "bytes": 7032403
+        },
+        {
+          "relative": "tokenizer_config.json",
+          "bytes": 10868
+        },
+        {
+          "relative": "video_preprocessor_config.json",
+          "bytes": 385
+        },
+        {
+          "relative": "vocab.json",
+          "bytes": 2776833
+        }
+      ],
+      "total_bytes": 4266647442,
+      "source_URL": "https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct/tree/89644892e4d85e24eaac8bacfd4f463576704203"
+    },
+    {
+      "repo_id": "timbrooks/instruct-pix2pix",
+      "revision": "31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+      "absolute_path": "/storage/home/ydk297/.cache/huggingface/hub/models--timbrooks--instruct-pix2pix/snapshots/31519b5cb02a7fd89b906d88731cd4d6a7bbf88d",
+      "exists": true,
+      "files": [
+        {
+          "relative": "README.md",
+          "bytes": 1291
+        },
+        {
+          "relative": "model_index.json",
+          "bytes": 616
+        },
+        {
+          "relative": "scheduler/scheduler_config.json",
+          "bytes": 569
+        },
+        {
+          "relative": "text_encoder/config.json",
+          "bytes": 617
+        },
+        {
+          "relative": "text_encoder/model.fp16.safetensors",
+          "bytes": 246144864
+        },
+        {
+          "relative": "tokenizer/merges.txt",
+          "bytes": 524619
+        },
+        {
+          "relative": "tokenizer/special_tokens_map.json",
+          "bytes": 472
+        },
+        {
+          "relative": "tokenizer/tokenizer_config.json",
+          "bytes": 806
+        },
+        {
+          "relative": "tokenizer/vocab.json",
+          "bytes": 1059962
+        },
+        {
+          "relative": "unet/config.json",
+          "bytes": 1021
+        },
+        {
+          "relative": "unet/diffusion_pytorch_model.fp16.safetensors",
+          "bytes": 1719148344
+        },
+        {
+          "relative": "vae/config.json",
+          "bytes": 553
+        },
+        {
+          "relative": "vae/diffusion_pytorch_model.fp16.safetensors",
+          "bytes": 167335342
+        }
+      ],
+      "total_bytes": 2134219076,
+      "source_URL": "https://huggingface.co/timbrooks/instruct-pix2pix/tree/31519b5cb02a7fd89b906d88731cd4d6a7bbf88d"
+    },
+    {
+      "repo_id": "openai/clip-vit-large-patch14",
+      "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "absolute_path": "/storage/home/ydk297/.cache/huggingface/hub/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "exists": true,
+      "files": [
+        {
+          "relative": "config.json",
+          "bytes": 4519
+        },
+        {
+          "relative": "merges.txt",
+          "bytes": 524619
+        },
+        {
+          "relative": "model.safetensors",
+          "bytes": 1710540580
+        },
+        {
+          "relative": "preprocessor_config.json",
+          "bytes": 316
+        },
+        {
+          "relative": "special_tokens_map.json",
+          "bytes": 389
+        },
+        {
+          "relative": "tokenizer.json",
+          "bytes": 2224003
+        },
+        {
+          "relative": "tokenizer_config.json",
+          "bytes": 905
+        },
+        {
+          "relative": "vocab.json",
+          "bytes": 961143
+        }
+      ],
+      "total_bytes": 1714256474,
+      "source_URL": "https://huggingface.co/openai/clip-vit-large-patch14/tree/32bd64288804d66eefd0ccbe215aa642df71cc41"
+    }
+  ],
+  "dataset_archives": [
+    {
+      "absolute_path": "/storage/home/ydk297/projects/poisoning/data/raw/vqav2/v2_Questions_Train_mscoco.zip",
+      "exists": true,
+      "bytes": 7239401,
+      "SHA256": "05a64b6e2582d06d7585f5429674a9a33851878be1bff9f8668cdcf792df611e",
+      "source_URL": "https://cvmlp.s3.amazonaws.com/vqa/mscoco/vqa/v2_Questions_Train_mscoco.zip"
+    },
+    {
+      "absolute_path": "/storage/home/ydk297/projects/poisoning/data/raw/vqav2/v2_Annotations_Train_mscoco.zip",
+      "exists": true,
+      "bytes": 21708861,
+      "SHA256": "fb101bcefe91422c543c2bb6d70af11eb3119d0ff745ae283d09acdf66250853",
+      "source_URL": "https://cvmlp.s3.amazonaws.com/vqa/mscoco/vqa/v2_Annotations_Train_mscoco.zip"
+    }
+  ],
+  "selected_clean_VQA_adapters": [
+    {
+      "seed": 42,
+      "directory": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed42/attempt_0/selected_checkpoint/adapter",
+      "files": {
+        "README.md": {
+          "absolute_path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed42/attempt_0/selected_checkpoint/adapter/README.md",
+          "bytes": 5174,
+          "SHA256": "2760cd17fdef01f19afa53cf5cb1cabd8abb11483065d561c577c1cc7ea6034b"
+        },
+        "adapter_config.json": {
+          "absolute_path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed42/attempt_0/selected_checkpoint/adapter/adapter_config.json",
+          "bytes": 1013,
+          "SHA256": "820e4790afed373137ed00709dbcb92476a4286a4296cd26e5239377d747d136"
+        },
+        "adapter_model.safetensors": {
+          "absolute_path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed42/attempt_0/selected_checkpoint/adapter/adapter_model.safetensors",
+          "bytes": 3227648,
+          "SHA256": "2a9a5ee542fb0d4468d605a2b7ff9df681ed3caa507e6a1ef74a3a95c2a7a26c"
+        }
+      }
+    },
+    {
+      "seed": 123,
+      "directory": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed123/attempt_0/selected_checkpoint/adapter",
+      "files": {
+        "README.md": {
+          "absolute_path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed123/attempt_0/selected_checkpoint/adapter/README.md",
+          "bytes": 5174,
+          "SHA256": "2760cd17fdef01f19afa53cf5cb1cabd8abb11483065d561c577c1cc7ea6034b"
+        },
+        "adapter_config.json": {
+          "absolute_path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed123/attempt_0/selected_checkpoint/adapter/adapter_config.json",
+          "bytes": 1013,
+          "SHA256": "820e4790afed373137ed00709dbcb92476a4286a4296cd26e5239377d747d136"
+        },
+        "adapter_model.safetensors": {
+          "absolute_path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed123/attempt_0/selected_checkpoint/adapter/adapter_model.safetensors",
+          "bytes": 3227648,
+          "SHA256": "1c7511e7ae17345c70a14040ae1bf016639c9f13fd5ba3a39d306ff47d19c449"
+        }
+      }
+    },
+    {
+      "seed": 3407,
+      "directory": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed3407/attempt_0/selected_checkpoint/adapter",
+      "files": {
+        "README.md": {
+          "absolute_path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed3407/attempt_0/selected_checkpoint/adapter/README.md",
+          "bytes": 5174,
+          "SHA256": "2760cd17fdef01f19afa53cf5cb1cabd8abb11483065d561c577c1cc7ea6034b"
+        },
+        "adapter_config.json": {
+          "absolute_path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed3407/attempt_0/selected_checkpoint/adapter/adapter_config.json",
+          "bytes": 1013,
+          "SHA256": "820e4790afed373137ed00709dbcb92476a4286a4296cd26e5239377d747d136"
+        },
+        "adapter_model.safetensors": {
+          "absolute_path": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed3407/attempt_0/selected_checkpoint/adapter/adapter_model.safetensors",
+          "bytes": 3227648,
+          "SHA256": "f3d6a7ad9015919b51f0c22f7986290c121440b26f33ef3d1da354afa5907ee2"
+        }
+      }
+    }
+  ],
+  "metric_trunk": {
+    "path": "/storage/home/ydk297/.cache/torch/hub/checkpoints/alexnet-owt-7be5be79.pth",
+    "bytes": 244408911
+  },
+  "clean_cohort": {
+    "directory": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/images",
+    "images": 1792,
+    "all_exist": true,
+    "image_bytes": 279061722,
+    "manifest": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/manifest.json",
+    "manifest_SHA256": "17d7362a01d7cfc0291825da876b5e8201fcba324d7fd6f526db27b532af76b8",
+    "image_source_URL": "https://s3.amazonaws.com/images.cocodataset.org/train2014/",
+    "split_sizes": {
+      "train": 1024,
+      "dev": 128,
+      "test": 512,
+      "transfer": 128
+    }
+  },
+  "metric_assets": [
+    {
+      "kind": "torch_trunk",
+      "absolute_path": "/storage/home/ydk297/.cache/torch/hub/checkpoints/alexnet-owt-7be5be79.pth",
+      "bytes": 244408911,
+      "source_URL": "https://download.pytorch.org/models/alexnet-owt-7be5be79.pth",
+      "SHA256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02"
+    },
+    {
+      "kind": "lpips_calibration",
+      "absolute_path": "/storage/home/ydk297/projects/poisoning/tools/metrics/lpips_0_1_4/lpips/weights/v0.1/alex.pth",
+      "project_relative_path": "tools/metrics/lpips_0_1_4/lpips/weights/v0.1/alex.pth",
+      "bytes": 6009,
+      "source_URL": "https://raw.githubusercontent.com/richzhang/PerceptualSimilarity/082bb24f84c091ea94de2867d34c4544f1878c01ff/lpips/weights/v0.1/alex.pth",
+      "SHA256": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0"
+    }
+  ],
+  "Windows_source_mirror": "H:/Project/Poisoning",
+  "base_model_weights_uploaded": false,
+  "raw_dataset_uploaded": false
+}

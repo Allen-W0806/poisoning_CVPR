@@ -1,0 +1,27 @@
+{
+  "0": {
+    "mean": 0.5569875000000086,
+    "source_CI95_low": 0.5470101017351143,
+    "source_CI95_high": 0.5666836465910248,
+    "cases": 8000,
+    "unique_source_hashes": 7928,
+    "scope": "conditional on these fixed trained victims; not training-seed uncertainty"
+  },
+  "50": {
+    "mean": 0.5535500000000086,
+    "source_CI95_low": 0.5436405094076605,
+    "source_CI95_high": 0.5633169155236907,
+    "cases": 8000,
+    "unique_source_hashes": 7928,
+    "scope": "conditional on these fixed trained victims; not training-seed uncertainty"
+  },
+  "Delta_Clean_poison50_minus_clean0": {
+    "mean": -0.003437499999999998,
+    "source_CI95_low": -0.0062148711068735416,
+    "source_CI95_high": -0.0006749135269613419,
+    "cases": 8000,
+    "unique_source_hashes": 7928,
+    "scope": "conditional on these fixed trained victims; not training-seed uncertainty"
+  },
+  "scope": "full8000 fixed-victim paired source uncertainty, not training-seed CI"
+}

@@ -1,0 +1,55 @@
+{
+  "browser": "Installed Chrome via Playwright; real HTTP/files, no mocked responses",
+  "before": "2026-10-28T16:03:32.335841+00:00",
+  "errors": [],
+  "views": [
+    {
+      "lang": "zh-CN",
+      "snapshot": "2026-10-28T16:03:32.335841+00:00",
+      "pairAudit": "EXP_20261028T154458_eefb8fb1fe7a_phase6_review_dashboard_followup",
+      "independent": "0",
+      "svgCount": 0,
+      "rows": 10,
+      "overflow": false,
+      "bodyLength": 21413,
+      "rendered_chart_marks": 4
+    },
+    {
+      "lang": "en",
+      "snapshot": "2026-10-28T16:03:32.335841+00:00",
+      "pairAudit": "EXP_20261028T154458_eefb8fb1fe7a_phase6_review_dashboard_followup",
+      "independent": "0",
+      "svgCount": 2,
+      "rows": 10,
+      "overflow": false,
+      "bodyLength": 11516,
+      "rendered_chart_marks": 4
+    }
+  ],
+  "chinese_to_english": {
+    "href": "./rsi_poisoning_en.html",
+    "lang": "en"
+  },
+  "canonical_refresh": "{\"reviews\": {\"submission_files\": 0, \"independent_pairs\": 0}, \"dashboard\": {\"json\": \"/storage/home/ydk297/projects/poisoning/dashboard/dashboard_data.json\", \"zh\": \"/storage/home/ydk297/projects/poisoning/dashboard/rsi_poisoning_zh.html\", \"en\": \"/storage/home/ydk297/projects/poisoning/dashboard/rsi_poisoning_en.html\", \"snapshot_utc\": \"2026-10-28T16:04:06.145348+00:00\"}}\n",
+  "windows_sync": "Synchronized snapshot 2026-10-28T16:04:06.145348+00:00. Reload local HTML; future cluster changes require synchronization.\r\n",
+  "after": "2026-10-28T16:04:06.145348+00:00",
+  "english_after": "2026-10-28T16:04:06.145348+00:00",
+  "authoritative": "2026-10-28T16:04:06.145348+00:00",
+  "mobile": {
+    "width": 390,
+    "scroll": 390
+  },
+  "review": {
+    "images": 48,
+    "broken": 0,
+    "selects": 168,
+    "knownDefaults": 0
+  },
+  "file_reload": {
+    "before": "2026-10-28T16:03:32.335841+00:00",
+    "after": "2026-10-28T16:04:06.145348+00:00",
+    "automatic_timer_verified": true,
+    "mode": "本地副本 · 每 25 秒重载；集群变化需同步"
+  },
+  "pass": true
+}

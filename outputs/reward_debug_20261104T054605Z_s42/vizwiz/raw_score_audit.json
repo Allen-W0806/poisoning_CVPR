@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "UTC": "2026-11-04T11:35:09.130548+00:00",
+  "conditions": {
+    "0": {
+      "all8000_raw_answers_rescored": true,
+      "mean_accuracy": 0.5569875000000086,
+      "raw_predictions_SHA256": "4dee9084beda5bbf83cf798e8990b0fe83e602a63b6c190cd7242174f0c531f0",
+      "scores_SHA256": "4fce12a4267c7f098bbea5be9ff4ea5d5565744d3feb0c83349a5c00458088af"
+    },
+    "50": {
+      "all8000_raw_answers_rescored": true,
+      "mean_accuracy": 0.5535500000000086,
+      "raw_predictions_SHA256": "838cf61e204a4bda95c9f0aa8e0e4e577f25ab5db1a1e924c8269f84bf66321d",
+      "scores_SHA256": "38e03f4e7cb4b4fb99972ae19c05871ba48fbe176cb0ea8e104853590ff5a78f"
+    }
+  },
+  "scoring_protocol": "official_vizwiz_API_accuracy_d26ef7ac_v1",
+  "official_reference": {
+    "protocol": "official_vizwiz_API_accuracy_d26ef7ac_v1",
+    "source_SHA256": "d26ef7ac2db06351444c3531f8d95fd9c454423fbcb9fd5dd984f12281146694",
+    "source_url": "https://vizwiz.cs.colorado.edu/VizWiz_final/vqa_data/API.zip",
+    "accuracy_path": "original VQAEval.evaluate through setAccuracy; caption metrics omitted",
+    "references": "all ten original answers, unchanged as in official VQA JSON loader",
+    "prediction_normalization": "official unconditional punctuation/digit/article/contraction processing"
+  },
+  "annotation_SHA256": "fa113f0e90230ab4690bb41c4d74e40f7087cc7c192dd8363fa4d6bad339b7aa",
+  "question_SHA256": "25b71577dafc1e4049b1a273b8e58d0d8bca510510b512e4925730905c3eceac",
+  "new_model_calls": 0,
+  "scope": "deterministic raw-score recomputation, not a full independent scientific integrity audit"
+}

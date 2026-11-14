@@ -1,0 +1,40 @@
+{
+  "UTC": "2026-11-04T12:03:18.2983113Z",
+  "bounded_execution_complete": true,
+  "scope": "seed42 Reward-debug pilot and released-code Shadowcast reference",
+  "seed": 42,
+  "trained_internal_updates": {
+    "rl_rsi": 100,
+    "rule_rsi": 100,
+    "ddpo_only": 100
+  },
+  "legacy_reward_arithmetic_bug_found": false,
+  "task_objective_revision": "lighting_v3_mean_progress_20261104",
+  "FP32_bounded_numeric_checks_passed": true,
+  "BF16_repaired": false,
+  "editing_quality_resolved": false,
+  "RL_superiority_over_DDPO_demonstrated": false,
+  "internal_poisoned_victim_ASR": "NOT TESTED",
+  "Shadowcast_keyword_ASR": {
+    "successes": 189,
+    "cases": 200,
+    "fraction": 0.945
+  },
+  "VizWiz_questions_per_condition": 8000,
+  "VizWiz_clean0_accuracy": 0.5569875,
+  "VizWiz_poison50_accuracy": 0.55355,
+  "VizWiz_delta_fraction": -0.0034375,
+  "actual_GPU_seconds": 44166,
+  "actual_GPU_hours": 12.268333333333333,
+  "GPU_cap_hours": 20,
+  "all_owned_GPU_stages_terminal": true,
+  "BadVLM": "SKIPPED by user",
+  "full_paper_evidence_and_tables_complete": false,
+  "broad_claim_supported": "no",
+  "scoped_measurements_supported": "yes, provisional",
+  "review_independence": "same-family",
+  "formal_integrity_audit": "unavailable",
+  "automatic_additional_experiments": false,
+  "mirror_scope": "selected evidence; models and tensor checkpoints remain on cluster",
+  "scratch_cleanup": "separate post-delivery receipt"
+}

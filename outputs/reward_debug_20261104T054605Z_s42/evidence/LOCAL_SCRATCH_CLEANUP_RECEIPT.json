@@ -1,0 +1,9 @@
+{
+  "UTC": "2026-11-04T12:07:16.9118903Z",
+  "mode": "EXECUTED",
+  "verified_absolute_target": "H:\\Project\\Poisoning\\tmp\\reward_debug_20261104T054605Z",
+  "deleted_files": 29,
+  "deleted_bytes": 309781509.0,
+  "target_absent_after_removal": true,
+  "retained": "final deliverables, source, raw experiment evidence, model/checkpoint references, and review-input reconstruction"
+}

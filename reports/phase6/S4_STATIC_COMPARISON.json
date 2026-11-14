@@ -1,0 +1,58 @@
+{
+  "experiment_id": "EXP_20261028T044816_33120182732f_phase6_s4_static_comparison",
+  "path": "/storage/home/ydk297/projects/poisoning/experiments/EXP_20261028T044816_33120182732f_phase6_s4_static_comparison",
+  "results": {
+    "static_equalities": {
+      "generator_config": true,
+      "split_sha256": true,
+      "dataset_version": true,
+      "seeds": true,
+      "development_sources": true,
+      "private_gate_sources": true,
+      "training_reward_config": true,
+      "backend": true
+    },
+    "prepared_config_version": "phase6_comparison_proposal_v1",
+    "M3_wording_corrected": "trace collection and diagnosis, no revision",
+    "equal_source_exposure_trained_arms": true,
+    "conventional_scheduler_present": true,
+    "runtime_initialization_comparable": false,
+    "natural_image_gate_independent": false,
+    "scientific_comparison_ready": false,
+    "pilot": {
+      "status": "PREPARED_NOT_RUN",
+      "scientific_gpu_budget_seconds": 0,
+      "launch_authorized": false,
+      "matched_arms": [
+        "frozen",
+        "standard_RL",
+        "ordinary_schedule",
+        "harness_revision"
+      ],
+      "seed": 42,
+      "logical_batch_size": 10,
+      "updates_per_trained_arm": 4,
+      "scope": "benign lighting edit only, no security optimization",
+      "unresolved": [
+        "independent instruction/factual validity",
+        "accepted training reward",
+        "pristine matched initialization",
+        "fresh private evaluation",
+        "explicit GPU budget"
+      ],
+      "runtime_estimate": "requires re-estimation after reward/evaluator release; historical42.20h is not allocation"
+    },
+    "resources": {
+      "wall_seconds": 0.6840268075466156,
+      "cpu_seconds": 0.06976348599999938,
+      "gpu_seconds": 0,
+      "model_calls": 0
+    },
+    "source_provenance": [],
+    "audit_context_versions": {
+      "dataset": "vqav2_content_v2",
+      "reward": "reward_compat_v2_diagnostic_only, not released or executed as training reward"
+    }
+  },
+  "output_manifest_sha256": "80c7618be2dbfcb52d467bdfbd6a8fe5e4cbd0fc7035ab627e7a1884bc0adba1"
+}

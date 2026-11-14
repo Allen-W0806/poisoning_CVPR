@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "TMPDIR": "/storage/home/ydk297/projects/poisoning/tmp/rd_cpu_sock_20261104",
+  "prefix_bytes": 64,
+  "workers": 4,
+  "batches": 4,
+  "CPU_tensor_sum": 120,
+  "CUDA_used": false
+}

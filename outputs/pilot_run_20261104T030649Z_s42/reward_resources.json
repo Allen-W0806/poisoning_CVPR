@@ -1,0 +1,10 @@
+{
+  "CLIP_snapshot": "/storage/home/ydk297/.cache/huggingface/hub/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41",
+  "CLIP_revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+  "LPIPS_calibration_SHA256": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+  "AlexNet_SHA256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+  "LPIPS_input_range": "[-1,1]",
+  "CLIP_input": "PIL RGB via pinned processor",
+  "ASR": "NOT TESTED",
+  "all_reward_parameters_frozen": true
+}

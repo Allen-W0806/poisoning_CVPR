@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/storage/home/ydk297/projects/poisoning/train_and_evaluate_pilot.py", line 405, in main
+    execute(ROOT, output, protocol, cohort, state, persist)
+  File "/storage/home/ydk297/projects/poisoning/train_and_evaluate_pilot.py", line 275, in execute
+    episode, observation = collect(cohort["train"][source_index], f"{method}/train/step_{step:03d}",
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/ydk297/projects/poisoning/train_and_evaluate_pilot.py", line 158, in collect
+    check_time()
+  File "/storage/home/ydk297/projects/poisoning/train_and_evaluate_pilot.py", line 113, in check_time
+    raise TimeoutError("Preregistered pilot wall-time cap reached; no automatic continuation")
+TimeoutError: Preregistered pilot wall-time cap reached; no automatic continuation

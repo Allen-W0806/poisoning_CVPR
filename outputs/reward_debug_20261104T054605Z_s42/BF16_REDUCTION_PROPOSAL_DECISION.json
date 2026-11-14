@@ -1,0 +1,20 @@
+{
+  "status": "WITHDRAWN_BEFORE_GPU_SUBMISSION",
+  "GPU_seconds": 0,
+  "torch": "2.6.0+cu124",
+  "process_default_before_policy_construction": true,
+  "actual_policy_constructor_already_disables_reduced_precision_reduction": true,
+  "unconditional_assignment_lines": [
+    35
+  ],
+  "protected_policy_source_SHA256": "3ed947bf7cffeb7ae754b101cf8774fa4a68bf269a210089bfd54c77f2352ed1",
+  "matches_active_pilot_source": true,
+  "reason": "Process-default True was not the effective policy value; existing BF16 failure already occurred with the flag disabled. This is not a new repair candidate.",
+  "proposal": "rejected_proposals/check_bf16_reduction_candidate_UNEXECUTED.py",
+  "no_model_or_image_loaded": true,
+  "BF16_repair_claim": false,
+  "UTC": "2026-11-04T09:16:46.736467+00:00",
+  "submitted": false,
+  "archived_unexecuted_script_SHA256": "5f3ac935ef6e2c3a1c6880fb6f2efe7be999dfe96f369b98a339d0e57ac7e9ae",
+  "audit_script_SHA256": "6c84e5a15a6926eaf6ca5339e0cb08f6f31702f53c5c771c96edfe7260638cb8"
+}

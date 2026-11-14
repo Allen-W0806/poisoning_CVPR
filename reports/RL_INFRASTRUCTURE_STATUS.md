@@ -1,0 +1,7 @@
+# RL Infrastructure Status
+
+Run `semantic_clean_20261029_v1`. Reused scoped mathematical evidence **PASS**; no unnecessary Monte Carlo rerun. All27 production source hashes still match the prior audited run. Categorical code is REINFORCE. Production diffusion is single-pass on-policy DDPO score-function learning with fixed coordinate/time scaling. Production GRPO is absent; a separate finite group-relative reference has old-policy ratios, clipping, detached normalization and KL, and tests its own normalized surrogate rather than claiming unbiased raw-return gradients.
+
+The reward-release guard rejects empty receipts and both training_eligible=False/True. It remains active; clean supervised target LoRA uses no generator reward path. Historical full pretrained BF16 checkpoint failures remain documented. Tiny random-UNet fixed replay does not validate pretrained diffusion training. No production RL parameters or source were changed this stage.
+
+Clean-target checkpoint engineering fixed a reproduced AdamW reference-aliasing bug in the new isolated harness only. It does not establish that the same cause explains previous IP2Pix BF16 failures. [Current source and guard receipt](../results/semantic_clean_20261029_v1/audit/rl_infrastructure_current.json); [reused canonical evidence](../results/matched_feedback_20261028_v2/audit/rl_reliability.json); [original negative restart audit](PHASE4_RESTART_DIAGNOSTIC.md).

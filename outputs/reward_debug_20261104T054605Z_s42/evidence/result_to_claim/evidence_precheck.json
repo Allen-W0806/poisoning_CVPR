@@ -1,0 +1,9 @@
+{
+  "status": "WARN",
+  "helper_status": "UNRESOLVED",
+  "helper_not_run": true,
+  "checked_routes": ["tools/evidence_check.py", ".aris/installed-skills-codex.txt", "prior ARIS_REPO and selective skill lookup"],
+  "formal_experiment_integrity_audit": "unavailable",
+  "custom_checks": ["internal_pilot_raw_audit.json PASS", "vizwiz/raw_score_audit.json PASS", "shadowcast/verified_statistics.json raw recomputation", "evidence/local_review_delivery_readback.json 534 files verified"],
+  "scope": "Custom raw checks and file existence do not certify semantic claims; fresh same-family review remains provisional."
+}

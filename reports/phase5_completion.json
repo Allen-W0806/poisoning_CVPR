@@ -1,0 +1,87 @@
+{
+  "completed_utc": "2026-10-28T03:11:48.820352+00:00",
+  "phase": 5,
+  "engineering_decision": "GO_SCOPED",
+  "scientific_decision": "NO-GO",
+  "local_commit": "d14ad4956c986bf971f48f373d19a3b40f0fe958",
+  "canonical_commit": "94fa4a9b6ced1d6b56226888d5f500181adb13b9",
+  "implementation_local_commit": "82a3febe7049639f2b43ec9a68ed60ff60113619",
+  "implementation_canonical_commit": "afd9c1a4159d88b00388b0db7ea23e96d8c2e689",
+  "source_files_equal": 73,
+  "canonical_tests": {
+    "passed": 81,
+    "errors": 0,
+    "receipt": "reports/phase5_canonical_cpu_tests_final.log"
+  },
+  "local_phase5_tests": {
+    "passed": 22,
+    "errors": 0
+  },
+  "earlier_local_full_suite": {
+    "passed": 75,
+    "errors": 3,
+    "reason": "missing local Diffusers",
+    "receipt": "reports/phase5_local_cpu_tests.log"
+  },
+  "old_files_preserved": {
+    "local": {
+      "historical_files_unchanged": 3418,
+      "protected_phase4_sources_unchanged": 32,
+      "historical_outputs_overwritten": false
+    },
+    "canonical": {
+      "historical_files_unchanged": 3344,
+      "protected_phase4_sources_unchanged": 32,
+      "historical_outputs_overwritten": false
+    }
+  },
+  "new_scientific_updates": 0,
+  "new_model_calls": 0,
+  "new_gpu_hours": 0,
+  "scientific_blockers": [
+    "independent_editing_validity",
+    "validated_training_reward",
+    "pre_intervention_comparability",
+    "private_gate_isolation"
+  ],
+  "future_planning_gpu_hours": 42.19540658619441,
+  "review": {
+    "rounds": 2,
+    "independence": "same-family",
+    "status": "provisional",
+    "last_verdict": "gaps",
+    "post_last_sweep_fixes": "executor_verified_only",
+    "later_report_assumption": "A27, not re-reviewed"
+  },
+  "cleanup": {
+    "local": {
+      "resolved_scratch_path": "H:\\Project\\Poisoning\\tmp\\phase5_20261028",
+      "removed": true,
+      "removed_bytes": 448328.0,
+      "removed_files": 10
+    },
+    "canonical": {
+      "resolved_scratch_path": "/storage/home/ydk297/projects/poisoning/tmp/phase5_20261028",
+      "removed_files": 11,
+      "removed_bytes": 450448,
+      "only_run_specific_patches_and_verifier_scripts": true,
+      "removed": true
+    }
+  },
+  "local_retained_phase5_experiment_bytes": 887912,
+  "local_retained_phase5_experiment_directories": 9,
+  "large_new_C_artifacts": false,
+  "monitor_snapshot": "reports/phase5_monitor_snapshot.json",
+  "deliverables": [
+    "reports/PHASE5_DRAFT_CODE_DISCREPANCIES.md",
+    "reports/PHASE5_LITERATURE_ALIGNMENT.md",
+    "reports/PHASE5_METHOD_SPECIFICATION.md",
+    "reports/PHASE5_PROGRESS_SUMMARY_ZH.md",
+    "reports/PHASE5_REWARD_CORRECTIONS.md",
+    "reports/PHASE5_RL_RSI_EXPERIMENT_PROTOCOL.md",
+    "reports/PHASE5_RSI_HARNESS_IMPLEMENTATION.md",
+    "reports/PHASE5_SECURITY_EVALUATION_PROTOCOL.md",
+    "reports/PHASE5_SEMANTIC_DATA_CONTRACT.md",
+    "reports/PHASE5_TEST_RESULTS.md"
+  ]
+}

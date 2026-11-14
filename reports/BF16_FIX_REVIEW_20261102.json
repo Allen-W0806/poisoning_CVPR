@@ -1,0 +1,1223 @@
+{
+  "audit_skill": "experiment-audit",
+  "post_run_cpu_finalizer": {
+    "accepted_actual_result": true,
+    "classification": "ROOT_CAUSE_PARTIALLY_LOCALIZED",
+    "candidate_status": "FAILED_ORDINARY_VERIFICATION",
+    "complete": false,
+    "fix_verified": false,
+    "actual_resumed_next_optimizer_update": "NOT COMPLETE / TIMEOUT",
+    "lowest_CUDA_primitive": "NOT ESTABLISHED",
+    "independently_matched_fields": [
+      "exact",
+      "tolerance_pass",
+      "affected_elements",
+      "max_abs"
+    ],
+    "independently_matched_checks": [
+      "matched_raw_starts",
+      "raw_pair_raw",
+      "raw_pair_postclip",
+      "raw_pair_runtime_total_norm",
+      "raw_pair_after_adapter",
+      "raw_pair_after_optimizer",
+      "raw_pair_after_scheduler",
+      "raw_pair_after_rng_torch",
+      "raw_pair_after_rng_cuda",
+      "raw_pair_after_rng_numpy",
+      "raw_pair_after_rng_python",
+      "after1_adapter",
+      "after1_exp_avg",
+      "after1_exp_avg_sq",
+      "after2_adapter",
+      "after2_exp_avg",
+      "after2_exp_avg_sq",
+      "ordinary_next_trajectory.pt",
+      "ordinary_postclip.pt",
+      "resumed_next_trajectory.pt"
+    ],
+    "execution_source_and_post_review_source": "Protocol hashes denote the candidate actually tested. The archived guard matches the submitted version; the live successor adds an experimental status docstring.",
+    "applicability": "The revised finalizer correctly describes this failed run. Its generated classification/scope wording is run-specific. The review accepts no positive generic admission path.",
+    "current_and_archived_sha256": {
+      "results/numerical_fix_20261102_v1/verification/mandatory_verification.json": "c79a921ed9751cd88ea260730500b7c5d597bfe97dfdfe9decb4605b3afd9f57",
+      "scripts/verify_numerical_fix_artifacts_20261102.py": "01ca16f7c9cd1f1654d776b8df304401d5d282bb2f083da36408f3039d923cdf",
+      "src/rl/cuda_execution_guard.py": "b22280642caabe772dd0b5e4a4c4954627aa55d0dcc1fb967134d2b3a5c35d8b",
+      "results/numerical_fix_20261102_v1/candidate_failed_source/verify_numerical_fix_artifacts_20261102.py": "c42454970c79cc817831bb2f7219a973b0ffb7ddd1a738b9fc2598209b521f93",
+      "results/numerical_fix_20261102_v1/candidate_failed_source/run_numerical_fix_verification_20261102.py": "63a5f8b9227635007c138a01cef566448b2f4a6673b731226210f4149a1613c1",
+      "results/numerical_fix_20261102_v1/candidate_failed_source/cuda_execution_guard.py": "fba3631cbf56172352b854c3dc550e283444783425968f8005ededc025cef1e3",
+      "results/numerical_fix_20261102_v1/candidate_failed_source/pretrained_editor_loader.py": "eb30d081f9295cb20debd383dda3af302bfd7174a6e5a9893762c09846ee482e"
+    }
+  },
+  "review_date_utc": "2026-11-02",
+  "reviewer": "/root/bf16_fix_review",
+  "review_independence": "fresh same-family",
+  "acceptance_status": "provisional",
+  "canonical_root": "/storage/home/ydk297/projects/poisoning",
+  "run": "numerical_fix_20261102_v1",
+  "verification_job": 88504,
+  "verdict": "FAIL",
+  "candidate_status": "FIX_NOT_VERIFIED",
+  "reject_FIX_VERIFIED": true,
+  "reason_codes": [
+    "GUARDED_ORDINARY_FRESH_PAIR_MISMATCH",
+    "RESUMED_NEXT_UPDATE_NOT_SAVED",
+    "CUDA_PRIMITIVE_UNRESOLVED"
+  ],
+  "scientific_release": "NO-GO",
+  "ASR": "NOT TESTED",
+  "method": "Fresh reviewer read the scoped source, matched eight local and UTC hashes, inspected the executed-source protocol, read prior diagnostic and worker receipts, then compared saved tensors independently on CPU with CUDA hidden and one Torch thread. No new model operations or scheduler submissions.",
+  "evaluation": "Reproducibility of saved engineering-fixture gradients and state. The paired workers reference each other. Native dataset labels, performance scores and external validity are outside the measurement.",
+  "scope": {
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "allocation": "one requested Tesla A100 80GB",
+    "seed": 42,
+    "base_precision": "BF16",
+    "adapter_precision": "FP32",
+    "samples": 10,
+    "steps_per_trajectory": 2,
+    "reward_coefficient": 1,
+    "effective_lr": 0.000005,
+    "math_SDPA": true,
+    "h3_testing": "ABBA in separate processes with clipping-only capture",
+    "guard_execution": "Harness explicitly configures before CUDA init; loader additionally receives strict_backward=True. Default loader opt-in remains false.",
+    "frozen_check": "SHA-256 before/after over names and raw bytes of requires_grad=False named parameters in UNet, VAE and text encoder. Excludes buffers and other components.",
+    "ownership_check": "The set of trainable UNet object IDs equals optimizer parameter IDs before restore. Raw workers compare ordered IDs with clipping arguments. Independently checked all 256 captured names are unique LoRA A/B parameters; both sets of raw and postclip gradients are finite and present. Resume has no completed post-update receipt."
+  },
+  "history": {
+    "failed_localization": {
+      "job": 88495,
+      "state": "FAILED",
+      "exit": "1:0"
+    },
+    "bounded_localization": {
+      "job": 88497,
+      "first_measured": "down_blocks.0.attentions.0.transformer_blocks.0.attn1.to_q.lora_A.default.weight grad_output, transition 0, call 0",
+      "unequal_elements": 32768,
+      "max_abs": 2.2879531602626457e-11,
+      "original_raw_failure_preserved": true
+    },
+    "attention_bridge": {
+      "job": 88499,
+      "raw_exact": false,
+      "raw_max_abs": 4.307366907596588e-7,
+      "sampled_SDPA_differences": 0,
+      "sampled_LoRA_B_differences": 0
+    },
+    "H1": {
+      "job": 88502,
+      "single_thread_pair_raw_unequal": 1443163,
+      "baseline_pair_raw_unequal": 91542,
+      "single_thread_fix_supported": false
+    },
+    "H3": {
+      "job": 88503,
+      "baseline_pair_raw_unequal": 92571,
+      "blocked_pair_raw_unequal": 0,
+      "one_mixed_pair_also_exact": true,
+      "raw_hooked": true
+    },
+    "unit_tests": {
+      "count": 6,
+      "receipt": "guard_regressions.log",
+      "outcome": "OK",
+      "runtime": "CPU unit tests with mock initialization/loader"
+    },
+    "primitive_identified": false
+  },
+  "acceptance": {
+    "exact": "torch.equal for tensors with shape and dtype checks. Structured fields compared by the project helper. Signed-zero bit identity is outside this assertion.",
+    "tolerance": "abs(a-b) <= 1e-7 + 1e-5*abs(a), required per element, reported separately.",
+    "raw_pair": "PASS",
+    "ordinary_pair": "FAIL",
+    "actual_resumed_next_update": "NOT VERIFIED",
+    "resumed_trajectory_only": "PASS",
+    "ownership_frozen": "PASS for two raw and two completed ordinary workers; unavailable for incomplete resumed worker",
+    "automatic_release": false
+  },
+  "evidence": {
+    "source_input_hash_check": true,
+    "protocol_gaps": [
+      "ordinary/resume worker and CPU comparison helper lack submission-time hashes in verification/protocol.json. Current UTC hashes are included below.",
+      "Top-level ordinary_uninstrumented=false is stage-wide. Per-worker execution and receipt records distinguish raw wrappers from ordinary canonical updates."
+    ],
+    "raw_pair": {
+      "initial": {
+        "exact": true,
+        "tolerance_pass": true,
+        "tensor_count": 1027,
+        "affected_elements": 0,
+        "max_abs": 0,
+        "relative_L2": 0,
+        "structural_differences": []
+      },
+      "conditioning": {
+        "exact": true,
+        "tolerance_pass": true,
+        "tensor_count": 20,
+        "affected_elements": 0,
+        "max_abs": 0,
+        "relative_L2": 0,
+        "structural_differences": []
+      },
+      "raw_pairs": {
+        "raw": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "postclip": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "runtime_total_norm": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "runtime_coefficient_formula": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "after_adapter": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "after_consumed": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "after_optimizer": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 768,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "after_rng_cuda": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "after_rng_numpy": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "after_rng_python": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "after_rng_torch": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "after_scheduler": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "after_step": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "after_version": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "adam_exp_avg": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "adam_exp_avg_sq": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "adam_step": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        }
+      },
+      "bridge": {
+        "adapter": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "consumed": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "optimizer": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 768,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_cuda": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_numpy": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_python": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_torch": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "scheduler": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "step": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "version": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        }
+      },
+      "raw0": {
+        "trainable_names": 256,
+        "unique_names": 256,
+        "lora_names_only": true,
+        "raw_finite_nonmissing": true,
+        "clip_finite_nonmissing": true,
+        "optimizer_state_entries": 256,
+        "adapter_tensors": 256,
+        "raw_numel": 1594368,
+        "dtypes": [
+          "torch.float32"
+        ]
+      },
+      "raw1": {
+        "trainable_names": 256,
+        "unique_names": 256,
+        "lora_names_only": true,
+        "raw_finite_nonmissing": true,
+        "clip_finite_nonmissing": true,
+        "optimizer_state_entries": 256,
+        "adapter_tensors": 256,
+        "raw_numel": 1594368,
+        "dtypes": [
+          "torch.float32"
+        ]
+      }
+    },
+    "ordinary_pair": {
+      "before": {
+        "adapter": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "consumed": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "contract": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "optimizer": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 768,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_cuda": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_numpy": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_python": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_torch": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "scheduler": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "step": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "version": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "adam_exp_avg": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "adam_exp_avg_sq": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "adam_step": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        }
+      },
+      "after1": {
+        "adapter": {
+          "exact": false,
+          "tolerance_pass": false,
+          "tensor_count": 256,
+          "affected_tensors": 256,
+          "affected_elements": 744464,
+          "max_abs": 9.978311936720274e-7,
+          "relative_L2": 1.9541099001297864e-8,
+          "structural_differences": []
+        },
+        "consumed": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "contract": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "optimizer": {
+          "exact": false,
+          "tolerance_pass": false,
+          "tensor_count": 768,
+          "affected_tensors": 512,
+          "affected_elements": 3183698,
+          "max_abs": 0.000005123263690620661,
+          "relative_L2": 0.0000010529370477146139,
+          "structural_differences": []
+        },
+        "rng_cuda": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_numpy": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_python": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_torch": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "scheduler": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "step": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "version": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "adam_exp_avg": {
+          "exact": false,
+          "tolerance_pass": false,
+          "tensor_count": 256,
+          "affected_tensors": 256,
+          "affected_elements": 1593772,
+          "max_abs": 0.000005123263690620661,
+          "relative_L2": 0.0003835098236490921,
+          "structural_differences": []
+        },
+        "adam_exp_avg_sq": {
+          "exact": false,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_tensors": 256,
+          "affected_elements": 1589926,
+          "max_abs": 1.657298298596288e-9,
+          "relative_L2": 0.0003702914873992351,
+          "structural_differences": []
+        },
+        "adam_step": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        }
+      },
+      "after2": {
+        "adapter": {
+          "exact": false,
+          "tolerance_pass": false,
+          "tensor_count": 256,
+          "affected_tensors": 256,
+          "affected_elements": 1387812,
+          "max_abs": 0.000006400543043127982,
+          "relative_L2": 7.359801979942289e-7,
+          "structural_differences": []
+        },
+        "consumed": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "contract": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "optimizer": {
+          "exact": false,
+          "tolerance_pass": false,
+          "tensor_count": 768,
+          "affected_tensors": 512,
+          "affected_elements": 3188715,
+          "max_abs": 0.00009832702926360071,
+          "relative_L2": 0.00003826815523522041,
+          "structural_differences": []
+        },
+        "rng_cuda": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_numpy": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_python": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "rng_torch": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 1,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "scheduler": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "step": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "version": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 0,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        },
+        "adam_exp_avg": {
+          "exact": false,
+          "tolerance_pass": false,
+          "tensor_count": 256,
+          "affected_tensors": 256,
+          "affected_elements": 1594362,
+          "max_abs": 0.00009832702926360071,
+          "relative_L2": 0.016008960159899624,
+          "structural_differences": []
+        },
+        "adam_exp_avg_sq": {
+          "exact": false,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_tensors": 256,
+          "affected_elements": 1594353,
+          "max_abs": 5.445895112643484e-8,
+          "relative_L2": 0.01033286205176625,
+          "structural_differences": []
+        },
+        "adam_step": {
+          "exact": true,
+          "tolerance_pass": true,
+          "tensor_count": 256,
+          "affected_tensors": 0,
+          "affected_elements": 0,
+          "max_abs": 0,
+          "relative_L2": 0,
+          "structural_differences": []
+        }
+      },
+      "next_trajectory": {
+        "exact": false,
+        "tolerance_pass": false,
+        "tensor_count": 92,
+        "affected_tensors": 34,
+        "affected_elements": 353821,
+        "max_abs": 0.35465067625045776,
+        "relative_L2": 0.002963086661153757,
+        "structural_differences": []
+      },
+      "postclip": {
+        "exact": false,
+        "tolerance_pass": false,
+        "tensor_count": 256,
+        "affected_tensors": 256,
+        "affected_elements": 1594366,
+        "max_abs": 0.0009832559153437614,
+        "relative_L2": 0.018369500921843186,
+        "structural_differences": []
+      },
+      "updates": [
+        {
+          "gradient_norm": {
+            "exact": false,
+            "tolerance_pass": true,
+            "tensor_count": 1,
+            "affected_tensors": 1,
+            "affected_elements": 1,
+            "max_abs": 0.000004649162292480469,
+            "relative_L2": 0.000004497329451177049,
+            "structural_differences": []
+          },
+          "loss": {
+            "exact": true,
+            "tolerance_pass": true,
+            "tensor_count": 1,
+            "affected_tensors": 0,
+            "affected_elements": 0,
+            "max_abs": 0,
+            "relative_L2": 0,
+            "structural_differences": []
+          },
+          "trainable_max_change": {
+            "exact": true,
+            "tolerance_pass": true,
+            "tensor_count": 1,
+            "affected_tensors": 0,
+            "affected_elements": 0,
+            "max_abs": 0,
+            "relative_L2": 0,
+            "structural_differences": []
+          },
+          "behavior_logp_replay_max_difference": {
+            "exact": true,
+            "tolerance_pass": true,
+            "tensor_count": 1,
+            "affected_tensors": 0,
+            "affected_elements": 0,
+            "max_abs": 0,
+            "relative_L2": 0,
+            "structural_differences": []
+          }
+        },
+        {
+          "gradient_norm": {
+            "exact": false,
+            "tolerance_pass": false,
+            "tensor_count": 1,
+            "affected_tensors": 1,
+            "affected_elements": 1,
+            "max_abs": 0.0019047260284423828,
+            "relative_L2": 0.001866228402389118,
+            "structural_differences": []
+          },
+          "loss": {
+            "exact": false,
+            "tolerance_pass": true,
+            "tensor_count": 1,
+            "affected_tensors": 1,
+            "affected_elements": 1,
+            "max_abs": 7.450580596923828e-9,
+            "relative_L2": 3.5222728262854173e-9,
+            "structural_differences": []
+          },
+          "trainable_max_change": {
+            "exact": false,
+            "tolerance_pass": true,
+            "tensor_count": 1,
+            "affected_tensors": 1,
+            "affected_elements": 1,
+            "max_abs": 3.2741809263825417e-11,
+            "relative_L2": 0.000006525572904516186,
+            "structural_differences": []
+          },
+          "behavior_logp_replay_max_difference": {
+            "exact": true,
+            "tolerance_pass": true,
+            "tensor_count": 1,
+            "affected_tensors": 0,
+            "affected_elements": 0,
+            "max_abs": 0,
+            "relative_L2": 0,
+            "structural_differences": []
+          }
+        }
+      ]
+    },
+    "resume_partial": {
+      "resume_trajectory_only": {
+        "exact": true,
+        "tolerance_pass": true,
+        "tensor_count": 92,
+        "affected_elements": 0,
+        "max_abs": 0,
+        "relative_L2": 0,
+        "structural_differences": []
+      },
+      "receipt_presence_resume": {
+        "next_trajectory.pt": true,
+        "after2/training_state.pt": false,
+        "postclip.pt": false,
+        "receipt.json": false,
+        "execution_guard.json": false
+      }
+    },
+    "worker_receipts": {
+      "raw0": {
+        "evidence_files": [
+          "checks.json",
+          "conditioning.pt",
+          "execution_guard.json",
+          "torch_clip_grad_norm_source.py",
+          "update0.json",
+          "update0.pt"
+        ],
+        "guard": {
+          "guard": "cuda_launch_blocking_v1",
+          "CUDA_initialized_before": false,
+          "previous_value": "0",
+          "active_value": "1",
+          "scientific_loss_changed": false,
+          "precision_changed": false,
+          "actual_environment": "1",
+          "ordinary_uninstrumented": false,
+          "loader_optin": true
+        },
+        "receipt": {
+          "status": "PASS",
+          "frozen_base_unchanged": true,
+          "ownership_exact": true,
+          "guard_unchanged": true
+        },
+        "updates": []
+      },
+      "raw1": {
+        "evidence_files": [
+          "checks.json",
+          "conditioning.pt",
+          "execution_guard.json",
+          "torch_clip_grad_norm_source.py",
+          "update0.json",
+          "update0.pt"
+        ],
+        "guard": {
+          "guard": "cuda_launch_blocking_v1",
+          "CUDA_initialized_before": false,
+          "previous_value": "0",
+          "active_value": "1",
+          "scientific_loss_changed": false,
+          "precision_changed": false,
+          "actual_environment": "1",
+          "ordinary_uninstrumented": false,
+          "loader_optin": true
+        },
+        "receipt": {
+          "status": "PASS",
+          "frozen_base_unchanged": true,
+          "ownership_exact": true,
+          "guard_unchanged": true
+        },
+        "updates": []
+      },
+      "ordinary0": {
+        "evidence_files": [
+          "after1/training_state.pt",
+          "after2/training_state.pt",
+          "before/training_state.pt",
+          "execution_guard.json",
+          "next_trajectory.pt",
+          "postclip.pt",
+          "receipt.json"
+        ],
+        "guard": {
+          "guard": "cuda_launch_blocking_v1",
+          "CUDA_initialized_before": false,
+          "previous_value": "0",
+          "active_value": "1",
+          "scientific_loss_changed": false,
+          "precision_changed": false,
+          "actual_environment": "1",
+          "ordinary_uninstrumented": true,
+          "loader_optin": true
+        },
+        "receipt": {
+          "ownership_exact": true,
+          "frozen_base_unchanged": true,
+          "unmodified_canonical_update": true,
+          "clip_wrapper": false,
+          "original_guard_unchanged": true,
+          "UNet_NFE": 180
+        },
+        "updates": [
+          {
+            "step": 2,
+            "loss": -2.1148666068911552,
+            "gradient_norm": 1.033760666847229,
+            "optimizer_updates": 1,
+            "backward_transition_calls": 20,
+            "trainable_max_change": 0.0000050067383199348114
+          },
+          {
+            "step": 3,
+            "loss": -2.1152764037251472,
+            "gradient_norm": 1.020628571510315,
+            "optimizer_updates": 1,
+            "backward_transition_calls": 20,
+            "trainable_max_change": 0.000005017461262468714
+          }
+        ]
+      },
+      "ordinary1": {
+        "evidence_files": [
+          "after1/training_state.pt",
+          "after2/training_state.pt",
+          "before/training_state.pt",
+          "execution_guard.json",
+          "next_trajectory.pt",
+          "postclip.pt",
+          "receipt.json"
+        ],
+        "guard": {
+          "guard": "cuda_launch_blocking_v1",
+          "CUDA_initialized_before": false,
+          "previous_value": "0",
+          "active_value": "1",
+          "scientific_loss_changed": false,
+          "precision_changed": false,
+          "actual_environment": "1",
+          "ordinary_uninstrumented": true,
+          "loader_optin": true
+        },
+        "receipt": {
+          "ownership_exact": true,
+          "frozen_base_unchanged": true,
+          "unmodified_canonical_update": true,
+          "clip_wrapper": false,
+          "original_guard_unchanged": true,
+          "UNet_NFE": 180
+        },
+        "updates": [
+          {
+            "step": 2,
+            "loss": -2.1148666068911552,
+            "gradient_norm": 1.0337653160095215,
+            "optimizer_updates": 1,
+            "backward_transition_calls": 20,
+            "trainable_max_change": 0.0000050067383199348114
+          },
+          {
+            "step": 3,
+            "loss": -2.115276411175728,
+            "gradient_norm": 1.0187238454818726,
+            "optimizer_updates": 1,
+            "backward_transition_calls": 20,
+            "trainable_max_change": 0.0000050174285206594504
+          }
+        ]
+      },
+      "resume": {
+        "evidence_files": [
+          "next_trajectory.pt"
+        ],
+        "guard": null,
+        "receipt": null,
+        "updates": null
+      }
+    },
+    "execution_receipt": null,
+    "process_exit": {
+      "returncode": 124,
+      "finished_UTC": "2026-11-02T15:56:37.576574+00:00",
+      "job_id": "88504"
+    },
+    "sacct": [
+      "88504|FAILED|340|124:0"
+    ],
+    "timing_note": "sacct terminal status and process_exit supersede any previously read pending controller snapshot."
+  },
+  "audited_input_hashes": {
+    "src/rl/cuda_execution_guard.py": "fba3631cbf56172352b854c3dc550e283444783425968f8005ededc025cef1e3",
+    "src/models/pretrained_editor_loader.py": "eb30d081f9295cb20debd383dda3af302bfd7174a6e5a9893762c09846ee482e",
+    "scripts/test_cuda_execution_guard_20261102.py": "bb863be3e98a0c5449d6dcec1333c924f6c7d51757befe3b8f2026feefb2aca8",
+    "scripts/manage_numerical_fix_20261102.py": "f0d88f1e2dec24271d624333bef7ede1c81b3fd8577cb8c6b4db95b2c14aa235",
+    "scripts/run_numerical_fix_verification_20261102.py": "63a5f8b9227635007c138a01cef566448b2f4a6673b731226210f4149a1613c1",
+    "scripts/run_backward_h3_20261102.py": "2fe994ebdc3e80f821ecb09539cf7ba1b51cdbdf16f50a626b0c9530844f54b0",
+    "scripts/analyze_backward_h3_20261102.py": "3255533a72cf0a7eb6b8685fca4716f12f285cfa33ce34a1d6b853ab237dd42e",
+    "scripts/run_overnight_ordinary_resume_20261102.py": "4bc01c171a2e6c59e1030490f9e9c016b873e6dc49b82851852ba88d1c73cf68",
+    "scripts/run_overnight_norm_fixture_20261102.py": "498116d9cbf0b850cb4b6cd6604a3ad7fd83af344c3a4953231d80ae5907371c",
+    "scripts/numerical_boundaries_20261102.py": "e708e5da9fcb488e3998d245af5355abc6897eb2402446023225781622d53b6c",
+    "scripts/gradient_boundary_capture_20261102.py": "19e05b593401c327a32809d032606140be5f7783c05157b677cf536c4b545b9a",
+    "scripts/run_ip2pix_checkpoint_diagnostic.py": "6cad93ecaf8351cdeefe647ffa277c1dceac91237894a3ed7f603ca57345e959",
+    "src/rl/diffusion_rl_trainer.py": "6be0f6d9837166730e2f72ae8ed0891c1d673efc66fcd53de644a344ffaf2348",
+    "src/training/generator_adapter.py": "9a5e282bfda4b440e3747cf899a095e8ade0d9a90760326ffa3489113a119c51",
+    "results/numerical_fix_20261102_v1/localization_bounded/boundary_summary.json": "5a46a71ed682d1ddfaddd7d01f4fc12421dbc613dbc451d041910bedff7c419d",
+    "results/numerical_fix_20261102_v1/attention_bridge/attention_bridge_summary.json": "7594cc557cd45fa93acfb71eae014731de5df6db4cbe737acbf33bb1ced53f81",
+    "results/numerical_fix_20261102_v1/h1_order/H1_summary.json": "7ca21a7c0e027061d8d235f25cc5b2883529f8845e91321f2d6691938ea83de9",
+    "results/numerical_fix_20261102_v1/h3_launch/H3_summary.json": "3bfe4730f31060ecd880d2028e81daffa41b778df5d39b093d393eb6aed9ea3c",
+    "results/numerical_fix_20261102_v1/guard_regressions.log": "065c7d15facfd20f14fb9182747be315f3349fa1d5e1a0e966047509f4bfa9b1",
+    "results/numerical_fix_20261102_v1/verification/protocol.json": "2757942b2978239d087404d3ecff76ed85a89b82e27f5533c5b86ec3f1c96b1d",
+    "reports/numerical_fix_20261102_v1/state.json": "6167cf0d02f4249103cb865ca3e5db30c5736e0226bf6e122c65c64b678ff938",
+    "results/numerical_fix_20261102_v1/verification/process_exit.json": "6df74b009528e41f20b2821daaa6f0d6693ddda7f6dc7aceff7986c3337836c2",
+    "results/numerical_fix_20261102_v1/verification/raw0/update0.json": "32a8234bf850b380a877701cceccbb436e76fc14e3c1127e6a6694090f162f88",
+    "results/numerical_fix_20261102_v1/verification/raw0/execution_guard.json": "b20d3f3db741bcdc9e978217bf785e00acca6dc3f7add0799a4e388d889369e3",
+    "results/numerical_fix_20261102_v1/verification/raw0/checks.json": "3e0aa4f8d69cbbc0e39dc70b1885f0763f5932ff239cf9d93f3881335b700a4c",
+    "results/numerical_fix_20261102_v1/verification/raw0/update0.pt": "e210b1584c1c8005e8d13afb308e8d342db4968d4ee36521a3be21ad5048b56c",
+    "results/numerical_fix_20261102_v1/verification/raw0/conditioning.pt": "f2539d35048b80ec4832e433b0e6d31b2209f4e46d206d4537622fd13cd9f73e",
+    "results/numerical_fix_20261102_v1/verification/raw1/update0.json": "aa879fbeccfced1b2c7b552fd4bbdd3f14fa2f7048e55d1ff6a3c55985ea19e5",
+    "results/numerical_fix_20261102_v1/verification/raw1/execution_guard.json": "b20d3f3db741bcdc9e978217bf785e00acca6dc3f7add0799a4e388d889369e3",
+    "results/numerical_fix_20261102_v1/verification/raw1/checks.json": "3e0aa4f8d69cbbc0e39dc70b1885f0763f5932ff239cf9d93f3881335b700a4c",
+    "results/numerical_fix_20261102_v1/verification/raw1/update0.pt": "6f366d8d847f48f6e7f319c8d5cd37f86bcfada389b8977e88778165397df3f9",
+    "results/numerical_fix_20261102_v1/verification/raw1/conditioning.pt": "f2539d35048b80ec4832e433b0e6d31b2209f4e46d206d4537622fd13cd9f73e",
+    "results/numerical_fix_20261102_v1/verification/resume/next_trajectory.pt": "29eeeff601ebc63cbc23b89b6bd58942c3e88871b77f88ec01185df63b601e54",
+    "results/numerical_fix_20261102_v1/verification/ordinary1/postclip.pt": "a25c25c27a02b8d8541a195172ecd3747d631e71087d237d97788e77be070f85",
+    "results/numerical_fix_20261102_v1/verification/ordinary1/next_trajectory.pt": "77cd4b3bf3c34fc0f84914ac6680a3c12223de07052fe5015a1ab1fd6f99cf18",
+    "results/numerical_fix_20261102_v1/verification/ordinary1/execution_guard.json": "8921a92a09aebddbec63a35d3abb8daf1ebdce87b9c2203531c632679a7c5152",
+    "results/numerical_fix_20261102_v1/verification/ordinary1/receipt.json": "0c11737c55cfc8a853aaccb50b0336728e7f2cc06dc054682858a97bfb933da4",
+    "results/numerical_fix_20261102_v1/verification/ordinary1/after2/training_state.pt": "6ba401b6d9f93339e4883bdaf5ffaf61fdff62ec27a433fc839498ffc11122e6",
+    "results/numerical_fix_20261102_v1/verification/ordinary1/before/training_state.pt": "0aab634306cd4f1b7ad5cfd7be90983a07f46ba9d6dd39ee03392787d1a31c27",
+    "results/numerical_fix_20261102_v1/verification/ordinary1/after1/training_state.pt": "5ebdcb404f541a5f502eab780ac9d8badef1322dcac5a5314e1146120376f595",
+    "results/numerical_fix_20261102_v1/verification/ordinary0/postclip.pt": "753e96b471df6c4a003a64a9a9c545188d6a3f3f945e9bc50f071f2ad5de54b0",
+    "results/numerical_fix_20261102_v1/verification/ordinary0/next_trajectory.pt": "29eeeff601ebc63cbc23b89b6bd58942c3e88871b77f88ec01185df63b601e54",
+    "results/numerical_fix_20261102_v1/verification/ordinary0/execution_guard.json": "8921a92a09aebddbec63a35d3abb8daf1ebdce87b9c2203531c632679a7c5152",
+    "results/numerical_fix_20261102_v1/verification/ordinary0/receipt.json": "e5a6b344ccb08e0430bf7c119cceda0cd88c47a508286dc00298f482fb0e9c82",
+    "results/numerical_fix_20261102_v1/verification/ordinary0/after2/training_state.pt": "b151db5ba051aa2af3dc555841460d217e78810b9d69d5303eb37565e223abef",
+    "results/numerical_fix_20261102_v1/verification/ordinary0/before/training_state.pt": "7428b670c6af9a0581b8ec7a2af1a8b1889e66c186bcb7b9830232eb43a2bcf1",
+    "results/numerical_fix_20261102_v1/verification/ordinary0/after1/training_state.pt": "00850667649341f631900a67404776aa79bf7e2d73e4765f23dc17742fbb0825"
+  },
+  "actions": [
+    "Preserve historical RAW_BACKWARD_GRADIENT_MISMATCH and all new failures. Withhold verified guard, primitive-root-cause and learning/effect claims."
+  ],
+  "new_gpu_work_by_reviewer": 0,
+  "checklist": {
+    "ground_truth_provenance": "PASS (paired engineering comparison, no scientific GT)",
+    "score_normalization": "PASS (absolute and elementwise comparisons; relative L2 is descriptive)",
+    "result_existence": "FAIL for full verification: ordinary results falsify the candidate; final resume state is missing",
+    "dead_code": "PASS on tested candidate preflight and canonical update. Deployment outside the verifier is unvalidated.",
+    "scope": "FAIL for any fixture-wide numerical fix claim",
+    "evaluation_type": "reproducibility_fixture"
+  }
+}

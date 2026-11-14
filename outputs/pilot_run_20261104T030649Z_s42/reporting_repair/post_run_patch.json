@@ -1,0 +1,16 @@
+{
+  "scope": "post-run optional plotting dependency guard and status text only",
+  "files": {
+    "src/mini_pilot/reporting.py": {
+      "before_SHA256": "1d804eea90f659a8e3c0a6e2448d2039e4db1367483b921dc67d05edab160114",
+      "after_SHA256": "556fa1af01eca634acb211466aad0ef3f6ff0380cbcdd89b1d074fd1bcd082e2"
+    }
+  },
+  "metric_formula_checks": {
+    "mean_metrics": true,
+    "paired_bootstrap": true,
+    "display": true,
+    "comparison_rows_and_statistics_AST_unchanged": true
+  },
+  "scientific_training_sources_changed": false
+}

@@ -1,0 +1,9 @@
+{
+  "returncode": 0,
+  "stdout": "88932",
+  "stderr": "sbatch:  \nsbatch: Job Resource Tips:\nsbatch:   * Run 'jobstats <jobid>' while your job is running (wait at least 60 seconds before trying) or after job completes.\nsbatch:   * Check CPU, GPU, and memory usage.\nsbatch:   * Adjust your requests to improve efficiency.\nsbatch:   * Optimizing your requests can help shorten queue times and improve cluster utilization.\nsbatch:",
+  "GPU_count": 0,
+  "wall_cap_seconds": 300,
+  "automatic_retries": 0,
+  "job_id": "88932"
+}

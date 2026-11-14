@@ -1,0 +1,19 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--no-requeue",
+    "--partition=epyc-cpu",
+    "--account=allusers",
+    "--cpus-per-task=4",
+    "--mem=8G",
+    "--time=00:05:00",
+    "--job-name=poisoning-next-cpu",
+    "--output=/storage/home/ydk297/projects/poisoning/logs/next_validation_20261101T0040Z_v1-cpu-%j.out",
+    "--error=/storage/home/ydk297/projects/poisoning/logs/next_validation_20261101T0040Z_v1-cpu-%j.err",
+    "--wrap=cd /storage/home/ydk297/projects/poisoning && OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 PYTHONDONTWRITEBYTECODE=1 /storage/home/ydk297/projects/poisoning/.venv-editor/bin/python -B scripts/next_validation_20261031.py prepare --run-id next_validation_20261101T0040Z_v1"
+  ],
+  "returncode": 0,
+  "stdout": "88013\n",
+  "stderr": "sbatch:  \nsbatch: Job Resource Tips:\nsbatch:   * Run 'jobstats <jobid>' while your job is running (wait at least 60 seconds before trying) or after job completes.\nsbatch:   * Check CPU, GPU, and memory usage.\nsbatch:   * Adjust your requests to improve efficiency.\nsbatch:   * Optimizing your requests can help shorten queue times and improve cluster utilization.\nsbatch:  \n"
+}

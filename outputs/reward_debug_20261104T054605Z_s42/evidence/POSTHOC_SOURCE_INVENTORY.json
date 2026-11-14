@@ -1,0 +1,211 @@
+{
+  "UTC": "2026-11-04T12:00:45.3291590Z",
+  "scope": "Post-results source capture for reproducibility; submission receipts and frozen training snapshots establish pre-execution versions. Restore these relative paths under project root to execute.",
+  "files": [
+    {
+      "path": "scripts/summarize_reward_campaign.py",
+      "SHA256": "19b4699a29f6adf3c9ffc9c0e2ef5cc1e80c9819ae5149894ca48e64f5356647",
+      "bytes": 34945
+    },
+    {
+      "path": "scripts/package_reward_campaign.py",
+      "SHA256": "f73e9b3169cbb86a33f25e79dcce9e9655f6814be7e6b40b2b17c5cb961c303e",
+      "bytes": 4485
+    },
+    {
+      "path": "scripts/mirror_reward_campaign_delivery.py",
+      "SHA256": "90b444846009cf8333be64a8b327af96f8bcfeb6c24003132114e8b258ccdd8c",
+      "bytes": 4827
+    },
+    {
+      "path": "scripts/preserve_reward_review_snapshot.py",
+      "SHA256": "26fa55d93ce3d31589b06609c6fc37f7e9ae2c81c85389618c9f66c9396e23d3",
+      "bytes": 3901
+    },
+    {
+      "path": "scripts/verify_reward_figure_exports.py",
+      "SHA256": "f1b0cc17f2556220a184c0b36336b9d17df85db426d41e70cfaed8c9a8f76281",
+      "bytes": 3961
+    },
+    {
+      "path": "scripts/export_reward_campaign_figures.mjs",
+      "SHA256": "0f71988071d3c27996a6e2a9384ae57c8c2d58c2bc9bf0a93232d9913de9440b",
+      "bytes": 14499
+    },
+    {
+      "path": "scripts/plot_reward_debug_20261104.py",
+      "SHA256": "610113b76263fe5b5f7a0196e53adaab4651a42fa038a9ea9cd7aadf10c2b967",
+      "bytes": 7687
+    },
+    {
+      "path": "scripts/cleanup_reward_campaign_scratch.py",
+      "SHA256": "2ff2c9c2991eaa38cab66b2aa33612a9d1901ca8b1b797964d5ca4c025536efa",
+      "bytes": 4556
+    },
+    {
+      "path": "scripts/submit_reward_campaign.py",
+      "SHA256": "b0205a4be308966faa40a38e2590c636fcc0af0168faf454f69e80e82cc60d95",
+      "bytes": 6300
+    },
+    {
+      "path": "scripts/supervise_reward_campaign.py",
+      "SHA256": "c2c84f966b0e595034db788dae771156729ca36f45e3838310ad5d2a77ab9ca0",
+      "bytes": 9046
+    },
+    {
+      "path": "scripts/audit_completed_lighting_v3.py",
+      "SHA256": "101c93113690b2e23a5dd52dd8eaa6c0b2c3be03f8d5ebc29022ddaa9836772b",
+      "bytes": 8147
+    },
+    {
+      "path": "scripts/audit_lighting_v3_vqa.py",
+      "SHA256": "ebfa50909d62ccf945105a8fbb403d400dff436647fe5bba75a6bb0730273e23",
+      "bytes": 3618
+    },
+    {
+      "path": "scripts/audit_shadowcast_results.py",
+      "SHA256": "8d3ec183ca1ed9e6917d6ea747c2feaa1fe499357c4dc13602ae9eca9271d733",
+      "bytes": 9267
+    },
+    {
+      "path": "scripts/audit_shadowcast_poison_tokenization.py",
+      "SHA256": "2630a8e5478f2c8d08c919f4a1bfeec0eba62c1f9a81251d965a2a20f6d1367a",
+      "bytes": 3356
+    },
+    {
+      "path": "scripts/audit_shadowcast_split_overlap.py",
+      "SHA256": "5cac3c019d7a327bebd2396d3482bc6fa55192348ce3d981f9e4833a378b2788",
+      "bytes": 2769
+    },
+    {
+      "path": "scripts/audit_vizwiz_results.py",
+      "SHA256": "1873413c5e8c3474dfc928667ae4d947916669f8891e9f487ccc637a7d63cf1e",
+      "bytes": 3800
+    },
+    {
+      "path": "scripts/evaluate_shadowcast_vizwiz.py",
+      "SHA256": "d47e01fb43e54a5b706a201ae1b5f592b4cdb8a26d0f42d78a7267f1ab0eefc8",
+      "bytes": 8747
+    },
+    {
+      "path": "scripts/run_shadowcast_seed42.py",
+      "SHA256": "0fb550a42eb6018036912a60e581fa5018cd9410ae39cc56680eea2eb458138a",
+      "bytes": 18418
+    },
+    {
+      "path": "scripts/prepare_shadowcast_resources.py",
+      "SHA256": "637b82b95e9690a9e26c8ef8f909ee236fb6612de668b374b89e01a993c10007",
+      "bytes": 6385
+    },
+    {
+      "path": "scripts/prepare_vizwiz_clean_benchmark.py",
+      "SHA256": "f452e2050c4b9f054663f643458b9e09d2f138f52932e9b5e4cf2acebd3a57f5",
+      "bytes": 6793
+    },
+    {
+      "path": "scripts/debug_lighting_v2.py",
+      "SHA256": "c33154a75734cfab67fe67e6d3955bd9462904257fe5927da334fb948e2b23d1",
+      "bytes": 9428
+    },
+    {
+      "path": "scripts/calibrate_lighting_v3.py",
+      "SHA256": "f49d53818913556c35fa448c79cb8c9610f75d114c683bb4a97c67d7d2ab65dc",
+      "bytes": 3720
+    },
+    {
+      "path": "scripts/audit_padding_reward_20261104.py",
+      "SHA256": "fd52001a0c8774aafa13745b30410f9bfea528b05bfbe42499dee444a0eec7ad",
+      "bytes": 4013
+    },
+    {
+      "path": "scripts/check_bf16_reduction_candidate.py",
+      "SHA256": "6c84e5a15a6926eaf6ca5339e0cb08f6f31702f53c5c771c96edfe7260638cb8",
+      "bytes": 2345
+    },
+    {
+      "path": "scripts/continue_lighting_v3.py",
+      "SHA256": "083c878cce14d08a92ca2654e51cbc585f744ae652c3a7293d04d2d40470be1e",
+      "bytes": 22974
+    },
+    {
+      "path": "configs/lighting_v3_posthoc_vqa.json",
+      "SHA256": "0f9cc35e768c5da885535f8279d2009386c8f1d05db5992e19a1e08a67196f23",
+      "bytes": 1306
+    },
+    {
+      "path": "configs/shadowcast_env_20261104.json",
+      "SHA256": "8cd80f641af147ab9188bf13ef9a5f89eaddc637642e9478108ce29b73adcb3c",
+      "bytes": 2102
+    },
+    {
+      "path": "docs/REWARD_DEBUG_20261104.md",
+      "SHA256": "2358fd7902dd16b6b3f6b465512a597702bd82cb7f9b3ccbf1fa3963999897e2",
+      "bytes": 6595
+    },
+    {
+      "path": "docs/SHADOWCAST_SEED42.md",
+      "SHA256": "03ca8e588305a1b7c4829e96d5a8134b877003c2ff7b9f1f8067c085abb5a289",
+      "bytes": 3941
+    },
+    {
+      "path": "docs/SHADOWCAST_VIZWIZ_CLEAN.md",
+      "SHA256": "e2db0389459d49213491f138ae32888e086bc8c3c030db7500fa6b8bce2473bd",
+      "bytes": 4037
+    },
+    {
+      "path": "docs/REWARD_CAMPAIGN_SUPERVISOR.md",
+      "SHA256": "dff00ffae1bd7c0a0b1fd8f58e11d22b17d9f8eaa8ca2ed4f2988008a553ee72",
+      "bytes": 2421
+    },
+    {
+      "path": "docs/BF16_REDUCTION_CANDIDATE.md",
+      "SHA256": "d15d524f36eece760c114b9233d00bea1e0ae064b40046e0246eedc301fc73e7",
+      "bytes": 1539
+    },
+    {
+      "path": "docs/LIGHTING_V3_TIMECAP_CONTINUATION.md",
+      "SHA256": "a6b2b5b67a3419fe0613024c086b8ff34db1ffebd8a49858ed181c296efc6650",
+      "bytes": 3168
+    },
+    {
+      "path": "src/evaluation/vizwiz_official.py",
+      "SHA256": "0ef017a4f52d672c6ea030664862fd36c3076489d5ae0bdac486883beae01992",
+      "bytes": 3362
+    },
+    {
+      "path": "src/evaluation/_vendor/vizwiz_vqaEval_original.py",
+      "SHA256": "d26ef7ac2db06351444c3531f8d95fd9c454423fbcb9fd5dd984f12281146694",
+      "bytes": 11856
+    },
+    {
+      "path": "tests/test_lighting_reward_v2.py",
+      "SHA256": "5c78040a6503516fc1a984396be85741640e0e4647ce667444268b15216e0d8f",
+      "bytes": 1725
+    },
+    {
+      "path": "tests/test_lighting_reward_v3.py",
+      "SHA256": "0ba8e0c9572bee179a8740e4c0473389735b26afb24ffd5fc060d2fce181cd7d",
+      "bytes": 1811
+    },
+    {
+      "path": "tests/test_lighting_v3_continuation.py",
+      "SHA256": "a5bce71eee749c5b57dcc62ecec7771c49cc742cf0287e3d63e6223566a93c2a",
+      "bytes": 5311
+    },
+    {
+      "path": "tests/test_vizwiz_official.py",
+      "SHA256": "0ce8faa8afb57a0fae42a2fc0224bd27d0dee008735556a2b2eae4d1f42d6634",
+      "bytes": 1218
+    },
+    {
+      "path": "tests/test_shadowcast_vizwiz_loader.py",
+      "SHA256": "8cb0d4b311690c0ea9269f41860431bda9e9712749530c69ca3c0cb432abcc11",
+      "bytes": 1501
+    },
+    {
+      "path": "tests/test_reward_campaign_supervisor.py",
+      "SHA256": "30456f6b5505ffcb40e593d27696e6933145aa0d733afceeef1d11fb2792cdaa",
+      "bytes": 1821
+    }
+  ]
+}

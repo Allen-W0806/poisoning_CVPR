@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "views": [
+    {
+      "lang": "zh",
+      "width": 1440,
+      "errors": [],
+      "overflow": false,
+      "rows": 9,
+      "payload_equal": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "errors": [],
+      "overflow": false,
+      "rows": 9,
+      "payload_equal": true
+    },
+    {
+      "lang": "zh",
+      "width": 390,
+      "errors": [],
+      "overflow": false,
+      "rows": 9,
+      "payload_equal": true
+    }
+  ],
+  "review_kit": {
+    "cases": 32,
+    "initial_reviews": 0,
+    "defaults_blank": true,
+    "no_human_labels_written": true,
+    "images_load": true,
+    "errors": []
+  }
+}

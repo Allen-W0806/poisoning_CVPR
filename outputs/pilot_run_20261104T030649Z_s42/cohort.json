@@ -1,0 +1,1224 @@
+{
+  "train": [
+    {
+      "sample_id": "564978001",
+      "image_id": "564978",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000564978.jpg",
+      "image_sha256": "6cb0d62a553f46c3337134365f651c40249bc10f201ed1b33ecc125efbd3d692",
+      "question": "What is on the computer?",
+      "answers": [
+        "cell phone",
+        "mail",
+        "internet",
+        "tv show",
+        "phone",
+        "websites",
+        "phone",
+        "phone",
+        "images",
+        "phone"
+      ]
+    },
+    {
+      "sample_id": "36445002",
+      "image_id": "36445",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000036445.jpg",
+      "image_sha256": "24720e7dc0d068d8cdf54a94f228a1b46ac47f989510145924cd97fef2d8e8fb",
+      "question": "Would the be an appropriate food to serve to an infant?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "574996000",
+      "image_id": "574996",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000574996.jpg",
+      "image_sha256": "cd696eae998978fd5591a2ac791cafae8d91c5e47219ba721bd0d4c513f601fa",
+      "question": "Does the person have the ski poles on each side of her?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "poles",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "293215034",
+      "image_id": "293215",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000293215.jpg",
+      "image_sha256": "45c49a38ac9e5500b5bd8df89ae4723996d8255a2f81adfbebd2f651f4e048bc",
+      "question": "Is he going on a trip?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "118227001",
+      "image_id": "118227",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000118227.jpg",
+      "image_sha256": "d9096db6fd300e6bae48da52f4c20acf396b643536e7d7ee37287a24c2c8e145",
+      "question": "Is this room clean?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "48261002",
+      "image_id": "48261",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000048261.jpg",
+      "image_sha256": "988deff1b1800c0504731b14c3fb968c0d14ce38d9e9e7b5739a5499f1517b93",
+      "question": "What color jackets are the skiers wearing?",
+      "answers": [
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "black",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue"
+      ]
+    },
+    {
+      "sample_id": "143096006",
+      "image_id": "143096",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000143096.jpg",
+      "image_sha256": "cea24f7b944de23685d5ad4da2ba5b6957357873cb0b42201bb802951aa5841e",
+      "question": "Is there any container?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "66753005",
+      "image_id": "66753",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000066753.jpg",
+      "image_sha256": "7062447126fdaa45e2fefa50352f325011a396e5373a49368fceff6351c65924",
+      "question": "Is it a clear day?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "233938002",
+      "image_id": "233938",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000233938.jpg",
+      "image_sha256": "94a449812a2508334ac516b29e180d4f2066535b85df9e8e8cebfdaa52948e05",
+      "question": "What color is this laptop?",
+      "answers": [
+        "gray",
+        "gray",
+        "gray",
+        "gray",
+        "gray",
+        "gray",
+        "gray",
+        "gray",
+        "gray",
+        "gray"
+      ]
+    },
+    {
+      "sample_id": "29716003",
+      "image_id": "29716",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000029716.jpg",
+      "image_sha256": "ff57df85ff7d87340f5dd8c65c1b43fc6c9e7fe04d9c4910d42ce9977be3df01",
+      "question": "What pattern is on the man's tie?",
+      "answers": [
+        "diamonds",
+        "diamond",
+        "diamonds",
+        "diamonds",
+        "diamond",
+        "diamonds",
+        "triangles",
+        "diamonds",
+        "diamonds",
+        "flowers"
+      ]
+    },
+    {
+      "sample_id": "450102000",
+      "image_id": "450102",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000450102.jpg",
+      "image_sha256": "15a92c34f98a88446f269544087ba55b19ae924e9ddda687adc5b5b876267842",
+      "question": "Does the zebras hair looked striped?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "79077005",
+      "image_id": "79077",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000079077.jpg",
+      "image_sha256": "07911aea6f9302bf40fa6b0068ca43d7408648e1ab2d72319e4347d6af1314ac",
+      "question": "Does this boat have a motor?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "459001006",
+      "image_id": "459001",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000459001.jpg",
+      "image_sha256": "8f00140dc7952a894527e5b7ffb7da7c9cc5f296824d84f02524245025e44b2a",
+      "question": "What sport is the man playing?",
+      "answers": [
+        "frisbee",
+        "frisbee",
+        "frisbee",
+        "frisbee",
+        "frisbee",
+        "frisbee",
+        "frisbee",
+        "frisbee",
+        "frisbee",
+        "frisbee"
+      ]
+    },
+    {
+      "sample_id": "40466000",
+      "image_id": "40466",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000040466.jpg",
+      "image_sha256": "849238b18684cf7d8d4e4ba068fe44c43d6abf6bf464f56c51361984bd8b5c29",
+      "question": "Is the dog driving the car?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "357561008",
+      "image_id": "357561",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000357561.jpg",
+      "image_sha256": "cb46740f2f4912db3fc72b5124ac5350809ce6c4dc25b058982080f761ab9c20",
+      "question": "Is the woman wearing tennis shoes?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "yes",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "408576001",
+      "image_id": "408576",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000408576.jpg",
+      "image_sha256": "02419c4443de0c866bbb1bc7959c82ffb901f710d13184e20b7bc4c86a3b9a89",
+      "question": "Is this person posing for a picture?",
+      "answers": [
+        "yes",
+        "no",
+        "no",
+        "no",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "no",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "396321001",
+      "image_id": "396321",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000396321.jpg",
+      "image_sha256": "fec37ef2758d8c742c80be3ca3e95c3aa9d83a0427c7880972e9f08dbf6d1221",
+      "question": "What is the digital number showing?",
+      "answers": [
+        "15",
+        "151",
+        "151",
+        "151",
+        "151",
+        "151",
+        "151",
+        "151 kmh",
+        "15",
+        "151 km"
+      ]
+    },
+    {
+      "sample_id": "127856009",
+      "image_id": "127856",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000127856.jpg",
+      "image_sha256": "fee50131a16f3f9a2f73726bfe660cdf765f45f6758e1c3a58840187370d3cf2",
+      "question": "What color are the gloves?",
+      "answers": [
+        "brown",
+        "black",
+        "black",
+        "gray and black",
+        "gray",
+        "brown",
+        "gray",
+        "gray",
+        "black",
+        "gray"
+      ]
+    },
+    {
+      "sample_id": "377416005",
+      "image_id": "377416",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000377416.jpg",
+      "image_sha256": "514eefa8cc5a5554b5e3d92b6884be05b9b7ba6e0ce39fedfd3a3d1d2f1e13eb",
+      "question": "How many lights are on?",
+      "answers": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1"
+      ]
+    },
+    {
+      "sample_id": "225164001",
+      "image_id": "225164",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000225164.jpg",
+      "image_sha256": "05355d054b0080372c4e2f1f8272766d44001a3d792af352d62f445cf4bca464",
+      "question": "Is it snowing?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "569996001",
+      "image_id": "569996",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000569996.jpg",
+      "image_sha256": "a5cb326d1bd62e7387f5d40cc505033ec0052e7c20b8b138de70383b7d835b1e",
+      "question": "Does she have a nice ass?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes",
+        "no",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "no",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "263878005",
+      "image_id": "263878",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000263878.jpg",
+      "image_sha256": "3ab9e920d0bffc40ee786fbe0d4ec567a8a6f6871187606bf6c8e2751772481f",
+      "question": "How many setting are there?",
+      "answers": [
+        "4",
+        "2",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4"
+      ]
+    },
+    {
+      "sample_id": "292187001",
+      "image_id": "292187",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000292187.jpg",
+      "image_sha256": "b9ffd7cc0314a9704180f79fad069b99b406d0553a93feacc9e84d0c0788fbdd",
+      "question": "Does the wetsuit cover his head?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "343279003",
+      "image_id": "343279",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000343279.jpg",
+      "image_sha256": "57272a8ec72b133ffe4c13dee6d40278a2010ca40a75cfc302b8c7db03b0af31",
+      "question": "Will the truck be able to move forward?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "436464002",
+      "image_id": "436464",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000436464.jpg",
+      "image_sha256": "533191c78c4730b9e84cd9b9295dfb0deab79daf293563be6760899fb39585f8",
+      "question": "What is the color of the stoplight?",
+      "answers": [
+        "red",
+        "red",
+        "red",
+        "red",
+        "red",
+        "red",
+        "red",
+        "red",
+        "red",
+        "red"
+      ]
+    },
+    {
+      "sample_id": "288770000",
+      "image_id": "288770",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000288770.jpg",
+      "image_sha256": "0812887d87b795dc939ed0cdd75361af51d91052e7d5bdd377379596ab554c66",
+      "question": "Is in night?",
+      "answers": [
+        "no",
+        "no",
+        "yes",
+        "no",
+        "yes",
+        "yes",
+        "yes",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "27439001",
+      "image_id": "27439",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000027439.jpg",
+      "image_sha256": "3c65ece967daa219de7b4fa45efb5cbcf492cd6a03b330184577f8c42a8844d4",
+      "question": "Are the bears the same color?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "19766001",
+      "image_id": "19766",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000019766.jpg",
+      "image_sha256": "f611bc7714e0740d154eb6d286fe753423787133978a7d3de4465e29a1e21795",
+      "question": "What sport is this person participating in?",
+      "answers": [
+        "skateboarding",
+        "skateboarding",
+        "skateboarding",
+        "skateboarding",
+        "skateboarding",
+        "skateboarding",
+        "skateboarding",
+        "skateboarding",
+        "skateboarding",
+        "skateboarding"
+      ]
+    },
+    {
+      "sample_id": "311088005",
+      "image_id": "311088",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000311088.jpg",
+      "image_sha256": "b7f50305750c7aaea3beda34dcc201a6669285a57c6e33534374618a930cdd89",
+      "question": "What is written on the front of the truck?",
+      "answers": [
+        "hh",
+        "hh",
+        "hh",
+        "hi",
+        "studebaker",
+        "hh",
+        "nothing",
+        "symbol",
+        "truck details",
+        "for sale"
+      ]
+    },
+    {
+      "sample_id": "51041007",
+      "image_id": "51041",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000051041.jpg",
+      "image_sha256": "443f1d9293210e7a87c854f2ac6a5b6b707545e894ce62883c3e2ffe5d40758e",
+      "question": "What is the object in the sky?",
+      "answers": [
+        "plane",
+        "plane",
+        "plane",
+        "helicopter",
+        "plane",
+        "plane",
+        "plane",
+        "plane",
+        "airplane",
+        "plane"
+      ]
+    },
+    {
+      "sample_id": "190927000",
+      "image_id": "190927",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000190927.jpg",
+      "image_sha256": "c029c08fd3fe89442b8d58e42bbd790d105ce2c347379c38b7bab8a049c290f0",
+      "question": "What color is the box?",
+      "answers": [
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white"
+      ]
+    },
+    {
+      "sample_id": "309944012",
+      "image_id": "309944",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000309944.jpg",
+      "image_sha256": "906d308ab2caceac89eea80e8d1a998614985c69ff8659258838322fddbb6c29",
+      "question": "Is the toilet lid up?",
+      "answers": [
+        "yes",
+        "yes",
+        "no",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "sample_id": "538530002",
+      "image_id": "538530",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000538530.jpg",
+      "image_sha256": "b4ae077d5b2ee695344e36996aa25a78caad8aabfee479c2deda58db5a253e41",
+      "question": "How many goats are in this scene?",
+      "answers": [
+        "5",
+        "5",
+        "5",
+        "0",
+        "6",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5"
+      ]
+    },
+    {
+      "sample_id": "382669003",
+      "image_id": "382669",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000382669.jpg",
+      "image_sha256": "7b87eb3a36d7241a313e7fd8972fd9353e72f8b30cbc4394ac3af9c06b7cbd47",
+      "question": "How many bikes?",
+      "answers": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "sample_id": "200221004",
+      "image_id": "200221",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000200221.jpg",
+      "image_sha256": "0afd11eccf64d8c34f4a01b7eb41bb9c5f85bea365deb8a4e53c1379380b4a86",
+      "question": "What type of books are on the bookshelf?",
+      "answers": [
+        "software",
+        "computer",
+        "reading books",
+        "textbooks",
+        "computer",
+        "computer",
+        "programming",
+        "computer",
+        "lots",
+        "programming"
+      ]
+    },
+    {
+      "sample_id": "417090002",
+      "image_id": "417090",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000417090.jpg",
+      "image_sha256": "c3ab05bf2e14d026694a6523dee08d14999bbf40f1b832ea68dfebd48302c92f",
+      "question": "Is this fast food?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes",
+        "no",
+        "yes",
+        "yes",
+        "yes",
+        "no",
+        "no",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "463087001",
+      "image_id": "463087",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000463087.jpg",
+      "image_sha256": "98822795eb7d769519c3d4d560a3231a7cc029eaf55c17e67fdf9c978daba15d",
+      "question": "Are these people doing watersports?",
+      "answers": [
+        "no",
+        "no",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "no",
+        "no",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "486822000",
+      "image_id": "486822",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000486822.jpg",
+      "image_sha256": "64d7f8bb4dd092f7cc07c5a02eb2e164c51f8de3ed8f2e1c57e40d4d3c40439f",
+      "question": "What is the guy on?",
+      "answers": [
+        "skateboard",
+        "skateboard",
+        "skateboard",
+        "skateboard",
+        "skateboard",
+        "skateboard",
+        "skateboard",
+        "skateboard",
+        "skateboard",
+        "skateboard"
+      ]
+    },
+    {
+      "sample_id": "129794003",
+      "image_id": "129794",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000129794.jpg",
+      "image_sha256": "1653faaf752ded57e339c3b64652b79705279a3aff47c9539fcd7bc9f797f9ab",
+      "question": "Is this a busy street?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "322350002",
+      "image_id": "322350",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000322350.jpg",
+      "image_sha256": "58dc3b2c5915fd604bfed9082fb32f6a05c7bcb166ab23ee9744eed31d8c339b",
+      "question": "Why is there a car right in front of a plane?",
+      "answers": [
+        "for baggage",
+        "loading luggage",
+        "for luggage",
+        "fuel truck",
+        "no",
+        "unloading bags",
+        "loading people",
+        "loading",
+        "to transport baggage",
+        "luggage cart"
+      ]
+    },
+    {
+      "sample_id": "131638000",
+      "image_id": "131638",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000131638.jpg",
+      "image_sha256": "788aba2fe6ebe77d99f59de17475c103d2eaca4f4eba2e27d90a9d7404f81b6b",
+      "question": "Which room is this?",
+      "answers": [
+        "bedroom",
+        "bedroom",
+        "bedroom",
+        "bedroom",
+        "bedroom",
+        "bedroom",
+        "bedroom",
+        "bedroom",
+        "bedroom",
+        "bedroom"
+      ]
+    },
+    {
+      "sample_id": "398821001",
+      "image_id": "398821",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000398821.jpg",
+      "image_sha256": "ff95755ad4150b4ffebe5925b0a3572234519bf7dbe0128a27e003749dec8294",
+      "question": "Are the men workers?",
+      "answers": [
+        "no",
+        "yes",
+        "yes",
+        "yes",
+        "no",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "549239003",
+      "image_id": "549239",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000549239.jpg",
+      "image_sha256": "c99fa0e5598da0714c91bbb1228b3f290cb478e7addb4b77b679081b6e437479",
+      "question": "What trick is being shown?",
+      "answers": [
+        "jumping",
+        "jumping",
+        "flip",
+        "skateboard trick",
+        "skateboard",
+        "skateboard trick",
+        "kickflip",
+        "jump",
+        "jump",
+        "jump"
+      ]
+    },
+    {
+      "sample_id": "461404005",
+      "image_id": "461404",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000461404.jpg",
+      "image_sha256": "050865aa476a56f18b58f0aafcf8c1bb352fd029a86043354d61a75ea6cbcf1b",
+      "question": "Is the dog on  leash?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "500712001",
+      "image_id": "500712",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000500712.jpg",
+      "image_sha256": "136d84cc5a1709fecd4187890be40bbd4ca5d0b96c37f451f9e4e24b37470630",
+      "question": "What color is the truck?",
+      "answers": [
+        "red",
+        "red",
+        "red",
+        "red",
+        "red",
+        "red",
+        "red",
+        "red",
+        "red",
+        "red"
+      ]
+    },
+    {
+      "sample_id": "203036001",
+      "image_id": "203036",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000203036.jpg",
+      "image_sha256": "d1f1cccb4e807f183349098c878a19855360ccd9d6abf1d94ec34ae1c6d85be6",
+      "question": "How many men are dressed in black?",
+      "answers": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ]
+    },
+    {
+      "sample_id": "201891004",
+      "image_id": "201891",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000201891.jpg",
+      "image_sha256": "7b76d2bc739116b60e885a7c620885b1c842b1abb52a6dd81e1e011fdee2c4fc",
+      "question": "Are all the people in the photograph smiling?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "172543001",
+      "image_id": "172543",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000172543.jpg",
+      "image_sha256": "0ffbc5ac200e72e1135e6125b0bd8d570880eff930fcd7cfe05cffdeeb8f9151",
+      "question": "What color are the second mans shorts?",
+      "answers": [
+        "brown",
+        "brown",
+        "blue",
+        "black",
+        "brown",
+        "plaid",
+        "black",
+        "brown",
+        "brown",
+        "blue"
+      ]
+    }
+  ],
+  "test": [
+    {
+      "sample_id": "340345009",
+      "image_id": "340345",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000340345.jpg",
+      "image_sha256": "7c93af6405d7477e49170ea974c96bf9aa5ac3102ade1edb0146c57e29c2cda3",
+      "question": "Are the giraffes walking?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "155177008",
+      "image_id": "155177",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000155177.jpg",
+      "image_sha256": "4317b7601cf10082c9de3a591e5a7945275f15bd2681b9345e8c50ffc80a9ece",
+      "question": "How many computers are on the table?",
+      "answers": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "1"
+      ]
+    },
+    {
+      "sample_id": "245528000",
+      "image_id": "245528",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000245528.jpg",
+      "image_sha256": "573403122a9fde926f7db97663b233eacb904f6bd5dd75d4742ec1057f866c2a",
+      "question": "What is the boy with the striped shirt doing to the boy on the bike?",
+      "answers": [
+        "squirting with water",
+        "spraying",
+        "spraying",
+        "spraying with water",
+        "spraying with water",
+        "squirting water",
+        "spraying water",
+        "shooting water",
+        "spraying with water",
+        "spraying"
+      ]
+    },
+    {
+      "sample_id": "94416001",
+      "image_id": "94416",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000094416.jpg",
+      "image_sha256": "71fe14ce7b481fdc5af44d216cf814accff983cee499e1b8f9240bc189dff0de",
+      "question": "What kind of motorcycle is this?",
+      "answers": [
+        "davidson",
+        "kawasaki",
+        "kawasaki",
+        "kawasaki",
+        "kawasaki",
+        "special",
+        "kawasaki",
+        "honda",
+        "suzuki",
+        "suzuki"
+      ]
+    },
+    {
+      "sample_id": "110821005",
+      "image_id": "110821",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000110821.jpg",
+      "image_sha256": "2ca324aadbcc8b465b0cf10b36439fa8c766385d3e7c3f864799e79668349fc7",
+      "question": "Is the pizza still in the pan?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "197570005",
+      "image_id": "197570",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000197570.jpg",
+      "image_sha256": "f5ea7ea50084dc3cf4bf5ed5519fa8c5c17ab7b304fd89c7120a947be50564ae",
+      "question": "Is this a modern time period?",
+      "answers": [
+        "yes",
+        "no",
+        "yes",
+        "no",
+        "no",
+        "no",
+        "yes",
+        "no",
+        "no",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "431322007",
+      "image_id": "431322",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000431322.jpg",
+      "image_sha256": "ac95f65e2d33c16ea5b936ef60b0e470c4500728490cd188beafde873c864e5d",
+      "question": "Does the grass need mowing?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    },
+    {
+      "sample_id": "323162000",
+      "image_id": "323162",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000323162.jpg",
+      "image_sha256": "917d0b534aca61fbdd56ffabec5f3fc4deb6f74d06989c56badeafb25ed583d1",
+      "question": "How many eyes does the cat have?",
+      "answers": [
+        "4",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ]
+    },
+    {
+      "sample_id": "285605001",
+      "image_id": "285605",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000285605.jpg",
+      "image_sha256": "8b8c2facdeadf9ff002d5f12d0ffe5f0047a43c84b06498def77323b201e0c60",
+      "question": "Are most people wearing rain gear?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "555143000",
+      "image_id": "555143",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000555143.jpg",
+      "image_sha256": "6c340becfe3defef038b99f4d73cea2c90b6cdecb3072e7316e3434af2ad7e98",
+      "question": "What are the people wearing to protect their heads?",
+      "answers": [
+        "caps",
+        "nothing",
+        "cap",
+        "hat",
+        "hats",
+        "beanie",
+        "hats",
+        "knit hats",
+        "hat",
+        "hat"
+      ]
+    },
+    {
+      "sample_id": "316640000",
+      "image_id": "316640",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000316640.jpg",
+      "image_sha256": "a8552a31bf364d3c212005ae2a47ee6fd046a52b17d6639949b54173d861929c",
+      "question": "What letters are on the airplane?",
+      "answers": [
+        "vra",
+        "vroa",
+        "vroa",
+        "military",
+        "vra",
+        "vra",
+        "vroa",
+        "vroa",
+        "v r",
+        "vra"
+      ]
+    },
+    {
+      "sample_id": "367423003",
+      "image_id": "367423",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000367423.jpg",
+      "image_sha256": "57152e98e6c64c2586bd278de5aa0a10f5e105c12a4097d1f1963cda3e9c9fa0",
+      "question": "Is the are grassy?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "511121005",
+      "image_id": "511121",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000511121.jpg",
+      "image_sha256": "0b8f8d1dba4d74100f1afd7b8e0a936ae422156ed43a001ad2701db0d02d9d5f",
+      "question": "What color is the Frisbee?",
+      "answers": [
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white and red",
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "sample_id": "256877002",
+      "image_id": "256877",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000256877.jpg",
+      "image_sha256": "57f56302a276a4da38b40a32eb8ac61c0c61d895a08e9861005820cb87ea3c9b",
+      "question": "What is this place called?",
+      "answers": [
+        "airport",
+        "baggage claim",
+        "baggage claim",
+        "airport",
+        "no name",
+        "baggage claim",
+        "baggage claim",
+        "airport",
+        "airport",
+        "baggage claim"
+      ]
+    },
+    {
+      "sample_id": "429015001",
+      "image_id": "429015",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000429015.jpg",
+      "image_sha256": "0d6faf57ee60c52fbcc1b66897692ae726773400bf4e1aad7815487daf219ff2",
+      "question": "Are all the trees green?",
+      "answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "sample_id": "229362028",
+      "image_id": "229362",
+      "image_path": "data/raw/vqav2/images/COCO_train2014_000000229362.jpg",
+      "image_sha256": "f2eb641641b8fb139409c108a7140ec691a221cefc21572ecb7143861588f9c1",
+      "question": "Does this dish contain salad?",
+      "answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ]
+    }
+  ]
+}

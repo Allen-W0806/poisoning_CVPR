@@ -1,0 +1,37 @@
+{
+  "status": "VERIFIED_BYTE_IDENTICAL_SELECTED_CLEAN_VQA_LORA",
+  "base_model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "base_model_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "base_model_card": "https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct/blob/89644892e4d85e24eaac8bacfd4f463576704203/README.md",
+  "source_scope": "Normal VQAv2 response-only SFT, no edited/poison data; selected on dev only.",
+  "adapters": [
+    {
+      "seed": 42,
+      "path": "artifacts/clean_vqa_lora/seed42/adapter_model.safetensors",
+      "bytes": 3227648,
+      "SHA256": "2a9a5ee542fb0d4468d605a2b7ff9df681ed3caa507e6a1ef74a3a95c2a7a26c",
+      "tensor_count": 112,
+      "dtype": "F32",
+      "source_directory": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed42/attempt_0/selected_checkpoint/adapter"
+    },
+    {
+      "seed": 123,
+      "path": "artifacts/clean_vqa_lora/seed123/adapter_model.safetensors",
+      "bytes": 3227648,
+      "SHA256": "1c7511e7ae17345c70a14040ae1bf016639c9f13fd5ba3a39d306ff47d19c449",
+      "tensor_count": 112,
+      "dtype": "F32",
+      "source_directory": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed123/attempt_0/selected_checkpoint/adapter"
+    },
+    {
+      "seed": 3407,
+      "path": "artifacts/clean_vqa_lora/seed3407/adapter_model.safetensors",
+      "bytes": 3227648,
+      "SHA256": "f3d6a7ad9015919b51f0c22f7986290c121440b26f33ef3d1da354afa5907ee2",
+      "tensor_count": 112,
+      "dtype": "F32",
+      "source_directory": "/storage/home/ydk297/projects/poisoning/outputs/overnight_benign_20261112T051015Z/stages/seed3407/attempt_0/selected_checkpoint/adapter"
+    }
+  ],
+  "full_optimizer_RNG_states": "Retained at original cluster checkpoint paths; not uploaded."
+}

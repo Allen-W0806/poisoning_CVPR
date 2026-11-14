@@ -1,0 +1,15 @@
+{
+  "runtime": "H:/Anaconda/python.exe",
+  "matplotlib_version": "3.9.2",
+  "GPU_seconds": 0,
+  "model_or_reward_queries": 0,
+  "source_function": "Original executed src.mini_pilot.reporting.make_figures before dependency guard patch",
+  "reason": "Existing cluster editor environment lacks Matplotlib; all model training and locked assessments completed before plotting error",
+  "figures": {
+    "source_edit_contact_sheet.png": "50cb8bbdd36bce45371e6f7617c73ab2a32cbc98144c77146948c9360af94280",
+    "validation_reward.pdf": "7fb35a88ac5626c12f829bb0ac533797740164a997a73f790d2614a31fefdcb3",
+    "validation_reward.png": "4b66e8d30710d5b5e004ef6972050ca23bcc5cfd378ee1dce7ffc29f64949a28"
+  },
+  "unchanged_measurement_digest": "6b405d15decef689430e677d49cf7266d8e90543dd644b038295e7da364dbe0e",
+  "recorded_UTC": "2026-11-04T04:19:31.074867+00:00"
+}

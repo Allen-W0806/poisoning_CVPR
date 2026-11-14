@@ -1,0 +1,18 @@
+{
+  "train_and_evaluate_pilot.py": true,
+  "run_mini_pilot.sh": true,
+  "src/mini_pilot/__init__.py": true,
+  "src/mini_pilot/controller.py": true,
+  "src/mini_pilot/data.py": true,
+  "src/mini_pilot/engine.py": true,
+  "src/mini_pilot/reporting.py": true,
+  "src/mini_pilot/reward.py": true,
+  "src/models/pretrained_editor_loader.py": true,
+  "src/editing/pretrained_editor.py": true,
+  "src/rl/diffusion_policy.py": true,
+  "src/rl/diffusion_rl_trainer.py": true,
+  "src/rl/diffusion_trajectory.py": true,
+  "src/rl/phase5_backend.py": true,
+  "src/rl/reward.py": true,
+  "src/training/generator_adapter.py": true
+}
